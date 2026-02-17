@@ -1,47 +1,11 @@
-/* styles.css - Professional Banking Website Styling */
-
-body {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    background-color: #f8f9fa;
-    line-height: 1.6;
+.technology {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
 }
 
-header {
-    background: #007bff;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav {
+.expansion {
+    display: flex;
+    justify-content: space-between;
     margin: 20px 0;
-}
-
-nav a {
-    color: #007bff;
-    text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-}
-
-nav a:hover {
-    background: #0056b3;
-    color: #fff;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
