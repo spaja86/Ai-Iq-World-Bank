@@ -8,7 +8,7 @@
 
 ## Prijavljivanje Bezbednosnih Problema
 
-Ako otkrijete bezbednosnu ranjivost, molimo vas da je prijavite direktno vlasniiku:
+Ako otkrijete bezbednosnu ranjivost, molimo vas da je prijavite direktno vlasniku:
 
 - **Email:** spajicn@yahoo.com
 - **Email:** spajicn@gmail.com

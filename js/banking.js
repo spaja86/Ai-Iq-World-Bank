@@ -82,13 +82,11 @@
     document.getElementById('loanInterestTotal').textContent  = formatCurrency(result.totalInterest);
     document.getElementById('loanPrincipalVal').textContent   = formatCurrency(principal);
 
-    // Progress bar: principal vs interest share
+    // Progress bar: principal share of total payment
     var principalPct = (principal / result.totalPayment * 100).toFixed(1);
     var interestPct  = (100 - principalPct).toFixed(1);
     var principalBar = document.getElementById('principalBar');
-    var interestBar  = document.getElementById('interestBar');
     if (principalBar) principalBar.style.width = principalPct + '%';
-    if (interestBar)  interestBar.style.width  = interestPct + '%';
 
     var principalPctEl = document.getElementById('principalPct');
     var interestPctEl  = document.getElementById('interestPct');
