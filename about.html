@@ -1,161 +1,214 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>O Banci &#8212; AI IQ World Bank</title>
-  <meta name="description" content="O AI IQ World Bank: misija, vizija, tim i vrednosti. Vlasnik Nikola Spajic.">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-  <meta name="author" content="Nikola Spajic">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/components.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="O AI IQ World Bank — misija, vrednosti i tim iza profesionalne svetske banke." />
+  <title>O Banci — AI IQ World Bank</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header class="header" role="banner">
-  <div class="header-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-icon">AI</div>
-      <div class="logo-text"><span class="logo-name">AI IQ World Bank</span><span class="logo-tagline">Svetska Banka Buducnosti</span></div>
-    </a>
-    <nav class="nav" role="navigation" aria-label="Glavna navigacija">
-      <a href="index.html">Pocetna</a>
-      <a href="about.html">O Banci</a>
-      <a href="services.html">Usluge</a>
-      <a href="loans.html">Krediti</a>
-      <a href="investments.html">Investicije</a>
-      <a href="contact.html">Kontakt</a>
-      <div class="dropdown">
-        <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Platforme &#9660;</button>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="https://github.com/spaja86/Kompanija-SPAJA" target="_blank" rel="noopener noreferrer">Kompanija SPAJA</a></li>
-          <li><a href="https://io-openui-ao.vercel.app" target="_blank" rel="noopener noreferrer">IO-OPENUI-AO</a></li>
-          <li><a href="https://github.com/spaja86/Ai-Iq-Menja-nica" target="_blank" rel="noopener noreferrer">Menjacnica</a></li>
-        </ul>
-      </div>
+
+<div class="ticker-wrapper" aria-label="Finansijski ticker">
+  <div class="ticker-track"></div>
+</div>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-icon">🏦</span><span>AI IQ World Bank</span></a>
+    <nav aria-label="Glavna navigacija">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="about.html">O Banci</a></li>
+        <li><a href="services.html">Usluge</a></li>
+        <li><a href="loans.html">Krediti</a></li>
+        <li><a href="investments.html">Investicije</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
     </nav>
-    <div class="header-actions">
-      <a href="contact.html" class="btn btn-primary">Otvori Racun</a>
-      <button class="hamburger" aria-label="Otvori meni" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
+    <button class="hamburger" id="hamburger" aria-label="Otvori meni" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
-<nav class="mobile-nav" role="navigation" aria-label="Mobilna navigacija">
-  <a href="index.html">Pocetna</a><a href="about.html">O Banci</a><a href="services.html">Usluge</a>
-  <a href="loans.html">Krediti</a><a href="investments.html">Investicije</a><a href="contact.html">Kontakt</a>
-  <a href="contact.html" class="btn btn-primary mobile-btn">Otvori Racun</a>
-</nav>
-<section class="page-hero">
-  <div class="container" style="position:relative;z-index:1">
-    <h1>O <span class="text-gold">AI IQ World Bank</span></h1>
-    <p>Pioniri globalnog AI bankarstva &#8212; od Smedereva do celog sveta.</p>
-  </div>
-</section>
-<section class="page-section">
-  <div class="container">
-    <div class="smederevo-grid">
-      <div class="fade-in-left">
-        <h2 class="section-title" style="text-align:left" id="mission">Nasa <span>Misija</span></h2>
-        <div class="divider" style="margin-left:0"></div>
-        <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">AI IQ World Bank je osnovana sa jednom misijom: demokratizovati pristup naprednim finansijskim uslugama za svakoga, bez obzira na lokaciju ili velicinu portfelja.</p>
-        <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px">Kombinacijom vestacke inteligencije, globalnih partnerstva (IMF, World Bank, ECB, BIS) i predanosti klijentima, gradimo banku buducnosti &#8212; dostupnu od Smedereva do Singapura.</p>
-        <p style="color:var(--text-secondary);line-height:1.8">Vlasnik i osnivac: <strong style="color:var(--accent-gold)">Nikola Spajic</strong></p>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Početna</a><span>/</span>O Banci</div>
+  <h1>O <span>AI IQ World Bank</span></h1>
+  <p>Profesionalna svetska banka utemeljena na AI tehnologijama i globalnoj saradnji</p>
+</div>
+
+<!-- Misija -->
+<section>
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="animate-hidden">
+        <h2 style="font-size:clamp(1.5rem,3vw,2rem); color:#fff; margin-bottom:1rem;">Naša Misija</h2>
+        <p style="color:var(--bank-muted); margin-bottom:1rem; line-height:1.8;">AI IQ World Bank je osnovana sa jasnom misijom: pružiti svakome, bez obzira na geografsku lokaciju ili ekonomski status, pristup profesionalnim bankarskim uslugama naredne generacije.</p>
+        <p style="color:var(--bank-muted); margin-bottom:1rem; line-height:1.8;">Kroz primenu veštačke inteligencije i savremenih finansijskih tehnologija, redefinišemo šta znači biti banka u 21. veku. Sarađujemo sa svim vodećim svetskim bankama i finansijskim institucijama.</p>
+        <p style="color:var(--bank-muted); line-height:1.8;">Naša vizija: finansijska inkluzija za sve, transparentnost u svakoj transakciji i pametno upravljanje imovinom potpomognuto AI.</p>
       </div>
-      <div class="fade-in-right delay-2">
-        <h2 class="section-title" style="text-align:left">Nase <span>Vrednosti</span></h2>
-        <div class="divider" style="margin-left:0"></div>
-        <div class="values-grid">
-          <div class="value-card"><div class="value-icon">&#127991;</div><div><h3>Transparentnost</h3><p>Bez skrivenih naknada. Svi uslovi jasni i dostupni.</p></div></div>
-          <div class="value-card"><div class="value-icon">&#128272;</div><div><h3>Bezbednost</h3><p>Najvisi nivo zastite podataka i transakcija.</p></div></div>
-          <div class="value-card"><div class="value-icon">&#128200;</div><div><h3>Inovacija</h3><p>Konstantno ulazemo u AI i nove tehnologije.</p></div></div>
-          <div class="value-card"><div class="value-icon">&#128101;</div><div><h3>Inkluzivnost</h3><p>Finansijske usluge za sve &#8212; bez diskriminacije.</p></div></div>
+      <div class="about-visual animate-hidden">
+        <div class="bank-emblem">🏦</div>
+        <h3>AI IQ World Bank</h3>
+        <p>Profesionalna Svetska Banka Budućnosti</p>
+        <div class="values-grid" style="margin-top:1.5rem;">
+          <div class="value-item"><div class="v-icon">🌍</div><strong>190+</strong><span>Zemalja</span></div>
+          <div class="value-item"><div class="v-icon">💰</div><strong>$50B+</strong><span>Aktiva</span></div>
+          <div class="value-item"><div class="v-icon">👥</div><strong>10M+</strong><span>Klijenata</span></div>
+          <div class="value-item"><div class="v-icon">🤖</div><strong>AI</strong><span>Powered</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="page-section alt-bg">
-  <div class="container">
-    <h2 class="section-title fade-in" id="team">Nas <span>Tim</span></h2>
-    <div class="divider"></div>
-    <div class="team-grid stagger-children">
-      <div class="team-card">
-        <div class="team-avatar">N</div>
-        <h3>Nikola Spajic</h3>
-        <div class="role">CEO &amp; Osnivac</div>
-        <p>Vizionar i pokretac AI IQ World Bank. Strucnjak za AI finansije i globalno bankarstvo.</p>
+
+<!-- Vrednosti -->
+<section style="background:var(--bank-mid); border-top:1px solid var(--glass-border); border-bottom:1px solid var(--glass-border);">
+  <div class="section-inner">
+    <div class="section-title animate-hidden">
+      <h2>Naše Vrednosti</h2>
+      <p>Principi koji nas vode u svakoj odluci i interakciji sa klijentima</p>
+      <div class="gold-line"></div>
+    </div>
+    <div class="cards-grid">
+      <div class="card animate-hidden">
+        <div class="card-icon">🔒</div>
+        <h3>Sigurnost</h3>
+        <p>Vaša sredstva i podaci su zaštićeni najnovijim enkripcijskim tehnologijama i višefaktorskom autentikacijom.</p>
       </div>
-      <div class="team-card">
-        <div class="team-avatar">&#129302;</div>
-        <h3>AI Operations Team</h3>
-        <div class="role">AI &amp; Tehnologija</div>
-        <p>Tim strucnjaka za vestacku inteligenciju, machine learning i finansijsku analitiku.</p>
+      <div class="card animate-hidden">
+        <div class="card-icon">🤝</div>
+        <h3>Poverenje</h3>
+        <p>Izgradili smo reputaciju na transparentnosti i poštenju u svakoj transakciji i finansijskom savetu.</p>
       </div>
-      <div class="team-card">
-        <div class="team-avatar">&#127760;</div>
-        <h3>Global Partnerships</h3>
-        <div class="role">Medjunarodne Relacije</div>
-        <p>Upravljanje partnerstvima sa IMF, ECB, BIS i vise od 10.000 banaka sirom sveta.</p>
+      <div class="card animate-hidden">
+        <div class="card-icon">🚀</div>
+        <h3>Inovacija</h3>
+        <p>Konstantno unapređujemo naše usluge koristeći najnovije AI tehnologije i fintech rešenja.</p>
+      </div>
+      <div class="card animate-hidden">
+        <div class="card-icon">🌐</div>
+        <h3>Globalna Dostupnost</h3>
+        <p>Dostupni smo u 190+ zemalja sa 24/7 podrškom na više od 30 svetskih jezika.</p>
+      </div>
+      <div class="card animate-hidden">
+        <div class="card-icon">⚡</div>
+        <h3>Brzina</h3>
+        <p>Instant transakcije, brzo odobravanje kredita i trenutni uvid u vaše finansije u realnom vremenu.</p>
+      </div>
+      <div class="card animate-hidden">
+        <div class="card-icon">♻️</div>
+        <h3>Održivost</h3>
+        <p>Posvećeni smo zelenim investicijama i odgovornom finansiranju koje podržava održivi razvoj.</p>
       </div>
     </div>
   </div>
 </section>
-<section class="page-section">
-  <div class="container">
-    <h2 class="section-title fade-in">Nasi <span>Rezultati</span></h2>
-    <div class="divider"></div>
-    <div class="stats-grid stagger-children">
-      <div class="stat-card"><div class="stat-icon">&#127757;</div><span class="stat-value" data-counter data-target="190" data-suffix="+">0+</span><span class="stat-label">Zemalja</span></div>
-      <div class="stat-card"><div class="stat-icon">&#128176;</div><span class="stat-value" data-counter data-prefix="$" data-target="50" data-suffix="B+">$0B+</span><span class="stat-label">Sredstava</span></div>
-      <div class="stat-card"><div class="stat-icon">&#128101;</div><span class="stat-value" data-counter data-target="5" data-suffix="M+">0M+</span><span class="stat-label">Klijenata</span></div>
-      <div class="stat-card"><div class="stat-icon">&#127970;</div><span class="stat-value" data-counter data-target="10000" data-suffix="+">0+</span><span class="stat-label">Partnerskih Banaka</span></div>
+
+<!-- Vlasnik -->
+<section>
+  <div class="section-inner">
+    <div class="section-title animate-hidden">
+      <h2>Osnivač i Vlasnik</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div style="max-width:600px; margin:0 auto; text-align:center;" class="animate-hidden">
+      <div style="background:var(--bank-mid); border:1px solid var(--glass-border); border-radius:var(--radius); padding:3rem;">
+        <div style="font-size:4rem; margin-bottom:1rem;">👤</div>
+        <h3 style="color:var(--bank-gold); font-size:1.5rem; margin-bottom:0.5rem;">Nikola Spajić</h3>
+        <p style="color:var(--bank-muted); margin-bottom:1.5rem;">Osnivač &amp; CEO | Smederevo, Srbija</p>
+        <div style="display:flex; flex-direction:column; gap:0.5rem; text-align:left; max-width:320px; margin:0 auto;">
+          <div style="display:flex; gap:0.75rem; align-items:center;">
+            <span>📧</span>
+            <a href="mailto:spajicn@yahoo.com" style="color:var(--bank-muted);">spajicn@yahoo.com</a>
+          </div>
+          <div style="display:flex; gap:0.75rem; align-items:center;">
+            <span>📧</span>
+            <a href="mailto:spajicn@gmail.com" style="color:var(--bank-muted);">spajicn@gmail.com</a>
+          </div>
+        </div>
+        <div class="social-links" style="justify-content:center; margin-top:1.5rem;">
+          <a href="https://www.facebook.com/Spaja86" class="social-link" target="_blank" rel="noopener">📘 Facebook</a>
+          <a href="https://www.instagram.com/spaja.1986" class="social-link" target="_blank" rel="noopener">📷 Instagram</a>
+          <a href="https://www.tiktok.com/@spaja.1986" class="social-link" target="_blank" rel="noopener">🎵 TikTok</a>
+          <a href="https://www.youtube.com/@spajanikopenevolution" class="social-link" target="_blank" rel="noopener">▶️ YouTube</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="logo"><div class="logo-icon">AI</div><div class="logo-text"><span class="logo-name">AI IQ World Bank</span><span class="logo-tagline">Svetska Banka Buducnosti</span></div></a>
-        <p>Maksimalno profesionalna AI banka sa globalnim dosegom u 190+ zemalja.</p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/Spaja86" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">f</a>
-          <a href="https://www.instagram.com/spaja.1986" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">ig</a>
-          <a href="https://github.com/spaja86" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">gh</a>
-        </div>
-      </div>
-      <div class="footer-col"><h4>Usluge</h4><ul>
-        <li><a href="services.html">Tekuci Racuni</a></li><li><a href="loans.html">Krediti</a></li>
-        <li><a href="investments.html">Investicije</a></li><li><a href="services.html">Bezbednost</a></li>
-        <li><a href="services.html">International</a></li><li><a href="services.html">AI Savjetnik</a></li>
-      </ul></div>
-      <div class="footer-col"><h4>Kompanija</h4><ul>
-        <li><a href="about.html">O Banci</a></li><li><a href="about.html">Nas Tim</a></li>
-        <li><a href="index.html#smederevo">Smederevo</a></li><li><a href="index.html#partners">Partneri</a></li>
-      </ul></div>
-      <div class="footer-col"><h4>Kontakt</h4>
-        <div class="footer-contact">
-          <div class="contact-item"><span>&#128231;</span><a href="mailto:spajicn@yahoo.com">spajicn@yahoo.com</a></div>
-          <div class="contact-item"><span>&#128231;</span><a href="mailto:spajicn@gmail.com">spajicn@gmail.com</a></div>
-          <div class="contact-item"><span>&#128100;</span><span>Nikola Spajic</span></div>
-          <div class="contact-item"><span>&#127757;</span><span>Smederevo, Srbija</span></div>
-        </div>
+
+<!-- Platforme -->
+<section class="platforms-section">
+  <div class="section-inner">
+    <div class="section-title animate-hidden">
+      <h2>Ekosistem Kompanija SPAJA</h2>
+      <p>Sve naše platforme sarađuju međusobno</p>
+      <div class="gold-line"></div>
+    </div>
+    <div class="platform-grid">
+      <a href="https://io-openui-ao.vercel.app" class="platform-card animate-hidden" target="_blank" rel="noopener">
+        <span class="platform-icon">🌐</span>
+        <div class="platform-card-text"><strong>IO-OPENUI-AO</strong><span>Saradnja i igrice</span></div>
+      </a>
+      <a href="https://github.com/spaja86/Ai-Iq-Menja-nica" class="platform-card animate-hidden" target="_blank" rel="noopener">
+        <span class="platform-icon">💱</span>
+        <div class="platform-card-text"><strong>Ai-Iq-Menjačnica</strong><span>Kripto menjačnica</span></div>
+      </a>
+      <a href="https://github.com/spaja86/Kompanija-SPAJA" class="platform-card animate-hidden" target="_blank" rel="noopener">
+        <span class="platform-icon">🏢</span>
+        <div class="platform-card-text"><strong>Kompanija SPAJA</strong><span>Matična kompanija</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-text">🏦 AI IQ World Bank</div>
+      <p>Profesionalna svetska banka budućnosti. AI tehnologije u službi vaših finansija.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Stranice</h4>
+      <ul>
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="about.html">O Banci</a></li>
+        <li><a href="services.html">Usluge</a></li>
+        <li><a href="loans.html">Krediti</a></li>
+        <li><a href="investments.html">Investicije</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Platforme</h4>
+      <ul>
+        <li><a href="https://io-openui-ao.vercel.app" target="_blank" rel="noopener">IO-OPENUI-AO</a></li>
+        <li><a href="https://github.com/spaja86/Ai-Iq-Menja-nica" target="_blank" rel="noopener">Ai-Iq-Menjačnica</a></li>
+        <li><a href="https://github.com/spaja86/Kompanija-SPAJA" target="_blank" rel="noopener">Kompanija SPAJA</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Kontakt</h4>
+      <p>👤 Nikola Spajić</p>
+      <p>📧 <a href="mailto:spajicn@yahoo.com">spajicn@yahoo.com</a></p>
+      <p>📍 Smederevo, Srbija</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/Spaja86" target="_blank" rel="noopener">📘 FB</a>
+        <a href="https://www.instagram.com/spaja.1986" target="_blank" rel="noopener">📷 IG</a>
+        <a href="https://www.tiktok.com/@spaja.1986" target="_blank" rel="noopener">🎵 TT</a>
+        <a href="https://www.youtube.com/@spajanikopenevolution" target="_blank" rel="noopener">▶️ YT</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 <strong>Nikola Spajic</strong> / AI IQ World Bank. Sva prava zadrzana.</p>
-      <div style="display:flex;gap:16px;flex-wrap:wrap">
-        <a href="https://github.com/spaja86/Kompanija-SPAJA" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);font-size:0.85rem">Kompanija SPAJA</a>
-        <a href="https://io-openui-ao.vercel.app" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);font-size:0.85rem">IO-OPENUI-AO</a>
-        <a href="https://github.com/spaja86/Ai-Iq-Menja-nica" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);font-size:0.85rem">Menjacnica</a>
-      </div>
-    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="footer-year">2026</span> AI IQ World Bank. Sva prava zadržana. | Vlasnik: Nikola Spajić</p>
+    <p>Dizajnirano sa ❤️ u Srbiji</p>
   </div>
 </footer>
-<script src="js/animations.js"></script>
-<script src="js/main.js"></script>
-</body></html>
 
+<script src="js/ticker.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,159 +1,264 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontakt &#8212; AI IQ World Bank</title>
-  <meta name="description" content="Kontaktirajte AI IQ World Bank. Email: spajicn@yahoo.com, spajicn@gmail.com">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-  <meta name="author" content="Nikola Spajic">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/components.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kontaktirajte AI IQ World Bank — Nikola Spajić, Smederevo, Srbija. Email, social media i kontakt forma." />
+  <title>Kontakt — AI IQ World Bank</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header class="header" role="banner">
-  <div class="header-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-icon">AI</div>
-      <div class="logo-text"><span class="logo-name">AI IQ World Bank</span><span class="logo-tagline">Svetska Banka Buducnosti</span></div>
-    </a>
-    <nav class="nav" role="navigation" aria-label="Glavna navigacija">
-      <a href="index.html">Pocetna</a>
-      <a href="about.html">O Banci</a>
-      <a href="services.html">Usluge</a>
-      <a href="loans.html">Krediti</a>
-      <a href="investments.html">Investicije</a>
-      <a href="contact.html">Kontakt</a>
-      <div class="dropdown">
-        <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Platforme &#9660;</button>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="https://github.com/spaja86/Kompanija-SPAJA" target="_blank" rel="noopener noreferrer">Kompanija SPAJA</a></li>
-          <li><a href="https://io-openui-ao.vercel.app" target="_blank" rel="noopener noreferrer">IO-OPENUI-AO</a></li>
-          <li><a href="https://github.com/spaja86/Ai-Iq-Menja-nica" target="_blank" rel="noopener noreferrer">Menjacnica</a></li>
-        </ul>
-      </div>
+
+<div class="ticker-wrapper" aria-label="Finansijski ticker">
+  <div class="ticker-track"></div>
+</div>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-icon">🏦</span><span>AI IQ World Bank</span></a>
+    <nav aria-label="Glavna navigacija">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="about.html">O Banci</a></li>
+        <li><a href="services.html">Usluge</a></li>
+        <li><a href="loans.html">Krediti</a></li>
+        <li><a href="investments.html">Investicije</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
     </nav>
-    <div class="header-actions">
-      <a href="contact.html" class="btn btn-primary">Otvori Racun</a>
-      <button class="hamburger" aria-label="Otvori meni" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
+    <button class="hamburger" id="hamburger" aria-label="Otvori meni" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
-<nav class="mobile-nav" role="navigation" aria-label="Mobilna navigacija">
-  <a href="index.html">Pocetna</a><a href="about.html">O Banci</a><a href="services.html">Usluge</a>
-  <a href="loans.html">Krediti</a><a href="investments.html">Investicije</a><a href="contact.html">Kontakt</a>
-  <a href="contact.html" class="btn btn-primary mobile-btn">Otvori Racun</a>
-</nav>
-<section class="page-hero">
-  <div class="container" style="position:relative;z-index:1">
-    <h1>Kontaktirajte <span class="text-gold">Nas</span></h1>
-    <p>Tu smo 24/7. Odgovaramo u roku od 24 sata.</p>
-  </div>
-</section>
-<section class="page-section">
-  <div class="container">
-    <div class="smederevo-grid">
-      <div class="fade-in-left">
-        <h2 class="section-title" style="text-align:left">Posaljite <span>Poruku</span></h2>
-        <div class="divider" style="margin-left:0"></div>
-        <form class="contact-form" id="contactForm" novalidate>
-          <div class="form-row">
-            <div class="form-group"><label for="firstName">Ime</label><input type="text" id="firstName" name="firstName" placeholder="Vase ime" required></div>
-            <div class="form-group"><label for="lastName">Prezime</label><input type="text" id="lastName" name="lastName" placeholder="Vase prezime" required></div>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Početna</a><span>/</span>Kontakt</div>
+  <h1><span>Kontaktirajte</span> Nas</h1>
+  <p>Vaša pitanja su naš prioritet — odgovaramo u roku od 24 sata</p>
+</div>
+
+<!-- Kontakt sekcija -->
+<section>
+  <div class="section-inner">
+    <div class="contact-wrapper">
+      <!-- Kontakt info -->
+      <div class="contact-info animate-hidden">
+        <h3>Informacije za Kontakt</h3>
+
+        <div class="contact-item">
+          <span class="c-icon">👤</span>
+          <div>
+            <strong>Nikola Spajić</strong>
+            <span>Osnivač &amp; CEO, AI IQ World Bank</span>
           </div>
-          <div class="form-group"><label for="email">Email adresa</label><input type="email" id="email" name="email" placeholder="vas@email.com" required></div>
-          <div class="form-group"><label for="phone">Telefon (opciono)</label><input type="tel" id="phone" name="phone" placeholder="+381 ..."></div>
+        </div>
+
+        <div class="contact-item">
+          <span class="c-icon">📧</span>
+          <div>
+            <strong>Email adrese</strong>
+            <a href="mailto:spajicn@yahoo.com">spajicn@yahoo.com</a>
+            <a href="mailto:spajicn@gmail.com">spajicn@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <span class="c-icon">📍</span>
+          <div>
+            <strong>Lokacija</strong>
+            <span>Smederevo, Srbija</span>
+            <span>Balkansko poluostrvo, Evropa</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <span class="c-icon">⏰</span>
+          <div>
+            <strong>Radno Vreme</strong>
+            <span>Pon–Pet: 09:00–17:00 CET</span>
+            <span>Online podrška: 24/7</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <span class="c-icon">📘</span>
+          <div>
+            <strong>Facebook</strong>
+            <a href="https://www.facebook.com/Spaja86" target="_blank" rel="noopener">facebook.com/Spaja86</a>
+            <a href="https://www.facebook.com/profile.php?id=61583240952997" target="_blank" rel="noopener">facebook.com/profile (Banka)</a>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.facebook.com/Spaja86" class="social-link" target="_blank" rel="noopener">📘 Facebook</a>
+          <a href="https://www.instagram.com/spaja.1986" class="social-link" target="_blank" rel="noopener">📷 Instagram</a>
+          <a href="https://www.tiktok.com/@spaja.1986" class="social-link" target="_blank" rel="noopener">🎵 TikTok</a>
+          <a href="https://www.youtube.com/@spajanikopenevolution" class="social-link" target="_blank" rel="noopener">▶️ YouTube</a>
+        </div>
+      </div>
+
+      <!-- Forma -->
+      <div class="contact-form-panel animate-hidden">
+        <h3>📩 Pošaljite Poruku</h3>
+        <form id="contactForm" novalidate>
           <div class="form-group">
-            <label for="subject">Tema</label>
-            <select id="subject" name="subject">
+            <label for="contactName">Vaše Ime *</label>
+            <input type="text" id="contactName" name="name" placeholder="npr. Marko Marković" required />
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email Adresa *</label>
+            <input type="email" id="contactEmail" name="email" placeholder="vasa@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="contactSubject">Tema</label>
+            <select id="contactSubject" name="subject">
               <option value="">Izaberite temu...</option>
-              <option>Otvaranje racuna</option>
-              <option>Kreditna prijava</option>
-              <option>Investicije</option>
-              <option>Tehnicka podrska</option>
-              <option>Opcenito pitanje</option>
+              <option>Informacije o uslugama</option>
+              <option>Kreditni zahtev</option>
+              <option>Investiciono savetovanje</option>
+              <option>Tehnička podrška</option>
+              <option>Poslovne saradnje</option>
+              <option>Ostalo</option>
             </select>
           </div>
-          <div class="form-group"><label for="message">Poruka</label><textarea id="message" name="message" placeholder="Vasa poruka..." required></textarea></div>
-          <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Posalji Poruku</button>
+          <div class="form-group">
+            <label for="contactMessage">Poruka *</label>
+            <textarea id="contactMessage" name="message" rows="5" placeholder="Napišite svoju poruku ovde..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;">Pošalji Poruku ✉️</button>
+          <div class="form-message" id="formMessage"></div>
         </form>
-      </div>
-      <div class="fade-in-right delay-2">
-        <h2 class="section-title" style="text-align:left">Kontakt <span>Informacije</span></h2>
-        <div class="divider" style="margin-left:0"></div>
-        <div class="info-card" style="margin-bottom:20px">
-          <div class="icon">&#128231;</div>
-          <h3>Email</h3>
-          <p><a href="mailto:spajicn@yahoo.com">spajicn@yahoo.com</a><br><a href="mailto:spajicn@gmail.com">spajicn@gmail.com</a></p>
-        </div>
-        <div class="info-card" style="margin-bottom:20px">
-          <div class="icon">&#128100;</div>
-          <h3>Vlasnik / Osnivac</h3>
-          <p>Nikola Spajic<br>CEO &amp; Osnivac AI IQ World Bank</p>
-        </div>
-        <div class="info-card" style="margin-bottom:20px">
-          <div class="icon">&#127760;</div>
-          <h3>Sediste</h3>
-          <p>Smederevo, Srbija<br>Ekspanzija u toku &#8212; 190+ zemalja</p>
-        </div>
-        <div class="info-card">
-          <div class="icon">&#128241;</div>
-          <h3>Drustvene Mreze</h3>
-          <p>
-            <a href="https://www.facebook.com/Spaja86" target="_blank" rel="noopener noreferrer">Facebook: Spaja86</a><br>
-            <a href="https://www.instagram.com/spaja.1986" target="_blank" rel="noopener noreferrer">Instagram: spaja.1986</a><br>
-            <a href="https://github.com/spaja86" target="_blank" rel="noopener noreferrer">GitHub: spaja86</a>
-          </p>
-        </div>
       </div>
     </div>
   </div>
 </section>
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="logo"><div class="logo-icon">AI</div><div class="logo-text"><span class="logo-name">AI IQ World Bank</span><span class="logo-tagline">Svetska Banka Buducnosti</span></div></a>
-        <p>Maksimalno profesionalna AI banka sa globalnim dosegom u 190+ zemalja.</p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/Spaja86" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">f</a>
-          <a href="https://www.instagram.com/spaja.1986" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">ig</a>
-          <a href="https://github.com/spaja86" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">gh</a>
-        </div>
-      </div>
-      <div class="footer-col"><h4>Usluge</h4><ul>
-        <li><a href="services.html">Tekuci Racuni</a></li><li><a href="loans.html">Krediti</a></li>
-        <li><a href="investments.html">Investicije</a></li><li><a href="services.html">Bezbednost</a></li>
-        <li><a href="services.html">International</a></li><li><a href="services.html">AI Savjetnik</a></li>
-      </ul></div>
-      <div class="footer-col"><h4>Kompanija</h4><ul>
-        <li><a href="about.html">O Banci</a></li><li><a href="about.html">Nas Tim</a></li>
-        <li><a href="index.html#smederevo">Smederevo</a></li><li><a href="index.html#partners">Partneri</a></li>
-      </ul></div>
-      <div class="footer-col"><h4>Kontakt</h4>
-        <div class="footer-contact">
-          <div class="contact-item"><span>&#128231;</span><a href="mailto:spajicn@yahoo.com">spajicn@yahoo.com</a></div>
-          <div class="contact-item"><span>&#128231;</span><a href="mailto:spajicn@gmail.com">spajicn@gmail.com</a></div>
-          <div class="contact-item"><span>&#128100;</span><span>Nikola Spajic</span></div>
-          <div class="contact-item"><span>&#127757;</span><span>Smederevo, Srbija</span></div>
-        </div>
-      </div>
+
+<!-- Mapa -->
+<section style="background:var(--bank-mid); border-top:1px solid var(--glass-border); border-bottom:1px solid var(--glass-border);">
+  <div class="section-inner">
+    <div class="section-title animate-hidden">
+      <h2>Naša Lokacija</h2>
+      <p>Smederevo, Srbija — Digitalna filijala AI IQ World Bank</p>
+      <div class="gold-line"></div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 <strong>Nikola Spajic</strong> / AI IQ World Bank. Sva prava zadrzana.</p>
-      <div style="display:flex;gap:16px;flex-wrap:wrap">
-        <a href="https://github.com/spaja86/Kompanija-SPAJA" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);font-size:0.85rem">Kompanija SPAJA</a>
-        <a href="https://io-openui-ao.vercel.app" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);font-size:0.85rem">IO-OPENUI-AO</a>
-        <a href="https://github.com/spaja86/Ai-Iq-Menja-nica" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);font-size:0.85rem">Menjacnica</a>
+    <div class="map-placeholder animate-hidden">
+      <div class="map-pin">📍</div>
+      <strong>Smederevo, Srbija</strong>
+      <span>Balkansko poluostrvo, Centralna Evropa</span>
+      <span style="color:var(--bank-gold);">44°40′ S, 20°56′ I</span>
+    </div>
+  </div>
+</section>
+
+<!-- Platforme -->
+<section class="platforms-section">
+  <div class="section-inner">
+    <div class="section-title animate-hidden">
+      <h2>Ekosistem Kompanija SPAJA</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="platform-grid">
+      <a href="https://io-openui-ao.vercel.app" class="platform-card animate-hidden" target="_blank" rel="noopener">
+        <span class="platform-icon">🌐</span>
+        <div class="platform-card-text"><strong>IO-OPENUI-AO</strong><span>Saradnja i igrice</span></div>
+      </a>
+      <a href="https://github.com/spaja86/Ai-Iq-Menja-nica" class="platform-card animate-hidden" target="_blank" rel="noopener">
+        <span class="platform-icon">💱</span>
+        <div class="platform-card-text"><strong>Ai-Iq-Menjačnica</strong><span>Kripto menjačnica</span></div>
+      </a>
+      <a href="https://github.com/spaja86/Kompanija-SPAJA" class="platform-card animate-hidden" target="_blank" rel="noopener">
+        <span class="platform-icon">🏢</span>
+        <div class="platform-card-text"><strong>Kompanija SPAJA</strong><span>Matična kompanija</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-text">🏦 AI IQ World Bank</div>
+      <p>Profesionalna svetska banka budućnosti. AI tehnologije u službi vaših finansija.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Stranice</h4>
+      <ul>
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="about.html">O Banci</a></li>
+        <li><a href="services.html">Usluge</a></li>
+        <li><a href="loans.html">Krediti</a></li>
+        <li><a href="investments.html">Investicije</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Platforme</h4>
+      <ul>
+        <li><a href="https://io-openui-ao.vercel.app" target="_blank" rel="noopener">IO-OPENUI-AO</a></li>
+        <li><a href="https://github.com/spaja86/Ai-Iq-Menja-nica" target="_blank" rel="noopener">Ai-Iq-Menjačnica</a></li>
+        <li><a href="https://github.com/spaja86/Kompanija-SPAJA" target="_blank" rel="noopener">Kompanija SPAJA</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Kontakt</h4>
+      <p>👤 Nikola Spajić</p>
+      <p>📧 <a href="mailto:spajicn@yahoo.com">spajicn@yahoo.com</a></p>
+      <p>📍 Smederevo, Srbija</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/Spaja86" target="_blank" rel="noopener">📘 FB</a>
+        <a href="https://www.instagram.com/spaja.1986" target="_blank" rel="noopener">📷 IG</a>
+        <a href="https://www.tiktok.com/@spaja.1986" target="_blank" rel="noopener">🎵 TT</a>
+        <a href="https://www.youtube.com/@spajanikopenevolution" target="_blank" rel="noopener">▶️ YT</a>
       </div>
     </div>
   </div>
+  <div class="footer-bottom">
+    <p>© <span id="footer-year">2026</span> AI IQ World Bank. Sva prava zadržana. | Vlasnik: Nikola Spajić</p>
+    <p>Dizajnirano sa ❤️ u Srbiji</p>
+  </div>
 </footer>
-<script src="js/animations.js"></script>
-<script src="js/main.js"></script>
-</body></html>
 
+<script src="js/ticker.js"></script>
+<script src="js/main.js"></script>
+<script>
+// Contact form validation
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('contactForm');
+  const msg  = document.getElementById('formMessage');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    msg.style.display = 'none';
+    msg.className = 'form-message';
+
+    const name    = form.querySelector('#contactName').value.trim();
+    const email   = form.querySelector('#contactEmail').value.trim();
+    const message = form.querySelector('#contactMessage').value.trim();
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!name) {
+      show('Molimo unesite vaše ime.', false); return;
+    }
+    if (!email || !emailRe.test(email)) {
+      show('Molimo unesite ispravnu email adresu.', false); return;
+    }
+    if (!message || message.length < 10) {
+      show('Poruka mora imati najmanje 10 karaktera.', false); return;
+    }
+
+    show('✅ Hvala! Vaša poruka je uspešno poslata. Odgovorićemo u roku od 24 sata.', true);
+    form.reset();
+  });
+
+  function show(text, success) {
+    msg.textContent = text;
+    msg.classList.add(success ? 'success' : 'error');
+    msg.style.display = 'block';
+    msg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+});
+</script>
 </body>
 </html>

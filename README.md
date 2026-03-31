@@ -1,91 +1,130 @@
-# AI IQ World Bank
+# 🏦 AI IQ World Bank
 
-> Svetska Banka Buducnosti | The Future of Global Banking, Powered by AI
+**Profesionalna Svetska Banka Budućnosti** — izgrađena na AI tehnologijama sa globalnom pokrivenošću u 190+ zemalja.
 
-**Vlasnik / Owner:** Nikola Spajic  
-**Kontakt:** spajicn@yahoo.com | spajicn@gmail.com  
-**Lokacija:** Smederevo, Srbija  
+[![Live Demo](https://img.shields.io/badge/Live-Demo-gold?style=for-the-badge)](https://github.com/spaja86/Ai-Iq-World-Bank)
+[![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ---
 
-## O Projektu
+## 📋 O Projektu
 
-AI IQ World Bank je maksimalno profesionalna bankarska platforma zasnovana na vestackoj inteligenciji. Saradjuje sa svim bankama sveta i nudi kompletnu paletu finansijskih usluga za fizicka i pravna lica u 190+ zemalja.
+AI IQ World Bank je profesionalni višestraničan bankarski sajt sa interaktivnim JavaScript funkcijama, Canvas grafovima, animiranim counter-ima, kreditnim kalkulatorom i live ticker bar-om.
 
-## Stranice
+**Karakteristike:**
+- 🌍 Pokrivenost u **190+ zemalja** širom sveta
+- 💰 **$50B+** ukupna aktiva
+- 👥 **10M+** zadovoljnih klijenata
+- ⏰ **24/7** korisnička podrška
+- 🤖 AI-potpomognuto bankarstvo naredne generacije
 
-| Stranica | Opis |
-|---|---|
-| `index.html` | Homepage sa hero, statistike, usluge, kalkulator, graf, partneri, Smederevo |
-| `about.html` | O banci, misija, tim, vrednosti |
-| `services.html` | Sve bankarske usluge i uporedjivanje paketa |
-| `loans.html` | Krediti (stambeni, auto, licni) + kalkulator |
-| `investments.html` | Investicioni fondovi + FAQ |
-| `contact.html` | Kontakt forma i informacije |
+---
 
-## Tehnologije
-
-- **HTML5** — semanticka struktura, ARIA atributi
-- **CSS3** — custom properties, Grid, Flexbox, glassmorphism, animacije
-- **Vanilla JavaScript** — bez zavisnosti od eksternih biblioteka
-- **Canvas API** — grafovi rasta sredstava
-- **Intersection Observer API** — scroll animacije i counter animacije
-
-## Struktura Fajlova
+## 📁 Struktura Projekta
 
 ```
 Ai-Iq-World-Bank/
-├── index.html
-├── about.html
-├── services.html
-├── loans.html
-├── investments.html
-├── contact.html
-├── css/
-│   ├── styles.css          # Glavna tema, dark navy, animacije
-│   └── components.css      # Visestruko koristive komponente
+├── index.html          ← Naslovna strana (hero, stats, usluge, platforme)
+├── about.html          ← O banci (misija, vrednosti, osnivač)
+├── services.html       ← Bankarske usluge (kartice, krediti, FX...)
+├── loans.html          ← Krediti sa interaktivnim kalkulatorom
+├── investments.html    ← Investicije sa Canvas grafovima
+├── contact.html        ← Kontakt forma sa validacijom
+├── styles.css          ← Kompletan profesionalni CSS (dark blue + gold tema)
 ├── js/
-│   ├── main.js             # Navigacija, hamburger, smooth scroll
-│   ├── banking.js          # Kalkulator kredita i stednje
-│   ├── chart.js            # Canvas graf rasta sredstava
-│   └── animations.js       # Scroll animacije, counter animacije
+│   ├── main.js         ← Navigacija, sticky header, counters, IntersectionObserver
+│   ├── calculator.js   ← Kreditni kalkulator (M = P[r(1+r)^n]/[(1+r)^n-1])
+│   ├── charts.js       ← Canvas grafovi (linijski + stupičasti)
+│   └── ticker.js       ← Live ticker bar animacija
 ├── README.md
 └── SECURITY.md
 ```
 
-## Dizajn
+---
 
-- **Tamno-plava tema**: `#0a1628` (navy) + `#c9a227` (gold) + bijeli tekst
-- Sticky header sa navigacijom i dropdown platformi
-- Glassmorphism kartice za usluge
-- Responzivni dizajn (hamburger meni na mobilnom)
-- Animirani ticker bar sa kursevima
+## ✨ Funkcionalnosti
 
-## Kalkulator Kredita
+### �� Dizajn
+- **Profesionalna bankarska tema**: tamno plava (`#0a1628`), zlatna (`#c9a84c`), bela
+- **Sticky glassmorphism header** sa efektom zamućenja
+- **Animirani ticker bar**: BTC, ETH, EUR/USD, USD/RSD, GOLD i još...
+- **Hover efekti** na karticama sa zlatnom gornjom linijom
+- **Responsive mobile-first** dizajn
+- CSS varijable za konzistentnu temu
 
-Formula za mesecnu ratu: `M = P[r(1+r)^n] / [(1+r)^n - 1]`
+### 🧮 Kreditni Kalkulator (`loans.html`)
+Interaktivni kalkulator sa formulom:
+```
+M = P × [r(1+r)ⁿ] / [(1+r)ⁿ − 1]
+```
+- **P** = iznos kredita | **r** = mesečna kamatna stopa | **n** = broj rata
+- Range slideri + number inputi sinhronizovani
+- Canvas pita grafikon: Glavnica vs. Kamata
 
-- P = iznos kredita
-- r = mesecna kamatna stopa (godisnja / 12)
-- n = broj meseci otplate
+### 📊 Canvas Grafovi (`investments.html`)
+- **Linijski grafikon** rasta aktive 2020–2026 ($30B → $50B) sa gradijentom
+- **Stupičasti grafikon** godišnjih prinosa po fondovima
+- Animirani, responzivni, redraw pri resize
 
-## Platforma Ekosistem
+### 📡 Ticker Bar
+- `BTC: $67,420 ▲2.3% | ETH: $3,840 ▲1.7% | EUR/USD: 1.0842 | USD/RSD: 109.50 | GOLD: $2,340/oz`
+- CSS animacija beskonačnog scrolling-a
 
-| Platforma | Link |
-|---|---|
-| Kompanija SPAJA | https://github.com/spaja86/Kompanija-SPAJA |
-| IO-OPENUI-AO | https://io-openui-ao.vercel.app |
-| AI IQ World Bank | https://github.com/spaja86/Ai-Iq-World-Bank |
-| AI IQ Menjacnica | https://github.com/spaja86/Ai-Iq-Menja-nica |
-
-## Globalna Partnerstva
-
-- **IMF** — International Monetary Fund
-- **World Bank Group** — Global Development Partner
-- **ECB** — European Central Bank
-- **BIS** — Bank for International Settlements
-- **Omega AI** — AI Technology Partner
+### �� Counter Animacije
+- Animate on scroll koristeći `IntersectionObserver`
+- 190+ Zemalja | $50B+ Aktiva | 10M+ Klijenata | 24/7 Podrška
 
 ---
 
-**Copyright 2026 Nikola Spajic / AI IQ World Bank. Sva prava zadrzana.**
+## 🚀 Kako Pokrenuti Lokalno
+
+Nema build koraka — čist HTML/CSS/JS:
+
+```bash
+# Klonirajte repozitorijum
+git clone https://github.com/spaja86/Ai-Iq-World-Bank.git
+cd Ai-Iq-World-Bank
+
+# Pokrenite sa VS Code Live Server ili bilo kojim HTTP serverom
+python3 -m http.server 8000
+# → Otvorite http://localhost:8000
+```
+
+---
+
+## 🔗 Ekosistem Kompanija SPAJA
+
+Sve platforme sarađuju međusobno:
+
+| Platforma | Opis | Link |
+|-----------|------|------|
+| 🏦 **AI IQ World Bank** | Profesionalna svetska banka | *Ova platforma* |
+| 🌐 **IO-OPENUI-AO** | Saradnja, igrice, WebRTC | [io-openui-ao.vercel.app](https://io-openui-ao.vercel.app) |
+| 💱 **Ai-Iq-Menjačnica** | Kripto menjačnica | [GitHub](https://github.com/spaja86/Ai-Iq-Menja-nica) |
+| 🏢 **Kompanija SPAJA** | Matična IT kompanija | [GitHub](https://github.com/spaja86/Kompanija-SPAJA) |
+
+---
+
+## 👤 Vlasnik i Kontakt
+
+**Nikola Spajić**
+Osnivač & CEO — Smederevo, Srbija
+
+| Kontakt | Link |
+|---------|------|
+| 📧 Email | [spajicn@yahoo.com](mailto:spajicn@yahoo.com) |
+| 📧 Email | [spajicn@gmail.com](mailto:spajicn@gmail.com) |
+| 📘 Facebook | [facebook.com/Spaja86](https://www.facebook.com/Spaja86) |
+| 📘 Facebook (Banka) | [facebook.com/profile](https://www.facebook.com/profile.php?id=61583240952997) |
+| 📷 Instagram | [instagram.com/spaja.1986](https://www.instagram.com/spaja.1986) |
+| 🎵 TikTok | [tiktok.com/@spaja.1986](https://www.tiktok.com/@spaja.1986) |
+| ▶️ YouTube | [youtube.com/@spajanikopenevolution](https://www.youtube.com/@spajanikopenevolution) |
+
+---
+
+## 📄 Licenca
+
+© 2026 AI IQ World Bank. Sva prava zadržana.  
+Vlasnik: **Nikola Spajić** | Smederevo, Srbija
