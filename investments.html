@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Investicije AI IQ World Bank — AI-pogonski investicioni fondovi, Canvas grafovi rasta aktive i godišnjih prinosa." />
+  <title>Investicije — AI IQ World Bank</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="ticker-wrapper" aria-label="Finansijski ticker">
+  <div class="ticker-track"></div>
+</div>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-icon">🏦</span><span>AI IQ World Bank</span></a>
+    <nav aria-label="Glavna navigacija">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="about.html">O Banci</a></li>
+        <li><a href="services.html">Usluge</a></li>
+        <li><a href="loans.html">Krediti</a></li>
+        <li><a href="investments.html">Investicije</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Otvori meni" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Početna</a><span>/</span>Investicije</div>
+  <h1>Pametne <span>Investicije</span></h1>
+  <p>AI-pogonski investicioni fondovi sa dokazanim prinosima i globalnom diversifikacijom</p>
+</div>
+
+<!-- Investicioni fondovi kartice -->
+<section>
+  <div class="section-inner">
+    <div class="section-title animate-hidden">
+      <h2>Naši Investicioni Fondovi</h2>
+      <p>Izaberite fond koji odgovara vašem rizičnom profilu</p>
+      <div class="gold-line"></div>
+    </div>
+    <div class="investment-cards">
+      <div class="inv-card animate-hidden">
+        <div class="inv-icon">🌱</div>
+        <h4>Konzervativni Fond</h4>
+        <div class="inv-rate">5-7%</div>
+        <p>Godišnji prinos | Nizak rizik</p>
+      </div>
+      <div class="inv-card animate-hidden">
+        <div class="inv-icon">⚖️</div>
+        <h4>Balansirani Fond</h4>
+        <div class="inv-rate">8-11%</div>
+        <p>Godišnji prinos | Srednji rizik</p>
+      </div>
+      <div class="inv-card animate-hidden">
+        <div class="inv-icon">🚀</div>
+        <h4>Agresivni Fond</h4>
+        <div class="inv-rate">12-18%</div>
+        <p>Godišnji prinos | Visok rizik</p>
+      </div>
+      <div class="inv-card animate-hidden">
+        <div class="inv-icon">🤖</div>
+        <h4>AI Fond</h4>
+        <div class="inv-rate">14%+</div>
+        <p>Godišnji prinos | AI-upravljan</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Canvas grafovi -->
+<section style="background:var(--bank-mid); border-top:1px solid var(--glass-border); border-bottom:1px solid var(--glass-border);">
+  <div class="section-inner">
+    <div class="section-title animate-hidden">
+      <h2>Rast Aktive Banke</h2>
+      <p>Ukupna aktiva u milijardama USD — 2020–2026</p>
+      <div class="gold-line"></div>
+    </div>
+    <div class="chart-container animate-hidden">
+      <h3>📈 Rast Ukupne Aktive (2020–2026)</h3>
+      <canvas id="assetsChart" aria-label="Linijski grafikon rasta aktive"></canvas>
+    </div>
+    <div style="margin-top:2rem;" class="chart-container animate-hidden">
+      <h3>📊 Godišnji Prinosi Fondova (%)</h3>
+      <canvas id="returnsChart" aria-label="Stupičasti grafikon godišnjih prinosa"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- Prednosti -->
+<section>
+  <div class="section-inner">
+    <div class="section-title animate-hidden">
+      <h2>Zašto Investirati sa Nama?</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="cards-grid">
+      <div class="card animate-hidden">
+        <div class="card-icon">🤖</div>
+        <h3>AI Upravljanje</h3>
+        <p>Naš AI sistem analizira 1000+ tržišnih signala sekundo i prilagođava portfelj u realnom vremenu za maksimalne prinose.</p>
+      </div>
+      <div class="card animate-hidden">
+        <div class="card-icon">🌍</div>
+        <h3>Globalna Diversifikacija</h3>
+        <p>Investirajte u 190+ tržišta širom sveta — akcije, obveznice, nekretnine, robni marketi i digitalna imovina.</p>
+      </div>
+      <div class="card animate-hidden">
+        <div class="card-icon">💸</div>
+        <h3>Niske Naknade</h3>
+        <p>Upravljačka naknada od samo 0.5% godišnje — jedna od najnižih u industriji zahvaljujući AI automatizaciji.</p>
+      </div>
+      <div class="card animate-hidden">
+        <div class="card-icon">🛡️</div>
+        <h3>Zaštita Kapitala</h3>
+        <p>AI risk management sistem automatski štiti vaš kapital od naglog pada tržišta kroz hedging strategije.</p>
+      </div>
+      <div class="card animate-hidden">
+        <div class="card-icon">📱</div>
+        <h3>Real-Time Praćenje</h3>
+        <p>Pratite performanse vašeg portfelja 24/7 uz live grafove, obaveštenja i AI preporuke.</p>
+      </div>
+      <div class="card animate-hidden">
+        <div class="card-icon">💎</div>
+        <h3>Premium Klijenti</h3>
+        <p>Klijentima sa investicijom iznad €50,000 obezbeđujemo ličnog AI finansijskog savetnika bez naknade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Platforme -->
+<section class="platforms-section">
+  <div class="section-inner">
+    <div class="section-title animate-hidden">
+      <h2>Ekosistem Kompanija SPAJA</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="platform-grid">
+      <a href="https://io-openui-ao.vercel.app" class="platform-card animate-hidden" target="_blank" rel="noopener">
+        <span class="platform-icon">🌐</span>
+        <div class="platform-card-text"><strong>IO-OPENUI-AO</strong><span>Saradnja i igrice</span></div>
+      </a>
+      <a href="https://github.com/spaja86/Ai-Iq-Menja-nica" class="platform-card animate-hidden" target="_blank" rel="noopener">
+        <span class="platform-icon">💱</span>
+        <div class="platform-card-text"><strong>Ai-Iq-Menjačnica</strong><span>Kripto menjačnica</span></div>
+      </a>
+      <a href="https://github.com/spaja86/Kompanija-SPAJA" class="platform-card animate-hidden" target="_blank" rel="noopener">
+        <span class="platform-icon">🏢</span>
+        <div class="platform-card-text"><strong>Kompanija SPAJA</strong><span>Matična kompanija</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-text">🏦 AI IQ World Bank</div>
+      <p>Profesionalna svetska banka budućnosti. AI tehnologije u službi vaših finansija.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Stranice</h4>
+      <ul>
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="about.html">O Banci</a></li>
+        <li><a href="services.html">Usluge</a></li>
+        <li><a href="loans.html">Krediti</a></li>
+        <li><a href="investments.html">Investicije</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Platforme</h4>
+      <ul>
+        <li><a href="https://io-openui-ao.vercel.app" target="_blank" rel="noopener">IO-OPENUI-AO</a></li>
+        <li><a href="https://github.com/spaja86/Ai-Iq-Menja-nica" target="_blank" rel="noopener">Ai-Iq-Menjačnica</a></li>
+        <li><a href="https://github.com/spaja86/Kompanija-SPAJA" target="_blank" rel="noopener">Kompanija SPAJA</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Kontakt</h4>
+      <p>👤 Nikola Spajić</p>
+      <p>📧 <a href="mailto:spajicn@yahoo.com">spajicn@yahoo.com</a></p>
+      <p>📍 Smederevo, Srbija</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/Spaja86" target="_blank" rel="noopener">📘 FB</a>
+        <a href="https://www.instagram.com/spaja.1986" target="_blank" rel="noopener">📷 IG</a>
+        <a href="https://www.tiktok.com/@spaja.1986" target="_blank" rel="noopener">🎵 TT</a>
+        <a href="https://www.youtube.com/@spajanikopenevolution" target="_blank" rel="noopener">▶️ YT</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="footer-year">2026</span> AI IQ World Bank. Sva prava zadržana. | Vlasnik: Nikola Spajić</p>
+    <p>Dizajnirano sa ❤️ u Srbiji</p>
+  </div>
+</footer>
+
+<script src="js/ticker.js"></script>
+<script src="js/main.js"></script>
+<script src="js/charts.js"></script>
+</body>
+</html>
