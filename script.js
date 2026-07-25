@@ -18,9 +18,13 @@ function handleUserLogin(username, password) {
     }
 }
 
+const SIMULATED_INTEREST_RATE = 4.75;
+const MAX_RATE_SCALE = 10;
+const ANIMATION_DELAY_MS = 100;
+
 // Function to display and animate the interest rate risk indicators
 function displayInterestRateRisk() {
-    const simulatedRate = 4.75; // Simulated current interest rate in %
+    const simulatedRate = SIMULATED_INTEREST_RATE;
 
     const rateEl = document.getElementById('current-rate');
     const levelEl = document.getElementById('risk-level');
@@ -46,11 +50,11 @@ function displayInterestRateRisk() {
     levelEl.className = 'risk-indicator ' + riskClass;
 
     // Animate the rate bar (max scale = 10%)
-    const barWidthPercent = Math.min((simulatedRate / 10) * 100, 100);
+    const barWidthPercent = Math.min((simulatedRate / MAX_RATE_SCALE) * 100, 100);
     barEl.style.width = '0%';
     setTimeout(() => {
         barEl.style.width = barWidthPercent + '%';
-    }, 100);
+    }, ANIMATION_DELAY_MS);
 }
 
 // Initialize on DOM ready
