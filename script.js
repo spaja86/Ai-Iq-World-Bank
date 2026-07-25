@@ -53,10 +53,8 @@ function displayInterestRateRisk() {
     }, 100);
 }
 
-// Call the function to display the current date and time
-displayCurrentDateTime();
-
-// Initialize interest rate risk section on DOM ready
+// Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', function () {
+    displayCurrentDateTime();
     displayInterestRateRisk();
 });
