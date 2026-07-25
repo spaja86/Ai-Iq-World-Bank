@@ -14,6 +14,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#indekurilanc">INDEKURILANC</a></li>
                 <li><a href="#technology">Technology</a></li>
                 <li><a href="#partners">Partners</a></li>
                 <li><a href="#statistics">Statistics</a></li>
@@ -33,6 +34,61 @@
         <section id="services">
             <h2>Our Services</h2>
             <p>We offer a wide range of services tailored for AI development and implementation.</p>
+        </section>
+        <section id="indekurilanc" aria-labelledby="indekurilanc-title">
+            <h2 id="indekurilanc-title">INDEKURILANC</h2>
+            <p>
+                INDEKURILANC is a frontend-only readiness index prototype that estimates AI
+                capability maturity from weighted inputs.
+            </p>
+            <div class="indekurilanc-grid">
+                <article class="card indekurilanc-card">
+                    <h3>Overview</h3>
+                    <p>
+                        Use the calculator to estimate readiness from infrastructure, skills,
+                        and governance indicators. Values are scored from 0 to 100.
+                    </p>
+                    <ul>
+                        <li>0-39: Early Stage</li>
+                        <li>40-69: Emerging</li>
+                        <li>70-100: Advanced</li>
+                    </ul>
+                </article>
+                <article class="card indekurilanc-card" aria-labelledby="calculator-title">
+                    <h3 id="calculator-title">Readiness Calculator</h3>
+                    <form id="indekurilanc-form" novalidate>
+                        <label for="infrastructure-score">Infrastructure (0-100)</label>
+                        <input id="infrastructure-score" name="infrastructure" type="number" min="0" max="100" required>
+
+                        <label for="skills-score">Skills (0-100)</label>
+                        <input id="skills-score" name="skills" type="number" min="0" max="100" required>
+
+                        <label for="governance-score">Governance (0-100)</label>
+                        <input id="governance-score" name="governance" type="number" min="0" max="100" required>
+
+                        <button type="submit">Calculate INDEKURILANC</button>
+                        <button type="button" id="indekurilanc-reset">Reset</button>
+                    </form>
+                    <p id="indekurilanc-feedback" class="indekurilanc-feedback" aria-live="polite"></p>
+                </article>
+                <article class="card indekurilanc-card">
+                    <h3>Result</h3>
+                    <dl id="indekurilanc-result" class="indekurilanc-result" aria-live="polite">
+                        <div>
+                            <dt>Index Score</dt>
+                            <dd id="indekurilanc-score">-</dd>
+                        </div>
+                        <div>
+                            <dt>Status</dt>
+                            <dd id="indekurilanc-status">Not Calculated</dd>
+                        </div>
+                    </dl>
+                    <p>
+                        This static prototype does not call external APIs. A future version can map
+                        inputs to external country and institution datasets.
+                    </p>
+                </article>
+            </div>
         </section>
         <section id="technology">
             <h2>Technology with Omega AI</h2>
@@ -67,5 +123,6 @@
         <p>&copy; 2026 AI IQ World Bank. All rights reserved.</p>
         <p>Owner: Nikola Spajić</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
