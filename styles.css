@@ -68,3 +68,143 @@ h1, h2, h3 {
         padding: 10px;
     }
 }
+
+/* ── Interest Rate Risk Section ── */
+
+#interest-rate-risk {
+    padding: 20px;
+}
+
+.interest-rate-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 16px 0;
+    transition: transform 0.3s;
+}
+
+.interest-rate-card:hover {
+    transform: translateY(-5px);
+}
+
+.risk-metrics {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.risk-metric-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-width: 160px;
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.metric-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0072ff;
+}
+
+.risk-indicator {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    background: #aaa;
+    width: fit-content;
+}
+
+.risk-indicator.risk-low {
+    background: #28a745;
+}
+
+.risk-indicator.risk-medium {
+    background: #fd7e14;
+}
+
+.risk-indicator.risk-high {
+    background: #dc3545;
+}
+
+.rate-bar-container {
+    margin-top: 8px;
+}
+
+.rate-bar-container label {
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.rate-bar-track {
+    background: #e9ecef;
+    border-radius: 8px;
+    height: 18px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.rate-bar {
+    height: 100%;
+    width: 0%;
+    border-radius: 8px;
+    background: linear-gradient(to right, #28a745, #fd7e14, #dc3545);
+    transition: width 1.2s ease-in-out;
+}
+
+.rate-bar-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #777;
+    margin-top: 4px;
+}
+
+.risk-cta {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.risk-cta p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #0072ff;
+    color: #fff;
+    padding: 10px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background: #005bcc;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .risk-metrics {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
