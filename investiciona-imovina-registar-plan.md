@@ -32,6 +32,12 @@ Ovaj dokument je **fill-in template/framework** za evidenciju i analizu:
   - **Interna poverljiva verzija:** objekat/site ID + grad + država.
   - **Deljena/sanitizovana verzija:** region + država (bez tačne adrese i bez detalja objekta).
 
+### 1.4 Zašto su mašine uključene u isti registar
+- Mašine za novac nisu investiciona imovina kao zlato/dijamanti, ali jesu kritična operativna sredstva koja utiču na bezbednost, raspoloživost i kontinuitet gotovinskih procesa.
+- U ovom okviru vode se zajedno radi jedinstvenog pregleda „imovina + operativna podrška“, uz jasno odvojeno izveštavanje:
+  - **Investiciona imovina (dijamanti/zlato):** količine (t/kg/karat), pravni status, lokacija čuvanja.
+  - **Operativna oprema (mašine):** broj komada, operativni status, kapacitet, kritičnost i rizik prekida.
+
 ## 2) Period i referentni datum
 
 - **Datum preseka (as-of):**

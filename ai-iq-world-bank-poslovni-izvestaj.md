@@ -138,6 +138,16 @@ Finalni izveštaj mora sadržati:
 - Governance:
 - Ukupni trend indeksa po kvartalima:
 
+Izvori dokaza za ocene (obavezno dokumentovati po kvartalu):
+- **Infrastructure:** inventar sistema/integracija, izveštaji kvaliteta podataka, sigurnosni izveštaji, evidencija performansi i dostupnosti.
+- **Skills:** HR matrica kompetencija, evidencija obuka/sertifikata, rezultati evaluacije timova, projektni KPI primene AI.
+- **Governance:** usvojene politike/procedure, compliance i risk evidencije, zapisnici tela odlučivanja, audit i kontrolni nalazi.
+
+Metod procene ocena 0–100:
+- Za svaki pod-kriterijum navesti konkretan dokaz (dokument, izveštaj, metrika) i datum važenja.
+- Ocenjivanje mora raditi isti odgovorni tim po istoj rubrici kroz sve kvartale.
+- U izveštaju obavezno navesti metodološke napomene kada postoji promena izvora ili kvaliteta podataka.
+
 Napomena: INDEKURILANC je interni indeks AI zrelosti koji meri spremnost kroz tri dimenzije (infrastructure, skills, governance).
 Formula obračuna: `INDEKURILANC = (Infrastructure × 0.40) + (Skills × 0.35) + (Governance × 0.25)`.
 Model u ovom repozitorijumu koristi fiksne težine:
