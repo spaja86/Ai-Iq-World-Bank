@@ -177,7 +177,9 @@ Napomena za objavu: za mašine koristiti lokacione kodove ili regione; ne objavl
 Finalni output obavezno uključuje:
 - Executive summary
 - Tabelu ukupnih količina po kategoriji
-- Mapu „koliko i gde“ po lokacijama (za deljenje koristiti agregirane lokacije i sanitizovane podatke)
+- Mapu „koliko i gde“ po lokacijama:
+  - **Interna poverljiva verzija:** site-level prikaz (site ID/objekat) za ovlašćene korisnike.
+  - **Deljena sanitizovana verzija:** isključivo agregirano na nivou region + država, bez tačnih lokacija.
 - Rizike, kontrole i preporuke za relokaciju/diversifikaciju
 - Akcioni plan sa prioritetima (kvartalni)
 
