@@ -145,6 +145,11 @@ Model u ovom repozitorijumu koristi fiksne težine:
 - Skills 35%
 - Governance 25%
 
+Izvor težina i namena:
+- Težine su preuzete iz postojeće implementacije i dokumentacije u ovom repozitorijumu (trenutni standard prototipa).
+- U ovom okviru tretiraju se kao **normativni podrazumevani model** za poređenje kroz kvartale u okviru AI IQ World Bank.
+- Ako se težine menjaju, rezultate pre i posle promene ne porediti direktno bez rekalkulacije istorijskih perioda.
+
 Standard skale i interpretacije:
 - Svaka dimenzija (Infrastructure, Skills, Governance) ocenjuje se u rasponu **0–100**.
 - Rezultat indeksa je u rasponu **0–100** (težinski zbir tri dimenzije).
@@ -153,15 +158,15 @@ Standard skale i interpretacije:
   - **40–69.99:** Emerging
   - **70–100:** Advanced
 
-Kriterijumi ocenjivanja dimenzija (za konzistentan obračun):
-- **Infrastructure (0–100):** dostupnost podataka, kvalitet podataka, integracije sistema, sigurnost infrastrukture, skalabilnost platforme.
-- **Skills (0–100):** AI/data kompetencije tima, obuke i sertifikacije, primena AI znanja u projektima, brzina usvajanja novih alata.
-- **Governance (0–100):** politike i procedure za AI, upravljanje rizicima i usklađenošću, vlasništvo nad odlukama, monitoring i audit tragovi.
+Fiksni kriterijumi ocenjivanja dimenzija (za konzistentan obračun):
+- **Infrastructure (0–100):** (1) dostupnost podataka, (2) kvalitet podataka, (3) integracije sistema, (4) sigurnost infrastrukture, (5) skalabilnost platforme.
+- **Skills (0–100):** (1) AI/data kompetencije tima, (2) obuke i sertifikacije, (3) primena AI znanja u projektima, (4) brzina usvajanja alata, (5) pokrivenost ključnih AI uloga.
+- **Governance (0–100):** (1) politike i procedure za AI, (2) upravljanje rizicima/usklađenošću, (3) vlasništvo nad odlukama, (4) monitoring performansi i rizika, (5) audit tragovi i kontrola promena.
 
-Preporučeni izvor i metod bodovanja:
-- Za svaku dimenziju oceniti najmanje 4–5 pod-kriterijuma u rasponu 0–100.
-- Vrednost dimenzije je aritmetička sredina pod-kriterijuma.
-- Koristiti isti set pod-kriterijuma kroz sve kvartale radi uporedivosti trenda.
+Metod bodovanja:
+- Svaki od 5 pod-kriterijuma oceniti u rasponu 0–100.
+- Vrednost dimenzije je aritmetička sredina 5 pod-kriterijuma.
+- Poređenja kroz kvartale su validna samo ako kriterijumi i način ocenjivanja ostanu nepromenjeni.
 
 ## 8) Sekcija E — Tržišna usmerenja
 

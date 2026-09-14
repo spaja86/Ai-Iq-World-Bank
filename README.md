@@ -35,7 +35,7 @@ It calculates an AI maturity score using weighted input dimensions:
 ## Template Plan
 
 - See `template-plan.md` for the reusable template-plan structure and mapping of current repository assets.
-- See `ai-iq-world-bank-poslovni-izvestaj.md` for the comprehensive business analysis framework (Serbian-language document covering revenue, balance sheet, KPI, and market orientation).
+- See `ai-iq-world-bank-poslovni-izvestaj.md` for the Serbian-language business analysis **template/framework** (fill-in document covering revenue, balance sheet, KPI, and market orientation).
 
 ## Owner Information
 
