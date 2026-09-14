@@ -65,6 +65,8 @@ Za svaku stavku koristiti sledeća obavezna polja:
 - Kategorija imovine
 - Podtip
 - Količina (primarna + pomoćna jedinica)
+- Referentna vrednost u EUR (ako postoji)
+- Referentna vrednost u DINAR (ako postoji, uz verziju standarda i status)
 - Lokacija (objekat, grad, država, jurisdikcija)
 - Tip čuvanja/skladištenja
 - Vlasništvo i pravni status
@@ -163,6 +165,7 @@ Tumačenje kritičnosti (N/S/V):
   - uzrok
   - korektivna akcija
 - Potvrditi finalni „single source of truth“ datum i verziju.
+- Ako se vodi DINAR vrednost, potvrditi i aktivnu DINAR verziju iz `dinar-standard-plan.md`.
 
 ## 8) Kontrole, rizici i usklađenost
 
@@ -185,6 +188,7 @@ Tumačenje kritičnosti (N/S/V):
 - **Geografska diversifikacija (%):** udeo imovine po regionu/državi.
 - **Dostupnost mašina (% uptime):** `aktivno vreme / ukupno planirano vreme × 100`.
 - **Odstupanja inventara:** broj slučajeva i procenjena vrednost po kvartalu.
+- **DINAR pokrivenost dokumentacijom (%):** `stavke sa DINAR vrednošću i važećom verzijom standarda / sve stavke sa DINAR prikazom × 100`.
 
 ## 10) Scenario analiza
 
@@ -218,6 +222,7 @@ Finalni output obavezno uključuje:
 - Status vlasništva/opterećenja po stavkama
 - Servisni i operativni status mašina
 - Dokazi verifikacije (interni i eksterni)
+- Ako se koristi DINAR prikaz: aktivna DINAR verzija, datum važenja i status odobrenja
 
 ## Dodatak A — Jedinstvena tabela registra (master format)
 

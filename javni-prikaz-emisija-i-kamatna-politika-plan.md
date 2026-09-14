@@ -34,6 +34,9 @@ Za svaku kategoriju prikazati:
   - Plemenite aktive: **tona (t)**
   - Mašine: **komad**
 - Pomoćne jedinice (kg/karat) su izvedene/reference vrednosti.
+- Ako se koristi **DINAR**, primenjuje se standard iz `dinar-standard-plan.md`:
+  - `DINAR` se u ovoj fazi vodi kao kontrolisana interna/scenario jedinica
+  - javni prikaz DINAR vrednosti dozvoljen je samo uz status, datum važenja i pravnu napomenu
 
 ## 4) Pravilo „koliko čega ima“ (public dashboard)
 
@@ -71,6 +74,20 @@ Kontrole primene:
   - maksimalne dozvoljene stope
   - uslove i rokove primene
 - Uvesti automatsko ograničenje isplate prema važećem javnom limitu.
+
+## 7.1 Pravilo prikaza DINAR vrednosti
+
+- Ako se imovina, emisija ili limiti prikazuju i u `DINAR`, obavezno razdvojiti:
+  - **scenario vrednost**
+  - **operativnu vrednost**
+  - **javnu vrednost**
+- Scenario vrednost ne sme automatski postati javno objavljena vrednost.
+- Svaki javni prikaz DINAR parametra mora sadržati:
+  - vrednost
+  - referentnu valutu poređenja
+  - datum važenja
+  - status odobrenja
+  - verziju standarda
 
 ## 8) Rešavanje konflikta pravila (kritično)
 
@@ -123,6 +140,8 @@ Za odstupanja evidentirati:
 - broj i status mašina po lokaciji
 - definisan jedinstveni pravni limit kamate
 - verifikovan parametar 783000 RSD/kg + datum važenja
+- definisan DINAR status (`scenario / operativno / javno`) + datum važenja
+- evidentirana DINAR verzija standarda i vlasnik parametra
 - pravila sanitizacije za javnu objavu
 
 ## Dodatak A — Javna tabela (primer strukture)

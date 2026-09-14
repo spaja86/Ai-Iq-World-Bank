@@ -101,6 +101,15 @@ Finalni izveštaj mora sadržati:
 - Koncentracija rizika:
 - Zaključak kvaliteta bilansa:
 
+### 5.5 DINAR overlay za procenu vrednosti
+- Ako se bilans ili scenario prikazuju u `DINAR`, obavezno navesti i referentni prikaz u `EURO`.
+- U ovoj fazi `1 DINAR = 15000 EURO` može se koristiti samo kao `privremena procena / scenario` prema `dinar-standard-plan.md`.
+- Svaka upotreba DINAR vrednosti mora imati:
+  - verziju standarda
+  - datum važenja
+  - status odobrenja
+  - napomenu da li utiče samo na prikaz ili i na obračun
+
 ## 6) Sekcija C — Dužina rada i stabilnost kroz vreme
 
 - Datum osnivanja / početka operacija:
@@ -162,6 +171,12 @@ Izvor težina i namena:
 - U ovom okviru tretiraju se kao **normativni podrazumevani model** za poređenje kroz kvartale u okviru AI IQ World Bank.
 - Ako se težine menjaju, rezultate pre i posle promene ne porediti direktno bez rekalkulacije istorijskih perioda.
 
+### 7.6 DINAR governance KPI
+- Status DINAR standarda: `nije uveden / scenario / operativno odobren / javno verifikovan`.
+- Broj revizija DINAR parametra po periodu.
+- Pokrivenost verifikacionim dokazima za aktivnu DINAR vrednost.
+- Broj javnih prikaza koji sadrže važeći status, datum i verziju standarda.
+
 Standard skale i interpretacije:
 - Svaka dimenzija (Infrastructure, Skills, Governance) ocenjuje se u rasponu **0–100**.
 - Rezultat indeksa je u rasponu **0–100** (težinski zbir tri dimenzije).
@@ -208,6 +223,10 @@ Metod bodovanja:
 - Efekat na promet:
 - Efekat na bilans:
 - Efekat na tržišni fokus:
+
+Napomena za scenario sekciju:
+- Ako se koristi DINAR, obavezno odvojiti neutralni, optimistični i konzervativni DINAR scenario.
+- Ne porediti DINAR scenarije kroz periode bez potvrde da je korišćena ista verzija standarda ili izvršiti rekalkulaciju istorije.
 
 ## 10) Zaključak i odluka menadžmenta
 
