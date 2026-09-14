@@ -5,6 +5,12 @@ Ovaj dokument je **fill-in template/framework** za evidenciju i analizu:
 - Investicionog zlata (koliko tona i gde)
 - Mašina za novac (koliko imamo i gde)
 
+## Bezbednosna napomena (obavezno)
+
+- Popunjene verzije ovog dokumenta tretirati kao **poverljive**.
+- Za deljenje van usko ovlašćenog kruga koristiti samo sanitizovanu verziju.
+- U deljenim izveštajima ne objavljivati tačne adrese, tačne količine po objektu, niti operativne detalje koji mogu povećati fizički ili bezbednosni rizik.
+
 ## 1) Scope i definicije
 
 ### 1.1 Kategorije imovine
@@ -22,6 +28,9 @@ Ovaj dokument je **fill-in template/framework** za evidenciju i analizu:
 ### 1.3 Obavezna normalizacija
 - Sve fizičke količine u finalnom izveštaju moraju imati prikaz i u tonama.
 - Za mašine obavezno prikazati broj komada i status operativnosti.
+- Za polje lokacija koristiti kontrolisanu granularnost:
+  - **Interna poverljiva verzija:** objekat/site ID + grad + država.
+  - **Deljena/sanitizovana verzija:** region + država (bez tačne adrese i bez detalja objekta).
 
 ## 2) Period i referentni datum
 
@@ -66,6 +75,8 @@ Za svaku stavku koristiti sledeća obavezna polja:
 |---|---|---|---:|---:|---:|
 |  |  |  |  |  |  |
 
+Napomena za objavu: u deljenim verzijama polje „Lokacija“ prikazati kao region/site kod, bez pune adrese.
+
 ## 5) Inventar — Investiciono zlato
 
 ### 5.1 Agregat količine
@@ -88,6 +99,8 @@ Za svaku stavku koristiti sledeća obavezna polja:
 |---|---|---:|---:|---|---|
 |  |  |  |  |  |  |
 
+Napomena za objavu: u deljenim verzijama koristiti agregiran nivo lokacije (region + država), bez identifikacije tačnog trezora.
+
 ## 6) Inventar — Mašine za novac
 
 ### 6.1 Broj mašina po tipu i lokaciji
@@ -101,6 +114,8 @@ Za svaku stavku koristiti sledeća obavezna polja:
 | Lokacija | Procena kapaciteta | Kritičnost (N/S/V) | Ključna zavisnost | Rizik prekida |
 |---|---|---|---|---|
 |  |  |  |  |  |
+
+Napomena za objavu: za mašine koristiti lokacione kodove ili regione; ne objavljivati detalje fizičkog rasporeda.
 
 ## 7) Verifikacija podataka
 
@@ -156,7 +171,7 @@ Za svaku stavku koristiti sledeća obavezna polja:
 Finalni output obavezno uključuje:
 - Executive summary
 - Tabelu ukupnih količina po kategoriji
-- Mapu „koliko i gde“ po lokacijama
+- Mapu „koliko i gde“ po lokacijama (za deljenje koristiti agregirane lokacije i sanitizovane podatke)
 - Rizike, kontrole i preporuke za relokaciju/diversifikaciju
 - Akcioni plan sa prioritetima (kvartalni)
 

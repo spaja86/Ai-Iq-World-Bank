@@ -37,6 +37,7 @@ It calculates an AI maturity score using weighted input dimensions:
 - See `template-plan.md` for the reusable template-plan structure and mapping of current repository assets.
 - See `ai-iq-world-bank-poslovni-izvestaj.md` for the Serbian-language business analysis **template/framework** (fill-in document covering revenue, balance sheet, KPI, and market orientation).
 - See `investiciona-imovina-registar-plan.md` for the Serbian-language investment asset registry template (diamonds, gold, and cash-machine inventory/location framework).
+- Note: these are fill-in planning templates; populated versions may contain sensitive business/asset details and should be kept out of source control unless sanitized.
 
 ## Owner Information
 
