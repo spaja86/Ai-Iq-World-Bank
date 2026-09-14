@@ -72,7 +72,7 @@ Finalni izveštaj mora sadržati:
 - Vanredni uticaji (ako postoje):
 - Koregovani pogled na trend bez jednokratnih efekata:
 
-## 5) Sekcija B — Stanje bilansa
+## 5) Sekcija B.2 — Stanje bilansa
 
 ### 5.1 Struktura aktive/pasive po kvartalima
 
@@ -144,6 +144,14 @@ Model u ovom repozitorijumu koristi fiksne težine:
 - Infrastructure 40%
 - Skills 35%
 - Governance 25%
+
+Standard skale i interpretacije:
+- Svaka dimenzija (Infrastructure, Skills, Governance) ocenjuje se u rasponu **0–100**.
+- Rezultat indeksa je u rasponu **0–100** (težinski zbir tri dimenzije).
+- Preporučena interpretacija rezultata:
+  - **0–39.99:** Early Stage
+  - **40–69.99:** Emerging
+  - **70–100:** Advanced
 
 ## 8) Sekcija E — Tržišna usmerenja
 
