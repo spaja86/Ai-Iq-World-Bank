@@ -34,7 +34,7 @@ It calculates an AI maturity score using weighted input dimensions:
 
 ## Template Plan
 
-- See `/home/runner/work/Ai-Iq-World-Bank/Ai-Iq-World-Bank/template-plan.md` for the reusable template-plan structure and mapping of current repository assets.
+- See `template-plan.md` for the reusable template-plan structure and mapping of current repository assets.
 
 ## Owner Information
 
