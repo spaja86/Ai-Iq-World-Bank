@@ -1,4 +1,4 @@
-# AI IQ World Bank — Ekstremni plan/registar za investicionu imovinu
+# AI IQ World Bank — Ekstremni plan/registar za investicionu i operativnu imovinu
 
 Ovaj dokument je **fill-in template/framework** za evidenciju i analizu:
 - Investicionih dijamanata (koliko tona i gde)
