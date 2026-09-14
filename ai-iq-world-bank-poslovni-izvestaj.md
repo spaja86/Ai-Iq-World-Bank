@@ -156,8 +156,9 @@ Model u ovom repozitorijumu koristi fiksne težine:
 - Governance 25%
 
 Izvor težina i namena:
-- Težine su preuzete iz važećeg repozitorijumskog standarda INDEKURILANC modela (trenutni standard prototipa).
-- Referenca: koristiti aktuelnu verziju standardne projektne dokumentacije za potvrdu vrednosti težina.
+- Težine su preuzete iz važećeg repozitorijumskog standarda INDEKURILANC modela.
+- Verzija standarda za ovaj template: **INDEKURILANC-STD-2026-01 (40/35/25)**.
+- Ako postoji novija verzija standarda, obavezno je navesti njen ID/verziju u izveštaju pre poređenja rezultata.
 - U ovom okviru tretiraju se kao **normativni podrazumevani model** za poređenje kroz kvartale u okviru AI IQ World Bank.
 - Ako se težine menjaju, rezultate pre i posle promene ne porediti direktno bez rekalkulacije istorijskih perioda.
 
