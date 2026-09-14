@@ -156,7 +156,8 @@ Model u ovom repozitorijumu koristi fiksne težine:
 - Governance 25%
 
 Izvor težina i namena:
-- Težine su preuzete iz postojeće implementacije i dokumentacije u ovom repozitorijumu (trenutni standard prototipa).
+- Težine su preuzete iz postojeće implementacije i dokumentacije u ovom repozitorijumu (script.js i README.md; trenutni standard prototipa).
+- Referenca: `script.js` (INDEKURILANC_WEIGHTS i calculateIndekurilanc) i `README.md` sekcija INDEKURILANC (Infrastructure 40%, Skills 35%, Governance 25%).
 - U ovom okviru tretiraju se kao **normativni podrazumevani model** za poređenje kroz kvartale u okviru AI IQ World Bank.
 - Ako se težine menjaju, rezultate pre i posle promene ne porediti direktno bez rekalkulacije istorijskih perioda.
 

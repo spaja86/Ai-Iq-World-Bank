@@ -81,7 +81,7 @@ Za svaku stavku koristiti sledeća obavezna polja:
 |---|---|---|---:|---:|---:|
 |  |  |  |  |  |  |
 
-Napomena za objavu: u deljenim verzijama polje „Lokacija“ prikazati kao region/site kod, bez pune adrese.
+Napomena za objavu: u deljenim verzijama polje „Lokacija“ prikazati kao region + država, bez pune adrese.
 
 ## 5) Inventar — Investiciono zlato
 
