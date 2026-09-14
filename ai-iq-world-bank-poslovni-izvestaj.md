@@ -138,7 +138,9 @@ Finalni izveštaj mora sadržati:
 - Governance:
 - Ukupni trend indeksa po kvartalima:
 
-Napomena: INDEKURILANC model u ovom repozitorijumu koristi tri dimenzije sa fiksnim težinama:
+Napomena: INDEKURILANC je interni indeks AI zrelosti koji meri spremnost kroz tri dimenzije (infrastructure, skills, governance).
+Formula obračuna: `INDEKURILANC = (Infrastructure × 0.40) + (Skills × 0.35) + (Governance × 0.25)`.
+Model u ovom repozitorijumu koristi fiksne težine:
 - Infrastructure 40%
 - Skills 35%
 - Governance 25%
