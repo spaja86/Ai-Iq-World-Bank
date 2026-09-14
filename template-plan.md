@@ -2,7 +2,8 @@
 
 ## 1) Scope Clarification
 
-Given the original wording (`PRETPLATE`, `EXIST EXTRIMLI EXTREM EXTRONDOL`), this repository uses the following normalized interpretation:
+Source phrase from task input: `CREATE PRETPLATE PLAN FOR EXIST EXTRIMLI EXTREM EXTRONDOL`.
+The mapping below is an interpretation for planning purposes, not canonical project terminology:
 
 - **PRETPLATE** → **Template**
 - **EXIST** → **Existing**
@@ -19,7 +20,7 @@ This document defines a reusable planning template and applies it to what curren
 - `README.md` (project overview, INDEKURILANC behavior, usage, constraints, owner info)
 
 ### Existing workflows/automation
-- No GitHub Actions workflow files found in `.github/workflows`.
+- Point-in-time baseline (2026-09-14 review): no GitHub Actions workflow files were found in `.github/workflows`.
 
 ### Existing implementation artifacts
 - `index.html` (UI and INDEKURILANC section)
@@ -54,7 +55,7 @@ Use this section structure for future “existing asset template plans”:
 
 - No pre-existing template artifacts are present in the repository.
 - No CI/workflow definitions are present for process standardization.
-- The term **INDEKURILANC** appears consistently but may still require product-level glossary confirmation.
+- The term **INDEKURILANC** appears consistently in `README.md`, `index.html`, and `script.js`; no separate canonical glossary document was found during this review.
 
 ## 6) Stakeholder Review Notes
 
@@ -63,6 +64,7 @@ Review and confirm:
 - Whether the normalized interpretation of the original phrase is correct.
 - Whether this template should be the default for future planning docs.
 - Whether a dedicated templates directory should be introduced later.
+- Whether a canonical glossary source should be added for terms like **INDEKURILANC**.
 
 ## 7) Finalized Standard (Current)
 
