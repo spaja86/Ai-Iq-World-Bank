@@ -70,7 +70,7 @@ Finalni izveštaj mora sadržati:
 
 ### 4.4 Jednokratni efekti
 - Vanredni uticaji (ako postoje):
-- Koregovani pogled na trend bez jednokratnih efekata:
+- Korigovani pogled na trend bez jednokratnih efekata:
 
 ## 5) Sekcija B.2 — Stanje bilansa
 
@@ -112,25 +112,25 @@ Finalni izveštaj mora sadržati:
 ## 7) Sekcija D — Napredak kroz multidimenzionalne KPI-jeve
 
 ### 7.1 Finansijski KPI
-- Rast prihoda:
-- Marža:
-- Profitabilnost:
-- Novčani tok:
+- Rast prihoda: `% promena prihoda (Q/Q i Y/Y)`.
+- Marža: `bruto marža %` i/ili `EBITDA marža %`.
+- Profitabilnost: `neto dobit / prihod × 100`.
+- Novčani tok: `operativni novčani tok` i njegov Q/Q trend.
 
 ### 7.2 Komercijalni KPI
-- Broj kupaca:
-- Retention/Churn:
-- LTV/CAC:
+- Broj kupaca: `broj aktivnih kupaca po kvartalu`.
+- Retention/Churn: `retention %` i `churn %` na kvartalnom nivou.
+- LTV/CAC: `odnos LTV prema CAC` po glavnom segmentu.
 
 ### 7.3 Operativni KPI
-- Brzina isporuke:
-- Kvalitet isporuke:
-- Efikasnost procesa:
+- Brzina isporuke: `prosečno vreme od zahteva do isporuke`.
+- Kvalitet isporuke: `stopa grešaka/reklamacija` i `first-pass success`.
+- Efikasnost procesa: `output po zaposlenom` ili `trošak po isporuci`.
 
 ### 7.4 Organizacijski KPI
-- Razvoj tima:
-- Kompetencije:
-- Governance napredak:
+- Razvoj tima: `rast tima`, `fluktuacija %`, `stabilnost ključnih uloga`.
+- Kompetencije: `broj obuka/sertifikata` i procena primene znanja.
+- Governance napredak: `broj usvojenih politika`, `nivo usklađenosti`, `audit nalaz`.
 
 ### 7.5 AI zrelost KPI (INDEKURILANC model)
 - Infrastructure:
