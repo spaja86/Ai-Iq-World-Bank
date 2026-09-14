@@ -38,6 +38,7 @@ It calculates an AI maturity score using weighted input dimensions:
 - See `ai-iq-world-bank-poslovni-izvestaj.md` for the Serbian-language business analysis **template/framework** (fill-in document covering revenue, balance sheet, KPI, and market orientation).
 - See `investiciona-i-operativna-imovina-registar-plan.md` for the Serbian-language investment and operational asset registry template (diamonds, gold, and cash-machine inventory/location framework).
 - See `javni-prikaz-emisija-i-kamatna-politika-plan.md` for the Serbian-language public transparency and policy template (asset visibility, gold-backed digital emission formula, and interest-policy controls).
+- See `eksterni-repozitorijum-pravni-navod-plan.md` for the Serbian-language template on handling legal/political claims from external repositories (source evidence, legal verification, and neutral public wording).
 - Note: these are fill-in planning templates; populated versions may contain sensitive business/asset details and should be kept out of source control unless sanitized.
 - Minimum sanitization for shared versions: remove exact site/facility identifiers, avoid exact per-site quantities, and publish only aggregated region + country views (follow the security/sanitization guidance in `investiciona-i-operativna-imovina-registar-plan.md`).
 
