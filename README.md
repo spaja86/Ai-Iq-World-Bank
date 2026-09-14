@@ -41,6 +41,7 @@ It calculates an AI maturity score using weighted input dimensions:
 - See `eksterni-repozitorijum-pravni-navod-plan.md` for the Serbian-language template on handling legal/political claims from external repositories (source evidence, legal verification, and neutral public wording).
 - See `dinar-standard-plan.md` for the Serbian-language DINAR standard (value parameters, governance, verification rules, display status, and version history).
 - See `vercel-naplata-poruka-plan.md` for the Serbian-language Vercel billing support message template with a final support message, attachment checklist, and follow-up sequence.
+- See `github-naplata-poruka-plan.md` for the Serbian-language GitHub billing support and business subscription message template, including short and extended versions, key questions, and follow-up structure.
 - Note: these are fill-in planning templates; populated versions may contain sensitive business/asset details and should be kept out of source control unless sanitized.
 - Minimum sanitization for shared versions: remove exact site/facility identifiers, avoid exact per-site quantities, and publish only aggregated region + country views (follow the security/sanitization guidance in `investiciona-i-operativna-imovina-registar-plan.md`).
 - Current DINAR baseline: `1 DINAR = 15000 EURO` is documented as `DINAR-STD-V0` with status `privremena procena / scenario`, not as a production-verified public fact.
