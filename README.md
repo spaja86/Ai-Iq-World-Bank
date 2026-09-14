@@ -32,6 +32,10 @@ It calculates an AI maturity score using weighted input dimensions:
 - To support live data, add an API layer and map external indicators to the current 3-dimension model.
 - Keep output states consistent: not calculated, error, success.
 
+## Template Plan
+
+- See `template-plan.md` for the reusable template-plan structure and mapping of current repository assets.
+
 ## Owner Information
 
 **Name:** Nikola Spajić  
