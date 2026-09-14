@@ -16,7 +16,7 @@ Ovaj dokument je **fill-in template/framework** za evidenciju i analizu:
 ### 1.1 Kategorije imovine
 - **Investicioni dijamanti:** fizički dijamanti namenjeni čuvanju vrednosti i/ili trgovanju.
 - **Investiciono zlato:** fizičko zlato investicionog kvaliteta (poluge/kovanice) prema internim pravilima.
-- **Mašine za novac:** oprema za gotovinske operacije (npr. ATM, cash-handling, trezorska i povezana oprema).
+- **Mašine za novac:** inventarisana mašinska oprema za gotovinske operacije (npr. ATM, cash recycler, cash counting/sorting uređaji) koja se prati kroz broj komada, status, kapacitet i uptime.
 
 ### 1.2 Merne jedinice (standard)
 - Primarno: **tona (t)**
@@ -43,6 +43,20 @@ Ovaj dokument je **fill-in template/framework** za evidenciju i analizu:
 - **Datum preseka (as-of):**
 - **Period trenda:** poslednjih 8 kvartala + YTD.
 - **Frekvencija osvežavanja:** kvartalno (minimum).
+
+Mapiranje perioda (obavezno popuniti uz svaki izveštaj):
+
+| Oznaka u tabelama | Konkretan period |
+|---|---|
+| Q1 |  |
+| Q2 |  |
+| Q3 |  |
+| Q4 |  |
+| Q5 |  |
+| Q6 |  |
+| Q7 |  |
+| Q8 |  |
+| YTD |  |
 
 ## 3) Standard registra imovine
 
@@ -74,6 +88,10 @@ Za svaku stavku koristiti sledeća obavezna polja:
 | Q7 |  |  |  |  |
 | Q8 |  |  |  |  |
 | YTD |  |  |  |  |
+
+Pravilo unosa jedinica:
+- **Količina (t)** je autoritativna vrednost za izveštavanje.
+- **kg** i **karat** su izvedene/reference vrednosti iz autoritativne vrednosti.
 
 ### 4.2 Lokacije i status
 
@@ -115,6 +133,11 @@ Napomena za objavu: u deljenim verzijama koristiti agregiran nivo lokacije (regi
 |---|---|---:|---:|---:|---:|
 |  |  |  |  |  |  |
 
+Pravilo statusa:
+- Kolone **Aktivno/Servis/Van upotrebe** su broj komada (ne procenti).
+- Statusi su međusobno isključivi.
+- Mora važiti: `Broj komada = Aktivno + Servis + Van upotrebe`.
+
 ### 6.2 Kapacitet i kritičnost
 
 | Lokacija | Procena kapaciteta | Kritičnost (N/S/V) | Ključna zavisnost | Rizik prekida |
@@ -122,6 +145,11 @@ Napomena za objavu: u deljenim verzijama koristiti agregiran nivo lokacije (regi
 |  |  |  |  |  |
 
 Napomena za objavu: za mašine koristiti lokacione kodove ili regione; ne objavljivati detalje fizičkog rasporeda.
+
+Tumačenje kritičnosti (N/S/V):
+- **N (Niska):** prekid ne utiče materijalno na kontinuitet servisa; postoji više dostupnih alternativa.
+- **S (Srednja):** prekid pravi uočljiv uticaj, ali je oporavak moguć kroz rezervne kapacitete u prihvatljivom roku.
+- **V (Visoka):** prekid izaziva značajan operativni poremećaj i zahteva prioritetnu zaštitu i plan oporavka.
 
 ## 7) Verifikacija podataka
 
