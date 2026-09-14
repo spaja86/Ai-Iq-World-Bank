@@ -2,7 +2,7 @@
 
 ## 1) Scope Clarification
 
-Source phrase from task input: `CREATE PRETPLATE PLAN FOR EXIST EXTRIMLI EXTREM EXTRONDOL`.
+Source phrase from task input (verbatim, spelling intentionally preserved): `CREATE PRETPLATE PLAN FOR EXIST EXTRIMLI EXTREM EXTRONDOL`.
 The mapping below is an interpretation for planning purposes, not canonical project terminology:
 
 - **PRETPLATE** → **Template**
