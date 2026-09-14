@@ -153,6 +153,16 @@ Standard skale i interpretacije:
   - **40–69.99:** Emerging
   - **70–100:** Advanced
 
+Kriterijumi ocenjivanja dimenzija (za konzistentan obračun):
+- **Infrastructure (0–100):** dostupnost podataka, kvalitet podataka, integracije sistema, sigurnost infrastrukture, skalabilnost platforme.
+- **Skills (0–100):** AI/data kompetencije tima, obuke i sertifikacije, primena AI znanja u projektima, brzina usvajanja novih alata.
+- **Governance (0–100):** politike i procedure za AI, upravljanje rizicima i usklađenošću, vlasništvo nad odlukama, monitoring i audit tragovi.
+
+Preporučeni izvor i metod bodovanja:
+- Za svaku dimenziju oceniti najmanje 4–5 pod-kriterijuma u rasponu 0–100.
+- Vrednost dimenzije je aritmetička sredina pod-kriterijuma.
+- Koristiti isti set pod-kriterijuma kroz sve kvartale radi uporedivosti trenda.
+
 ## 8) Sekcija E — Tržišna usmerenja
 
 - Primarna tržišta:
