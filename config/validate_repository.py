@@ -26,7 +26,7 @@ FORBIDDEN_PATH_SNIPPET = '/'.join([
     'Ai-Iq-World-Bank',
 ])
 CONTENT_GLOBS = ('*.md', '*.html', '*.css', '*.js', '*.py', '*.yml', '*.yaml')
-README_LINK_PATTERN = re.compile(r'`([^`]+\.(?:md|html|css|js|py|yml))`')
+README_LINK_PATTERN = re.compile(r'`([^`\s]+\.(?:md|html|css|js|py|yml))`')
 HTML_IDS = [
     'indekurilanc-form',
     'indekurilanc-feedback',
@@ -59,6 +59,8 @@ for pattern in CONTENT_GLOBS:
 readme_text = (ROOT / 'README.md').read_text(encoding='utf-8')
 for linked_path in README_LINK_PATTERN.findall(readme_text):
     if linked_path.startswith('http'):
+        continue
+    if '*' in linked_path:
         continue
     if not (ROOT / linked_path).exists():
         fail(f'README references missing file: {linked_path}')
