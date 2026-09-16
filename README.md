@@ -1,53 +1,96 @@
 # AI IQ World Bank
 
-## INDEKURILANC
+AI IQ World Bank is a repository that combines a static prototype, repository standards, governance rules, and Serbian-language planning templates.
 
-INDEKURILANC is a frontend-only readiness index prototype in this static website.
-It calculates an AI maturity score using weighted input dimensions:
+## Repository pillars
+
+1. **Product / prototype** - the static website and INDEKURILANC calculator.
+2. **Standards** - canonical definitions for scoring, terminology, and controlled value systems.
+3. **Operational plans** - fill-in planning templates for analysis, assets, public disclosures, licensing, and support communication.
+4. **Governance and protection** - sanitization, review, lifecycle, and publication controls.
+
+## Current structure
+
+- `index.html` - static entrypoint for the repository website.
+- `styles.css` - current website styles.
+- `script.js` - current frontend logic for INDEKURILANC.
+- `docs/` - portfolio maps, roadmap, and future integration references.
+- `governance/` - charter and document lifecycle rules.
+- `standards/` - canonical repository standards and glossary.
+- `config/` - repository validation and sensitive-content review guidance.
+- Root `*.md` planning files - current fill-in templates and standards already used by the repository.
+
+## Quick start
+
+### View the prototype
+
+1. Open `index.html` in a browser.
+2. Navigate to the `INDEKURILANC` section.
+3. Enter scores for infrastructure, skills, and governance.
+4. Review the score, status, and operational interpretation.
+
+### Validate locally
+
+- Run `python3 config/validate_repository.py`
+- Run `node --check script.js`
+
+## Product baseline: INDEKURILANC
+
+INDEKURILANC is the repository's active scoring prototype.
 
 - Infrastructure: 40%
 - Skills: 35%
 - Governance: 25%
+- Current maturity bands:
+  - `0-39.99` -> Early Stage
+  - `40-69.99` -> Emerging
+  - `70-100` -> Advanced
+- Active standard reference: `standards/indekurilanc-standard.md`
 
-### Usage
+## Canonical standards and governance
 
-1. Open `index.html` in a browser.
-2. Navigate to the **INDEKURILANC** section.
-3. Enter scores (0-100) for Infrastructure, Skills, and Governance.
-4. Click **Calculate INDEKURILANC** to see:
-   - Index score (0-100)
-   - Maturity status: Early Stage, Emerging, or Advanced
-5. Use **Reset** to clear inputs and output state.
+- `standards/indekurilanc-standard.md` - scoring baseline, maturity bands, required interpretation fields, and future model rules.
+- `standards/glossary.md` - controlled repository terminology.
+- `dinar-standard-plan.md` - DINAR framework with scenario/operational/public usage separation.
+- `governance/repo-charter.md` - purpose, repository pillars, and source-of-truth hierarchy.
+- `governance/document-lifecycle.md` - document types, statuses, review rules, and naming/linking conventions.
+- `config/sensitive-content-review-checklist.md` - pre-commit and publication safety checklist.
 
-### Validation and behavior
+## Document portfolio
 
-- Invalid/missing inputs return an inline error message.
-- Inputs are normalized into the 0-100 range.
-- Results are rendered with safe text updates (no unsafe HTML insertion).
-- The current version uses static client-side logic and does not call external APIs.
+### Operational templates and plans
 
-### Constraints and extension points
+- `template-plan.md` - reusable baseline template for existing repository assets.
+- `ai-iq-world-bank-poslovni-izvestaj.md` - business analysis template with KPI and INDEKURILANC rubric.
+- `investiciona-i-operativna-imovina-registar-plan.md` - asset registry template with sanitization rules.
+- `javni-prikaz-emisija-i-kamatna-politika-plan.md` - public transparency, emission, and interest-policy template.
+- `eksterni-repozitorijum-pravni-navod-plan.md` - legal/reputational handling template for external claims.
+- `globalni-licencni-okvir-i-delatnosti-plan.md` - master licensing and activity-expansion template.
+- `vercel-naplata-poruka-plan.md` - Vercel billing support message template.
+- `github-naplata-poruka-plan.md` - GitHub billing and business subscription template.
 
-- This is a no-backend prototype.
-- To support live data, add an API layer and map external indicators to the current 3-dimension model.
-- Keep output states consistent: not calculated, error, success.
+### Portfolio and roadmap references
 
-## Template Plan
+- `docs/document-portfolio.md` - master map of repository documents, purpose, status, and usage order.
+- `docs/repository-roadmap.md` - phased development roadmap for product, docs, and governance.
+- `docs/future-data-model.md` - future entity model for scoring, assets, governance, and licensing.
 
-- See `template-plan.md` for the reusable template-plan structure and mapping of current repository assets.
-- See `ai-iq-world-bank-poslovni-izvestaj.md` for the Serbian-language business analysis **template/framework** (fill-in document covering revenue, balance sheet, KPI, and market orientation).
-- See `investiciona-i-operativna-imovina-registar-plan.md` for the Serbian-language investment and operational asset registry template (diamonds, gold, and cash-machine inventory/location framework).
-- See `javni-prikaz-emisija-i-kamatna-politika-plan.md` for the Serbian-language public transparency and policy template (asset visibility, gold-backed digital emission formula, and interest-policy controls).
-- See `eksterni-repozitorijum-pravni-navod-plan.md` for the Serbian-language template on handling legal/political claims from external repositories (source evidence, legal verification, and neutral public wording).
-- See `dinar-standard-plan.md` for the Serbian-language DINAR standard (value parameters, governance, verification rules, display status, and version history).
-- See `globalni-licencni-okvir-i-delatnosti-plan.md` for the Serbian-language master planning template for activity expansion, jurisdiction-based licensing, product standardization, and holding-model governance.
-- See `vercel-naplata-poruka-plan.md` for the Serbian-language Vercel billing support message template with a final support message, attachment checklist, and follow-up sequence.
-- See `github-naplata-poruka-plan.md` for the Serbian-language GitHub billing support and business subscription message template, including short and extended versions, key questions, and follow-up structure.
-- Note: these are fill-in planning templates; populated versions may contain sensitive business/asset details and should be kept out of source control unless sanitized.
-- Minimum sanitization for shared versions: remove exact site/facility identifiers, avoid exact per-site quantities, and publish only aggregated region + country views (follow the security/sanitization guidance in `investiciona-i-operativna-imovina-registar-plan.md`).
-- Current DINAR baseline: `1 DINAR = 15000 EURO` is documented as `DINAR-STD-V0` with status `privremena procena / scenario`, not as a production-verified public fact.
+## Governance rules
 
-## Owner Information
+- Planning documents are fill-in templates; populated versions with sensitive business or asset details must stay out of source control unless sanitized.
+- Public-facing content must clearly separate scenario assumptions from verified facts.
+- DINAR values must always carry status, version, and effective-date context.
+- Repository documents should reference sibling files with repository-relative filenames.
+
+## CI and repository validation
+
+The repository now includes `.github/workflows/validate.yml` for basic checks:
+
+- `node --check script.js`
+- repository structure validation through `config/validate_repository.py`
+- protection against accidental checkout-specific absolute path references
+
+## Owner information
 
 **Name:** Nikola Spajić  
 **Contact Emails:**  

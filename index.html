@@ -7,52 +7,92 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to AI IQ World Bank</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#indekurilanc">INDEKURILANC</a></li>
-                <li><a href="#technology">Technology</a></li>
-                <li><a href="#partners">Partners</a></li>
-                <li><a href="#statistics">Statistics</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="container">
+            <h1>AI IQ World Bank</h1>
+            <p class="hero-copy">Knowledge, planning, standards, and prototype modules in one repository.</p>
+            <nav aria-label="Primary">
+                <ul class="nav-list">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#modules">Modules</a></li>
+                    <li><a href="#indekurilanc">INDEKURILANC</a></li>
+                    <li><a href="#standards">Standards</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#governance">Governance</a></li>
+                    <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>Welcome to the AI IQ World Bank website, your hub for AI and technology.</p>
+    <main class="container">
+        <section id="overview" class="page-section card-stack">
+            <h2>Repository Overview</h2>
+            <p>
+                This repository combines a static prototype, controlled standards, operational templates,
+                and governance rules for sensitive or scenario-based content.
+            </p>
+            <div class="pillar-grid">
+                <article class="card info-card">
+                    <h3>Product / Prototype</h3>
+                    <p>Current baseline: the static website and the INDEKURILANC readiness calculator.</p>
+                </article>
+                <article class="card info-card">
+                    <h3>Standards</h3>
+                    <p>Canonical scoring and terminology now live in dedicated repository standards.</p>
+                </article>
+                <article class="card info-card">
+                    <h3>Operational Plans</h3>
+                    <p>Serbian-language templates define analysis, asset, licensing, and support workflows.</p>
+                </article>
+                <article class="card info-card">
+                    <h3>Governance</h3>
+                    <p>Lifecycle, sanitization, and publication rules protect sensitive and scenario content.</p>
+                </article>
+            </div>
         </section>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Learn about our mission and vision in promoting AI technologies.</p>
+
+        <section id="modules" class="page-section">
+            <h2>Repository Modules</h2>
+            <div class="module-grid">
+                <article class="card module-card">
+                    <h3>Prototype Module</h3>
+                    <p>Frontend entrypoint with scoring, result states, and roadmap-aligned content structure.</p>
+                </article>
+                <article class="card module-card">
+                    <h3>Standards Module</h3>
+                    <p>Controlled references for INDEKURILANC, DINAR usage, and repository terminology.</p>
+                </article>
+                <article class="card module-card">
+                    <h3>Portfolio Module</h3>
+                    <p>Document maps and usage guidance that connect planning files into one system.</p>
+                </article>
+                <article class="card module-card">
+                    <h3>Governance Module</h3>
+                    <p>Review, lifecycle, and publication controls for sustainable repository growth.</p>
+                </article>
+            </div>
         </section>
-        <section id="services">
-            <h2>Our Services</h2>
-            <p>We offer a wide range of services tailored for AI development and implementation.</p>
-        </section>
-        <section id="indekurilanc" aria-labelledby="indekurilanc-title">
+
+        <section id="indekurilanc" class="page-section" aria-labelledby="indekurilanc-title">
             <h2 id="indekurilanc-title">INDEKURILANC</h2>
             <p>
-                INDEKURILANC is a frontend-only readiness index prototype that estimates AI
-                capability maturity from weighted inputs.
+                INDEKURILANC is the active repository scoring baseline for AI capability maturity.
+                The current standard keeps three weighted dimensions and adds an operational interpretation.
             </p>
             <div class="indekurilanc-grid">
                 <article class="card indekurilanc-card">
-                    <h3>Overview</h3>
-                    <p>
-                        Use the calculator to estimate readiness from infrastructure, skills,
-                        and governance indicators. Values are scored from 0 to 100.
-                    </p>
+                    <h3>Baseline Standard</h3>
                     <ul>
-                        <li>0-39: Early Stage</li>
-                        <li>40-69: Emerging</li>
-                        <li>70-100: Advanced</li>
+                        <li>Infrastructure: 40%</li>
+                        <li>Skills: 35%</li>
+                        <li>Governance: 25%</li>
+                        <li>Active reference: <code>INDEKURILANC-STD-V1</code></li>
                     </ul>
+                    <p>
+                        Use the score as a structured readiness indicator, not as a substitute for a full business,
+                        governance, or licensing review.
+                    </p>
                 </article>
                 <article class="card indekurilanc-card" aria-labelledby="calculator-title">
                     <h3 id="calculator-title">Readiness Calculator</h3>
@@ -66,8 +106,10 @@
                         <label for="governance-score">Governance (0-100)</label>
                         <input id="governance-score" name="governance" type="number" min="0" max="100" required>
 
-                        <button type="submit">Calculate INDEKURILANC</button>
-                        <button type="button" id="indekurilanc-reset">Reset</button>
+                        <div class="button-row">
+                            <button type="submit">Calculate INDEKURILANC</button>
+                            <button type="button" id="indekurilanc-reset">Reset</button>
+                        </div>
                     </form>
                     <p id="indekurilanc-feedback" class="indekurilanc-feedback" aria-live="polite"></p>
                 </article>
@@ -82,46 +124,126 @@
                             <dt>Status</dt>
                             <dd id="indekurilanc-status">Not Calculated</dd>
                         </div>
+                        <div>
+                            <dt>Interpretation</dt>
+                            <dd id="indekurilanc-summary">Run the calculator to generate an operational interpretation.</dd>
+                        </div>
+                        <div>
+                            <dt>Priority Focus</dt>
+                            <dd id="indekurilanc-priority">Awaiting input</dd>
+                        </div>
+                        <div>
+                            <dt>Standard</dt>
+                            <dd id="indekurilanc-standard">INDEKURILANC-STD-V1</dd>
+                        </div>
                     </dl>
-                    <p>
-                        This static prototype does not call external APIs. A future version can map
-                        inputs to external country and institution datasets.
-                    </p>
                 </article>
             </div>
         </section>
-        <section id="technology">
-            <h2>Technology with Omega AI</h2>
-            <p>Discover how Omega AI is reshaping the landscape of technology.</p>
-            <a href="https://www.omegaai.com">Visit Omega AI</a>
+
+        <section id="standards" class="page-section">
+            <h2>Standards</h2>
+            <div class="reference-grid">
+                <article class="card reference-card">
+                    <h3>INDEKURILANC</h3>
+                    <p>Canonical score model, maturity bands, and output expectations.</p>
+                    <p><code>standards/indekurilanc-standard.md</code></p>
+                </article>
+                <article class="card reference-card">
+                    <h3>Glossary</h3>
+                    <p>Controlled terminology for repository content and future extensions.</p>
+                    <p><code>standards/glossary.md</code></p>
+                </article>
+                <article class="card reference-card">
+                    <h3>DINAR</h3>
+                    <p>Controlled internal/scenario unit with explicit status and usage rules.</p>
+                    <p><code>dinar-standard-plan.md</code></p>
+                </article>
+            </div>
         </section>
-        <section id="smederevo-expansion">
-            <h2>Smederevo Expansion</h2>
-            <p>Explore our expansion initiatives in Smederevo.</p>
+
+        <section id="portfolio" class="page-section">
+            <h2>Document Portfolio</h2>
+            <div class="portfolio-grid">
+                <article class="card portfolio-card">
+                    <h3>Business and KPI analysis</h3>
+                    <p><code>ai-iq-world-bank-poslovni-izvestaj.md</code></p>
+                </article>
+                <article class="card portfolio-card">
+                    <h3>Asset registry and sanitization</h3>
+                    <p><code>investiciona-i-operativna-imovina-registar-plan.md</code></p>
+                </article>
+                <article class="card portfolio-card">
+                    <h3>Public transparency and policy</h3>
+                    <p><code>javni-prikaz-emisija-i-kamatna-politika-plan.md</code></p>
+                </article>
+                <article class="card portfolio-card">
+                    <h3>Legal and external claim handling</h3>
+                    <p><code>eksterni-repozitorijum-pravni-navod-plan.md</code></p>
+                </article>
+                <article class="card portfolio-card">
+                    <h3>Licensing and activity expansion</h3>
+                    <p><code>globalni-licencni-okvir-i-delatnosti-plan.md</code></p>
+                </article>
+                <article class="card portfolio-card">
+                    <h3>Support communication</h3>
+                    <p><code>vercel-naplata-poruka-plan.md</code> and <code>github-naplata-poruka-plan.md</code></p>
+                </article>
+            </div>
+            <p class="supporting-copy">See <code>docs/document-portfolio.md</code> for the full status matrix and usage order.</p>
         </section>
-        <section id="partners">
-            <h2>Our Partners</h2>
-            <p>Meet our partners who contribute to our goals and success.</p>
+
+        <section id="governance" class="page-section">
+            <h2>Governance</h2>
+            <div class="reference-grid">
+                <article class="card reference-card">
+                    <h3>Repository Charter</h3>
+                    <p>Defines purpose, pillars, and source-of-truth hierarchy.</p>
+                    <p><code>governance/repo-charter.md</code></p>
+                </article>
+                <article class="card reference-card">
+                    <h3>Document Lifecycle</h3>
+                    <p>Defines types, statuses, review checkpoints, and linking rules.</p>
+                    <p><code>governance/document-lifecycle.md</code></p>
+                </article>
+                <article class="card reference-card">
+                    <h3>Sensitive Content Review</h3>
+                    <p>Pre-commit checklist for sanitization, visibility, and publication safety.</p>
+                    <p><code>config/sensitive-content-review-checklist.md</code></p>
+                </article>
+            </div>
         </section>
-        <section id="statistics">
-            <h2>Statistics</h2>
-            <p>Check out the latest statistics related to AI development and innovation.</p>
+
+        <section id="roadmap" class="page-section">
+            <h2>Roadmap</h2>
+            <ol class="roadmap-list">
+                <li><strong>Phase 1:</strong> structure, standards, governance, and baseline validation.</li>
+                <li><strong>Phase 2:</strong> connected UI sections and stronger document quality gates.</li>
+                <li><strong>Phase 3:</strong> modular expansion, more calculators, and structured data reuse.</li>
+                <li><strong>Phase 4:</strong> platformization, dashboard views, and managed data workflows.</li>
+            </ol>
+            <p class="supporting-copy">Detailed sequencing lives in <code>docs/repository-roadmap.md</code>.</p>
         </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>If you have any questions, feel free to reach out to us.</p>
-            <h3>Follow Us on Social Media</h3>
-            <ul>
-                <li><a href="https://www.facebook.com">Facebook</a></li>
-                <li><a href="https://twitter.com">Twitter</a></li>
-                <li><a href="https://www.linkedin.com">LinkedIn</a></li>
-                <li><a href="https://www.instagram.com">Instagram</a></li>
+
+        <section id="contact" class="page-section">
+            <h2>Contact</h2>
+            <p>If you have questions about the repository, prototype direction, or document framework, use the listed owner channels.</p>
+            <ul class="contact-list">
+                <li>Email: <a href="mailto:spajicn@yahoo.com">spajicn@yahoo.com</a></li>
+                <li>Email: <a href="mailto:spajicn@gmail.com">spajicn@gmail.com</a></li>
+                <li><a href="https://www.facebook.com/Spaja86">Facebook Page 1</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61583240952997">Facebook Page 2</a></li>
+                <li><a href="https://www.instagram.com/spaja.1986">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@spaja.1986">TikTok</a></li>
+                <li><a href="https://www.youtube.com/@spajanikopenevolution?si=9JIUkOKsxLcRn">YouTube</a></li>
             </ul>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2026 AI IQ World Bank. All rights reserved.</p>
-        <p>Owner: Nikola Spajić</p>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 AI IQ World Bank. All rights reserved.</p>
+            <p>Owner: Nikola Spajić</p>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
