@@ -364,11 +364,11 @@ Pre aktivacije svake nove delatnosti mora postojati sledeći tok odluke:
 
 ## 15) Usklađivanje sa postojećim repozitorijumom
 
-- Poslovni okvir povezati sa `/home/runner/work/Ai-Iq-World-Bank/Ai-Iq-World-Bank/ai-iq-world-bank-poslovni-izvestaj.md`.
+- Poslovni okvir povezati sa `ai-iq-world-bank-poslovni-izvestaj.md`.
 - Globalni licencni deo voditi kao poseban pravno-operativni template.
 - Javne verzije uskladiti sa pravilima sanitizovanog prikaza iz postojećih planova.
-- Ako se koristi `DINAR`, primenjuje se status i režim iz `/home/runner/work/Ai-Iq-World-Bank/Ai-Iq-World-Bank/dinar-standard-plan.md`; bez automatskog predstavljanja kao javno verifikovane ili regulatorno potvrđene vrednosti.
-- Tvrdnje iz eksternih izvora voditi prema pravilima iz `/home/runner/work/Ai-Iq-World-Bank/Ai-Iq-World-Bank/eksterni-repozitorijum-pravni-navod-plan.md`.
+- Ako se koristi `DINAR`, primenjuje se status i režim iz `dinar-standard-plan.md`; bez automatskog predstavljanja kao javno verifikovane ili regulatorno potvrđene vrednosti.
+- Tvrdnje iz eksternih izvora voditi prema pravilima iz `eksterni-repozitorijum-pravni-navod-plan.md`.
 
 ## 16) Završna preporuka
 
