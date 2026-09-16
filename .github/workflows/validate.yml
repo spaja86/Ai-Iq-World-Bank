@@ -1,0 +1,26 @@
+name: Validate Repository
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate repository structure and docs
+        run: python3 config/validate_repository.py
+
+      - name: Validate frontend script syntax
+        run: node --check script.js

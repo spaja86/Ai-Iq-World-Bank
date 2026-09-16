@@ -1,10 +1,11 @@
-// script.js
-
-// Function to display the current date and time
-function displayCurrentDateTime() {
-    const currentDateTime = new Date().toISOString();
-    console.log(`Current Date and Time (UTC): ${currentDateTime}`);
-}
+const INDEKURILANC_STANDARD_VERSION = 'INDEKURILANC-STD-V1';
+const DEFAULT_RESULT_STATE = Object.freeze({
+    score: '-',
+    status: 'Not Calculated',
+    summary: 'Run the calculator to generate an operational interpretation.',
+    priority: 'Awaiting input',
+    standard: INDEKURILANC_STANDARD_VERSION
+});
 
 const INDEKURILANC_WEIGHTS = Object.freeze({
     infrastructure: 0.4,
@@ -53,6 +54,25 @@ function resolveMaturity(score) {
     return 'Early Stage';
 }
 
+function resolveInterpretation(score) {
+    if (score >= 70) {
+        return {
+            summary: 'Capability is mature enough to support structured scale-up, provided standards stay controlled.',
+            priority: 'Scale responsibly, document decisions, and preserve governance discipline.'
+        };
+    }
+    if (score >= 40) {
+        return {
+            summary: 'Core capability exists, but execution consistency and institutional discipline still need reinforcement.',
+            priority: 'Strengthen repeatability, close governance gaps, and improve operational depth.'
+        };
+    }
+    return {
+        summary: 'Foundational capability is still forming and requires concentrated build-up across multiple dimensions.',
+        priority: 'Prioritize core infrastructure, team capability, and baseline operating controls.'
+    };
+}
+
 function setFeedback(element, message, type) {
     element.textContent = message;
     element.classList.remove('error', 'success');
@@ -61,21 +81,31 @@ function setFeedback(element, message, type) {
     }
 }
 
-function updateResultView(scoreElement, statusElement, score, status) {
-    scoreElement.textContent = String(score);
-    statusElement.textContent = status;
+function updateResultView(elements, state) {
+    elements.score.textContent = String(state.score);
+    elements.status.textContent = state.status;
+    elements.summary.textContent = state.summary;
+    elements.priority.textContent = state.priority;
+    elements.standard.textContent = state.standard;
 }
 
 function initializeIndekurilanc() {
     const form = document.getElementById('indekurilanc-form');
     const resetButton = document.getElementById('indekurilanc-reset');
     const feedback = document.getElementById('indekurilanc-feedback');
-    const scoreOutput = document.getElementById('indekurilanc-score');
-    const statusOutput = document.getElementById('indekurilanc-status');
+    const resultElements = {
+        score: document.getElementById('indekurilanc-score'),
+        status: document.getElementById('indekurilanc-status'),
+        summary: document.getElementById('indekurilanc-summary'),
+        priority: document.getElementById('indekurilanc-priority'),
+        standard: document.getElementById('indekurilanc-standard')
+    };
 
-    if (!form || !resetButton || !feedback || !scoreOutput || !statusOutput) {
+    if (!form || !resetButton || !feedback || Object.values(resultElements).some((element) => !element)) {
         return;
     }
+
+    updateResultView(resultElements, DEFAULT_RESULT_STATE);
 
     form.addEventListener('submit', (event) => {
         event.preventDefault();
@@ -90,25 +120,31 @@ function initializeIndekurilanc() {
         const validation = validateInputs(scores);
         if (!validation.valid) {
             setFeedback(feedback, validation.message, 'error');
-            updateResultView(scoreOutput, statusOutput, '-', 'Not Calculated');
+            updateResultView(resultElements, DEFAULT_RESULT_STATE);
             return;
         }
 
         const score = calculateIndekurilanc(scores);
         const status = resolveMaturity(score);
+        const interpretation = resolveInterpretation(score);
 
         setFeedback(feedback, 'INDEKURILANC score calculated successfully.', 'success');
-        updateResultView(scoreOutput, statusOutput, score, status);
+        updateResultView(resultElements, {
+            score,
+            status,
+            summary: interpretation.summary,
+            priority: interpretation.priority,
+            standard: INDEKURILANC_STANDARD_VERSION
+        });
     });
 
     resetButton.addEventListener('click', () => {
         form.reset();
         setFeedback(feedback, '', null);
-        updateResultView(scoreOutput, statusOutput, '-', 'Not Calculated');
+        updateResultView(resultElements, DEFAULT_RESULT_STATE);
     });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    displayCurrentDateTime();
     initializeIndekurilanc();
 });
