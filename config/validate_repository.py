@@ -54,16 +54,6 @@ ALLOWED_VISIBILITY = {
 STRUCTURED_MD_EXCLUDES = {'.github/PULL_REQUEST_TEMPLATE.md'}
 STRUCTURED_MD_DIRECTORIES = {'docs', 'governance', 'standards'}
 STRUCTURED_MD_FILES = {
-    'README.md',
-    'template-plan.md',
-    'ai-iq-world-bank-poslovni-izvestaj.md',
-    'investiciona-i-operativna-imovina-registar-plan.md',
-    'javni-prikaz-emisija-i-kamatna-politika-plan.md',
-    'eksterni-repozitorijum-pravni-navod-plan.md',
-    'globalni-licencni-okvir-i-delatnosti-plan.md',
-    'vercel-naplata-poruka-plan.md',
-    'github-naplata-poruka-plan.md',
-    'dinar-standard-plan.md',
     'config/sensitive-content-review-checklist.md',
 }
 
@@ -100,11 +90,20 @@ def validate_document_control(relative_path: Path, text: str) -> None:
     control_text = '\n'.join(control_lines)
 
     values = {}
-    for key in DOC_CONTROL_KEYS:
-        match = re.search(rf'- \*\*{re.escape(key)}:\*\* (.+)', control_text)
+    pattern = re.compile(r'- \*\*(.+?):\*\* (.+)')
+    for line in control_lines:
+        match = pattern.fullmatch(line)
         if not match:
+            continue
+        key = match.group(1).strip()
+        value = match.group(2).strip()
+        if key in values:
+            fail(f'{relative_path} has duplicate Document Control field: {key}')
+        values[key] = value
+
+    for key in DOC_CONTROL_KEYS:
+        if key not in values:
             fail(f'{relative_path} is missing Document Control field: {key}')
-        values[key] = match.group(1).strip()
 
     if values['Status'] not in ALLOWED_STATUSES:
         fail(f'{relative_path} has invalid status: {values["Status"]}')
@@ -132,6 +131,8 @@ def is_structured_markdown(relative_path: Path) -> bool:
     relative_name = relative_path.as_posix()
     if relative_name in STRUCTURED_MD_EXCLUDES:
         return False
+    if len(relative_path.parts) == 1 and relative_path.suffix == '.md':
+        return True
     if relative_name in STRUCTURED_MD_FILES:
         return True
     return relative_path.parts[0] in STRUCTURED_MD_DIRECTORIES

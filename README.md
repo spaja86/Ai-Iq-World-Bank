@@ -138,13 +138,10 @@ Validate locally with:
 - `python3 config/validate_repository.py`
 - `node --check script.js`
 
-The repository workflow in `.github/workflows/validate.yml` runs `config/validate_repository.py` plus `node --check script.js`, and therefore enforces:
+The repository workflow in `.github/workflows/validate.yml` currently runs:
 
-- required core files
-- structured document control blocks
-- repository-relative references only
-- presence of required frontend ids
-- active standard version exposure in `script.js`
+- `python3 config/validate_repository.py` for required core files, structured document control blocks, allowed status/visibility values, dependency existence, repository-relative references, required frontend ids, and active standard version exposure in `script.js`
+- `node --check script.js` for frontend syntax validation
 
 ## Development priorities
 

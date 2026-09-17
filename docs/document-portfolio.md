@@ -55,7 +55,8 @@ This file is the master portfolio map for repository documents, their category, 
 
 ## Master dependency view
 
-- **Repository control core:** `README.md` -> `governance/repo-charter.md` -> `governance/document-lifecycle.md`
+- **Repository control core:** `README.md` depends on `governance/repo-charter.md` and `governance/document-lifecycle.md`
+- **Governance sequence:** `governance/document-lifecycle.md` builds on `governance/repo-charter.md`
 - **Scoring core:** `standards/indekurilanc-standard.md` -> `script.js` -> `ai-iq-world-bank-poslovni-izvestaj.md`
 - **Value-system core:** `dinar-standard-plan.md` -> `javni-prikaz-emisija-i-kamatna-politika-plan.md`
 - **Sensitive asset/public split:** `investiciona-i-operativna-imovina-registar-plan.md` -> `javni-prikaz-emisija-i-kamatna-politika-plan.md` -> `config/sensitive-content-review-checklist.md`
