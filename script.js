@@ -91,11 +91,26 @@ const FUTURE_MODULES = Object.freeze([
 ]);
 
 const ROADMAP_PHASES = Object.freeze([
-    'Foundation stabilization: structure, hierarchy, standards, and validation.',
-    'Product strengthening: clearer prototype surfaces and standard-aligned outputs.',
-    'Core standardization: standards and glossary control future logic changes.',
-    'Portfolio alignment: document metadata, dependencies, and visibility.',
-    'Lifecycle enforcement and platform growth: controlled modular expansion.'
+    Object.freeze({
+        label: 'Foundation stabilization',
+        body: 'structure, hierarchy, standards, and validation.'
+    }),
+    Object.freeze({
+        label: 'Product strengthening',
+        body: 'clearer prototype surfaces and standard-aligned outputs.'
+    }),
+    Object.freeze({
+        label: 'Core standardization',
+        body: 'standards and glossary control future logic changes.'
+    }),
+    Object.freeze({
+        label: 'Portfolio alignment',
+        body: 'document metadata, dependencies, and visibility.'
+    }),
+    Object.freeze({
+        label: 'Lifecycle enforcement and platform growth',
+        body: 'controlled modular expansion.'
+    })
 ]);
 
 function clampToRange(value, min, max) {
@@ -208,6 +223,21 @@ function renderList(elementId, items) {
     }));
 }
 
+function renderRoadmap() {
+    const list = document.getElementById('roadmap-list');
+    if (!list) {
+        return;
+    }
+
+    list.replaceChildren(...ROADMAP_PHASES.map((phase) => {
+        const listItem = document.createElement('li');
+        const label = document.createElement('strong');
+        label.textContent = `${phase.label}:`;
+        listItem.append(label, ` ${phase.body}`);
+        return listItem;
+    }));
+}
+
 function renderStandardSummary() {
     const list = document.getElementById('indekurilanc-standard-list');
     if (!list) {
@@ -243,7 +273,7 @@ function initializeRepositoryView() {
     renderList('source-hierarchy', SOURCE_OF_TRUTH);
     renderMiniCardGrid('visibility-model', VISIBILITY_MODEL);
     renderMiniCardGrid('future-modules', FUTURE_MODULES);
-    renderList('roadmap-list', ROADMAP_PHASES);
+    renderRoadmap();
     renderStandardSummary();
     renderMaturityBands();
 }
