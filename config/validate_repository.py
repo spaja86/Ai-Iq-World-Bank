@@ -99,8 +99,20 @@ def validate_document_control(relative_path: Path, text: str) -> None:
     if values['Visibility'] not in ALLOWED_VISIBILITY:
         fail(f'{relative_path} has invalid visibility: {values["Visibility"]}')
 
-    if '`' not in values['Depends on']:
+    dependency_matches = re.findall(r'`([^`]+)`', values['Depends on'])
+    if not dependency_matches:
         fail(f'{relative_path} must use repository-relative backticked references in Depends on')
+
+    normalized_dependencies = ', '.join(f'`{dependency}`' for dependency in dependency_matches)
+    if normalized_dependencies != values['Depends on']:
+        fail(f'{relative_path} must list only repository-relative backticked references in Depends on')
+
+    for dependency in dependency_matches:
+        dependency_path = Path(dependency)
+        if dependency_path.is_absolute() or '..' in dependency_path.parts:
+            fail(f'{relative_path} has non-repository-relative dependency: {dependency}')
+        if not (ROOT / dependency_path).exists():
+            fail(f'{relative_path} depends on missing file: {dependency}')
 
 
 def is_structured_markdown(relative_path: Path) -> bool:
