@@ -1,5 +1,15 @@
 # AI IQ World Bank — Detaljan plan/registar za investicionu i operativnu imovinu
 
+## Document Control
+
+- **Category:** Templates
+- **Type:** asset registry
+- **Status:** working
+- **Visibility:** limited/internal
+- **Purpose:** Fill-in framework for sensitive asset and operational equipment registry with sanitization controls.
+- **Depends on:** `governance/document-lifecycle.md`, `config/sensitive-content-review-checklist.md`, `javni-prikaz-emisija-i-kamatna-politika-plan.md`
+
+
 Ovaj dokument je **fill-in template/framework** za evidenciju i analizu:
 - Investicionih dijamanata (koliko tona i gde)
 - Investicionog zlata (koliko tona i gde)

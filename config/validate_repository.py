@@ -37,11 +37,55 @@ HTML_IDS = [
     'indekurilanc-standard',
     'indekurilanc-reset',
 ]
+DOC_CONTROL_KEYS = [
+    'Category',
+    'Type',
+    'Status',
+    'Visibility',
+    'Purpose',
+    'Depends on',
+]
+ALLOWED_STATUSES = {'draft', 'working', 'approved', 'archived'}
+ALLOWED_VISIBILITY = {
+    'public-safe',
+    'limited/internal',
+    'canonical/internal standard',
+}
+STRUCTURED_MD_EXCLUDES = {'.github/PULL_REQUEST_TEMPLATE.md'}
 
 
 def fail(message: str) -> None:
     print(f'ERROR: {message}')
     sys.exit(1)
+
+
+def validate_document_control(relative_path: Path, text: str) -> None:
+    if relative_path.as_posix() in STRUCTURED_MD_EXCLUDES:
+        return
+
+    lines = text.splitlines()
+    if not lines or not lines[0].startswith('# '):
+        fail(f'{relative_path} must start with a level-1 title')
+
+    head = '\n'.join(lines[:18])
+    if '## Document Control' not in head:
+        fail(f'{relative_path} is missing a top-level Document Control block')
+
+    values = {}
+    for key in DOC_CONTROL_KEYS:
+        match = re.search(rf'- \*\*{re.escape(key)}:\*\* (.+)', head)
+        if not match:
+            fail(f'{relative_path} is missing Document Control field: {key}')
+        values[key] = match.group(1).strip()
+
+    if values['Status'] not in ALLOWED_STATUSES:
+        fail(f'{relative_path} has invalid status: {values["Status"]}')
+
+    if values['Visibility'] not in ALLOWED_VISIBILITY:
+        fail(f'{relative_path} has invalid visibility: {values["Visibility"]}')
+
+    if '`' not in values['Depends on']:
+        fail(f'{relative_path} must use repository-relative backticked references in Depends on')
 
 
 for relative_path in REQUIRED_FILES:
@@ -55,6 +99,8 @@ for pattern in CONTENT_GLOBS:
         text = path.read_text(encoding='utf-8')
         if FORBIDDEN_PATH_SNIPPET in text:
             fail(f'Forbidden absolute checkout path found in {path.relative_to(ROOT)}')
+        if path.suffix == '.md':
+            validate_document_control(path.relative_to(ROOT), text)
 
 readme_text = (ROOT / 'README.md').read_text(encoding='utf-8')
 for linked_path in README_LINK_PATTERN.findall(readme_text):

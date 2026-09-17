@@ -1,5 +1,15 @@
 # Vercel — plan poruke za problem sa naplatom
 
+## Document Control
+
+- **Category:** Support
+- **Type:** billing communication template
+- **Status:** working
+- **Visibility:** limited/internal
+- **Purpose:** Template for Vercel billing and reactivation communication with controlled supporting evidence.
+- **Depends on:** `config/sensitive-content-review-checklist.md`, `governance/document-lifecycle.md`
+
+
 Ovaj dokument implementira traženi plan za formalnu komunikaciju sa Vercel podrškom povodom problema sa naplatom i nastavka poslovanja.
 
 ## 1) Cilj poruke

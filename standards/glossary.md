@@ -1,5 +1,14 @@
 # Repository Glossary
 
+## Document Control
+
+- **Category:** Standards
+- **Type:** glossary
+- **Status:** approved
+- **Visibility:** canonical/internal standard
+- **Purpose:** Controlled terminology for repository pillars, document classes, visibility, and governance concepts.
+- **Depends on:** `governance/repo-charter.md`, `governance/document-lifecycle.md`, `README.md`
+
 | Term | Meaning |
 |---|---|
 | AI IQ World Bank | The repository and concept space combining prototype, standards, planning, and governance assets |
@@ -13,4 +22,7 @@
 | Sanitized output | A version prepared for sharing with sensitive details removed or aggregated |
 | Public output | A version suitable for wider distribution under legal/reputational controls |
 | Internal output | A version intended for restricted operational use |
+| public-safe | Content suitable for broad sharing without sensitive operational detail |
+| limited/internal | Restricted working content that may contain non-public context |
+| canonical/internal standard | Normative internal guidance that controls other repository assets |
 | Repository-relative reference | A sibling filename or repository path used instead of an environment-specific absolute filesystem path |

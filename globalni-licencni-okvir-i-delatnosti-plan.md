@@ -1,5 +1,15 @@
 # AI IQ World Bank — Master plan za širenje delatnosti i globalni licencni okvir
 
+## Document Control
+
+- **Category:** Templates
+- **Type:** licensing/master operations
+- **Status:** working
+- **Visibility:** limited/internal
+- **Purpose:** Master framework for activity expansion, jurisdiction readiness, approvals, and licensing boundaries.
+- **Depends on:** `governance/document-lifecycle.md`, `docs/future-data-model.md`, `standards/glossary.md`
+
+
 Ovaj dokument je **fill-in template/framework** za implementaciju cilja da AI IQ WORLD BANK funkcioniše kao široka globalna platforma/holding sa maksimalnim brojem dozvoljenih delatnosti, uz jasno razdvajanje:
 - šta može odmah
 - šta može uz lokalnu registraciju

@@ -1,5 +1,15 @@
 # AI IQ World Bank — Plan za javni prikaz stanja, emisiju digitalnih jedinica i kamatnu politiku
 
+## Document Control
+
+- **Category:** Templates
+- **Type:** public policy/display
+- **Status:** working
+- **Visibility:** public-safe
+- **Purpose:** Framework for public-safe transparency outputs, emission rules, and interest-policy controls.
+- **Depends on:** `dinar-standard-plan.md`, `investiciona-i-operativna-imovina-registar-plan.md`, `governance/document-lifecycle.md`
+
+
 Ovaj dokument je **fill-in template/framework** za javnu transparentnost podataka o imovini, kontrolisanu emisiju digitalnih jedinica i upravljanje kamatnom politikom.
 
 ## Bezbednosna i javna napomena

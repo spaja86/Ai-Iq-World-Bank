@@ -1,5 +1,14 @@
 # INDEKURILANC Standard
 
+## Document Control
+
+- **Category:** Standards
+- **Type:** scoring standard
+- **Status:** approved
+- **Visibility:** canonical/internal standard
+- **Purpose:** Canonical source for INDEKURILANC weights, maturity bands, outputs, and change-control rules.
+- **Depends on:** `script.js`, `governance/repo-charter.md`, `standards/glossary.md`
+
 ## Standard ID
 
 - **Identifier:** `INDEKURILANC-STD-V1`
@@ -40,12 +49,6 @@ Any interface or document that displays an INDEKURILANC result should include:
 - priority focus,
 - standard/version reference.
 
-## Future model rules
-
-- New dimensions may be proposed, but the active three-dimension model remains the canonical baseline until a new standard version is approved.
-- Experimental variants should be labeled separately from the baseline model.
-- If weights change, update this standard before treating the change as canonical.
-
 ## Mapping expectations
 
 INDEKURILANC results should be explainable against repository documents, especially:
@@ -54,3 +57,10 @@ INDEKURILANC results should be explainable against repository documents, especia
 - governance maturity,
 - licensing/operational expansion readiness,
 - public transparency and asset control practices.
+
+## Change-control rules
+
+- New dimensions may be proposed, but the active three-dimension model remains the canonical baseline until a new standard version is approved.
+- Experimental variants should be labeled separately from the baseline model.
+- If weights, maturity bands, or required outputs change, update this standard before treating the change as canonical.
+- Public prototype wording should remain aligned with this standard and should expose the active standard identifier.
