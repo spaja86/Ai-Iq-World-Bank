@@ -1,30 +1,46 @@
 # Document Portfolio Map
 
+## Document Control
+
+- **Category:** Architecture
+- **Type:** portfolio map
+- **Status:** approved
+- **Visibility:** public-safe
+- **Purpose:** Master index of repository documents, dependencies, visibility, and recommended usage order.
+- **Depends on:** `README.md`, `governance/document-lifecycle.md`, `governance/repo-charter.md`
+
 ## Purpose
 
-This file is the master portfolio map for repository documents, their category, current role, and recommended order of use.
+This file is the master portfolio map for repository documents, their category, current role, dependencies, risk level, and recommended order of use.
 
 ## Portfolio status matrix
 
-| File | Category | Type | Status | Primary use |
-|---|---|---|---|---|
-| `README.md` | Navigation | repository guide | working | Start here for structure and workflow |
-| `governance/repo-charter.md` | Governance | charter | approved | Understand repository purpose and hierarchy |
-| `governance/document-lifecycle.md` | Governance | rules | approved | Review document status and publication rules |
-| `standards/glossary.md` | Standards | glossary | approved | Resolve terminology before editing linked materials |
-| `standards/indekurilanc-standard.md` | Standards | scoring standard | approved | Canonical source for INDEKURILANC behavior |
-| `dinar-standard-plan.md` | Standards | value-system framework | working | DINAR status, usage, and controls |
-| `template-plan.md` | Templates | mapping template | working | Reusable structure for baseline mapping |
-| `ai-iq-world-bank-poslovni-izvestaj.md` | Templates | business analysis | working | Business review, KPI, and performance framing |
-| `investiciona-i-operativna-imovina-registar-plan.md` | Templates | asset registry | working | Sensitive asset inventory and sanitization logic |
-| `javni-prikaz-emisija-i-kamatna-politika-plan.md` | Templates | public policy/display | working | Public asset/policy framing and publication constraints |
-| `eksterni-repozitorijum-pravni-navod-plan.md` | Templates | legal/reputational handling | working | External-claim handling and evidence workflow |
-| `globalni-licencni-okvir-i-delatnosti-plan.md` | Templates | licensing/master operations | working | Activity expansion, approvals, and licensing scope |
-| `vercel-naplata-poruka-plan.md` | Support | billing communication template | working | Vercel support workflow |
-| `github-naplata-poruka-plan.md` | Support | billing communication template | working | GitHub support workflow |
-| `docs/future-data-model.md` | Architecture | planning reference | draft | Future entities and integration boundaries |
-| `docs/repository-roadmap.md` | Roadmap | phased plan | working | Delivery sequencing across product and docs |
-| `config/sensitive-content-review-checklist.md` | Controls | checklist | approved | Pre-commit and pre-publication review |
+| File | Category | Type | Status | Visibility | Depends on | Risk | Primary use |
+|---|---|---|---|---|---|---|---|
+| `README.md` | Navigation | repository guide | working | public-safe | `governance/repo-charter.md`, `governance/document-lifecycle.md`, `standards/indekurilanc-standard.md` | medium | Start here for structure and workflow |
+| `governance/repo-charter.md` | Governance | charter | approved | canonical/internal standard | `standards/indekurilanc-standard.md`, `README.md` | high | Understand repository purpose and hierarchy |
+| `governance/document-lifecycle.md` | Governance | rules | approved | canonical/internal standard | `governance/repo-charter.md`, `config/sensitive-content-review-checklist.md` | high | Review metadata, status, and publication rules |
+| `standards/glossary.md` | Standards | glossary | approved | canonical/internal standard | `governance/repo-charter.md`, `governance/document-lifecycle.md` | medium | Resolve terminology before editing linked materials |
+| `standards/indekurilanc-standard.md` | Standards | scoring standard | approved | canonical/internal standard | `script.js`, `standards/glossary.md`, `governance/repo-charter.md` | high | Canonical source for INDEKURILANC behavior |
+| `dinar-standard-plan.md` | Standards | value-system framework | working | canonical/internal standard | `governance/document-lifecycle.md`, `standards/glossary.md` | high | DINAR status, usage, and controls |
+| `template-plan.md` | Templates | mapping template | working | public-safe | `README.md`, `governance/document-lifecycle.md`, `standards/glossary.md` | low | Reusable structure for baseline mapping |
+| `ai-iq-world-bank-poslovni-izvestaj.md` | Templates | business analysis | working | limited/internal | `standards/indekurilanc-standard.md`, `template-plan.md` | medium | Business review, KPI, and performance framing |
+| `investiciona-i-operativna-imovina-registar-plan.md` | Templates | asset registry | working | limited/internal | `governance/document-lifecycle.md`, `config/sensitive-content-review-checklist.md` | high | Sensitive asset inventory and sanitization logic |
+| `javni-prikaz-emisija-i-kamatna-politika-plan.md` | Templates | public policy/display | working | public-safe | `dinar-standard-plan.md`, `investiciona-i-operativna-imovina-registar-plan.md` | high | Public asset/policy framing and publication constraints |
+| `eksterni-repozitorijum-pravni-navod-plan.md` | Templates | legal/reputational handling | working | limited/internal | `governance/document-lifecycle.md`, `standards/glossary.md` | high | External-claim handling and evidence workflow |
+| `globalni-licencni-okvir-i-delatnosti-plan.md` | Templates | licensing/master operations | working | limited/internal | `governance/document-lifecycle.md`, `docs/future-data-model.md` | high | Activity expansion, approvals, and licensing scope |
+| `vercel-naplata-poruka-plan.md` | Support | billing communication template | working | limited/internal | `config/sensitive-content-review-checklist.md`, `governance/document-lifecycle.md` | medium | Vercel support workflow |
+| `github-naplata-poruka-plan.md` | Support | billing communication template | working | limited/internal | `config/sensitive-content-review-checklist.md`, `governance/document-lifecycle.md` | medium | GitHub support workflow |
+| `docs/future-data-model.md` | Architecture | planning reference | draft | limited/internal | `docs/document-portfolio.md`, `standards/indekurilanc-standard.md`, `governance/document-lifecycle.md` | medium | Future entities and integration boundaries |
+| `docs/repository-roadmap.md` | Roadmap | delivery plan | working | public-safe | `docs/document-portfolio.md`, `governance/repo-charter.md`, `config/validate_repository.py` | medium | Delivery sequencing across product and docs |
+| `config/sensitive-content-review-checklist.md` | Controls | checklist | approved | canonical/internal standard | `governance/document-lifecycle.md`, `README.md` | high | Pre-commit and pre-publication review |
+
+## Portfolio snapshot
+
+- **Approved:** governance core, glossary, INDEKURILANC standard, sensitive-content checklist, portfolio map
+- **Working:** README, DINAR framework, reusable templates, roadmap, domain plans, support plans
+- **Draft:** future data model
+- **Archived:** none currently tracked
 
 ## Recommended usage order
 
@@ -34,7 +50,18 @@ This file is the master portfolio map for repository documents, their category, 
 4. `standards/glossary.md`
 5. `standards/indekurilanc-standard.md` and `dinar-standard-plan.md` as needed
 6. Domain-specific planning or support template
-7. `docs/repository-roadmap.md` and `docs/future-data-model.md` for extension work
+7. `docs/document-portfolio.md` and `docs/repository-roadmap.md` for sequencing and dependencies
+8. `docs/future-data-model.md` for later platform work
+
+## Master dependency view
+
+- **Repository control core:** `README.md` depends on `governance/repo-charter.md` and `governance/document-lifecycle.md`
+- **Governance sequence:** `governance/document-lifecycle.md` builds on `governance/repo-charter.md`
+- **Scoring core:** `standards/indekurilanc-standard.md` -> `script.js` -> `ai-iq-world-bank-poslovni-izvestaj.md`
+- **Value-system core:** `dinar-standard-plan.md` -> `javni-prikaz-emisija-i-kamatna-politika-plan.md`
+- **Sensitive asset/public split:** `investiciona-i-operativna-imovina-registar-plan.md` -> `javni-prikaz-emisija-i-kamatna-politika-plan.md` -> `config/sensitive-content-review-checklist.md`
+- **Expansion and licensing:** `globalni-licencni-okvir-i-delatnosti-plan.md` -> `docs/future-data-model.md` -> governance controls
+- **Support communication:** `vercel-naplata-poruka-plan.md` and `github-naplata-poruka-plan.md` -> `config/sensitive-content-review-checklist.md`
 
 ## When to use which plan
 

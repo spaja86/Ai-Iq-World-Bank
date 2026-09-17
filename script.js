@@ -1,4 +1,5 @@
 const INDEKURILANC_STANDARD_VERSION = 'INDEKURILANC-STD-V1';
+
 const DEFAULT_RESULT_STATE = Object.freeze({
     score: '-',
     status: 'Not Calculated',
@@ -12,6 +13,112 @@ const INDEKURILANC_WEIGHTS = Object.freeze({
     skills: 0.35,
     governance: 0.25
 });
+
+const MATURITY_BANDS = Object.freeze([
+    Object.freeze({
+        range: '0-39.99',
+        status: 'Early Stage',
+        summary: 'Foundation work is still the main priority.'
+    }),
+    Object.freeze({
+        range: '40-69.99',
+        status: 'Emerging',
+        summary: 'Core capability exists, but it still needs stronger repeatability and discipline.'
+    }),
+    Object.freeze({
+        range: '70-100',
+        status: 'Advanced',
+        summary: 'Capability is comparatively mature and can support structured scale-up.'
+    })
+]);
+
+const REPOSITORY_PILLARS = Object.freeze([
+    Object.freeze({
+        title: 'Product / Prototype',
+        body: 'Current baseline: the static website and the INDEKURILANC readiness calculator.'
+    }),
+    Object.freeze({
+        title: 'Standards',
+        body: 'Canonical scoring, terminology, and value-system rules control interpretation.'
+    }),
+    Object.freeze({
+        title: 'Operational Plans',
+        body: 'Serbian-language templates define business, asset, licensing, policy, and support workflows.'
+    }),
+    Object.freeze({
+        title: 'Governance and Protection',
+        body: 'Lifecycle, sanitization, visibility, and review rules protect repository growth.'
+    })
+]);
+
+const SOURCE_OF_TRUTH = Object.freeze([
+    'Approved standards and active normative root standards',
+    'Governance rules',
+    'README navigation and contributor workflow',
+    'Architecture, portfolio, and roadmap references',
+    'Operational templates and support plans',
+    'Prototype implementation details'
+]);
+
+const VISIBILITY_MODEL = Object.freeze([
+    Object.freeze({
+        title: 'public-safe',
+        body: 'Broadly shareable material without sensitive operational detail.'
+    }),
+    Object.freeze({
+        title: 'limited/internal',
+        body: 'Restricted working content with non-public context.'
+    }),
+    Object.freeze({
+        title: 'canonical/internal standard',
+        body: 'Normative repository guidance that controls other assets.'
+    })
+]);
+
+const FUTURE_MODULES = Object.freeze([
+    Object.freeze({
+        title: 'Metadata layer',
+        body: 'Document control, dependencies, visibility, and portfolio alignment.'
+    }),
+    Object.freeze({
+        title: 'Additional calculators',
+        body: 'New score or readiness modules introduced under controlled standards.'
+    }),
+    Object.freeze({
+        title: 'Dashboard/API layer',
+        body: 'Later platform work after governance and data boundaries are stable.'
+    })
+]);
+
+const STANDARD_SUMMARY_ITEMS = Object.freeze([
+    `Infrastructure: ${Math.round(INDEKURILANC_WEIGHTS.infrastructure * 100)}%`,
+    `Skills: ${Math.round(INDEKURILANC_WEIGHTS.skills * 100)}%`,
+    `Governance: ${Math.round(INDEKURILANC_WEIGHTS.governance * 100)}%`,
+    `Active reference: ${INDEKURILANC_STANDARD_VERSION}`
+]);
+
+const ROADMAP_PHASES = Object.freeze([
+    Object.freeze({
+        label: 'Foundation stabilization',
+        body: 'structure, hierarchy, standards, and validation.'
+    }),
+    Object.freeze({
+        label: 'Product strengthening',
+        body: 'clearer prototype surfaces and standard-aligned outputs.'
+    }),
+    Object.freeze({
+        label: 'Core standardization',
+        body: 'standards and glossary control future logic changes.'
+    }),
+    Object.freeze({
+        label: 'Portfolio alignment',
+        body: 'document metadata, dependencies, and visibility.'
+    }),
+    Object.freeze({
+        label: 'Lifecycle enforcement and platform growth',
+        body: 'controlled modular expansion.'
+    })
+]);
 
 function clampToRange(value, min, max) {
     return Math.min(max, Math.max(min, value));
@@ -89,6 +196,88 @@ function updateResultView(elements, state) {
     elements.standard.textContent = state.standard;
 }
 
+function createMiniCard(item, headingLevel = 'h4') {
+    const card = document.createElement('article');
+    card.className = 'mini-card';
+
+    const title = document.createElement(headingLevel);
+    title.textContent = item.title;
+
+    const body = document.createElement('p');
+    body.textContent = item.body;
+
+    card.append(title, body);
+    return card;
+}
+
+function renderMiniCardGrid(elementId, items) {
+    const container = document.getElementById(elementId);
+    if (!container) {
+        return;
+    }
+    container.replaceChildren(...items.map((item) => createMiniCard(item)));
+}
+
+function renderList(elementId, items) {
+    const list = document.getElementById(elementId);
+    if (!list) {
+        return;
+    }
+    list.replaceChildren(...items.map((item) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = item;
+        return listItem;
+    }));
+}
+
+function renderRoadmap() {
+    const list = document.getElementById('roadmap-list');
+    if (!list) {
+        return;
+    }
+
+    list.replaceChildren(...ROADMAP_PHASES.map((phase) => {
+        const listItem = document.createElement('li');
+        const label = document.createElement('strong');
+        label.textContent = `${phase.label}:`;
+        listItem.append(label, ` ${phase.body}`);
+        return listItem;
+    }));
+}
+
+function renderStandardSummary() {
+    const list = document.getElementById('indekurilanc-standard-list');
+    if (!list) {
+        return;
+    }
+
+    list.replaceChildren(...STANDARD_SUMMARY_ITEMS.map((item) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = item;
+        return listItem;
+    }));
+}
+
+function renderMaturityBands() {
+    renderMiniCardGrid('maturity-bands', MATURITY_BANDS.map((band) => ({
+        title: `${band.status} (${band.range})`,
+        body: band.summary
+    })));
+}
+
+function initializeRepositoryView() {
+    renderMiniCardGrid('pillar-grid', REPOSITORY_PILLARS.map((pillar) => ({
+        title: pillar.title,
+        body: pillar.body
+    })));
+    renderList('source-hierarchy', SOURCE_OF_TRUTH);
+    renderMiniCardGrid('visibility-model', VISIBILITY_MODEL);
+    renderMiniCardGrid('future-modules', FUTURE_MODULES);
+    renderRoadmap();
+    renderStandardSummary();
+    renderMaturityBands();
+}
+
 function initializeIndekurilanc() {
     const form = document.getElementById('indekurilanc-form');
     const resetButton = document.getElementById('indekurilanc-reset');
@@ -146,5 +335,6 @@ function initializeIndekurilanc() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    initializeRepositoryView();
     initializeIndekurilanc();
 });

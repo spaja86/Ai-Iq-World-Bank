@@ -1,5 +1,15 @@
 # AI IQ World Bank — Plan za obradu pravno osetljivih navoda iz eksternog repozitorijuma
 
+## Document Control
+
+- **Category:** Templates
+- **Type:** legal/reputational handling
+- **Status:** working
+- **Visibility:** limited/internal
+- **Purpose:** Framework for handling external legal or political claims without treating them as verified fact.
+- **Depends on:** `governance/document-lifecycle.md`, `config/sensitive-content-review-checklist.md`, `standards/glossary.md`
+
+
 Ovaj dokument je **fill-in template/framework** za slučajeve kada eksterni repozitorijum sadrži pravno/politički osetljivu tvrdnju (npr. navod o državnom uređenju).
 
 ## 1) Definisanje cilja

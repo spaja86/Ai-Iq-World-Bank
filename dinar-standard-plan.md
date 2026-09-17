@@ -1,5 +1,15 @@
 # AI IQ World Bank — Standard za “Dinar (srbski)” / “DINAR”
 
+## Document Control
+
+- **Category:** Standards
+- **Type:** value-system framework
+- **Status:** working
+- **Visibility:** canonical/internal standard
+- **Purpose:** Defines DINAR usage boundaries, scenario controls, and contextual labeling requirements.
+- **Depends on:** `governance/document-lifecycle.md`, `standards/glossary.md`, `README.md`
+
+
 Ovaj dokument je **normativni standard/framework** za uvođenje i upravljanje internom jedinicom **Dinar (srbski)** sa sistemskim nazivom **DINAR** u okviru AI IQ World Bank.
 
 ## 1) Svrha i status standarda

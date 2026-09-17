@@ -37,11 +37,105 @@ HTML_IDS = [
     'indekurilanc-standard',
     'indekurilanc-reset',
 ]
+DOC_CONTROL_KEYS = [
+    'Category',
+    'Type',
+    'Status',
+    'Visibility',
+    'Purpose',
+    'Depends on',
+]
+ALLOWED_STATUSES = {'draft', 'working', 'approved', 'archived'}
+ALLOWED_VISIBILITY = {
+    'public-safe',
+    'limited/internal',
+    'canonical/internal standard',
+}
+STRUCTURED_MD_EXCLUDES = {'.github/PULL_REQUEST_TEMPLATE.md'}
+STRUCTURED_MD_DIRECTORIES = {'docs', 'governance', 'standards'}
+STRUCTURED_MD_FILES = {
+    'config/sensitive-content-review-checklist.md',
+}
 
 
 def fail(message: str) -> None:
     print(f'ERROR: {message}')
     sys.exit(1)
+
+
+def validate_document_control(relative_path: Path, text: str) -> None:
+    if relative_path.as_posix() in STRUCTURED_MD_EXCLUDES:
+        return
+
+    lines = text.splitlines()
+    if not lines or not lines[0].startswith('# '):
+        fail(f'{relative_path} must start with a level-1 title')
+
+    document_control_index = None
+    for index, line in enumerate(lines[1:], start=1):
+        if line == '## Document Control':
+            document_control_index = index
+            break
+        if line.startswith('## '):
+            break
+
+    if document_control_index is None:
+        fail(f'{relative_path} is missing a top-level Document Control block')
+
+    control_lines = []
+    for line in lines[document_control_index + 1:]:
+        if line.startswith('## '):
+            break
+        control_lines.append(line)
+    control_text = '\n'.join(control_lines)
+
+    values = {}
+    pattern = re.compile(r'- \*\*(.+?):\*\* (.+)')
+    for line in control_lines:
+        match = pattern.fullmatch(line)
+        if not match:
+            continue
+        key = match.group(1).strip()
+        value = match.group(2).strip()
+        if key in values:
+            fail(f'{relative_path} has duplicate Document Control field: {key}')
+        values[key] = value
+
+    for key in DOC_CONTROL_KEYS:
+        if key not in values:
+            fail(f'{relative_path} is missing Document Control field: {key}')
+
+    if values['Status'] not in ALLOWED_STATUSES:
+        fail(f'{relative_path} has invalid status: {values["Status"]}')
+
+    if values['Visibility'] not in ALLOWED_VISIBILITY:
+        fail(f'{relative_path} has invalid visibility: {values["Visibility"]}')
+
+    dependency_matches = re.findall(r'`([^`]+)`', values['Depends on'])
+    if not dependency_matches:
+        fail(f'{relative_path} must use repository-relative backticked references in Depends on')
+
+    normalized_dependencies = ', '.join(f'`{dependency}`' for dependency in dependency_matches)
+    if normalized_dependencies != values['Depends on']:
+        fail(f'{relative_path} must list only repository-relative backticked references in Depends on')
+
+    for dependency in dependency_matches:
+        dependency_path = Path(dependency)
+        if dependency_path.is_absolute() or '..' in dependency_path.parts:
+            fail(f'{relative_path} has non-repository-relative dependency: {dependency}')
+        if not (ROOT / dependency_path).exists():
+            fail(f'{relative_path} depends on missing file: {dependency}')
+
+
+def is_structured_markdown(relative_path: Path) -> bool:
+    relative_name = relative_path.as_posix()
+    if relative_name in STRUCTURED_MD_EXCLUDES:
+        return False
+    if len(relative_path.parts) == 1 and relative_path.suffix == '.md':
+        return True
+    if relative_name in STRUCTURED_MD_FILES:
+        return True
+    return relative_path.parts[0] in STRUCTURED_MD_DIRECTORIES
 
 
 for relative_path in REQUIRED_FILES:
@@ -55,6 +149,8 @@ for pattern in CONTENT_GLOBS:
         text = path.read_text(encoding='utf-8')
         if FORBIDDEN_PATH_SNIPPET in text:
             fail(f'Forbidden absolute checkout path found in {path.relative_to(ROOT)}')
+        if path.suffix == '.md' and is_structured_markdown(path.relative_to(ROOT)):
+            validate_document_control(path.relative_to(ROOT), text)
 
 readme_text = (ROOT / 'README.md').read_text(encoding='utf-8')
 for linked_path in README_LINK_PATTERN.findall(readme_text):

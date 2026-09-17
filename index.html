@@ -10,11 +10,11 @@
     <header class="site-header">
         <div class="container">
             <h1>AI IQ World Bank</h1>
-            <p class="hero-copy">Knowledge, planning, standards, and prototype modules in one repository.</p>
+            <p class="hero-copy">One controlled repository for prototype modules, canonical standards, operational plans, and governance protection.</p>
             <nav aria-label="Primary">
                 <ul class="nav-list">
                     <li><a href="#overview">Overview</a></li>
-                    <li><a href="#modules">Modules</a></li>
+                    <li><a href="#architecture">Architecture</a></li>
                     <li><a href="#indekurilanc">INDEKURILANC</a></li>
                     <li><a href="#standards">Standards</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
@@ -29,47 +29,26 @@
         <section id="overview" class="page-section card-stack">
             <h2>Repository Overview</h2>
             <p>
-                This repository combines a static prototype, controlled standards, operational templates,
-                and governance rules for sensitive or scenario-based content.
+                The repository is designed as one connected system. Standards and governance control how plans and
+                public prototype surfaces evolve, while the prototype makes the active model visible.
             </p>
-            <div class="pillar-grid">
-                <article class="card info-card">
-                    <h3>Product / Prototype</h3>
-                    <p>Current baseline: the static website and the INDEKURILANC readiness calculator.</p>
-                </article>
-                <article class="card info-card">
-                    <h3>Standards</h3>
-                    <p>Canonical scoring and terminology now live in dedicated repository standards.</p>
-                </article>
-                <article class="card info-card">
-                    <h3>Operational Plans</h3>
-                    <p>Serbian-language templates define analysis, asset, licensing, and support workflows.</p>
-                </article>
-                <article class="card info-card">
-                    <h3>Governance</h3>
-                    <p>Lifecycle, sanitization, and publication rules protect sensitive and scenario content.</p>
-                </article>
-            </div>
+            <div id="pillar-grid" class="pillar-grid"></div>
         </section>
 
-        <section id="modules" class="page-section">
-            <h2>Repository Modules</h2>
-            <div class="module-grid">
+        <section id="architecture" class="page-section">
+            <h2>Controlled Architecture</h2>
+            <div class="module-grid architecture-grid">
                 <article class="card module-card">
-                    <h3>Prototype Module</h3>
-                    <p>Frontend entrypoint with scoring, result states, and roadmap-aligned content structure.</p>
+                    <h3>Source-of-Truth Hierarchy</h3>
+                    <ol id="source-hierarchy" class="ordered-card-list"></ol>
                 </article>
                 <article class="card module-card">
-                    <h3>Standards Module</h3>
-                    <p>Controlled references for INDEKURILANC, DINAR usage, and repository terminology.</p>
+                    <h3>Visibility Layers</h3>
+                    <div id="visibility-model" class="mini-card-grid"></div>
                 </article>
                 <article class="card module-card">
-                    <h3>Portfolio Module</h3>
-                    <p>Document maps and usage guidance that connect planning files into one system.</p>
-                </article>
-                <article class="card module-card">
-                    <h3>Governance Module</h3>
-                    <p>Review, lifecycle, and publication controls for sustainable repository growth.</p>
+                    <h3>Future Module Path</h3>
+                    <div id="future-modules" class="mini-card-grid"></div>
                 </article>
             </div>
         </section>
@@ -78,16 +57,16 @@
             <h2 id="indekurilanc-title">INDEKURILANC</h2>
             <p>
                 INDEKURILANC is the active repository scoring baseline for AI capability maturity.
-                The current standard keeps three weighted dimensions and adds an operational interpretation.
+                The current standard keeps three weighted dimensions and requires an operational interpretation.
             </p>
             <div class="indekurilanc-grid">
                 <article class="card indekurilanc-card">
                     <h3>Baseline Standard</h3>
-                    <ul>
+                    <ul id="indekurilanc-standard-list">
                         <li>Infrastructure: 40%</li>
                         <li>Skills: 35%</li>
                         <li>Governance: 25%</li>
-                        <li>Active reference: <code>INDEKURILANC-STD-V1</code></li>
+                        <li>Active reference: INDEKURILANC-STD-V1</li>
                     </ul>
                     <p>
                         Use the score as a structured readiness indicator, not as a substitute for a full business,
@@ -138,6 +117,10 @@
                         </div>
                     </dl>
                 </article>
+                <article class="card indekurilanc-card">
+                    <h3>Maturity Bands</h3>
+                    <div id="maturity-bands" class="mini-card-grid"></div>
+                </article>
             </div>
         </section>
 
@@ -146,12 +129,12 @@
             <div class="reference-grid">
                 <article class="card reference-card">
                     <h3>INDEKURILANC</h3>
-                    <p>Canonical score model, maturity bands, and output expectations.</p>
+                    <p>Canonical score model, maturity bands, outputs, and change-control rules.</p>
                     <p><code>standards/indekurilanc-standard.md</code></p>
                 </article>
                 <article class="card reference-card">
                     <h3>Glossary</h3>
-                    <p>Controlled terminology for repository content and future extensions.</p>
+                    <p>Controlled terminology for repository content, visibility, and future extensions.</p>
                     <p><code>standards/glossary.md</code></p>
                 </article>
                 <article class="card reference-card">
@@ -190,7 +173,7 @@
                     <p><code>vercel-naplata-poruka-plan.md</code> and <code>github-naplata-poruka-plan.md</code></p>
                 </article>
             </div>
-            <p class="supporting-copy">See <code>docs/document-portfolio.md</code> for the full status matrix and usage order.</p>
+            <p class="supporting-copy">See <code>docs/document-portfolio.md</code> for status, dependencies, risk, and usage order.</p>
         </section>
 
         <section id="governance" class="page-section">
@@ -198,12 +181,12 @@
             <div class="reference-grid">
                 <article class="card reference-card">
                     <h3>Repository Charter</h3>
-                    <p>Defines purpose, pillars, and source-of-truth hierarchy.</p>
+                    <p>Defines purpose, pillars, structure lock, hierarchy, and approval expectations.</p>
                     <p><code>governance/repo-charter.md</code></p>
                 </article>
                 <article class="card reference-card">
                     <h3>Document Lifecycle</h3>
-                    <p>Defines types, statuses, review checkpoints, and linking rules.</p>
+                    <p>Defines control metadata, statuses, visibility, review checkpoints, and linking rules.</p>
                     <p><code>governance/document-lifecycle.md</code></p>
                 </article>
                 <article class="card reference-card">
@@ -216,11 +199,12 @@
 
         <section id="roadmap" class="page-section">
             <h2>Roadmap</h2>
-            <ol class="roadmap-list">
-                <li><strong>Phase 1:</strong> structure, standards, governance, and baseline validation.</li>
-                <li><strong>Phase 2:</strong> connected UI sections and stronger document quality gates.</li>
-                <li><strong>Phase 3:</strong> modular expansion, more calculators, and structured data reuse.</li>
-                <li><strong>Phase 4:</strong> platformization, dashboard views, and managed data workflows.</li>
+            <ol id="roadmap-list" class="roadmap-list">
+                <li><strong>Foundation stabilization:</strong> structure, hierarchy, standards, and validation.</li>
+                <li><strong>Product strengthening:</strong> clearer prototype surfaces and standard-aligned outputs.</li>
+                <li><strong>Core standardization:</strong> standards and glossary control future logic changes.</li>
+                <li><strong>Portfolio alignment:</strong> document metadata, dependencies, and visibility.</li>
+                <li><strong>Lifecycle enforcement and platform growth:</strong> controlled modular expansion.</li>
             </ol>
             <p class="supporting-copy">Detailed sequencing lives in <code>docs/repository-roadmap.md</code>.</p>
         </section>

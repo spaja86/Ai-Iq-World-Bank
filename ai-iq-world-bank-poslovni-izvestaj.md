@@ -1,5 +1,15 @@
 # AI IQ World Bank — Ekstremno detaljan okvir poslovne analize
 
+## Document Control
+
+- **Category:** Templates
+- **Type:** business analysis
+- **Status:** working
+- **Visibility:** limited/internal
+- **Purpose:** Fill-in framework for business diagnostics, KPI review, and INDEKURILANC-aligned analysis.
+- **Depends on:** `standards/indekurilanc-standard.md`, `template-plan.md`, `governance/document-lifecycle.md`
+
+
 Ovaj dokument implementira traženi plan za: opis poslovanja, kvartalni promet, bilansno stanje, dužinu rada, napredak i tržišna usmerenja.
 
 ## 1) Cilj analize

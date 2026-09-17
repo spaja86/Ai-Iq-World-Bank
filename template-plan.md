@@ -1,31 +1,35 @@
 # Template Plan for Existing INDEKURILANC Assets
 
+## Document Control
+
+- **Category:** Templates
+- **Type:** mapping template
+- **Status:** working
+- **Visibility:** public-safe
+- **Purpose:** Reusable template for mapping existing repository assets, gaps, and normalization decisions.
+- **Depends on:** `README.md`, `governance/document-lifecycle.md`, `standards/glossary.md`
+
 ## 1) Scope Clarification
 
-Source phrase from task input (verbatim, spelling intentionally preserved): `CREATE PRETPLATE PLAN FOR EXIST EXTRIMLI EXTREM EXTRONDOL`.
-The mapping below is an interpretation for planning purposes, not canonical project terminology:
+Use this template when a task asks for an extreme or structured plan around assets that already exist in the repository.
 
-- **PRETPLATE** → **Template**
-- **EXIST** → **Existing**
-- **EXTRIMLI / EXTREM / EXTRONDOL** → **Extensible/standardized structure for current assets**
-
-This document defines a reusable planning template and applies it to what currently exists in this repository.
+This document is a reusable planning framework, not a canonical product or governance standard on its own.
 
 ## 2) Current Repository Baseline
 
-### Existing templates
-- No dedicated template files currently exist.
-
-### Existing documentation
-- `README.md` (project overview, INDEKURILANC behavior, usage, constraints, owner info)
+### Existing templates and standards
+- The repository already contains operational templates, governance documents, standards, and a static prototype.
+- The authoritative navigation entry is `README.md`.
+- The portfolio map is `docs/document-portfolio.md`.
 
 ### Existing workflows/automation
-- Point-in-time baseline (2026-09-14 review): no GitHub Actions workflow files were found in `.github/workflows`.
+- `.github/workflows/validate.yml` provides baseline repository validation.
+- `config/validate_repository.py` checks required files, repository-relative references, document control blocks, and forbidden checkout-specific paths.
 
 ### Existing implementation artifacts
-- `index.html` (UI and INDEKURILANC section)
-- `script.js` (validation, score calculation, result state handling)
-- `styles.css` (layout and visual styles)
+- `index.html` (public repository interface)
+- `script.js` (INDEKURILANC logic and data-driven repository panels)
+- `styles.css` (layout and visual system)
 
 ## 3) Standard Output Format (Reusable)
 
@@ -35,37 +39,46 @@ Use this section structure for future “existing asset template plans”:
 2. **Current Baseline Inventory**
 3. **Target Structure / Format Definition**
 4. **Mapping of Existing Items to Template**
-5. **Gaps / Exceptions**
-6. **Stakeholder Review Notes**
-7. **Finalized Standard**
+5. **Dependencies and Governance Controls**
+6. **Gaps / Exceptions**
+7. **Stakeholder Review Notes**
+8. **Finalized Working Standard**
 
 ## 4) Mapping Existing Items to the Template
 
 | Template Section | Existing Item(s) | Status | Notes |
 |---|---|---|---|
-| Scope Clarification | Problem statement only | Partial | Original wording is ambiguous; normalized in this file. |
-| Current Baseline Inventory | `README.md`, `index.html`, `script.js`, `styles.css` | Complete | Core project artifacts identified. |
+| Scope Clarification | Planning request / problem statement | Complete | Normalize ambiguous wording before execution. |
+| Current Baseline Inventory | `README.md`, `docs/document-portfolio.md`, `governance/`, `standards/`, frontend files | Complete | Core assets identified. |
 | Target Structure / Format Definition | This document section 3 | Complete | Reusable format defined. |
 | Mapping of Existing Items to Template | This document section 4 | Complete | Baseline mapped with status. |
-| Gaps / Exceptions | Section 5 below | Complete | Captures missing templates/workflows and unresolved naming. |
-| Stakeholder Review Notes | Section 6 below | Partial | Awaiting confirmation of normalized wording and naming. |
-| Finalized Standard | Section 7 below | Complete (provisional) | Usable now; confirm after stakeholder review. |
+| Dependencies and Governance Controls | Section 5 below | Complete | Links planning to standards, governance, and validation. |
+| Gaps / Exceptions | Section 6 below | Complete | Captures open structural or policy gaps. |
+| Stakeholder Review Notes | Section 7 below | Working | Open for clarification when ambiguous input exists. |
+| Finalized Working Standard | Section 8 below | Working | Usable now and revisable later. |
 
-## 5) Gaps / Exceptions
+## 5) Dependencies and Governance Controls
 
-- No pre-existing template artifacts are present in the repository.
-- No CI/workflow definitions are present for process standardization.
-- The term **INDEKURILANC** appears consistently in `README.md`, `index.html`, and `script.js`; no separate canonical glossary document was found during this review.
+- Check `governance/repo-charter.md` for repository pillars and hierarchy.
+- Check `governance/document-lifecycle.md` for required document metadata and status rules.
+- Check `standards/glossary.md` before introducing new normalized terminology.
+- Check `config/sensitive-content-review-checklist.md` when the output may expose sensitive operational details.
 
-## 6) Stakeholder Review Notes
+## 6) Gaps / Exceptions
+
+- A planning request may still be ambiguous even when the repository structure is clear.
+- Some domain templates may need both internal and sanitized public variants outside source control.
+- Future APIs or dashboards should wait until document metadata and governance controls are stable.
+
+## 7) Stakeholder Review Notes
 
 Review and confirm:
 
-- Whether the normalized interpretation of the original phrase is correct.
-- Whether this template should be the default for future planning docs.
-- Whether a dedicated templates directory should be introduced later.
-- Whether a canonical glossary source should be added for terms like **INDEKURILANC**.
+- whether the normalized interpretation of the request is correct,
+- whether a new standard or only a working plan is needed,
+- whether the output is public-safe or limited/internal,
+- whether any new term belongs in `standards/glossary.md`.
 
-## 7) Finalized Standard (Current)
+## 8) Finalized Working Standard
 
-Until revised, this file is the repository’s standard baseline template-plan format for existing assets and gap identification.
+Until superseded, this file is the repository’s reusable template for mapping existing assets, dependencies, and gaps into one controlled plan.

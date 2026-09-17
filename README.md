@@ -1,42 +1,88 @@
 # AI IQ World Bank
 
-AI IQ World Bank is a repository that combines a static prototype, repository standards, governance rules, and Serbian-language planning templates.
+## Document Control
+
+- **Category:** Navigation
+- **Type:** repository guide
+- **Status:** working
+- **Visibility:** public-safe
+- **Purpose:** Primary navigation entry for repository structure, standards, governance, and validation workflow.
+- **Depends on:** `governance/repo-charter.md`, `governance/document-lifecycle.md`, `standards/indekurilanc-standard.md`
+
+AI IQ World Bank is one repository built around one controlled system with four connected pillars: product/prototype, standards, operational plans, and governance/protection.
 
 ## Repository pillars
 
-1. **Product / prototype** - the static website and INDEKURILANC calculator.
-2. **Standards** - canonical definitions for scoring, terminology, and controlled value systems.
-3. **Operational plans** - fill-in planning templates for analysis, assets, public disclosures, licensing, and support communication.
-4. **Governance and protection** - sanitization, review, lifecycle, and publication controls.
+1. **Product / prototype** - the static website and the active INDEKURILANC calculator.
+2. **Standards** - canonical definitions for scoring, terminology, value-system usage, and future change control.
+3. **Operational plans** - fill-in templates for business analysis, assets, public outputs, licensing, and support communication.
+4. **Governance and protection** - lifecycle rules, sanitization, review checkpoints, and publication controls.
+
+## Source-of-truth hierarchy
+
+When repository content overlaps, use this order:
+
+1. Approved standards in `standards/` and active normative root standards such as `dinar-standard-plan.md`
+2. Governance rules in `governance/`
+3. `README.md` for contributor navigation and allowed structure
+4. Portfolio, roadmap, and future-model documents in `docs/`
+5. Domain-specific templates and support-message plans
+6. Prototype implementation in `index.html`, `styles.css`, and `script.js`
+
+## Locked structure and extension rules
+
+Core repository structure is intentionally stable:
+
+- `README.md` remains the main entry point for contributors.
+- `docs/` holds portfolio, roadmap, and future architecture planning.
+- `governance/` holds lifecycle and charter rules.
+- `standards/` holds canonical definitions and controlled terminology.
+- `config/` holds validation and sensitive-content review controls.
+- Root `*.md` files remain reserved for active standards and reusable fill-in plans already mapped in the portfolio.
+
+Do not add ad-hoc top-level files or new document groups without also updating:
+
+- `docs/document-portfolio.md`
+- `governance/document-lifecycle.md`
+- `config/validate_repository.py` when new required structure must be enforced
+
+## Structured document minimum
+
+Every structured repository document should declare a top-level `Document Control` block with at least:
+
+- category
+- type
+- status
+- visibility
+- purpose
+- dependencies
+
+Use repository-relative references such as `README.md` or `docs/document-portfolio.md`. Never commit checkout-specific absolute filesystem paths.
+
+## Visibility model
+
+Use these visibility classes consistently:
+
+- **public-safe** - suitable for broad sharing without sensitive operational detail
+- **limited/internal** - restricted working material that may contain non-public operational context
+- **canonical/internal standard** - normative repository guidance that controls other documents and implementations
+
+Separate scenario assumptions, verified facts, internal detail, and public output in every affected document.
 
 ## Current structure
 
-- `index.html` - static entrypoint for the repository website.
-- `styles.css` - current website styles.
-- `script.js` - current frontend logic for INDEKURILANC.
-- `docs/` - portfolio maps, roadmap, and future integration references.
-- `governance/` - charter and document lifecycle rules.
-- `standards/` - canonical repository standards and glossary.
-- `config/` - repository validation and sensitive-content review guidance.
-- Root `*.md` planning files - current fill-in templates and standards already used by the repository.
-
-## Quick start
-
-### View the prototype
-
-1. Open `index.html` in a browser.
-2. Navigate to the `INDEKURILANC` section.
-3. Enter scores for infrastructure, skills, and governance.
-4. Review the score, status, and operational interpretation.
-
-### Validate locally
-
-- Run `python3 config/validate_repository.py`
-- Run `node --check script.js`
+- `index.html` - static public entrypoint
+- `styles.css` - public prototype styling
+- `script.js` - frontend scoring and repository module rendering
+- `docs/` - document portfolio, roadmap, and future data model
+- `governance/` - repository charter and lifecycle rules
+- `standards/` - INDEKURILANC and glossary standards
+- `config/` - validation and sensitive-content review controls
+- Root `*.md` planning files - reusable templates and active root standards
 
 ## Product baseline: INDEKURILANC
 
-INDEKURILANC is the repository's active scoring prototype.
+INDEKURILANC is the active scoring prototype.
 
 - Infrastructure: 40%
 - Skills: 35%
@@ -47,48 +93,63 @@ INDEKURILANC is the repository's active scoring prototype.
   - `70-100` -> Advanced
 - Active standard reference: `standards/indekurilanc-standard.md`
 
+The interface must show numeric score, maturity status, operational interpretation, priority focus, and standard/version reference.
+
 ## Canonical standards and governance
 
-- `standards/indekurilanc-standard.md` - scoring baseline, maturity bands, required interpretation fields, and future model rules.
-- `standards/glossary.md` - controlled repository terminology.
-- `dinar-standard-plan.md` - DINAR framework with scenario/operational/public usage separation.
-- `governance/repo-charter.md` - purpose, repository pillars, and source-of-truth hierarchy.
-- `governance/document-lifecycle.md` - document types, statuses, review rules, and naming/linking conventions.
-- `config/sensitive-content-review-checklist.md` - pre-commit and publication safety checklist.
+- `standards/indekurilanc-standard.md` - scoring baseline, maturity bands, outputs, and change-control rules
+- `standards/glossary.md` - controlled repository terminology and visibility vocabulary
+- `dinar-standard-plan.md` - DINAR framework with scenario/operational/public usage separation
+- `governance/repo-charter.md` - repository mission, pillars, and source-of-truth hierarchy
+- `governance/document-lifecycle.md` - document types, statuses, metadata rules, and review checkpoints
+- `config/sensitive-content-review-checklist.md` - pre-commit and pre-publication safety checklist
 
 ## Document portfolio
 
 ### Operational templates and plans
 
-- `template-plan.md` - reusable baseline template for existing repository assets.
-- `ai-iq-world-bank-poslovni-izvestaj.md` - business analysis template with KPI and INDEKURILANC rubric.
-- `investiciona-i-operativna-imovina-registar-plan.md` - asset registry template with sanitization rules.
-- `javni-prikaz-emisija-i-kamatna-politika-plan.md` - public transparency, emission, and interest-policy template.
-- `eksterni-repozitorijum-pravni-navod-plan.md` - legal/reputational handling template for external claims.
-- `globalni-licencni-okvir-i-delatnosti-plan.md` - master licensing and activity-expansion template.
-- `vercel-naplata-poruka-plan.md` - Vercel billing support message template.
-- `github-naplata-poruka-plan.md` - GitHub billing and business subscription template.
+- `template-plan.md` - reusable baseline template for repository asset mapping
+- `ai-iq-world-bank-poslovni-izvestaj.md` - business analysis template with KPI and INDEKURILANC framing
+- `investiciona-i-operativna-imovina-registar-plan.md` - asset registry template with sanitization rules
+- `javni-prikaz-emisija-i-kamatna-politika-plan.md` - public transparency, emission, and interest-policy template
+- `eksterni-repozitorijum-pravni-navod-plan.md` - legal and reputational handling template for external claims
+- `globalni-licencni-okvir-i-delatnosti-plan.md` - master licensing and activity-expansion template
+- `vercel-naplata-poruka-plan.md` - Vercel billing support template
+- `github-naplata-poruka-plan.md` - GitHub billing and subscription support template
 
 ### Portfolio and roadmap references
 
-- `docs/document-portfolio.md` - master map of repository documents, purpose, status, and usage order.
-- `docs/repository-roadmap.md` - phased development roadmap for product, docs, and governance.
-- `docs/future-data-model.md` - future entity model for scoring, assets, governance, and licensing.
+- `docs/document-portfolio.md` - master map of repository documents, status, dependencies, visibility, and usage order
+- `docs/repository-roadmap.md` - implementation sequence across standards, governance, frontend, and platform growth
+- `docs/future-data-model.md` - future entity model for scores, documents, governance, assets, and licensing
 
-## Governance rules
+## Governance and protection rules
 
 - Planning documents are fill-in templates; populated versions with sensitive business or asset details must stay out of source control unless sanitized.
 - Public-facing content must clearly separate scenario assumptions from verified facts.
 - DINAR values must always carry status, version, and effective-date context.
-- Repository documents should reference sibling files with repository-relative filenames.
+- Repository documents should reference sibling files with repository-relative paths.
+- New standard changes should update the relevant standard before implementation is treated as canonical.
 
-## CI and repository validation
+## Validation workflow
 
-The repository now includes `.github/workflows/validate.yml` for basic checks:
+Validate locally with:
 
+- `python3 config/validate_repository.py`
 - `node --check script.js`
-- repository structure validation through `config/validate_repository.py`
-- protection against accidental checkout-specific absolute path references
+
+The repository workflow in `.github/workflows/validate.yml` currently runs:
+
+- `python3 config/validate_repository.py` for required core files, structured document control blocks, allowed status/visibility values, dependency existence, repository-relative references, required frontend ids, and active standard version exposure in `script.js`
+- `node --check script.js` for frontend syntax validation
+
+## Development priorities
+
+1. Standards + governance + validation
+2. Frontend clarity and stability
+3. Alignment of plans and document references
+4. Modular frontend/data-model growth
+5. Dashboard/API/platform expansion when repository controls are mature
 
 ## Owner information
 

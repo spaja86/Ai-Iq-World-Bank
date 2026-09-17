@@ -1,8 +1,29 @@
 # Future Data Model
 
+## Document Control
+
+- **Category:** Architecture
+- **Type:** planning reference
+- **Status:** draft
+- **Visibility:** limited/internal
+- **Purpose:** Defines future structured entities for scores, documents, governance, assets, and licensing.
+- **Depends on:** `docs/document-portfolio.md`, `standards/indekurilanc-standard.md`, `governance/document-lifecycle.md`
+
 ## Goal
 
-Define a future-ready data model that can support the current prototype, document governance, and later API-backed extensions.
+Define a future-ready data model that can support the current prototype, document governance, and later API-backed extensions without mixing public-safe content with sensitive operational detail.
+
+## Cross-cutting control fields
+
+When entities are introduced, prefer shared control fields where relevant:
+
+- `status`
+- `visibility`
+- `source_of_truth`
+- `standard_version`
+- `review_state`
+- `effective_date`
+- `last_reviewed_at`
 
 ## Core entities
 
@@ -14,6 +35,7 @@ Suggested fields:
 - `profile_id`
 - `name`
 - `scope`
+- `visibility`
 - `infrastructure_score`
 - `skills_score`
 - `governance_score`
@@ -35,8 +57,11 @@ Suggested fields:
 - `document_type`
 - `status`
 - `visibility`
-- `owner`
+- `purpose`
 - `depends_on`
+- `risk_level`
+- `source_of_truth`
+- `owner_role`
 - `last_reviewed_at`
 
 ### 3. Asset Summary
@@ -64,7 +89,7 @@ Suggested fields:
 - `subject_type`
 - `subject_id`
 - `decision_status`
-- `approver`
+- `approver_role`
 - `decision_date`
 - `notes`
 
@@ -80,6 +105,7 @@ Suggested fields:
 - `priority_wave`
 - `status`
 - `local_partner_required`
+- `visibility`
 - `notes`
 
 ### 6. KPI Metric
@@ -94,6 +120,17 @@ Suggested fields:
 - `unit`
 - `period`
 - `source_document`
+- `visibility`
+
+## Visibility alignment
+
+Use repository visibility classes when possible:
+
+- `public-safe`
+- `limited/internal`
+- `canonical/internal standard`
+
+A future system should also preserve the distinction between scenario assumptions and verified facts where those concepts apply.
 
 ## Separation rules
 
@@ -101,7 +138,13 @@ Suggested fields:
 - Keep public-safe aggregates separate from sensitive raw operational detail.
 - Keep scenario values separate from verified public values.
 - Keep UI display configuration separate from scoring logic and content data.
+- Keep document metadata reusable across frontend, validation, and future APIs.
 
 ## Implementation direction
 
-If a backend is introduced later, start with read-only reference entities for standards and document metadata before adding sensitive operational data.
+If a backend is introduced later:
+
+1. Start with read-only reference entities for standards and document metadata.
+2. Add governance decision tracking next.
+3. Add sanitized public summaries before detailed internal operational records.
+4. Introduce sensitive operational data only after access boundaries and approval controls exist.

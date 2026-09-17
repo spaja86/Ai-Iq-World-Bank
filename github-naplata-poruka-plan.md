@@ -1,5 +1,15 @@
 # GitHub — plan poruke za problem sa naplatom i dugoročnu poslovnu pretplatu
 
+## Document Control
+
+- **Category:** Support
+- **Type:** billing communication template
+- **Status:** working
+- **Visibility:** limited/internal
+- **Purpose:** Template for GitHub billing and subscription communication with controlled factual framing.
+- **Depends on:** `config/sensitive-content-review-checklist.md`, `governance/document-lifecycle.md`
+
+
 Ovaj dokument implementira traženi plan za formalnu komunikaciju sa GitHub podrškom povodom problema sa naplatom i zahteva za stabilnijim dugoročnim poslovnim modelom pretplate.
 
 ## 1) Cilj obraćanja
