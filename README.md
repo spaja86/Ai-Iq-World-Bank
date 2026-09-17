@@ -57,7 +57,7 @@ Every structured repository document should declare a top-level `Document Contro
 - purpose
 - dependencies
 
-Use repository-relative references such as `filename.md` or `folder/file.md`. Never commit checkout-specific absolute filesystem paths.
+Use repository-relative references such as `README.md` or `docs/document-portfolio.md`. Never commit checkout-specific absolute filesystem paths.
 
 ## Visibility model
 
