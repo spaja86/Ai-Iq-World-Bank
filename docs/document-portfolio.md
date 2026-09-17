@@ -18,7 +18,7 @@ This file is the master portfolio map for repository documents, their category, 
 | File | Category | Type | Status | Visibility | Depends on | Risk | Primary use |
 |---|---|---|---|---|---|---|---|
 | `README.md` | Navigation | repository guide | working | public-safe | `governance/repo-charter.md`, `governance/document-lifecycle.md`, `standards/indekurilanc-standard.md` | medium | Start here for structure and workflow |
-| `governance/repo-charter.md` | Governance | charter | approved | canonical/internal standard | `governance/document-lifecycle.md`, `standards/indekurilanc-standard.md` | high | Understand repository purpose and hierarchy |
+| `governance/repo-charter.md` | Governance | charter | approved | canonical/internal standard | `standards/indekurilanc-standard.md`, `README.md` | high | Understand repository purpose and hierarchy |
 | `governance/document-lifecycle.md` | Governance | rules | approved | canonical/internal standard | `governance/repo-charter.md`, `config/sensitive-content-review-checklist.md` | high | Review metadata, status, and publication rules |
 | `standards/glossary.md` | Standards | glossary | approved | canonical/internal standard | `governance/repo-charter.md`, `governance/document-lifecycle.md` | medium | Resolve terminology before editing linked materials |
 | `standards/indekurilanc-standard.md` | Standards | scoring standard | approved | canonical/internal standard | `script.js`, `standards/glossary.md`, `governance/repo-charter.md` | high | Canonical source for INDEKURILANC behavior |

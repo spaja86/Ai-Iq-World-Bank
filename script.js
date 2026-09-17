@@ -90,6 +90,13 @@ const FUTURE_MODULES = Object.freeze([
     })
 ]);
 
+const STANDARD_SUMMARY_ITEMS = Object.freeze([
+    `Infrastructure: ${Math.round(INDEKURILANC_WEIGHTS.infrastructure * 100)}%`,
+    `Skills: ${Math.round(INDEKURILANC_WEIGHTS.skills * 100)}%`,
+    `Governance: ${Math.round(INDEKURILANC_WEIGHTS.governance * 100)}%`,
+    `Active reference: ${INDEKURILANC_STANDARD_VERSION}`
+]);
+
 const ROADMAP_PHASES = Object.freeze([
     Object.freeze({
         label: 'Foundation stabilization',
@@ -244,14 +251,7 @@ function renderStandardSummary() {
         return;
     }
 
-    const items = [
-        `Infrastructure: ${Math.round(INDEKURILANC_WEIGHTS.infrastructure * 100)}%`,
-        `Skills: ${Math.round(INDEKURILANC_WEIGHTS.skills * 100)}%`,
-        `Governance: ${Math.round(INDEKURILANC_WEIGHTS.governance * 100)}%`,
-        `Active reference: ${INDEKURILANC_STANDARD_VERSION}`
-    ];
-
-    list.replaceChildren(...items.map((item) => {
+    list.replaceChildren(...STANDARD_SUMMARY_ITEMS.map((item) => {
         const listItem = document.createElement('li');
         listItem.textContent = item;
         return listItem;

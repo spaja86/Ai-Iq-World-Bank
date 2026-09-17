@@ -138,7 +138,7 @@ Validate locally with:
 - `python3 config/validate_repository.py`
 - `node --check script.js`
 
-The repository workflow in `.github/workflows/validate.yml` enforces:
+The repository workflow in `.github/workflows/validate.yml` runs `config/validate_repository.py` plus `node --check script.js`, and therefore enforces:
 
 - required core files
 - structured document control blocks
