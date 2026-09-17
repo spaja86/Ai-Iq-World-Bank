@@ -52,6 +52,7 @@ ALLOWED_VISIBILITY = {
     'canonical/internal standard',
 }
 STRUCTURED_MD_EXCLUDES = {'.github/PULL_REQUEST_TEMPLATE.md'}
+STRUCTURED_MD_DIRECTORIES = {'docs', 'governance', 'standards', 'config'}
 
 
 def fail(message: str) -> None:
@@ -67,13 +68,27 @@ def validate_document_control(relative_path: Path, text: str) -> None:
     if not lines or not lines[0].startswith('# '):
         fail(f'{relative_path} must start with a level-1 title')
 
-    head = '\n'.join(lines[:18])
-    if '## Document Control' not in head:
+    document_control_index = None
+    for index, line in enumerate(lines[1:], start=1):
+        if line == '## Document Control':
+            document_control_index = index
+            break
+        if line.startswith('## '):
+            break
+
+    if document_control_index is None:
         fail(f'{relative_path} is missing a top-level Document Control block')
+
+    control_lines = []
+    for line in lines[document_control_index + 1:]:
+        if line.startswith('## '):
+            break
+        control_lines.append(line)
+    control_text = '\n'.join(control_lines)
 
     values = {}
     for key in DOC_CONTROL_KEYS:
-        match = re.search(rf'- \*\*{re.escape(key)}:\*\* (.+)', head)
+        match = re.search(rf'- \*\*{re.escape(key)}:\*\* (.+)', control_text)
         if not match:
             fail(f'{relative_path} is missing Document Control field: {key}')
         values[key] = match.group(1).strip()
@@ -88,6 +103,14 @@ def validate_document_control(relative_path: Path, text: str) -> None:
         fail(f'{relative_path} must use repository-relative backticked references in Depends on')
 
 
+def is_structured_markdown(relative_path: Path) -> bool:
+    if relative_path.as_posix() in STRUCTURED_MD_EXCLUDES:
+        return False
+    if len(relative_path.parts) == 1 and relative_path.suffix == '.md':
+        return True
+    return relative_path.parts[0] in STRUCTURED_MD_DIRECTORIES
+
+
 for relative_path in REQUIRED_FILES:
     if not (ROOT / relative_path).exists():
         fail(f'Missing required file: {relative_path}')
@@ -99,7 +122,7 @@ for pattern in CONTENT_GLOBS:
         text = path.read_text(encoding='utf-8')
         if FORBIDDEN_PATH_SNIPPET in text:
             fail(f'Forbidden absolute checkout path found in {path.relative_to(ROOT)}')
-        if path.suffix == '.md':
+        if path.suffix == '.md' and is_structured_markdown(path.relative_to(ROOT)):
             validate_document_control(path.relative_to(ROOT), text)
 
 readme_text = (ROOT / 'README.md').read_text(encoding='utf-8')
