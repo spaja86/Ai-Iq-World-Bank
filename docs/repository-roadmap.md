@@ -32,6 +32,7 @@
 - Add clearer breakdown panels for score drivers, operating lanes, and public-safe output routes.
 - Prepare space for future dashboards, reference panels, and additional calculators.
 - Keep standard values, display data, and logic separated for easier growth.
+- Do not introduce new reusable concept surfaces in the prototype without an upstream standard or governance reference path.
 
 ## Phase 3 - Core standardization
 
@@ -48,6 +49,7 @@
 - Keep `docs/future-data-model.md` aligned with real document and governance entities.
 - Require every structured document to declare type, status, purpose, dependencies, and visibility.
 - Keep portfolio status, risk level, and dependency registry synchronized with repository growth.
+- Keep audience-layer mapping and public-surface routing synchronized with repository growth.
 
 ## Phase 5 - Domain-plan alignment
 
@@ -65,6 +67,7 @@
 - Make scenario, verified, internal, and public-safe boundaries explicit.
 - Use review checkpoints before merge for standards, visibility, references, and sensitive content.
 - Require ownership routing, change impact review, and release-readiness checks for non-trivial work.
+- Record whether high-impact changes create new reusable public-safe outputs or concept surfaces.
 
 ## Phase 7 - Security and sanitization
 
@@ -81,18 +84,21 @@
 - Validate required files, repository-relative references, structured document control blocks, forbidden checkout paths, and frontend syntax.
 - Keep required operating-model files and key prototype rendering anchors under validation.
 - Expand checks gradually when portfolio and lifecycle rules become more precise.
+- Keep validation aligned with any future enforcement of public-surface routing or reference exposure rules.
 
 ## Phase 9 - Creator and communication alignment
 
 - Define what is demonstration/public-safe, canonical, internal planning, regulatory, and support wording.
 - Keep repository storytelling aligned with standards and governance boundaries.
 - Preserve reusable support-message structures for billing, escalation, follow-up, and closure.
+- Keep creator-lane outputs cataloged as public-safe surfaces instead of isolated ad-hoc messages.
 
 ## Phase 10 - Modular growth
 
 - Prepare the frontend for clearer modules when growth justifies the split.
 - Keep the future model centered on score profiles, document records, asset summaries, governance decisions, jurisdiction/license entries, and KPI metrics.
 - Introduce metadata and read-only layers before any sensitive operational data layer.
+- Keep future modularization ready for distinct score logic, narrative panels, reference blocks, and data hooks.
 
 ## Phase 11 - Public and internal layering
 
@@ -105,3 +111,4 @@
 - Add dashboard-style views only after document and governance controls are stable.
 - Introduce managed data or API flows only after metadata structures and approval rules are mature.
 - Preserve the repository’s role as a controlled system, not just a loose file collection.
+- Start with read-only public-safe dashboards before any operational workflow backend is considered.

@@ -15,6 +15,8 @@ Use this checklist before committing or sharing documentation updates.
 
 - Confirm whether the file is a standard, governance document, template, support plan, or public output.
 - Confirm that the `Document Control` block declares status, visibility, purpose, and dependencies.
+- Confirm whether the work belongs primarily to the developer lane, creator lane, or another ownership lane.
+- Confirm the controlling source path for any new public-facing concept or message.
 - Remove checkout-specific absolute filesystem paths.
 - Remove secrets, tokens, credentials, or private access information.
 - Check whether the content contains exact sensitive locations or per-site quantities.
@@ -26,5 +28,7 @@ Use this checklist before committing or sharing documentation updates.
 - Verify that public-facing wording does not turn scenario content into asserted fact.
 - Aggregate sensitive operational data when a public-safe summary is enough.
 - Confirm that the intended visibility is `public-safe`, `limited/internal`, or `canonical/internal standard`.
+- Confirm that reusable public-safe output still fits the repository's logical public-safe output catalog.
+- Confirm that any new public concept surface exposes or inherits a standard/version or controlling document reference.
 - Re-check linked references so the shared version still points to valid repository documents.
 - Confirm that any populated template variant has been sanitized before publication.
