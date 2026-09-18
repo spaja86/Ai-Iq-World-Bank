@@ -144,6 +144,14 @@ The repository now uses one explicit operating model across developer and creato
 
 Use `docs/repository-operating-model.md` when a change needs ownership routing, approval sequence, audience/language separation, or release-readiness guidance.
 
+Use the repository-wide execution order for non-trivial work:
+
+1. standard first
+2. governance second
+3. portfolio third
+4. plans fourth
+5. public output last
+
 ## Communication layers
 
 Keep wording aligned with the intended audience:
@@ -163,6 +171,16 @@ Use this flow when turning internal work into shareable material:
 3. Remove or aggregate sensitive details.
 4. Publish only the sanitized/public-safe variant in documents or prototype surfaces.
 5. Re-run validation before merge.
+
+Treat `README.md`, the public prototype, `docs/repository-operating-model.md`, and explicitly public-safe planning outputs as one logical public-safe output catalog for the repository.
+
+## Developer and creator lane guardrails
+
+- Developer-lane work should stay focused on implementation, rendering, structure, and validation.
+- Creator-lane work should stay focused on public-safe framing, explanation, and reusable narrative.
+- Neither lane should bypass `standards/` or `governance/` when introducing a new reusable public concept surface.
+- New public-facing concept surfaces should expose or inherit a standard/version reference or controlling repository document reference.
+- Future multilingual or dashboard outputs should be layered on top of canonical and governance sources, not invented independently.
 
 ## Validation workflow
 

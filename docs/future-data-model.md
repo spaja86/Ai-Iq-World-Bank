@@ -21,6 +21,9 @@ When entities are introduced, prefer shared control fields where relevant:
 - `visibility`
 - `source_of_truth`
 - `standard_version`
+- `source_reference`
+- `audience_layer`
+- `owner_lane`
 - `review_state`
 - `effective_date`
 - `last_reviewed_at`
@@ -62,6 +65,7 @@ Suggested fields:
 - `risk_level`
 - `source_of_truth`
 - `owner_role`
+- `owner_lane`
 - `last_reviewed_at`
 
 ### 3. Asset Summary
@@ -132,10 +136,12 @@ Suggested fields:
 - `output_type`
 - `source_document_ids`
 - `source_standard_version`
+- `source_reference`
 - `visibility`
 - `sanitization_status`
 - `approved_for_publication`
 - `audience_layer`
+- `catalog_status`
 - `published_at`
 
 ### 8. Support Workflow Case
@@ -167,6 +173,8 @@ Suggested fields:
 - `governance_checked`
 - `validation_passed`
 - `sanitization_checked`
+- `source_reference_checked`
+- `public_surface_cataloged`
 - `approver_role`
 - `release_date`
 
@@ -184,6 +192,23 @@ Suggested fields:
 - `translation_status`
 - `approved_copy`
 - `last_reviewed_at`
+
+### 11. Concept Surface Record
+
+Represents a reusable UI panel, creator-facing explanation block, or public-safe narrative surface that must stay linked to a controlling source.
+
+Suggested fields:
+- `surface_id`
+- `surface_name`
+- `surface_type`
+- `channel`
+- `owner_lane`
+- `source_reference`
+- `standard_version`
+- `audience_layer`
+- `visibility`
+- `release_record_id`
+- `active`
 
 ## Visibility alignment
 
@@ -203,6 +228,7 @@ A future system should also preserve the distinction between scenario assumption
 - Keep UI display configuration separate from scoring logic and content data.
 - Keep document metadata reusable across frontend, validation, and future APIs.
 - Keep creator/public wording variants separate from regulatory, governance, and support wording.
+- Keep reusable public concept surfaces separate from canonical sources while preserving explicit source links.
 
 ## Implementation direction
 
@@ -213,3 +239,4 @@ If a backend is introduced later:
 3. Add sanitized public summaries and release-readiness tracking before managed operational workflows.
 4. Add support workflow records and language variants only after canonical-source links are stable.
 5. Introduce sensitive operational data only after access boundaries and approval controls exist.
+6. Add concept-surface records before allowing dynamic public-safe dashboard composition.

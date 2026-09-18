@@ -22,6 +22,24 @@ The operating model connects developer work, creator/public messaging, standards
 - Owns `index.html`, `styles.css`, and `script.js`.
 - Makes the active standard visible through public-safe interfaces.
 - Must not become the source of truth for scoring, governance, or licensing rules.
+- Must route every non-trivial UI or output change through standard -> governance -> docs -> implementation.
+- Must keep concept surfaces, score logic, narrative panels, and future data hooks separable as growth continues.
+
+### 1a. Developer lane execution rules
+
+- Treat the prototype lane as the developer lane for day-to-day implementation work.
+- Limit direct developer authority to implementation, rendering, frontend structure, and technical validation.
+- Before changing any public-facing concept, confirm the controlling source in `standards/` or `governance/`.
+- Do not introduce a new public concept surface in the UI unless the same concept already has a controlling document or an approved repository reference block.
+- Keep the frontend public-safe, standard-aligned, and ready for later modular extraction.
+
+### 1b. Creator lane execution rules
+
+- Treat public explanation, demo framing, external storytelling, and shareable narrative as creator-lane work.
+- Creator outputs may simplify presentation but must not redefine standards, governance rules, or internal planning facts.
+- Every creator-facing output should declare or inherit a clear audience layer and visibility intent.
+- Reusable creator messaging should map back to an existing plan, public-safe document, or approved support template.
+- Public storytelling must stay sanitized, aggregated, and free from sensitive operational detail.
 
 ### 2. Standards lane
 
@@ -67,6 +85,16 @@ Use the same repository facts through distinct communication layers:
 4. Public-safe documents and prototype surfaces reuse only approved, non-sensitive outputs.
 5. Future dashboards and APIs should consume the same public-safe or role-appropriate layers instead of bypassing governance.
 
+## Public-safe output catalog model
+
+Treat the repository as maintaining one logical public-safe output catalog even when the outputs remain distributed across files.
+
+- `README.md` provides the top-level public-safe framing and navigation.
+- `index.html`, `styles.css`, and `script.js` expose the controlled public prototype.
+- `docs/repository-operating-model.md` defines the routing and release constraints for public-safe outputs.
+- `javni-prikaz-emisija-i-kamatna-politika-plan.md` provides the public-policy and transparency-oriented output structure.
+- Future dashboard cards, summaries, multilingual variants, and creator-facing overview panels should be added only as cataloged public-safe outputs derived from controlled sources.
+
 ## Document ownership model
 
 Ownership is by role group, not by one individual file editor:
@@ -81,6 +109,20 @@ Ownership is by role group, not by one individual file editor:
 | Support plans | Support owner | Structured incident, billing, escalation, and follow-up communication |
 | Prototype files | Product owner | Public-safe UI clarity and standard-aligned output rendering |
 
+## RACI-style lane matrix
+
+Use this matrix when a change crosses developer, creator, standards, and governance work:
+
+| Change area | Responsible | Accountable | Consulted | Informed |
+|---|---|---|---|---|
+| Prototype implementation and UI structure | Product owner | Standards owner when behavior changes, otherwise Product owner | Governance owner, Portfolio owner | Domain owner, Support owner |
+| Creator/public-safe messaging | Navigation owner or Product owner | Governance owner | Standards owner, Portfolio owner | Domain owner, Support owner |
+| Standards and controlled terminology | Standards owner | Standards owner | Governance owner, Product owner | Portfolio owner, Domain owner |
+| Lifecycle, visibility, and publication rules | Governance owner | Governance owner | Standards owner, Portfolio owner | Product owner, Domain owner, Support owner |
+| Portfolio, roadmap, and future-model alignment | Portfolio owner | Portfolio owner | Standards owner, Governance owner | Product owner, Domain owner, Support owner |
+| Domain plan evolution | Domain owner | Domain owner | Governance owner, Standards owner | Portfolio owner, Product owner |
+| Support workflow content | Support owner | Support owner | Governance owner, Portfolio owner | Product owner, Domain owner |
+
 ## Approval flow by change type
 
 | Change type | Controlling source first | Required follow-up | Release gate |
@@ -91,6 +133,7 @@ Ownership is by role group, not by one individual file editor:
 | New structured document | `docs/document-portfolio.md` | Lifecycle compliance and README discoverability | Document Control + dependency check |
 | Public messaging changes | `README.md` or public-safe docs | Cross-check against standards and governance | Visibility + sanitization review |
 | Support workflow changes | Support plan file | README/portfolio sync if shared workflow changes | Evidence and escalation readiness check |
+| New public concept surface | controlling standard, governance rule, or approved reference document | Portfolio note, creator/developer alignment, prototype update if needed | Standard/version reference exposure check |
 
 ## Change sequence
 
@@ -102,13 +145,30 @@ Every non-trivial repository change should follow this order:
 4. Prototype/public-surface update
 5. Validation, sanitization, and release-readiness review
 
+The repository-wide default principle is:
+
+1. standard first
+2. governance second
+3. portfolio third
+4. plans fourth
+5. public output last
+
 ## Change impact matrix
 
 | Impact level | Typical trigger | Minimum required updates |
 |---|---|---|
 | Low | Copy clarification, small UI clarity improvement, non-normative structure cleanup | Validate affected files and keep references correct |
 | Medium | New working document, expanded roadmap, new public-safe panel, support workflow changes | Update portfolio, README references, and validation if structure changes |
-| High | Standard change, governance rule change, new sensitive-content boundary, future platform entity changes | Update controlling source, dependent docs, prototype messaging, and validator |
+| High | Standard change, governance rule change, new sensitive-content boundary, future platform entity changes | Update controlling source, dependent docs, prototype messaging, validator, and release-readiness trace |
+
+## Concept-surface gate
+
+When introducing a new concept surface in a public prototype or shareable document:
+
+1. identify the controlling standard, governance rule, or approved planning reference,
+2. expose the relevant standard/version or repository reference in the output,
+3. classify the audience layer and visibility before publication,
+4. update roadmap or portfolio references if the concept becomes a reusable repository surface.
 
 ## Release-readiness checklist
 
@@ -121,6 +181,8 @@ Before treating a change as ready:
 5. Confirm the prototype exposes the active standard/version where required.
 6. Confirm sensitive details and credentials are absent.
 7. Confirm roadmap, portfolio, and future-model references still match the repository structure.
+8. Confirm developer-lane and creator-lane responsibilities stayed within the intended ownership path.
+9. Confirm reusable public-safe outputs still fit the repository's logical public-safe output catalog.
 
 ## Future growth path
 
@@ -128,3 +190,4 @@ Before treating a change as ready:
 - Add new calculators only under standards control.
 - Introduce dashboard/API layers only after public-safe output flows and release gates are stable.
 - Use multilingual support only as a structured layer above existing canonical and governance sources.
+- Add read-only dashboard surfaces before any managed operational data flows.

@@ -55,6 +55,8 @@ This file is the master portfolio map for repository documents, their category, 
 8. `docs/repository-operating-model.md` for ownership, approvals, and release gates
 9. `docs/future-data-model.md` for later platform work
 
+This usage order is also the preferred execution order for non-trivial repository changes: standard/governance direction first, then portfolio and roadmap alignment, then plan updates, then public-safe surfaces.
+
 ## Master dependency view
 
 - **Repository control core:** `README.md` depends on `governance/repo-charter.md` and `governance/document-lifecycle.md`
@@ -78,9 +80,23 @@ This file is the master portfolio map for repository documents, their category, 
 | Support workflows | `vercel-naplata-poruka-plan.md`, `github-naplata-poruka-plan.md` | Support owner |
 | Prototype | `index.html`, `styles.css`, `script.js` | Product owner |
 
+## Audience and public-surface map
+
+| Repository area | Primary audience layer | Public-surface role |
+|---|---|---|
+| `README.md` | creator / public-safe + contributor navigation | top-level public-safe framing and entry point |
+| `docs/repository-operating-model.md` | creator / public-safe + contributor routing | operating rules for reusable public-safe outputs |
+| `docs/document-portfolio.md` | contributor / architecture | structure map and cross-document routing |
+| `docs/repository-roadmap.md` | contributor / architecture | priority and sequencing reference |
+| `standards/` and `governance/` | canonical / standards | controlling source layer, not promotional output |
+| Root planning templates | internal planning, regulatory, or support depending on file | structured inputs that may later produce sanitized outputs |
+| `index.html`, `styles.css`, `script.js` | demonstration / creator-public | controlled prototype surfaces that must expose source-aligned meaning |
+
 ## Public-safe output route
 
 Use canonical or governance sources first, route through the relevant working plan, sanitize the output, then expose the approved public-safe result through shared documents or the prototype.
+
+The repository's logical public-safe output catalog currently consists of `README.md`, the prototype files, `docs/repository-operating-model.md`, and any explicitly public-safe root plan such as `javni-prikaz-emisija-i-kamatna-politika-plan.md`.
 
 ## When to use which plan
 
