@@ -31,6 +31,7 @@ This file is the master portfolio map for repository documents, their category, 
 | `globalni-licencni-okvir-i-delatnosti-plan.md` | Templates | licensing/master operations | working | limited/internal | `governance/document-lifecycle.md`, `docs/future-data-model.md` | high | Activity expansion, approvals, and licensing scope |
 | `vercel-naplata-poruka-plan.md` | Support | billing communication template | working | limited/internal | `config/sensitive-content-review-checklist.md`, `governance/document-lifecycle.md` | medium | Vercel support workflow |
 | `github-naplata-poruka-plan.md` | Support | billing communication template | working | limited/internal | `config/sensitive-content-review-checklist.md`, `governance/document-lifecycle.md` | medium | GitHub support workflow |
+| `docs/repository-operating-model.md` | Architecture | operating model | working | public-safe | `README.md`, `governance/repo-charter.md`, `governance/document-lifecycle.md`, `docs/document-portfolio.md`, `docs/repository-roadmap.md`, `docs/future-data-model.md`, `config/sensitive-content-review-checklist.md` | medium | Route developer/creator work through ownership, approvals, and release gates |
 | `docs/future-data-model.md` | Architecture | planning reference | draft | limited/internal | `docs/document-portfolio.md`, `standards/indekurilanc-standard.md`, `governance/document-lifecycle.md` | medium | Future entities and integration boundaries |
 | `docs/repository-roadmap.md` | Roadmap | delivery plan | working | public-safe | `docs/document-portfolio.md`, `governance/repo-charter.md`, `config/validate_repository.py` | medium | Delivery sequencing across product and docs |
 | `config/sensitive-content-review-checklist.md` | Controls | checklist | approved | canonical/internal standard | `governance/document-lifecycle.md`, `README.md` | high | Pre-commit and pre-publication review |
@@ -51,7 +52,8 @@ This file is the master portfolio map for repository documents, their category, 
 5. `standards/indekurilanc-standard.md` and `dinar-standard-plan.md` as needed
 6. Domain-specific planning or support template
 7. `docs/document-portfolio.md` and `docs/repository-roadmap.md` for sequencing and dependencies
-8. `docs/future-data-model.md` for later platform work
+8. `docs/repository-operating-model.md` for ownership, approvals, and release gates
+9. `docs/future-data-model.md` for later platform work
 
 ## Master dependency view
 
@@ -62,6 +64,23 @@ This file is the master portfolio map for repository documents, their category, 
 - **Sensitive asset/public split:** `investiciona-i-operativna-imovina-registar-plan.md` -> `javni-prikaz-emisija-i-kamatna-politika-plan.md` -> `config/sensitive-content-review-checklist.md`
 - **Expansion and licensing:** `globalni-licencni-okvir-i-delatnosti-plan.md` -> `docs/future-data-model.md` -> governance controls
 - **Support communication:** `vercel-naplata-poruka-plan.md` and `github-naplata-poruka-plan.md` -> `config/sensitive-content-review-checklist.md`
+- **Operating sequence:** `governance/document-lifecycle.md` + `docs/repository-operating-model.md` -> `docs/repository-roadmap.md` -> prototype/public-safe outputs
+
+## Ownership lanes
+
+| Lane | Main files | Ownership role |
+|---|---|---|
+| Navigation | `README.md` | Navigation owner |
+| Governance | `governance/`, `config/sensitive-content-review-checklist.md` | Governance owner |
+| Standards | `standards/`, `dinar-standard-plan.md` | Standards owner |
+| Portfolio / architecture | `docs/document-portfolio.md`, `docs/repository-roadmap.md`, `docs/repository-operating-model.md`, `docs/future-data-model.md` | Portfolio owner |
+| Domain plans | Root planning templates | Domain owner |
+| Support workflows | `vercel-naplata-poruka-plan.md`, `github-naplata-poruka-plan.md` | Support owner |
+| Prototype | `index.html`, `styles.css`, `script.js` | Product owner |
+
+## Public-safe output route
+
+Use canonical or governance sources first, route through the relevant working plan, sanitize the output, then expose the approved public-safe result through shared documents or the prototype.
 
 ## When to use which plan
 

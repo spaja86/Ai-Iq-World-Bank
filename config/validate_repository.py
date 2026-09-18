@@ -10,6 +10,7 @@ REQUIRED_FILES = [
     'script.js',
     'docs/document-portfolio.md',
     'docs/future-data-model.md',
+    'docs/repository-operating-model.md',
     'docs/repository-roadmap.md',
     'governance/repo-charter.md',
     'governance/document-lifecycle.md',
@@ -34,8 +35,14 @@ HTML_IDS = [
     'indekurilanc-status',
     'indekurilanc-summary',
     'indekurilanc-priority',
+    'indekurilanc-next-step',
     'indekurilanc-standard',
+    'indekurilanc-contributions',
     'indekurilanc-reset',
+    'narrative-lanes',
+    'public-output-flow',
+    'approval-flow',
+    'release-gates',
 ]
 DOC_CONTROL_KEYS = [
     'Category',

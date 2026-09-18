@@ -75,6 +75,7 @@ Separate scenario assumptions, verified facts, internal detail, and public outpu
 - `styles.css` - public prototype styling
 - `script.js` - frontend scoring and repository module rendering
 - `docs/` - document portfolio, roadmap, and future data model
+- `docs/repository-operating-model.md` - developer/creator operating lanes, approvals, ownership, and release gates
 - `governance/` - repository charter and lifecycle rules
 - `standards/` - INDEKURILANC and glossary standards
 - `config/` - validation and sensitive-content review controls
@@ -121,6 +122,7 @@ The interface must show numeric score, maturity status, operational interpretati
 
 - `docs/document-portfolio.md` - master map of repository documents, status, dependencies, visibility, and usage order
 - `docs/repository-roadmap.md` - implementation sequence across standards, governance, frontend, and platform growth
+- `docs/repository-operating-model.md` - developer and creator operating model, output flow, ownership lanes, and release readiness
 - `docs/future-data-model.md` - future entity model for scores, documents, governance, assets, and licensing
 
 ## Governance and protection rules
@@ -130,6 +132,37 @@ The interface must show numeric score, maturity status, operational interpretati
 - DINAR values must always carry status, version, and effective-date context.
 - Repository documents should reference sibling files with repository-relative paths.
 - New standard changes should update the relevant standard before implementation is treated as canonical.
+
+## Operating model
+
+The repository now uses one explicit operating model across developer and creator work:
+
+- standards and governance define what can be stated,
+- portfolio and roadmap define where it belongs,
+- plans and support templates hold structured working content,
+- the public prototype exposes only public-safe, standard-aligned outputs.
+
+Use `docs/repository-operating-model.md` when a change needs ownership routing, approval sequence, audience/language separation, or release-readiness guidance.
+
+## Communication layers
+
+Keep wording aligned with the intended audience:
+
+- **creator / public-safe** - concept explanation, prototype framing, and sanitized outputs
+- **canonical / standards** - normative definitions and controlled terminology
+- **internal planning** - scenario, operational, and business working material
+- **regulatory / legal** - approval, compliance, jurisdiction, and reputational framing
+- **support / operations** - incident, billing, escalation, follow-up, and closure messaging
+
+## Public-safe output route
+
+Use this flow when turning internal work into shareable material:
+
+1. Start from the controlling standard or governance rule.
+2. Confirm the relevant plan or analysis template.
+3. Remove or aggregate sensitive details.
+4. Publish only the sanitized/public-safe variant in documents or prototype surfaces.
+5. Re-run validation before merge.
 
 ## Validation workflow
 
@@ -146,10 +179,12 @@ The repository workflow in `.github/workflows/validate.yml` currently runs:
 ## Development priorities
 
 1. Standards + governance + validation
-2. Frontend clarity and stability
-3. Alignment of plans and document references
-4. Modular frontend/data-model growth
-5. Dashboard/API/platform expansion when repository controls are mature
+2. README + portfolio + operating model + roadmap alignment
+3. Frontend clarity and stability
+4. Domain-plan alignment and support workflow standardization
+5. Modular frontend/data-model growth
+6. Public/internal output layering
+7. Dashboard/API/platform expansion when repository controls are mature
 
 ## Owner information
 

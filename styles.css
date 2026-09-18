@@ -116,6 +116,10 @@ main {
     padding-left: 20px;
 }
 
+.ordered-card-list li {
+    padding-left: 2px;
+}
+
 .ordered-card-list li + li,
 .roadmap-list li + li {
     margin-top: 8px;
@@ -205,6 +209,33 @@ main {
 
 .indekurilanc-result dd {
     margin: 0;
+}
+
+.metric-list {
+    display: grid;
+    gap: 12px;
+}
+
+.metric-item {
+    padding: 14px 16px;
+    border: 1px solid #d8e3ef;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #f7fbff, #eef5fd);
+}
+
+.metric-item h4,
+.metric-item p {
+    margin: 0;
+}
+
+.metric-item p + p {
+    margin-top: 6px;
+}
+
+.metric-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0b3f80;
 }
 
 .roadmap-list,
