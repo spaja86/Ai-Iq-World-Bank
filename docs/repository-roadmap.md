@@ -29,6 +29,7 @@
 - Preserve `index.html`, `styles.css`, and `script.js` as the public prototype baseline.
 - Keep INDEKURILANC as the central interactive module.
 - Ensure the public interface shows result, interpretation, priority focus, and standard version clearly.
+- Add clearer breakdown panels for score drivers, operating lanes, and public-safe output routes.
 - Prepare space for future dashboards, reference panels, and additional calculators.
 - Keep standard values, display data, and logic separated for easier growth.
 
@@ -43,6 +44,7 @@
 ## Phase 4 - Portfolio alignment
 
 - Use `docs/document-portfolio.md` as the master map of files, status, dependencies, and visibility.
+- Use `docs/repository-operating-model.md` as the routing layer for ownership, approvals, and release readiness.
 - Keep `docs/future-data-model.md` aligned with real document and governance entities.
 - Require every structured document to declare type, status, purpose, dependencies, and visibility.
 - Keep portfolio status, risk level, and dependency registry synchronized with repository growth.
@@ -62,6 +64,7 @@
 - Require statuses `draft`, `working`, `approved`, or `archived`.
 - Make scenario, verified, internal, and public-safe boundaries explicit.
 - Use review checkpoints before merge for standards, visibility, references, and sensitive content.
+- Require ownership routing, change impact review, and release-readiness checks for non-trivial work.
 
 ## Phase 7 - Security and sanitization
 
@@ -76,21 +79,28 @@
 - Maintain `config/validate_repository.py` as the repository validator.
 - Maintain `.github/workflows/validate.yml` for automatic checks.
 - Validate required files, repository-relative references, structured document control blocks, forbidden checkout paths, and frontend syntax.
+- Keep required operating-model files and key prototype rendering anchors under validation.
 - Expand checks gradually when portfolio and lifecycle rules become more precise.
 
-## Phase 9 - Modular growth
+## Phase 9 - Creator and communication alignment
+
+- Define what is demonstration/public-safe, canonical, internal planning, regulatory, and support wording.
+- Keep repository storytelling aligned with standards and governance boundaries.
+- Preserve reusable support-message structures for billing, escalation, follow-up, and closure.
+
+## Phase 10 - Modular growth
 
 - Prepare the frontend for clearer modules when growth justifies the split.
 - Keep the future model centered on score profiles, document records, asset summaries, governance decisions, jurisdiction/license entries, and KPI metrics.
 - Introduce metadata and read-only layers before any sensitive operational data layer.
 
-## Phase 10 - Public and internal layering
+## Phase 11 - Public and internal layering
 
 - Define which assets are public-safe, limited/internal, or canonical/internal standards.
 - Require future modules to declare their target audience and visibility.
 - Avoid mixing demo/prototype surfaces with sensitive operational detail.
 
-## Phase 11 - Platformization
+## Phase 12 - Platformization
 
 - Add dashboard-style views only after document and governance controls are stable.
 - Introduce managed data or API flows only after metadata structures and approval rules are mature.

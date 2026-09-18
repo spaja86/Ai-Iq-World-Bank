@@ -88,6 +88,32 @@ Where relevant, documents should explicitly separate:
 - limited/internal detail,
 - public-safe outputs.
 
+## Audience and wording layers
+
+When a repository concept appears in more than one context, keep the wording aligned with the target layer:
+
+- **creator / public-safe** - broad concept explanation and sanitized public outputs,
+- **canonical / standards** - normative definitions and controlled terminology,
+- **internal planning** - scenario and operational working material,
+- **regulatory / legal** - compliance, jurisdiction, evidence, and reputational handling,
+- **support / operational** - neutral case communication for billing, incidents, escalation, and closure.
+
+Do not let public-facing wording silently overwrite canonical rules or internal review constraints.
+
+## Document ownership expectations
+
+Each structured change should have a clear ownership lane even if multiple contributors edit the files:
+
+- navigation,
+- governance,
+- standards,
+- portfolio / architecture,
+- domain planning,
+- support workflows,
+- prototype / product surface.
+
+When a change crosses lanes, the controlling source should still be updated first.
+
 ## Publication and sanitization rules
 
 Before sharing a document outside the narrow working context:
@@ -97,6 +123,26 @@ Before sharing a document outside the narrow working context:
 - label scenario values and internal-only assumptions,
 - confirm whether the output is internal, limited, or public,
 - verify that DINAR usage includes status, version, and effective-date context.
+
+## Approval flow
+
+Use this order when a non-trivial change affects multiple repository layers:
+
+1. Update the controlling standard or governance rule.
+2. Update portfolio and roadmap references if structure, ownership, or scope changed.
+3. Update working plans or support templates that depend on the new rule.
+4. Update public prototype or public-safe outputs last.
+5. Run validation and re-check visibility, references, and sanitization.
+
+## Change impact matrix
+
+Classify non-trivial changes before merge:
+
+| Impact level | Typical examples | Minimum review expectation |
+|---|---|---|
+| Low | wording clarity, non-normative UI clarity, portfolio cleanup | validate files and keep references accurate |
+| Medium | new working docs, public-safe panels, support workflow changes | portfolio and ownership alignment review |
+| High | standard changes, governance changes, visibility-boundary changes, future managed-entity changes | controlling-source review plus dependent document and prototype alignment |
 
 ## Review checkpoints
 
@@ -111,6 +157,9 @@ Review these questions before merge:
 7. Does the content expose sensitive operational detail?
 8. If DINAR is used, are version and status stated?
 9. If a standard is affected, was the controlling standard updated first?
+10. Is the audience layer clear?
+11. Is the ownership lane clear?
+12. Is the change impact level understood?
 
 ## Release/checklist procedure for major changes
 
@@ -121,3 +170,16 @@ For major repository changes, complete this order:
 3. Update prototype implementation if public behavior changes.
 4. Run validation and syntax checks.
 5. Re-check sensitive content before sharing or merging.
+6. Confirm release readiness for standard version exposure, public-safe wording, and ownership routing.
+
+## Release readiness minimum
+
+Before treating a structured document or prototype change as ready:
+
+- confirm the controlling source was updated first,
+- confirm `Document Control` remains complete,
+- confirm repository-relative dependencies still resolve,
+- confirm public-safe versus limited/internal intent is explicit,
+- confirm scenario and verified statements remain separated,
+- confirm validation passed,
+- confirm no secrets or sensitive operational identifiers remain.

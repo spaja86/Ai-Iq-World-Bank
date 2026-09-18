@@ -22,7 +22,14 @@
 | Sanitized output | A version prepared for sharing with sensitive details removed or aggregated |
 | Public output | A version suitable for wider distribution under legal/reputational controls |
 | Internal output | A version intended for restricted operational use |
+| Creator / public-safe wording | Public-facing language used to explain the concept or prototype without exposing sensitive operational detail |
+| Regulatory / legal wording | Controlled language used for compliance, jurisdiction, legal, or reputational handling |
+| Support wording | Neutral operational language used for billing, incident, escalation, follow-up, and closure messages |
 | public-safe | Content suitable for broad sharing without sensitive operational detail |
 | limited/internal | Restricted working content that may contain non-public context |
 | canonical/internal standard | Normative internal guidance that controls other repository assets |
 | Repository-relative reference | A sibling filename or repository path used instead of an environment-specific absolute filesystem path |
+| Public-safe output flow | The sequence from canonical source through sanitization to a shareable document or prototype surface |
+| Ownership lane | The role-based responsibility path for a repository area such as standards, governance, portfolio, support, or product |
+| Change impact matrix | A simple low/medium/high classification used to decide the minimum review depth for a change |
+| Release readiness | The final repository check that confirms standards, governance, visibility, validation, and sanitization are aligned before sharing |

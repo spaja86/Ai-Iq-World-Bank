@@ -5,7 +5,9 @@ const DEFAULT_RESULT_STATE = Object.freeze({
     status: 'Not Calculated',
     summary: 'Run the calculator to generate an operational interpretation.',
     priority: 'Awaiting input',
-    standard: INDEKURILANC_STANDARD_VERSION
+    nextStep: 'Update the inputs to see the recommended next repository move.',
+    standard: INDEKURILANC_STANDARD_VERSION,
+    contributions: []
 });
 
 const INDEKURILANC_WEIGHTS = Object.freeze({
@@ -90,6 +92,58 @@ const FUTURE_MODULES = Object.freeze([
     })
 ]);
 
+const NARRATIVE_LANES = Object.freeze([
+    Object.freeze({
+        title: 'Creator / public-safe',
+        body: 'Explain the concept and show sanitized outputs without exposing sensitive operational detail.'
+    }),
+    Object.freeze({
+        title: 'Canonical / standards',
+        body: 'Define the active rules, terms, and version references that control the rest of the repository.'
+    }),
+    Object.freeze({
+        title: 'Internal / planning',
+        body: 'Keep scenario, asset, licensing, and business working material structured but restricted when needed.'
+    }),
+    Object.freeze({
+        title: 'Support / operations',
+        body: 'Use evidence-driven wording for billing, incidents, escalation, follow-up, and closure.'
+    })
+]);
+
+const PUBLIC_OUTPUT_FLOW = Object.freeze([
+    'Start from the controlling standard or governance rule.',
+    'Route the change through the relevant working plan or portfolio document.',
+    'Sanitize or aggregate sensitive content before public reuse.',
+    'Expose only the approved public-safe result in documents or the prototype.'
+]);
+
+const APPROVAL_FLOW = Object.freeze([
+    'Update the controlling standard or governance source first.',
+    'Align portfolio, roadmap, and dependent planning documents.',
+    'Update the public prototype after the rules and references are settled.',
+    'Run validation and confirm release readiness before sharing.'
+]);
+
+const RELEASE_GATES = Object.freeze([
+    Object.freeze({
+        title: 'Standards first',
+        body: 'Normative rules must lead prototype or document changes.'
+    }),
+    Object.freeze({
+        title: 'Visibility check',
+        body: 'Keep public-safe, limited/internal, and canonical scopes explicit.'
+    }),
+    Object.freeze({
+        title: 'Validation pass',
+        body: 'Repository checks and frontend syntax must pass before release.'
+    }),
+    Object.freeze({
+        title: 'Sanitization',
+        body: 'Remove sensitive operational identifiers, quantities, and secrets.'
+    })
+]);
+
 const STANDARD_SUMMARY_ITEMS = Object.freeze([
     `Infrastructure: ${Math.round(INDEKURILANC_WEIGHTS.infrastructure * 100)}%`,
     `Skills: ${Math.round(INDEKURILANC_WEIGHTS.skills * 100)}%`,
@@ -104,19 +158,19 @@ const ROADMAP_PHASES = Object.freeze([
     }),
     Object.freeze({
         label: 'Product strengthening',
-        body: 'clearer prototype surfaces and standard-aligned outputs.'
-    }),
-    Object.freeze({
-        label: 'Core standardization',
-        body: 'standards and glossary control future logic changes.'
+        body: 'clearer prototype surfaces, score breakdowns, and standard-aligned outputs.'
     }),
     Object.freeze({
         label: 'Portfolio alignment',
-        body: 'document metadata, dependencies, and visibility.'
+        body: 'roadmap, operating model, ownership, and document metadata.'
+    }),
+    Object.freeze({
+        label: 'Creator and support alignment',
+        body: 'public-safe messaging plus structured support workflows.'
     }),
     Object.freeze({
         label: 'Lifecycle enforcement and platform growth',
-        body: 'controlled modular expansion.'
+        body: 'controlled modular expansion and release gates.'
     })
 ]);
 
@@ -165,18 +219,21 @@ function resolveInterpretation(score) {
     if (score >= 70) {
         return {
             summary: 'Capability is mature enough to support structured scale-up, provided standards stay controlled.',
-            priority: 'Scale responsibly, document decisions, and preserve governance discipline.'
+            priority: 'Scale responsibly, document decisions, and preserve governance discipline.',
+            nextStep: 'Advance with portfolio-aligned expansion, additional calculators, and metadata-first dashboard planning.'
         };
     }
     if (score >= 40) {
         return {
             summary: 'Core capability exists, but execution consistency and institutional discipline still need reinforcement.',
-            priority: 'Strengthen repeatability, close governance gaps, and improve operational depth.'
+            priority: 'Strengthen repeatability, close governance gaps, and improve operational depth.',
+            nextStep: 'Align roadmap, support workflows, and public-safe outputs before expanding the surface area.'
         };
     }
     return {
         summary: 'Foundational capability is still forming and requires concentrated build-up across multiple dimensions.',
-        priority: 'Prioritize core infrastructure, team capability, and baseline operating controls.'
+        priority: 'Prioritize core infrastructure, team capability, and baseline operating controls.',
+        nextStep: 'Stabilize standards, governance, and validation before introducing new modules or public claims.'
     };
 }
 
@@ -193,7 +250,9 @@ function updateResultView(elements, state) {
     elements.status.textContent = state.status;
     elements.summary.textContent = state.summary;
     elements.priority.textContent = state.priority;
+    elements.nextStep.textContent = state.nextStep;
     elements.standard.textContent = state.standard;
+    renderContributionList(elements.contributions, state.contributions);
 }
 
 function createMiniCard(item, headingLevel = 'h4') {
@@ -228,6 +287,63 @@ function renderList(elementId, items) {
         listItem.textContent = item;
         return listItem;
     }));
+}
+
+function buildContributionItems(scores) {
+    return [
+        {
+            title: 'Infrastructure contribution',
+            weight: INDEKURILANC_WEIGHTS.infrastructure,
+            score: scores.infrastructure
+        },
+        {
+            title: 'Skills contribution',
+            weight: INDEKURILANC_WEIGHTS.skills,
+            score: scores.skills
+        },
+        {
+            title: 'Governance contribution',
+            weight: INDEKURILANC_WEIGHTS.governance,
+            score: scores.governance
+        }
+    ].map((item) => ({
+        title: item.title,
+        weightedValue: Number((item.score * item.weight).toFixed(2)),
+        detail: `Raw score ${item.score} x weight ${Math.round(item.weight * 100)}%`
+    }));
+}
+
+function createMetricItem(item) {
+    const wrapper = document.createElement('article');
+    wrapper.className = 'metric-item';
+
+    const heading = document.createElement('h4');
+    heading.textContent = item.title;
+
+    const value = document.createElement('p');
+    value.className = 'metric-value';
+    value.textContent = `${item.weightedValue} points`;
+
+    const detail = document.createElement('p');
+    detail.textContent = item.detail;
+
+    wrapper.append(heading, value, detail);
+    return wrapper;
+}
+
+function renderContributionList(container, items) {
+    if (!container) {
+        return;
+    }
+
+    if (!items.length) {
+        const emptyState = document.createElement('p');
+        emptyState.textContent = 'Calculate the index to see how each weighted dimension contributes to the total score.';
+        container.replaceChildren(emptyState);
+        return;
+    }
+
+    container.replaceChildren(...items.map((item) => createMetricItem(item)));
 }
 
 function renderRoadmap() {
@@ -273,6 +389,10 @@ function initializeRepositoryView() {
     renderList('source-hierarchy', SOURCE_OF_TRUTH);
     renderMiniCardGrid('visibility-model', VISIBILITY_MODEL);
     renderMiniCardGrid('future-modules', FUTURE_MODULES);
+    renderMiniCardGrid('narrative-lanes', NARRATIVE_LANES);
+    renderList('public-output-flow', PUBLIC_OUTPUT_FLOW);
+    renderList('approval-flow', APPROVAL_FLOW);
+    renderMiniCardGrid('release-gates', RELEASE_GATES);
     renderRoadmap();
     renderStandardSummary();
     renderMaturityBands();
@@ -287,7 +407,9 @@ function initializeIndekurilanc() {
         status: document.getElementById('indekurilanc-status'),
         summary: document.getElementById('indekurilanc-summary'),
         priority: document.getElementById('indekurilanc-priority'),
-        standard: document.getElementById('indekurilanc-standard')
+        nextStep: document.getElementById('indekurilanc-next-step'),
+        standard: document.getElementById('indekurilanc-standard'),
+        contributions: document.getElementById('indekurilanc-contributions')
     };
 
     if (!form || !resetButton || !feedback || Object.values(resultElements).some((element) => !element)) {
@@ -323,7 +445,9 @@ function initializeIndekurilanc() {
             status,
             summary: interpretation.summary,
             priority: interpretation.priority,
-            standard: INDEKURILANC_STANDARD_VERSION
+            nextStep: interpretation.nextStep,
+            standard: INDEKURILANC_STANDARD_VERSION,
+            contributions: buildContributionItems(scores)
         });
     });
 
