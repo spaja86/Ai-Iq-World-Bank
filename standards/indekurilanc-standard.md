@@ -7,7 +7,7 @@
 - **Status:** approved
 - **Visibility:** canonical/internal standard
 - **Purpose:** Canonical source for INDEKURILANC weights, maturity bands, outputs, and change-control rules.
-- **Depends on:** `script.js`, `governance/repo-charter.md`, `standards/glossary.md`
+- **Depends on:** `governance/repo-charter.md`, `governance/document-lifecycle.md`, `standards/glossary.md`
 
 ## Standard ID
 
