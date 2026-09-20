@@ -17,7 +17,7 @@ This file is the master portfolio map for repository documents, their category, 
 
 | File | Category | Type | Status | Visibility | Owner lane | Audience layer | Depends on | Risk | Primary use |
 |---|---|---|---|---|---|---|---|---|---|
-| `README.md` | Navigation | repository guide | working | public-safe | navigation / creator + shared lane | creator / public-safe + contributor navigation | `governance/repo-charter.md`, `governance/document-lifecycle.md`, `standards/indekurilanc-standard.md` | medium | Start here for structure and workflow |
+| `README.md` | Navigation | repository guide | working | public-safe | navigation / creator + shared lane | creator / public-safe + contributor navigation | `docs/repository-operating-model.md`, `governance/repo-charter.md`, `governance/document-lifecycle.md`, `standards/indekurilanc-standard.md` | medium | Start here for structure and workflow |
 | `governance/repo-charter.md` | Governance | charter | approved | canonical/internal standard | governance / standards alignment | canonical / standards | `standards/indekurilanc-standard.md`, `README.md` | high | Understand repository purpose and hierarchy |
 | `governance/document-lifecycle.md` | Governance | rules | approved | canonical/internal standard | governance + shared lane | canonical / standards | `governance/repo-charter.md`, `config/sensitive-content-review-checklist.md` | high | Review metadata, status, and publication rules |
 | `standards/glossary.md` | Standards | glossary | approved | canonical/internal standard | standards lane | canonical / standards | `governance/repo-charter.md`, `governance/document-lifecycle.md` | medium | Resolve terminology before editing linked materials |

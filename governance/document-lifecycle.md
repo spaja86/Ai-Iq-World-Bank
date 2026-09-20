@@ -163,15 +163,7 @@ For non-trivial cross-lane work, `docs/repository-operating-model.md` is the pri
 
 ## Repository work cycle
 
-Use this same cycle across repository work:
-
-1. identify the controlling source,
-2. classify the audience layer and visibility,
-3. update the governing source first,
-4. align downstream portfolio, roadmap, plan, or support files,
-5. update public-safe outputs and prototype surfaces last,
-6. validate required structure, references, and exposed standard/version references,
-7. confirm sanitization, release readiness, and catalog traceability.
+Use the canonical repository work cycle from `docs/repository-operating-model.md` for non-trivial repository changes. This governance file adopts that cycle as the release-control sequence and does not redefine it independently.
 
 ## Change impact matrix
 
