@@ -30,6 +30,13 @@
 | canonical/internal standard | Normative internal guidance that controls other repository assets |
 | Repository-relative reference | A sibling filename or repository path used instead of an environment-specific absolute filesystem path |
 | Public-safe output flow | The sequence from canonical source through sanitization to a shareable document or prototype surface |
+| Concept surface | A reusable UI panel, document block, or creator-facing narrative surface that must remain linked to a controlling source |
+| Controlling source reference | The explicit standard, governance rule, or approved plan that authorizes a reusable public-facing surface |
+| Public-safe output catalog | The tracked set of reusable public-safe repository surfaces such as the README, prototype panels, operating model, and approved public-safe plans |
 | Ownership lane | The role-based responsibility path for a repository area such as standards, governance, portfolio, support, or product |
+| Developer lane | The implementation path focused on rendering, structure, validation, and source-controlled prototype behavior |
+| Creator lane | The public-safe explanation path focused on narrative, framing, and shareable sanitized outputs |
 | Change impact matrix | A simple low/medium/high classification used to decide the minimum review depth for a change |
 | Release readiness | The final repository check that confirms standards, governance, visibility, validation, and sanitization are aligned before sharing |
+| Multilingual downstream layer | A translated or audience-specific presentation layer that must stay downstream from canonical standards and governance |
+| Read-only dashboard surface | A future public-safe display layer that may summarize approved outputs without introducing managed operational workflows |

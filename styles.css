@@ -135,6 +135,16 @@ main {
     margin-top: 0;
 }
 
+.mini-card-meta {
+    margin: 12px 0 0;
+    padding-left: 18px;
+    color: #36506b;
+}
+
+.mini-card-meta li + li {
+    margin-top: 6px;
+}
+
 #indekurilanc-form {
     display: grid;
     gap: 10px;

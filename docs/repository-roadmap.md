@@ -92,6 +92,7 @@
 - Keep repository storytelling aligned with standards and governance boundaries.
 - Preserve reusable support-message structures for billing, escalation, follow-up, and closure.
 - Keep creator-lane outputs cataloged as public-safe surfaces instead of isolated ad-hoc messages.
+- Treat future multilingual output as a downstream layer sourced from canonical and governance-controlled wording.
 
 ## Phase 10 - Modular growth
 
@@ -99,6 +100,7 @@
 - Keep the future model centered on score profiles, document records, asset summaries, governance decisions, jurisdiction/license entries, and KPI metrics.
 - Introduce metadata and read-only layers before any sensitive operational data layer.
 - Keep future modularization ready for distinct score logic, narrative panels, reference blocks, and data hooks.
+- Prepare a read-only dashboard surface only after concept-source mapping and release gates are stable.
 
 ## Phase 11 - Public and internal layering
 
@@ -112,3 +114,27 @@
 - Introduce managed data or API flows only after metadata structures and approval rules are mature.
 - Preserve the repository’s role as a controlled system, not just a loose file collection.
 - Start with read-only public-safe dashboards before any operational workflow backend is considered.
+
+## Maturity milestone tracks
+
+Track future work across four explicit maturity branches:
+
+### Standards maturity
+- glossary completeness for reusable terms
+- score-model and standard-version clarity
+- source-reference coverage for public-facing surfaces
+
+### Governance maturity
+- lifecycle rule completeness
+- concept-surface gate enforcement
+- sanitization and release-readiness traceability
+
+### Prototype maturity
+- UI surface modularity
+- validation anchor coverage
+- controlled display of source references and standard versions
+
+### Creator maturity
+- public-safe narrative consistency
+- reusable output catalog coverage
+- multilingual downstream readiness without creating a new source of truth

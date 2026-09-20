@@ -27,6 +27,8 @@ When entities are introduced, prefer shared control fields where relevant:
 - `review_state`
 - `effective_date`
 - `last_reviewed_at`
+- `catalog_membership`
+- `controlling_lane`
 
 ## Core entities
 
@@ -210,6 +212,22 @@ Suggested fields:
 - `release_record_id`
 - `active`
 
+### 12. Maturity Track Record
+
+Represents one repository-growth track used to measure standards, governance, prototype, or creator maturity over time.
+
+Suggested fields:
+- `track_id`
+- `track_name`
+- `track_category`
+- `status`
+- `owner_lane`
+- `source_reference`
+- `milestone_label`
+- `review_state`
+- `target_phase`
+- `last_reviewed_at`
+
 ## Visibility alignment
 
 Use repository visibility classes when possible:
@@ -229,6 +247,7 @@ A future system should also preserve the distinction between scenario assumption
 - Keep document metadata reusable across frontend, validation, and future APIs.
 - Keep creator/public wording variants separate from regulatory, governance, and support wording.
 - Keep reusable public concept surfaces separate from canonical sources while preserving explicit source links.
+- Keep read-only dashboard summaries separate from any future managed operational workflow records.
 
 ## Implementation direction
 

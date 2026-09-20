@@ -152,6 +152,13 @@ Use the repository-wide execution order for non-trivial work:
 4. plans fourth
 5. public output last
 
+Every reusable public-facing surface should also:
+
+- identify or inherit a controlling source reference,
+- fit the repository's logical public-safe output catalog,
+- preserve audience-layer and visibility separation,
+- remain downstream from standards and governance.
+
 ## Communication layers
 
 Keep wording aligned with the intended audience:
@@ -181,6 +188,7 @@ Treat `README.md`, the public prototype, `docs/repository-operating-model.md`, a
 - Neither lane should bypass `standards/` or `governance/` when introducing a new reusable public concept surface.
 - New public-facing concept surfaces should expose or inherit a standard/version reference or controlling repository document reference.
 - Future multilingual or dashboard outputs should be layered on top of canonical and governance sources, not invented independently.
+- Reusable public-safe surfaces should remain cataloged and traceable to their controlling sources as the prototype grows.
 
 ## Validation workflow
 
@@ -203,6 +211,7 @@ The repository workflow in `.github/workflows/validate.yml` currently runs:
 5. Modular frontend/data-model growth
 6. Public/internal output layering
 7. Dashboard/API/platform expansion when repository controls are mature
+8. Standards, governance, prototype, and creator maturity-track alignment
 
 ## Owner information
 
