@@ -7,7 +7,7 @@
 - **Status:** working
 - **Visibility:** public-safe
 - **Purpose:** Sequences repository stabilization, documentation alignment, frontend growth, and platformization.
-- **Depends on:** `docs/document-portfolio.md`, `governance/repo-charter.md`, `config/validate_repository.py`
+- **Depends on:** `docs/document-portfolio.md`, `docs/repository-operating-model.md`, `governance/repo-charter.md`
 
 ## Priority order
 
