@@ -9,11 +9,18 @@
 - **Purpose:** Canonical source for INDEKURILANC weights, maturity bands, outputs, and change-control rules.
 - **Depends on:** `governance/repo-charter.md`, `governance/document-lifecycle.md`, `standards/glossary.md`
 
+The `Depends on` field lists upstream controlling repository sources. Downstream implementation consumers of this standard are tracked separately so standards-first governance stays distinct from rendering targets.
+
 ## Standard ID
 
 - **Identifier:** `INDEKURILANC-STD-V1`
 - **Status:** `approved baseline for current prototype`
 - **Current implementation source:** `script.js`
+
+## Downstream implementation consumers
+
+- `script.js` renders the active standard version, calculation logic, and required output fields in the public prototype.
+- `index.html` exposes the prototype surface that presents the standard-linked output.
 
 ## Purpose
 
