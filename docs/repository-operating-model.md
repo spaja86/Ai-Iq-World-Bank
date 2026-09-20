@@ -7,7 +7,7 @@
 - **Status:** working
 - **Visibility:** public-safe
 - **Purpose:** Defines the developer and creator operating lanes, public-safe output flow, approvals, ownership model, and release-readiness gates for repository growth.
-- **Depends on:** `README.md`, `governance/repo-charter.md`, `governance/document-lifecycle.md`, `docs/document-portfolio.md`, `docs/repository-roadmap.md`, `docs/future-data-model.md`, `config/sensitive-content-review-checklist.md`
+- **Depends on:** `governance/repo-charter.md`, `governance/document-lifecycle.md`, `docs/document-portfolio.md`, `docs/repository-roadmap.md`, `docs/future-data-model.md`, `config/sensitive-content-review-checklist.md`
 
 ## Purpose
 

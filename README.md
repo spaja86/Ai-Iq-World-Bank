@@ -7,7 +7,7 @@
 - **Status:** working
 - **Visibility:** public-safe
 - **Purpose:** Primary navigation entry for repository structure, standards, governance, and validation workflow.
-- **Depends on:** `governance/repo-charter.md`, `governance/document-lifecycle.md`, `standards/indekurilanc-standard.md`
+- **Depends on:** `docs/repository-operating-model.md`, `governance/repo-charter.md`, `governance/document-lifecycle.md`, `standards/indekurilanc-standard.md`
 
 AI IQ World Bank is one repository built around one controlled system with four connected pillars: product/prototype, standards, operational plans, and governance/protection.
 

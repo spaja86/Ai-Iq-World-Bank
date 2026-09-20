@@ -7,7 +7,7 @@
 - **Status:** approved
 - **Visibility:** canonical/internal standard
 - **Purpose:** Defines repository mission, four pillars, source-of-truth hierarchy, and extension rules.
-- **Depends on:** `standards/indekurilanc-standard.md`, `README.md`
+- **Depends on:** `standards/indekurilanc-standard.md`, `standards/glossary.md`
 
 ## Purpose
 
