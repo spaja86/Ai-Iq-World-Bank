@@ -43,6 +43,10 @@ HTML_IDS = [
     'public-output-flow',
     'approval-flow',
     'release-gates',
+    'module-boundaries',
+    'developer-creator-checkpoints',
+    'concept-surface-inventory',
+    'public-output-catalog',
 ]
 DOC_CONTROL_KEYS = [
     'Category',

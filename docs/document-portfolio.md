@@ -57,6 +57,17 @@ This file is the master portfolio map for repository documents, their category, 
 
 This usage order is also the preferred execution order for non-trivial repository changes: standard/governance direction first, then portfolio and roadmap alignment, then plan updates, then public-safe surfaces.
 
+## Reusable public-safe output catalog
+
+Track these as the current reusable public-safe output set:
+
+1. `README.md` for top-level framing and navigation
+2. `index.html`, `styles.css`, and `script.js` for the controlled prototype
+3. `docs/repository-operating-model.md` for routing, approvals, and release readiness
+4. `javni-prikaz-emisija-i-kamatna-politika-plan.md` for public-policy and transparency structure
+
+Any new reusable surface should identify its controlling source and fit this catalog before it is treated as a stable public-safe output.
+
 ## Master dependency view
 
 - **Repository control core:** `README.md` depends on `governance/repo-charter.md` and `governance/document-lifecycle.md`
@@ -79,6 +90,15 @@ This usage order is also the preferred execution order for non-trivial repositor
 | Domain plans | Root planning templates | Domain owner |
 | Support workflows | `vercel-naplata-poruka-plan.md`, `github-naplata-poruka-plan.md` | Support owner |
 | Prototype | `index.html`, `styles.css`, `script.js` | Product owner |
+
+## Maturity tracks
+
+Use these parallel tracks when expanding the repository:
+
+- **Standards maturity:** terminology, scoring, and canonical source completeness
+- **Governance maturity:** lifecycle, visibility, sanitization, and approval enforcement
+- **Prototype maturity:** controlled UI surfaces, modular boundaries, and validation anchors
+- **Creator maturity:** public-safe framing, cataloged messaging, and downstream multilingual readiness
 
 ## Audience and public-surface map
 

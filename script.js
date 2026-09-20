@@ -92,6 +92,45 @@ const FUTURE_MODULES = Object.freeze([
     })
 ]);
 
+const MODULE_BOUNDARIES = Object.freeze([
+    Object.freeze({
+        title: 'Score logic',
+        body: 'Keep calculation weights, maturity bands, and result requirements tied to the INDEKURILANC standard.',
+        meta: [
+            'Owner lane: developer / prototype',
+            'Controlling source: standards/indekurilanc-standard.md',
+            'Visibility: public-safe output from canonical rule'
+        ]
+    }),
+    Object.freeze({
+        title: 'Narrative panels',
+        body: 'Keep creator-facing explanation blocks downstream from governance and standard wording.',
+        meta: [
+            'Owner lane: creator + prototype',
+            'Controlling source: docs/repository-operating-model.md',
+            'Visibility: public-safe'
+        ]
+    }),
+    Object.freeze({
+        title: 'Reference surfaces',
+        body: 'Keep standards, governance, and portfolio cards curated as repo-relative public-safe references.',
+        meta: [
+            'Owner lane: developer / prototype',
+            'Controlling source: README.md',
+            'Visibility: public-safe'
+        ]
+    }),
+    Object.freeze({
+        title: 'Future platform path',
+        body: 'Add multilingual, dashboard, and API layers only after source mapping and release gates are stable.',
+        meta: [
+            'Owner lane: portfolio / architecture',
+            'Controlling source: docs/repository-roadmap.md',
+            'Visibility: planning-led public-safe growth'
+        ]
+    })
+]);
+
 const NARRATIVE_LANES = Object.freeze([
     Object.freeze({
         title: 'Creator / public-safe',
@@ -141,6 +180,92 @@ const RELEASE_GATES = Object.freeze([
     Object.freeze({
         title: 'Sanitization',
         body: 'Remove sensitive operational identifiers, quantities, and secrets.'
+    })
+]);
+
+const DEVELOPER_CREATOR_CHECKPOINTS = Object.freeze([
+    'Confirm the controlling standard, governance rule, or approved plan before changing a reusable surface.',
+    'Classify the target audience layer and visibility before drafting new copy or prototype panels.',
+    'Keep source logic, public-safe explanation, and release-readiness checks separable.',
+    'Update concept-surface mapping when a reusable panel or cataloged output changes.',
+    'Keep multilingual or dashboard-ready variants downstream from canonical wording.'
+]);
+
+const CONCEPT_SURFACE_INVENTORY = Object.freeze([
+    Object.freeze({
+        title: 'Repository overview',
+        body: 'Public framing of the controlled repository system, pillars, and architecture path.',
+        meta: [
+            'Channel: README + prototype overview',
+            'Controlling source: governance/repo-charter.md',
+            'Owner lane: creator + prototype'
+        ]
+    }),
+    Object.freeze({
+        title: 'Operating-model panels',
+        body: 'Developer/creator routing, approval order, public-output flow, and release gates.',
+        meta: [
+            'Channel: docs + prototype operating model',
+            'Controlling source: docs/repository-operating-model.md',
+            'Visibility: public-safe'
+        ]
+    }),
+    Object.freeze({
+        title: 'INDEKURILANC results',
+        body: 'Score, status, interpretation, priority, next step, and active standard exposure.',
+        meta: [
+            'Channel: prototype calculator',
+            'Controlling source: standards/indekurilanc-standard.md',
+            `Standard version: ${INDEKURILANC_STANDARD_VERSION}`
+        ]
+    }),
+    Object.freeze({
+        title: 'Reference cards',
+        body: 'Curated standards, governance, portfolio, and roadmap references for contributors and viewers.',
+        meta: [
+            'Channel: prototype reference sections',
+            'Controlling source: docs/document-portfolio.md',
+            'Visibility: public-safe'
+        ]
+    })
+]);
+
+const PUBLIC_OUTPUT_CATALOG = Object.freeze([
+    Object.freeze({
+        title: 'README navigation',
+        body: 'Top-level public-safe framing and contributor entry point.',
+        meta: [
+            'Source reference: README.md',
+            'Audience layer: creator / public-safe',
+            'Release gate: visibility + source-reference check'
+        ]
+    }),
+    Object.freeze({
+        title: 'Controlled prototype',
+        body: 'Static UI that exposes standards, governance routes, and the active INDEKURILANC calculator.',
+        meta: [
+            'Source reference: index.html, styles.css, script.js',
+            `Standard exposure: ${INDEKURILANC_STANDARD_VERSION}`,
+            'Release gate: validation + syntax + sanitization'
+        ]
+    }),
+    Object.freeze({
+        title: 'Operating-model guide',
+        body: 'Public-safe routing document for ownership, approvals, and release readiness.',
+        meta: [
+            'Source reference: docs/repository-operating-model.md',
+            'Audience layer: contributor + creator',
+            'Release gate: governance alignment'
+        ]
+    }),
+    Object.freeze({
+        title: 'Policy and transparency template',
+        body: 'Public-safe structure for transparency and policy outputs under controlled standards.',
+        meta: [
+            'Source reference: javni-prikaz-emisija-i-kamatna-politika-plan.md',
+            'Audience layer: public-safe policy framing',
+            'Release gate: sanitization + policy source check'
+        ]
     })
 ]);
 
@@ -266,6 +391,20 @@ function createMiniCard(item, headingLevel = 'h4') {
     body.textContent = item.body;
 
     card.append(title, body);
+
+    if (Array.isArray(item.meta) && item.meta.length) {
+        const metaList = document.createElement('ul');
+        metaList.className = 'mini-card-meta';
+
+        metaList.replaceChildren(...item.meta.map((entry) => {
+            const metaItem = document.createElement('li');
+            metaItem.textContent = entry;
+            return metaItem;
+        }));
+
+        card.append(metaList);
+    }
+
     return card;
 }
 
@@ -389,10 +528,14 @@ function initializeRepositoryView() {
     renderList('source-hierarchy', SOURCE_OF_TRUTH);
     renderMiniCardGrid('visibility-model', VISIBILITY_MODEL);
     renderMiniCardGrid('future-modules', FUTURE_MODULES);
+    renderMiniCardGrid('module-boundaries', MODULE_BOUNDARIES);
     renderMiniCardGrid('narrative-lanes', NARRATIVE_LANES);
     renderList('public-output-flow', PUBLIC_OUTPUT_FLOW);
     renderList('approval-flow', APPROVAL_FLOW);
     renderMiniCardGrid('release-gates', RELEASE_GATES);
+    renderList('developer-creator-checkpoints', DEVELOPER_CREATOR_CHECKPOINTS);
+    renderMiniCardGrid('concept-surface-inventory', CONCEPT_SURFACE_INVENTORY);
+    renderMiniCardGrid('public-output-catalog', PUBLIC_OUTPUT_CATALOG);
     renderRoadmap();
     renderStandardSummary();
     renderMaturityBands();

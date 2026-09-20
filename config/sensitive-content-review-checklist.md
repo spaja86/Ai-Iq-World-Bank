@@ -17,6 +17,7 @@ Use this checklist before committing or sharing documentation updates.
 - Confirm that the `Document Control` block declares status, visibility, purpose, and dependencies.
 - Confirm whether the work belongs primarily to the developer lane, creator lane, or another ownership lane.
 - Confirm the controlling source path for any new public-facing concept or message.
+- Confirm whether a reusable concept surface inventory entry or source-mapping entry must be updated.
 - Remove checkout-specific absolute filesystem paths.
 - Remove secrets, tokens, credentials, or private access information.
 - Check whether the content contains exact sensitive locations or per-site quantities.
@@ -30,5 +31,6 @@ Use this checklist before committing or sharing documentation updates.
 - Confirm that the intended visibility is `public-safe`, `limited/internal`, or `canonical/internal standard`.
 - Confirm that reusable public-safe output still fits the repository's logical public-safe output catalog.
 - Confirm that any new public concept surface exposes or inherits a standard/version or controlling document reference.
+- Confirm that source-mapping for reusable public-safe surfaces still points to the right controlling document.
 - Re-check linked references so the shared version still points to valid repository documents.
 - Confirm that any populated template variant has been sanitized before publication.

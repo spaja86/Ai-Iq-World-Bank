@@ -41,6 +41,14 @@ The operating model connects developer work, creator/public messaging, standards
 - Reusable creator messaging should map back to an existing plan, public-safe document, or approved support template.
 - Public storytelling must stay sanitized, aggregated, and free from sensitive operational detail.
 
+### 1c. Developer + creator shared execution checkpoints
+
+- Confirm the controlling standard, governance rule, or approved plan before changing a reusable surface.
+- Classify the target audience layer and visibility before drafting new copy or panels.
+- Keep source logic, public-safe narrative, and release-readiness checks separable.
+- Update concept-surface mapping when a reusable panel, narrative block, or cataloged output changes.
+- Keep multilingual or channel-specific variants downstream from canonical wording.
+
 ### 2. Standards lane
 
 - Owns scoring rules, glossary terms, DINAR context, and other canonical definitions.
@@ -95,6 +103,19 @@ Treat the repository as maintaining one logical public-safe output catalog even 
 - `javni-prikaz-emisija-i-kamatna-politika-plan.md` provides the public-policy and transparency-oriented output structure.
 - Future dashboard cards, summaries, multilingual variants, and creator-facing overview panels should be added only as cataloged public-safe outputs derived from controlled sources.
 
+## Concept surface inventory
+
+Use this inventory to keep reusable surfaces tied to a controlling source:
+
+| Surface | Channel | Owner lane | Controlling source | Visibility | Release expectation |
+|---|---|---|---|---|---|
+| Repository overview and pillar framing | `README.md` + prototype overview panels | creator + prototype | `governance/repo-charter.md`, `README.md` | public-safe | navigation and public framing remain aligned |
+| Source-of-truth, visibility, and future-module panels | prototype architecture section | developer/prototype | `governance/repo-charter.md`, `governance/document-lifecycle.md`, `docs/future-data-model.md` | public-safe | source references remain explicit |
+| Developer/creator operating model panels | `docs/repository-operating-model.md` + prototype operating-model section | creator + portfolio | `docs/repository-operating-model.md`, `governance/document-lifecycle.md` | public-safe | ownership, audience, and release gates stay synchronized |
+| INDEKURILANC calculator outputs | prototype scoring module | developer/prototype | `standards/indekurilanc-standard.md` | public-safe | active standard version exposed in UI |
+| Standards, governance, and portfolio reference cards | prototype reference sections | developer/prototype | `README.md`, `docs/document-portfolio.md` | public-safe | public references remain repo-relative and curated |
+| Public transparency and policy outputs | `javni-prikaz-emisija-i-kamatna-politika-plan.md` and future summaries | creator + domain | `javni-prikaz-emisija-i-kamatna-politika-plan.md`, `dinar-standard-plan.md` | public-safe | sanitization and policy controls checked |
+
 ## Document ownership model
 
 Ownership is by role group, not by one individual file editor:
@@ -133,7 +154,7 @@ Use this matrix when a change crosses developer, creator, standards, and governa
 | New structured document | `docs/document-portfolio.md` | Lifecycle compliance and README discoverability | Document Control + dependency check |
 | Public messaging changes | `README.md` or public-safe docs | Cross-check against standards and governance | Visibility + sanitization review |
 | Support workflow changes | Support plan file | README/portfolio sync if shared workflow changes | Evidence and escalation readiness check |
-| New public concept surface | controlling standard, governance rule, or approved reference document | Portfolio note, creator/developer alignment, prototype update if needed | Standard/version reference exposure check |
+| New public concept surface | controlling standard, governance rule, or approved reference document | Portfolio note, creator/developer alignment, prototype update if needed, concept-surface inventory update | Standard/version reference exposure check |
 
 ## Change sequence
 
@@ -143,7 +164,8 @@ Every non-trivial repository change should follow this order:
 2. Portfolio and roadmap alignment
 3. Domain-plan and support-template alignment
 4. Prototype/public-surface update
-5. Validation, sanitization, and release-readiness review
+5. Concept-surface mapping and public-safe catalog review
+6. Validation, sanitization, and release-readiness review
 
 The repository-wide default principle is:
 
@@ -168,7 +190,8 @@ When introducing a new concept surface in a public prototype or shareable docume
 1. identify the controlling standard, governance rule, or approved planning reference,
 2. expose the relevant standard/version or repository reference in the output,
 3. classify the audience layer and visibility before publication,
-4. update roadmap or portfolio references if the concept becomes a reusable repository surface.
+4. update roadmap or portfolio references if the concept becomes a reusable repository surface,
+5. update the concept-surface inventory or equivalent source map.
 
 ## Release-readiness checklist
 
@@ -183,6 +206,7 @@ Before treating a change as ready:
 7. Confirm roadmap, portfolio, and future-model references still match the repository structure.
 8. Confirm developer-lane and creator-lane responsibilities stayed within the intended ownership path.
 9. Confirm reusable public-safe outputs still fit the repository's logical public-safe output catalog.
+10. Confirm reusable concept-surface mappings still point to the intended controlling sources.
 
 ## Future growth path
 

@@ -78,6 +78,7 @@ If a document has both internal and public variants, the tracked template should
 - Do not embed checkout-specific absolute filesystem paths in tracked content.
 - When a document depends on another standard, name that dependency explicitly in `Document Control`.
 - New root files must be justified in the portfolio and should not bypass existing folder structure.
+- Reusable public-facing concept surfaces should declare or inherit a controlling source reference before they are treated as shareable outputs.
 
 ## Required content separation
 
@@ -101,6 +102,20 @@ When a repository concept appears in more than one context, keep the wording ali
 Do not let public-facing wording silently overwrite canonical rules or internal review constraints.
 
 Creator-facing or prototype-facing wording should be treated as a downstream layer, never as a replacement for the controlling standard or governance rule.
+
+## Concept surface inventory expectations
+
+When a reusable public-safe surface is introduced or materially changed, record enough information to keep it traceable:
+
+- surface name or panel name,
+- channel such as README, prototype, plan, or future dashboard,
+- controlling source reference,
+- intended audience layer,
+- visibility class,
+- owning lane or role,
+- release-readiness expectation.
+
+This inventory may live inside an operating-model, portfolio, or future-model artifact as long as the mapping remains explicit and repository-relative.
 
 ## Document ownership expectations
 
@@ -136,7 +151,8 @@ Use this order when a non-trivial change affects multiple repository layers:
 2. Update portfolio and roadmap references if structure, ownership, or scope changed.
 3. Update working plans or support templates that depend on the new rule.
 4. Update public prototype or public-safe outputs last.
-5. Run validation and re-check visibility, references, and sanitization.
+5. Record or update the concept-surface mapping and public-safe output catalog status where relevant.
+6. Run validation and re-check visibility, references, and sanitization.
 
 Any new reusable public concept surface should also expose or inherit a standard/version reference or controlling repository document reference before publication.
 
@@ -148,7 +164,7 @@ Classify non-trivial changes before merge:
 |---|---|---|
 | Low | wording clarity, non-normative UI clarity, portfolio cleanup | validate files and keep references accurate |
 | Medium | new working docs, public-safe panels, support workflow changes | portfolio and ownership alignment review plus audience-layer confirmation |
-| High | standard changes, governance changes, visibility-boundary changes, future managed-entity changes | controlling-source review plus dependent document, prototype alignment, and release-readiness trace |
+| High | standard changes, governance changes, visibility-boundary changes, future managed-entity changes, new reusable concept surfaces | controlling-source review plus dependent document, prototype alignment, concept-surface trace, and release-readiness trace |
 
 ## Review checkpoints
 
@@ -168,6 +184,7 @@ Review these questions before merge:
 12. Is the change impact level understood?
 13. If a new public concept surface was added, does it expose a controlling source reference?
 14. If the content is reusable public-safe output, does it fit the repository's public-safe output catalog?
+15. If a reusable concept surface changed, is the surface inventory or mapping still accurate?
 
 ## Release/checklist procedure for major changes
 
@@ -179,7 +196,8 @@ For major repository changes, complete this order:
 4. Run validation and syntax checks.
 5. Re-check sensitive content before sharing or merging.
 6. Confirm release readiness for standard version exposure, public-safe wording, and ownership routing.
-7. Record whether the change introduced a new reusable public-safe output or concept surface.
+7. Record whether the change introduced or modified a reusable public-safe output or concept surface.
+8. Confirm the controlling-source map for reusable surfaces still matches the repository output catalog.
 
 ## Release readiness minimum
 
@@ -193,4 +211,5 @@ Before treating a structured document or prototype change as ready:
 - confirm validation passed,
 - confirm no secrets or sensitive operational identifiers remain,
 - confirm new public concept surfaces still point back to a controlling source,
-- confirm creator-lane outputs remain downstream from standards and governance.
+- confirm creator-lane outputs remain downstream from standards and governance,
+- confirm reusable-surface inventory or mapping remains accurate where applicable.
