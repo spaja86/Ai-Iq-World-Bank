@@ -43,7 +43,7 @@ Use one consistent work cycle for cross-repository changes:
 
 ## Core operating lanes
 
-### 1. Prototype lane
+### 1a. Prototype lane
 
 - Owns `index.html`, `styles.css`, and `script.js`.
 - Makes the active standard visible through public-safe interfaces.
@@ -51,7 +51,7 @@ Use one consistent work cycle for cross-repository changes:
 - Must route every non-trivial UI or output change through standard -> governance -> docs -> implementation.
 - Must keep concept surfaces, score logic, narrative panels, and future data hooks separable as growth continues.
 
-### 1a. Developer lane execution rules
+### 1b. Developer lane execution rules
 
 - Treat the prototype lane as the developer lane for day-to-day implementation work.
 - Limit direct developer authority to implementation, rendering, frontend structure, and technical validation.
@@ -60,7 +60,7 @@ Use one consistent work cycle for cross-repository changes:
 - Keep the frontend public-safe, standard-aligned, and ready for later modular extraction.
 - Preserve traceability between implementation details, required prototype anchors, validation checks, and the controlling source reference.
 
-### 1b. Creator lane execution rules
+### 1c. Creator lane execution rules
 
 - Treat public explanation, demo framing, external storytelling, and shareable narrative as creator-lane work.
 - Creator outputs may simplify presentation but must not redefine standards, governance rules, or internal planning facts.
@@ -68,7 +68,7 @@ Use one consistent work cycle for cross-repository changes:
 - Reusable creator messaging should map back to an existing plan, public-safe document, or approved support template.
 - Public storytelling must stay sanitized, aggregated, and free from sensitive operational detail.
 
-### 1c. Shared lane execution rules
+### 1d. Shared lane execution rules
 
 - Use the shared lane whenever work crosses developer, creator, governance, standards, or domain-plan responsibilities.
 - Confirm the controlling source, target audience layer, and visibility before editing a reusable surface.
@@ -76,7 +76,7 @@ Use one consistent work cycle for cross-repository changes:
 - Require cross-lane changes to preserve source meaning even when wording, presentation, or channel changes.
 - Record new reusable surfaces before they are treated as stable repository outputs.
 
-### 1d. Developer + creator shared execution checkpoints
+### 1e. Developer + creator shared execution checkpoints
 
 - Confirm the controlling standard, governance rule, or approved plan before changing a reusable surface.
 - Classify the target audience layer and visibility before drafting new copy or panels.
