@@ -55,7 +55,7 @@ This file is the master portfolio map for repository documents, their category, 
 8. `docs/repository-operating-model.md` for ownership, approvals, and release gates
 9. `docs/future-data-model.md` for later platform work
 
-This usage order is also the preferred execution order for non-trivial repository changes: standard/governance direction first, then portfolio and roadmap alignment, then plan updates, then public-safe surfaces.
+This usage order is a reading and routing sequence. For the canonical non-trivial change order, use `docs/repository-operating-model.md`.
 
 ## Program-equivalent routing rules
 

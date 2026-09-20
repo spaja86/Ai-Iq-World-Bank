@@ -151,13 +151,10 @@ const NARRATIVE_LANES = Object.freeze([
 ]);
 
 const REPOSITORY_WORK_CYCLE = Object.freeze([
-    'Identify the controlling source.',
-    'Classify the audience layer and visibility.',
-    'Update the governing standard, governance rule, or approved routing source first.',
-    'Align portfolio, roadmap, and dependent plans or support templates.',
-    'Update prototype and other public-safe outputs only after upstream alignment.',
-    'Validate structure, references, required anchors, and exposed standard/version signals.',
-    'Confirm sanitization, release readiness, and reusable-surface traceability.'
+    'Follow the canonical repository work cycle in docs/repository-operating-model.md.',
+    'Start with the controlling source plus audience/visibility classification.',
+    'Align standards, governance, portfolio, and plans before updating downstream public-safe surfaces.',
+    'Validate anchors, references, standard/version exposure, sanitization, and release readiness before sharing.'
 ]);
 
 const PUBLIC_OUTPUT_FLOW = Object.freeze([

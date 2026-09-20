@@ -144,25 +144,9 @@ The repository now uses one explicit operating model across developer and creato
 
 Use `docs/repository-operating-model.md` when a change needs ownership routing, approval sequence, audience/language separation, or release-readiness guidance.
 
-Treat `docs/repository-operating-model.md` as the primary coordination document for the repository-wide developer + creator program equivalent. Other routing, lane, handoff, or reusable-surface rules should stay aligned to that file.
+Treat `docs/repository-operating-model.md` as the primary coordination document for the repository-wide developer + creator program equivalent. Other routing, lane, handoff, execution-order, or reusable-surface rules should stay aligned to that file.
 
-Use the repository-wide execution order for non-trivial work:
-
-1. standard first
-2. governance second
-3. portfolio third
-4. plans fourth
-5. public output last
-
-Use the canonical repository work cycle from `docs/repository-operating-model.md` for non-trivial changes:
-
-1. identify the controlling source
-2. classify audience layer and visibility
-3. update the governing standard, governance rule, or approved routing document
-4. align portfolio, roadmap, and dependent plans
-5. update public-safe prototype or other downstream surfaces only after upstream alignment
-6. validate structure, repository-relative references, required anchors, and exposed standard/version signals
-7. confirm sanitization, release readiness, and reusable-surface traceability
+For non-trivial work, follow the canonical execution order and repository work cycle defined in `docs/repository-operating-model.md`.
 
 Every reusable public-facing surface should also:
 
