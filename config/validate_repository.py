@@ -52,10 +52,10 @@ HTML_IDS = [
     'public-output-catalog',
 ]
 OPERATING_MODEL_REQUIRED_MARKERS = [
-    'repository-wide execution order',
-    'repository work cycle',
-    'repository pillar routing',
-    'success criteria',
+    '<!-- operating-model:execution-order -->',
+    '<!-- operating-model:work-cycle -->',
+    '<!-- operating-model:pillar-routing -->',
+    '<!-- operating-model:success-criteria -->',
 ]
 DOC_CONTROL_KEYS = [
     'Category',
@@ -190,7 +190,7 @@ script_text = (ROOT / 'script.js').read_text(encoding='utf-8')
 if 'INDEKURILANC-STD-V1' not in script_text:
     fail('script.js must expose the active INDEKURILANC standard version')
 
-operating_model_text = (ROOT / 'docs/repository-operating-model.md').read_text(encoding='utf-8').lower()
+operating_model_text = (ROOT / 'docs/repository-operating-model.md').read_text(encoding='utf-8')
 for marker in OPERATING_MODEL_REQUIRED_MARKERS:
     if marker not in operating_model_text:
         fail(f'docs/repository-operating-model.md is missing required operating-model marker: {marker}')

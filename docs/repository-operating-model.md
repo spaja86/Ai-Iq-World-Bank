@@ -17,6 +17,7 @@ The operating model connects developer work, creator/public messaging, standards
 
 This file is the primary coordination reference for the repository-wide developer + creator program equivalent. Other repository files should stay downstream from this operating model when they define approvals, routing, reusable surfaces, release gates, or repository-wide execution order.
 
+<!-- operating-model:execution-order -->
 ## Repository-wide execution order
 
 Every non-trivial repository change should follow one shared order everywhere in the repository:
@@ -29,6 +30,7 @@ Every non-trivial repository change should follow one shared order everywhere in
 
 Do not invert this order when the change affects more than one repository pillar. If a downstream file implies a new rule, update the controlling standard or governance source first.
 
+<!-- operating-model:work-cycle -->
 ## Repository work cycle (radni takt)
 
 Use one consistent work cycle for cross-repository changes:
@@ -109,6 +111,7 @@ Use one consistent work cycle for cross-repository changes:
 - Keeps scenario, internal, and public-safe variants clearly separated.
 - Supplies structured inputs for future reporting and platformization.
 
+<!-- operating-model:pillar-routing -->
 ## Repository pillar routing
 
 Apply the operating model to every repository pillar:
@@ -267,6 +270,7 @@ When introducing a new concept surface in a public prototype or shareable docume
 4. update roadmap or portfolio references if the concept becomes a reusable repository surface,
 5. update the concept-surface inventory or equivalent source map.
 
+<!-- operating-model:success-criteria -->
 ## Success criteria and end-state
 
 Treat the rollout as complete only when:
