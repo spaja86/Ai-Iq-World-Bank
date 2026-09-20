@@ -7,7 +7,7 @@
 - **Status:** working
 - **Visibility:** public-safe
 - **Purpose:** Controlled creator/public-safe framework for shaping a narrative epilog about courage, learning, innovation, and human potential.
-- **Depends on:** `README.md`, `governance/document-lifecycle.md`, `docs/repository-operating-model.md`, `standards/glossary.md`
+- **Depends on:** `governance/document-lifecycle.md`, `docs/repository-operating-model.md`, `standards/glossary.md`
 
 Ovaj dokument uređuje jedan creator/public-safe narativni izlaz za odeljak „Čovečnost”.
 
@@ -108,7 +108,7 @@ Predloženi kratki epilog:
 
 > Čovečnost raste kada se hrabrost i znanje ne razdvajaju. Kada čovek ima smelost da započne i disciplinu da uči, njegovo stvaranje prevazilazi lični uspeh i postaje dar drugima.
 
-## 8) Pregled pre objave ili reuse-a
+## 8) Pregled pre objave ili ponovne upotrebe
 
 Pre svake dalje upotrebe proveriti:
 
