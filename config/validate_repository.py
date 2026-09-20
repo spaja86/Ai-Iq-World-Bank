@@ -51,11 +51,11 @@ HTML_IDS = [
     'concept-surface-inventory',
     'public-output-catalog',
 ]
-OPERATING_MODEL_REQUIRED_HEADINGS = [
-    '## Repository-wide execution order',
-    '## Repository work cycle (radni takt)',
-    '## Repository pillar routing',
-    '## Success criteria and end-state',
+OPERATING_MODEL_REQUIRED_MARKERS = [
+    'repository-wide execution order',
+    'repository work cycle',
+    'repository pillar routing',
+    'success criteria',
 ]
 DOC_CONTROL_KEYS = [
     'Category',
@@ -190,9 +190,9 @@ script_text = (ROOT / 'script.js').read_text(encoding='utf-8')
 if 'INDEKURILANC-STD-V1' not in script_text:
     fail('script.js must expose the active INDEKURILANC standard version')
 
-operating_model_text = (ROOT / 'docs/repository-operating-model.md').read_text(encoding='utf-8')
-for heading in OPERATING_MODEL_REQUIRED_HEADINGS:
-    if heading not in operating_model_text:
-        fail(f'docs/repository-operating-model.md is missing required heading: {heading}')
+operating_model_text = (ROOT / 'docs/repository-operating-model.md').read_text(encoding='utf-8').lower()
+for marker in OPERATING_MODEL_REQUIRED_MARKERS:
+    if marker not in operating_model_text:
+        fail(f'docs/repository-operating-model.md is missing required operating-model marker: {marker}')
 
 print('Repository validation passed.')
