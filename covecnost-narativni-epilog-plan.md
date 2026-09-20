@@ -55,12 +55,10 @@ Radna centralna teza ovog epiloga glasi:
 
 ## 4) Terminološka klasifikacija
 
-| Termin | Radna klasifikacija | Pravilo upotrebe |
-|---|---|---|
-| `SIGMA` | metafora ili interna oznaka | Ne koristiti kao dokazanu psihološku, sociološku ili naučnu kategoriju bez objašnjenja i izvora |
-| `igra života` | poetska formulacija | Koristiti kao metaforu za iskustvo, stvaranje i iskušenje |
-| `TAJ` | narativni idealni lik | Koristiti kao opis sinteze hrabrosti, znanja i odgovornosti |
-| `Čovečnost` | creator/public-safe završna tema | Koristiti kao univerzalni okvir koji spaja dostojanstvo, razvoj i stvaralaštvo |
+- `SIGMA` — radna klasifikacija: metafora ili interna oznaka; pravilo upotrebe: ne koristiti kao dokazanu psihološku, sociološku ili naučnu kategoriju bez objašnjenja i izvora.
+- `igra života` — radna klasifikacija: poetska formulacija; pravilo upotrebe: koristiti kao metaforu za iskustvo, stvaranje i iskušenje.
+- `TAJ` — radna klasifikacija: narativni idealni lik; pravilo upotrebe: koristiti kao opis sinteze hrabrosti, znanja i odgovornosti.
+- `Čovečnost` — radna klasifikacija: creator/public-safe završna tema; pravilo upotrebe: koristiti kao univerzalni okvir koji spaja dostojanstvo, razvoj i stvaralaštvo.
 
 Ako se ovi termini budu ponavljali kroz više repozitorijumskih površina, tek tada treba razmotriti njihovu standardizaciju kroz odgovarajući kontrolni izvor.
 
