@@ -101,6 +101,7 @@ Treat the repository as maintaining one logical public-safe output catalog even 
 - `index.html`, `styles.css`, and `script.js` expose the controlled public prototype.
 - `docs/repository-operating-model.md` defines the routing and release constraints for public-safe outputs.
 - `javni-prikaz-emisija-i-kamatna-politika-plan.md` provides the public-policy and transparency-oriented output structure.
+- `covecnost-narativni-epilog-plan.md` provides a controlled creator/public-safe narrative epilog structure for human-potential messaging.
 - Future dashboard cards, summaries, multilingual variants, and creator-facing overview panels should be added only as cataloged public-safe outputs derived from controlled sources.
 
 ## Concept surface inventory
@@ -115,6 +116,7 @@ Use this inventory to keep reusable surfaces tied to a controlling source:
 | INDEKURILANC calculator outputs | prototype scoring module | developer/prototype | `standards/indekurilanc-standard.md` | public-safe | active standard version exposed in UI |
 | Standards, governance, and portfolio reference cards | prototype reference sections | developer/prototype | `README.md`, `docs/document-portfolio.md` | public-safe | public references remain repo-relative and curated |
 | Public transparency and policy outputs | `javni-prikaz-emisija-i-kamatna-politika-plan.md` and future summaries | creator + domain | `javni-prikaz-emisija-i-kamatna-politika-plan.md`, `dinar-standard-plan.md` | public-safe | sanitization and policy controls checked |
+| Narrative epilog for “Čovečnost” | `covecnost-narativni-epilog-plan.md` and future creator-facing summary blocks | creator + domain | `covecnost-narativni-epilog-plan.md`, `governance/document-lifecycle.md` | public-safe | metaphor, tone, and controlling-source checks remain explicit |
 
 ## Document ownership model
 
