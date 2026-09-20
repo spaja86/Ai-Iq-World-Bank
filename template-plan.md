@@ -15,6 +15,14 @@ Use this template when a task asks for an extreme or structured plan around asse
 
 This document is a reusable planning framework, not a canonical product or governance standard on its own.
 
+## 1a) Lane routing and control expectations
+
+- **Primary lane:** domain/shared planning lane.
+- **Creator usage:** allowed for sanitized public-safe framing of an existing repository plan request.
+- **Developer usage:** allowed for structured implementation scoping, traceability, and dependency mapping.
+- **Controlling coordination source:** `docs/repository-operating-model.md`.
+- For non-trivial work derived from this template, follow: standards -> governance -> portfolio/roadmap -> plan/template -> public output.
+
 ## 2) Current Repository Baseline
 
 ### Existing templates and standards

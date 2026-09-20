@@ -12,6 +12,14 @@
 
 Ovaj dokument implementira traženi plan za formalnu komunikaciju sa GitHub podrškom povodom problema sa naplatom i zahteva za stabilnijim dugoročnim poslovnim modelom pretplate.
 
+## 0) Routing i lane napomena
+
+- **Primarni lane:** support/operational communication lane.
+- **Creator lane upotreba:** ograničena na javno-bezbedan, neutralan i poslovno jasan ton komunikacije.
+- **Developer lane upotreba:** za evidenciju dokaza, sequencing follow-up koraka i eventualno buduće case-management mapiranje.
+- **Kontrolni koordinacioni dokument:** `docs/repository-operating-model.md`.
+- Svaki deljeni output mora ostati downstream u odnosu na governance pravila, status dokaza i sensitive-content kontrolu.
+
 ## 1) Cilj obraćanja
 
 Poruka mora jasno razdvojiti dva povezana, ali odvojena pitanja:

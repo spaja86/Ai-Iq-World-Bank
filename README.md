@@ -144,6 +144,8 @@ The repository now uses one explicit operating model across developer and creato
 
 Use `docs/repository-operating-model.md` when a change needs ownership routing, approval sequence, audience/language separation, or release-readiness guidance.
 
+Treat `docs/repository-operating-model.md` as the primary coordination document for the repository-wide developer + creator program equivalent. Other routing, lane, handoff, or reusable-surface rules should stay aligned to that file.
+
 Use the repository-wide execution order for non-trivial work:
 
 1. standard first
@@ -151,6 +153,16 @@ Use the repository-wide execution order for non-trivial work:
 3. portfolio third
 4. plans fourth
 5. public output last
+
+Use one consistent repository work cycle for non-trivial changes:
+
+1. identify the controlling source
+2. classify audience and visibility
+3. update the governing standard, governance rule, or approved routing source
+4. align dependent portfolio and plan documents
+5. update public-safe outputs only after upstream alignment
+6. validate required structure, references, and standard/version exposure
+7. confirm sanitization and release readiness
 
 Every reusable public-facing surface should also:
 
@@ -185,6 +197,7 @@ Treat `README.md`, the public prototype, `docs/repository-operating-model.md`, a
 
 - Developer-lane work should stay focused on implementation, rendering, structure, and validation.
 - Creator-lane work should stay focused on public-safe framing, explanation, and reusable narrative.
+- Shared-lane work should handle source confirmation, visibility classification, release-readiness checks, and concept-surface mapping when a change crosses roles.
 - Neither lane should bypass `standards/` or `governance/` when introducing a new reusable public concept surface.
 - New public-facing concept surfaces should expose or inherit a standard/version reference or controlling repository document reference.
 - Future multilingual or dashboard outputs should be layered on top of canonical and governance sources, not invented independently.

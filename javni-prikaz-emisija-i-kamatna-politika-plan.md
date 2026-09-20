@@ -12,6 +12,13 @@
 
 Ovaj dokument je **fill-in template/framework** za javnu transparentnost podataka o imovini, kontrolisanu emisiju digitalnih jedinica i upravljanje kamatnom politikom.
 
+## 0) Routing i lane napomena
+
+- **Primarni lane:** creator/public-safe output lane uz domain i governance koordinaciju.
+- **Developer lane upotreba:** za mapiranje javnih output surface-a, traceability i buduću prototipsku implementaciju.
+- **Kontrolni koordinacioni dokument:** `docs/repository-operating-model.md`.
+- Svaki javni prikaz mora ostati downstream u odnosu na `dinar-standard-plan.md`, `governance/document-lifecycle.md`, i sanitizovane izvore iz internih planova.
+
 ## Bezbednosna i javna napomena
 
 - Popunjena verzija mora postojati u dve forme:

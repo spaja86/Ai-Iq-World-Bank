@@ -15,6 +15,14 @@ Ovaj dokument je **fill-in template/framework** za evidenciju i analizu:
 - Investicionog zlata (koliko tona i gde)
 - Mašina za novac (koliko imamo i gde)
 
+## 0) Routing i lane napomena
+
+- **Primarni lane:** domain/internal planning lane.
+- **Creator lane upotreba:** samo za agregirani javno-bezbedan prikaz izveden kroz `javni-prikaz-emisija-i-kamatna-politika-plan.md`.
+- **Developer lane upotreba:** za strukturu registra, proveru tragova i buduće validacione ili data-model integracije.
+- **Kontrolni koordinacioni dokument:** `docs/repository-operating-model.md`.
+- Osetljivi detalji ostaju interni; javni izlazi nastaju tek posle sanitizacije i posle upstream standard/governance usklađivanja.
+
 ## Bezbednosna napomena (obavezno)
 
 - Popunjene verzije ovog dokumenta tretirati kao **poverljive**.

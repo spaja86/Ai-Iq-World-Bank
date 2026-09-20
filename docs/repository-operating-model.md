@@ -15,6 +15,32 @@ This repository operates as one controlled system rather than a loose collection
 
 The operating model connects developer work, creator/public messaging, standards, governance review, and future platform growth into one sequence.
 
+This file is the primary coordination reference for the repository-wide developer + creator program equivalent. Other repository files should stay downstream from this operating model when they define approvals, routing, reusable surfaces, release gates, or repository-wide execution order.
+
+## Repository-wide execution order
+
+Every non-trivial repository change should follow one shared order everywhere in the repository:
+
+1. standards first
+2. governance second
+3. portfolio and roadmap third
+4. plans and support templates fourth
+5. public output and prototype surfaces last
+
+Do not invert this order when the change affects more than one repository pillar. If a downstream file implies a new rule, update the controlling standard or governance source first.
+
+## Repository work cycle (radni takt)
+
+Use one consistent work cycle for cross-repository changes:
+
+1. identify the controlling source
+2. classify audience layer and visibility
+3. update the governing standard, governance rule, or approved routing document
+4. align portfolio, roadmap, and dependent plans
+5. update public-safe prototype or other downstream surfaces only after upstream alignment
+6. validate structure, repository-relative references, required anchors, and exposed standard/version signals
+7. confirm sanitization, release readiness, and reusable-surface traceability
+
 ## Core operating lanes
 
 ### 1. Prototype lane
@@ -32,6 +58,7 @@ The operating model connects developer work, creator/public messaging, standards
 - Before changing any public-facing concept, confirm the controlling source in `standards/` or `governance/`.
 - Do not introduce a new public concept surface in the UI unless the same concept already has a controlling document or an approved repository reference block.
 - Keep the frontend public-safe, standard-aligned, and ready for later modular extraction.
+- Preserve traceability between implementation details, required prototype anchors, validation checks, and the controlling source reference.
 
 ### 1b. Creator lane execution rules
 
@@ -41,13 +68,22 @@ The operating model connects developer work, creator/public messaging, standards
 - Reusable creator messaging should map back to an existing plan, public-safe document, or approved support template.
 - Public storytelling must stay sanitized, aggregated, and free from sensitive operational detail.
 
-### 1c. Developer + creator shared execution checkpoints
+### 1c. Shared lane execution rules
+
+- Use the shared lane whenever work crosses developer, creator, governance, standards, or domain-plan responsibilities.
+- Confirm the controlling source, target audience layer, and visibility before editing a reusable surface.
+- Keep release-readiness checks, concept-surface mapping, and public-safe catalog membership explicit.
+- Require cross-lane changes to preserve source meaning even when wording, presentation, or channel changes.
+- Record new reusable surfaces before they are treated as stable repository outputs.
+
+### 1d. Developer + creator shared execution checkpoints
 
 - Confirm the controlling standard, governance rule, or approved plan before changing a reusable surface.
 - Classify the target audience layer and visibility before drafting new copy or panels.
 - Keep source logic, public-safe narrative, and release-readiness checks separable.
 - Update concept-surface mapping when a reusable panel, narrative block, or cataloged output changes.
 - Keep multilingual or channel-specific variants downstream from canonical wording.
+- Confirm whether the work stays in one lane or requires a shared-lane handoff before release.
 
 ### 2. Standards lane
 
@@ -72,6 +108,30 @@ The operating model connects developer work, creator/public messaging, standards
 - Owns business, asset, public-policy, legal, licensing, and support templates.
 - Keeps scenario, internal, and public-safe variants clearly separated.
 - Supplies structured inputs for future reporting and platformization.
+
+## Repository pillar routing
+
+Apply the operating model to every repository pillar:
+
+| Pillar | Main paths/files | Primary lane | Required downstream rule |
+|---|---|---|---|
+| Standards | `standards/`, `dinar-standard-plan.md` | standards lane | define canonical meaning, active terms, and standard/version-controlled outputs before downstream changes |
+| Governance | `governance/`, `config/sensitive-content-review-checklist.md` | governance lane | define what is allowed, visible, reviewable, publishable, and release-ready |
+| Portfolio / architecture | `docs/document-portfolio.md`, `docs/repository-roadmap.md`, `docs/future-data-model.md`, this file | portfolio lane | route work, sequence change rollout, catalog outputs, and keep ownership explicit |
+| Root plans and support templates | root `*.md` plan/support files | domain or support lane | separate structured internal inputs from public-safe outputs and declare lane usage |
+| Prototype | `index.html`, `styles.css`, `script.js` | developer + creator shared output | expose only approved public-safe surfaces tied to controlling sources |
+| Validation and CI | `config/validate_repository.py`, `.github/workflows/validate.yml` | developer / governance shared enforcement | enforce documented rules only after the rule exists in standards or governance |
+
+## Handoffs and cross-lane boundaries
+
+Use these handoffs when work moves between repository layers:
+
+1. **Standards -> Governance** when a canonical rule needs lifecycle, visibility, or publication enforcement.
+2. **Governance -> Portfolio** when the rule changes ownership mapping, routing, output catalog membership, or review sequence.
+3. **Portfolio -> Domain or Support plans** when reusable working inputs must adopt the new routing or control pattern.
+4. **Plans -> Prototype/Public output** when sanitized, approved, public-safe meaning is ready for display.
+5. **Developer -> Creator** when implementation surfaces need public-safe narrative framing.
+6. **Creator -> Developer** when public-safe messaging needs synchronized UI anchors or validation coverage.
 
 ## Narrative and audience layers
 
@@ -130,6 +190,20 @@ Ownership is by role group, not by one individual file editor:
 | Support plans | Support owner | Structured incident, billing, escalation, and follow-up communication |
 | Prototype files | Product owner | Public-safe UI clarity and standard-aligned output rendering |
 
+## Accountable lane map
+
+Use these accountable paths as the default ownership model for repository work:
+
+| Repository area | Accountable owner | Primary execution lane |
+|---|---|---|
+| `README.md` | Navigation owner | creator + shared lane |
+| `standards/` and `dinar-standard-plan.md` | Standards owner | standards lane |
+| `governance/` and lifecycle/review rules | Governance owner | governance + shared lane |
+| `docs/document-portfolio.md`, `docs/repository-roadmap.md`, `docs/repository-operating-model.md`, `docs/future-data-model.md` | Portfolio owner | portfolio lane |
+| Root planning templates | Domain owner | domain + creator-aware lane |
+| Support communication plans | Support owner | support + creator-aware lane |
+| `index.html`, `styles.css`, `script.js` | Product owner | developer lane with creator coordination for reusable public-safe surfaces |
+
 ## RACI-style lane matrix
 
 Use this matrix when a change crosses developer, creator, standards, and governance work:
@@ -179,9 +253,9 @@ The repository-wide default principle is:
 
 | Impact level | Typical trigger | Minimum required updates |
 |---|---|---|
-| Low | Copy clarification, small UI clarity improvement, non-normative structure cleanup | Validate affected files and keep references correct |
-| Medium | New working document, expanded roadmap, new public-safe panel, support workflow changes | Update portfolio, README references, and validation if structure changes |
-| High | Standard change, governance rule change, new sensitive-content boundary, future platform entity changes | Update controlling source, dependent docs, prototype messaging, validator, and release-readiness trace |
+| Low | Clarity, cleanup, non-normative presentation, small UI wording refinement | Validate affected files, preserve references, and confirm no source meaning changed |
+| Medium | New working document, new public-safe panel, support workflow change, lane-routing update in templates | Update portfolio/routing docs, confirm audience layer, and review dependent public-safe surfaces |
+| High | Standard change, governance rule change, new reusable concept surface, visibility-boundary change, future platform entity change | Update controlling source first, align dependent docs and prototype, update validator/catalog traces, and complete release-readiness review |
 
 ## Concept-surface gate
 
@@ -192,6 +266,27 @@ When introducing a new concept surface in a public prototype or shareable docume
 3. classify the audience layer and visibility before publication,
 4. update roadmap or portfolio references if the concept becomes a reusable repository surface,
 5. update the concept-surface inventory or equivalent source map.
+
+## Success criteria and end-state
+
+Treat the rollout as complete only when:
+
+1. every non-trivial change has a visible controlling source,
+2. every structured document preserves valid `Document Control`,
+3. every reusable public-safe surface is cataloged and traceable,
+4. developer and creator responsibilities remain separated but coordinated through the shared lane,
+5. standards, governance, docs, plans, prototype, and validation all express the same operating logic.
+
+Practical end-state:
+
+- the repository behaves as one controlled system,
+- the developer lane builds, structures, and validates,
+- the creator lane explains and frames approved public-safe meaning,
+- standards define canonical meaning,
+- governance controls publication and release,
+- portfolio artifacts route and sequence work,
+- plans hold structured inputs,
+- prototype surfaces expose only approved public-safe outputs.
 
 ## Release-readiness checklist
 

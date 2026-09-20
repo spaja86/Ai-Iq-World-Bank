@@ -62,6 +62,7 @@ If a document has both internal and public variants, the tracked template should
 ### Working
 - Actively used, but still subject to change.
 - Must avoid presenting scenario content as final fact.
+- Should still identify its execution lane and controlling source whenever it routes reusable repository work.
 
 ### Approved
 - Considered stable for repository use.
@@ -133,6 +134,8 @@ When a change crosses lanes, the controlling source should still be updated firs
 
 Where useful, also identify whether the work is primarily developer-lane or creator-lane execution so that presentation changes do not silently alter canonical meaning.
 
+Use a shared lane classification when the work exists mainly to coordinate source confirmation, visibility, release-readiness, or reusable-surface traceability across multiple owners.
+
 ## Publication and sanitization rules
 
 Before sharing a document outside the narrow working context:
@@ -156,15 +159,29 @@ Use this order when a non-trivial change affects multiple repository layers:
 
 Any new reusable public concept surface should also expose or inherit a standard/version reference or controlling repository document reference before publication.
 
+For non-trivial cross-lane work, `docs/repository-operating-model.md` is the primary coordination reference for ownership routing, handoffs, checkpoints, and repository-wide execution order.
+
+## Repository work cycle
+
+Use this same cycle across repository work:
+
+1. identify the controlling source,
+2. classify the audience layer and visibility,
+3. update the governing source first,
+4. align downstream portfolio, roadmap, plan, or support files,
+5. update public-safe outputs and prototype surfaces last,
+6. validate required structure, references, and exposed standard/version references,
+7. confirm sanitization, release readiness, and catalog traceability.
+
 ## Change impact matrix
 
 Classify non-trivial changes before merge:
 
 | Impact level | Typical examples | Minimum review expectation |
 |---|---|---|
-| Low | wording clarity, non-normative UI clarity, portfolio cleanup | validate files and keep references accurate |
-| Medium | new working docs, public-safe panels, support workflow changes | portfolio and ownership alignment review plus audience-layer confirmation |
-| High | standard changes, governance changes, visibility-boundary changes, future managed-entity changes, new reusable concept surfaces | controlling-source review plus dependent document, prototype alignment, concept-surface trace, and release-readiness trace |
+| Low | wording clarity, cleanup, non-normative presentation, small UI clarity changes | validate files, keep references accurate, and confirm no controlling meaning changed |
+| Medium | new working docs, public-safe panels, support workflow changes, lane-routing updates in plans | portfolio and ownership alignment review plus audience-layer and shared-lane checkpoint confirmation |
+| High | standard changes, governance changes, visibility-boundary changes, future managed-entity changes, new reusable concept surfaces | controlling-source review plus dependent document, prototype alignment, concept-surface trace, validation alignment, and release-readiness trace |
 
 ## Review checkpoints
 
@@ -181,10 +198,11 @@ Review these questions before merge:
 9. If a standard is affected, was the controlling standard updated first?
 10. Is the audience layer clear?
 11. Is the ownership lane clear?
-12. Is the change impact level understood?
-13. If a new public concept surface was added, does it expose a controlling source reference?
-14. If the content is reusable public-safe output, does it fit the repository's public-safe output catalog?
-15. If a reusable concept surface changed, is the surface inventory or mapping still accurate?
+12. Is the shared-lane coordination requirement clear when the change crosses roles?
+13. Is the change impact level understood?
+14. If a new public concept surface was added, does it expose a controlling source reference?
+15. If the content is reusable public-safe output, does it fit the repository's public-safe output catalog?
+16. If a reusable concept surface changed, is the surface inventory or mapping still accurate?
 
 ## Release/checklist procedure for major changes
 
@@ -211,5 +229,6 @@ Before treating a structured document or prototype change as ready:
 - confirm validation passed,
 - confirm no secrets or sensitive operational identifiers remain,
 - confirm new public concept surfaces still point back to a controlling source,
+- confirm cross-lane changes followed the standard -> governance -> portfolio -> plans -> public-output sequence,
 - confirm creator-lane outputs remain downstream from standards and governance,
 - confirm reusable-surface inventory or mapping remains accurate where applicable.
