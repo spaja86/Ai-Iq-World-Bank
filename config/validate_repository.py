@@ -40,13 +40,22 @@ HTML_IDS = [
     'indekurilanc-contributions',
     'indekurilanc-reset',
     'narrative-lanes',
+    'repository-work-cycle',
     'public-output-flow',
     'approval-flow',
     'release-gates',
     'module-boundaries',
     'developer-creator-checkpoints',
+    'change-impact-matrix',
+    'success-criteria',
     'concept-surface-inventory',
     'public-output-catalog',
+]
+OPERATING_MODEL_REQUIRED_MARKERS = [
+    '<!-- operating-model:execution-order -->',
+    '<!-- operating-model:work-cycle -->',
+    '<!-- operating-model:pillar-routing -->',
+    '<!-- operating-model:success-criteria -->',
 ]
 DOC_CONTROL_KEYS = [
     'Category',
@@ -180,5 +189,10 @@ for element_id in HTML_IDS:
 script_text = (ROOT / 'script.js').read_text(encoding='utf-8')
 if 'INDEKURILANC-STD-V1' not in script_text:
     fail('script.js must expose the active INDEKURILANC standard version')
+
+operating_model_text = (ROOT / 'docs/repository-operating-model.md').read_text(encoding='utf-8')
+for marker in OPERATING_MODEL_REQUIRED_MARKERS:
+    if marker not in operating_model_text:
+        fail(f'docs/repository-operating-model.md is missing required operating-model marker: {marker}')
 
 print('Repository validation passed.')

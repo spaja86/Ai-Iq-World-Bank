@@ -12,6 +12,14 @@
 
 Ovaj dokument implementira traženi plan za: opis poslovanja, kvartalni promet, bilansno stanje, dužinu rada, napredak i tržišna usmerenja.
 
+## 0) Routing i lane napomena
+
+- **Primarni lane:** domain/internal planning lane.
+- **Creator lane upotreba:** samo za sanitizovan sažetak ili javno bezbedan narativ izveden iz odobrene verzije.
+- **Developer lane upotreba:** za strukturiranje podataka, validacione tragove i povezivanje sa kontrolisanim repozitorijumskim izlazima.
+- **Kontrolni koordinacioni dokument:** `docs/repository-operating-model.md`.
+- Ako analiza menja kanonsko značenje, governance pravila ili javni prikaz, prvo se ažuriraju odgovarajući standard ili governance dokument, pa tek onda ovaj template i downstream output.
+
 ## 1) Cilj analize
 
 - Glavni cilj: kompletna poslovna dijagnostika + definisanje strateških pravaca rasta.

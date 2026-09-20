@@ -7,7 +7,7 @@
 - **Status:** working
 - **Visibility:** public-safe
 - **Purpose:** Primary navigation entry for repository structure, standards, governance, and validation workflow.
-- **Depends on:** `governance/repo-charter.md`, `governance/document-lifecycle.md`, `standards/indekurilanc-standard.md`
+- **Depends on:** `docs/repository-operating-model.md`, `governance/repo-charter.md`, `governance/document-lifecycle.md`, `standards/indekurilanc-standard.md`
 
 AI IQ World Bank is one repository built around one controlled system with four connected pillars: product/prototype, standards, operational plans, and governance/protection.
 
@@ -145,13 +145,9 @@ The repository now uses one explicit operating model across developer and creato
 
 Use `docs/repository-operating-model.md` when a change needs ownership routing, approval sequence, audience/language separation, or release-readiness guidance.
 
-Use the repository-wide execution order for non-trivial work:
+Treat `docs/repository-operating-model.md` as the primary coordination document for the repository-wide developer + creator program equivalent. Other routing, lane, handoff, execution-order, or reusable-surface rules should stay aligned to that file.
 
-1. standard first
-2. governance second
-3. portfolio third
-4. plans fourth
-5. public output last
+For non-trivial work, follow the canonical execution order and repository work cycle defined in `docs/repository-operating-model.md`.
 
 Every reusable public-facing surface should also:
 
@@ -186,6 +182,7 @@ Treat `README.md`, the public prototype, `docs/repository-operating-model.md`, a
 
 - Developer-lane work should stay focused on implementation, rendering, structure, and validation.
 - Creator-lane work should stay focused on public-safe framing, explanation, and reusable narrative.
+- Shared-lane work should handle source confirmation, visibility classification, release-readiness checks, and concept-surface mapping when a change crosses roles.
 - Neither lane should bypass `standards/` or `governance/` when introducing a new reusable public concept surface.
 - New public-facing concept surfaces should expose or inherit a standard/version reference or controlling repository document reference.
 - Future multilingual or dashboard outputs should be layered on top of canonical and governance sources, not invented independently.

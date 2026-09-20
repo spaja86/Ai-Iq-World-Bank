@@ -22,5 +22,8 @@ jobs:
       - name: Validate repository structure and docs
         run: python3 config/validate_repository.py
 
+      - name: Validate validator coverage
+        run: python3 -m unittest config/test_validate_repository.py
+
       - name: Validate frontend script syntax
         run: node --check script.js

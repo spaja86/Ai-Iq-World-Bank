@@ -12,6 +12,14 @@
 
 Ovaj dokument je **fill-in template/framework** za slučajeve kada eksterni repozitorijum sadrži pravno/politički osetljivu tvrdnju (npr. navod o državnom uređenju).
 
+## 0) Routing i lane napomena
+
+- **Primarni lane:** domain/legal handling lane uz governance koordinaciju.
+- **Creator lane upotreba:** samo za neutralan, verifikovan i statusno obeležen javni rezime.
+- **Developer lane upotreba:** za evidenciju izvora, citatnih lokacija i audit traga.
+- **Kontrolni koordinacioni dokument:** `docs/repository-operating-model.md`.
+- Bez pravne verifikacije i statusa tvrdnje nema prelaska u stabilan javni output.
+
 ## 1) Definisanje cilja
 
 - Evidentirati da postoji eksterni repozitorijum sa konkretnim navodom.

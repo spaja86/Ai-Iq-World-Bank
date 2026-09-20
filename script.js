@@ -133,21 +133,28 @@ const MODULE_BOUNDARIES = Object.freeze([
 
 const NARRATIVE_LANES = Object.freeze([
     Object.freeze({
-        title: 'Creator / public-safe',
-        body: 'Explain the concept and show sanitized outputs without exposing sensitive operational detail.'
+        title: 'Developer lane',
+        body: 'Own implementation, rendering, structure, validation, and traceability for controlled repository surfaces.'
     }),
     Object.freeze({
-        title: 'Canonical / standards',
-        body: 'Define the active rules, terms, and version references that control the rest of the repository.'
+        title: 'Creator lane',
+        body: 'Own public-safe framing, narrative clarity, reusable explanation, and audience alignment.'
     }),
     Object.freeze({
-        title: 'Internal / planning',
-        body: 'Keep scenario, asset, licensing, and business working material structured but restricted when needed.'
+        title: 'Shared lane',
+        body: 'Own source confirmation, visibility classification, release-readiness checks, and concept-surface mapping across roles.'
     }),
     Object.freeze({
-        title: 'Support / operations',
-        body: 'Use evidence-driven wording for billing, incidents, escalation, follow-up, and closure.'
+        title: 'Canonical downstream rule',
+        body: 'Keep public-safe messaging, plans, and prototype surfaces downstream from standards and governance.'
     })
+]);
+
+const REPOSITORY_WORK_CYCLE = Object.freeze([
+    'Follow the canonical repository work cycle in docs/repository-operating-model.md.',
+    'Start with the controlling source plus audience/visibility classification.',
+    'Align standards, governance, portfolio, and plans before updating downstream public-safe surfaces.',
+    'Validate anchors, references, standard/version exposure, sanitization, and release readiness before sharing.'
 ]);
 
 const PUBLIC_OUTPUT_FLOW = Object.freeze([
@@ -159,9 +166,10 @@ const PUBLIC_OUTPUT_FLOW = Object.freeze([
 
 const APPROVAL_FLOW = Object.freeze([
     'Update the controlling standard or governance source first.',
-    'Align portfolio, roadmap, and dependent planning documents.',
-    'Update the public prototype after the rules and references are settled.',
-    'Run validation and confirm release readiness before sharing.'
+    'Update governance rules second when lifecycle, visibility, or release gates are affected.',
+    'Align portfolio, roadmap, and dependent planning documents third.',
+    'Update plans and support templates fourth.',
+    'Update the public prototype and other public-safe outputs last, then run validation and release checks.'
 ]);
 
 const RELEASE_GATES = Object.freeze([
@@ -188,7 +196,22 @@ const DEVELOPER_CREATOR_CHECKPOINTS = Object.freeze([
     'Classify the target audience layer and visibility before drafting new copy or prototype panels.',
     'Keep source logic, public-safe explanation, and release-readiness checks separable.',
     'Update concept-surface mapping when a reusable panel or cataloged output changes.',
+    'Confirm whether the change needs shared-lane coordination before release.',
     'Keep multilingual or dashboard-ready variants downstream from canonical wording.'
+]);
+
+const CHANGE_IMPACT_CLASSES = Object.freeze([
+    'Low impact: clarity, cleanup, or non-normative presentation changes that still preserve controlling meaning.',
+    'Medium impact: new working docs, new public-safe panels, support-flow updates, or lane-routing changes that require portfolio and audience checks.',
+    'High impact: standards, governance, visibility-boundary, or new reusable concept-surface changes that require full downstream alignment and release-readiness review.'
+]);
+
+const SUCCESS_CRITERIA = Object.freeze([
+    'Every non-trivial change has a visible controlling source.',
+    'Every structured document keeps valid Document Control metadata.',
+    'Every reusable public-safe surface is cataloged and traceable.',
+    'Developer and creator responsibilities stay separated but coordinated.',
+    'Standards, governance, docs, plans, prototype, and validation express the same operating logic.'
 ]);
 
 const CONCEPT_SURFACE_INVENTORY = Object.freeze([
@@ -203,7 +226,7 @@ const CONCEPT_SURFACE_INVENTORY = Object.freeze([
     }),
     Object.freeze({
         title: 'Operating-model panels',
-        body: 'Developer/creator routing, approval order, public-output flow, and release gates.',
+        body: 'Developer/creator routing, repository work cycle, approval order, public-output flow, release gates, and success criteria.',
         meta: [
             'Channel: docs + prototype operating model',
             'Controlling source: docs/repository-operating-model.md',
@@ -278,24 +301,24 @@ const STANDARD_SUMMARY_ITEMS = Object.freeze([
 
 const ROADMAP_PHASES = Object.freeze([
     Object.freeze({
-        label: 'Foundation stabilization',
-        body: 'structure, hierarchy, standards, and validation.'
+        label: 'Phase A-B',
+        body: 'operating-model ownership rules plus governance and lifecycle enforcement.'
     }),
     Object.freeze({
-        label: 'Product strengthening',
-        body: 'clearer prototype surfaces, score breakdowns, and standard-aligned outputs.'
+        label: 'Phase C-D',
+        body: 'portfolio/roadmap alignment plus root-plan and support-template routing.'
     }),
     Object.freeze({
-        label: 'Portfolio alignment',
-        body: 'roadmap, operating model, ownership, and document metadata.'
+        label: 'Phase E-F',
+        body: 'prototype synchronization plus validation and release-readiness gates.'
     }),
     Object.freeze({
-        label: 'Creator and support alignment',
-        body: 'public-safe messaging plus structured support workflows.'
+        label: 'Phase G-I',
+        body: 'security, sanitization, automation, creator messaging, and support alignment.'
     }),
     Object.freeze({
-        label: 'Lifecycle enforcement and platform growth',
-        body: 'controlled modular expansion and release gates.'
+        label: 'Phase J-L',
+        body: 'modular growth, public/internal layering, and platformization after controls stabilize.'
     })
 ]);
 
@@ -530,10 +553,13 @@ function initializeRepositoryView() {
     renderMiniCardGrid('future-modules', FUTURE_MODULES);
     renderMiniCardGrid('module-boundaries', MODULE_BOUNDARIES);
     renderMiniCardGrid('narrative-lanes', NARRATIVE_LANES);
+    renderList('repository-work-cycle', REPOSITORY_WORK_CYCLE);
     renderList('public-output-flow', PUBLIC_OUTPUT_FLOW);
     renderList('approval-flow', APPROVAL_FLOW);
     renderMiniCardGrid('release-gates', RELEASE_GATES);
     renderList('developer-creator-checkpoints', DEVELOPER_CREATOR_CHECKPOINTS);
+    renderList('change-impact-matrix', CHANGE_IMPACT_CLASSES);
+    renderList('success-criteria', SUCCESS_CRITERIA);
     renderMiniCardGrid('concept-surface-inventory', CONCEPT_SURFACE_INVENTORY);
     renderMiniCardGrid('public-output-catalog', PUBLIC_OUTPUT_CATALOG);
     renderRoadmap();

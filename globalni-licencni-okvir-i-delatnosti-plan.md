@@ -17,6 +17,14 @@ Ovaj dokument je **fill-in template/framework** za implementaciju cilja da AI IQ
 - šta može tek posle posebne licence
 - šta ostaje samo scenario dok nema pravne potvrde
 
+## 0) Routing i lane napomena
+
+- **Primarni lane:** domain/licensing planning lane uz governance koordinaciju.
+- **Creator lane upotreba:** samo za sanitizovan javni prikaz statusa ili talasa ulaska bez neproverenih regulatornih tvrdnji.
+- **Developer lane upotreba:** za buduće mapiranje strukture podataka, statusnih polja i release traceability.
+- **Kontrolni koordinacioni dokument:** `docs/repository-operating-model.md`.
+- Svaki javni ili prototipski izlaz iz ovog plana mora ostati downstream u odnosu na standarde, governance i pravno potvrđene statuse.
+
 ## Bezbednosna, pravna i reputaciona napomena
 
 - Popunjena verzija mora postojati u dve forme:

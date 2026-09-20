@@ -15,27 +15,27 @@ This file is the master portfolio map for repository documents, their category, 
 
 ## Portfolio status matrix
 
-| File | Category | Type | Status | Visibility | Depends on | Risk | Primary use |
-|---|---|---|---|---|---|---|---|
-| `README.md` | Navigation | repository guide | working | public-safe | `governance/repo-charter.md`, `governance/document-lifecycle.md`, `standards/indekurilanc-standard.md` | medium | Start here for structure and workflow |
-| `governance/repo-charter.md` | Governance | charter | approved | canonical/internal standard | `standards/indekurilanc-standard.md`, `README.md` | high | Understand repository purpose and hierarchy |
-| `governance/document-lifecycle.md` | Governance | rules | approved | canonical/internal standard | `governance/repo-charter.md`, `config/sensitive-content-review-checklist.md` | high | Review metadata, status, and publication rules |
-| `standards/glossary.md` | Standards | glossary | approved | canonical/internal standard | `governance/repo-charter.md`, `governance/document-lifecycle.md` | medium | Resolve terminology before editing linked materials |
-| `standards/indekurilanc-standard.md` | Standards | scoring standard | approved | canonical/internal standard | `script.js`, `standards/glossary.md`, `governance/repo-charter.md` | high | Canonical source for INDEKURILANC behavior |
-| `dinar-standard-plan.md` | Standards | value-system framework | working | canonical/internal standard | `governance/document-lifecycle.md`, `standards/glossary.md` | high | DINAR status, usage, and controls |
-| `template-plan.md` | Templates | mapping template | working | public-safe | `README.md`, `governance/document-lifecycle.md`, `standards/glossary.md` | low | Reusable structure for baseline mapping |
-| `ai-iq-world-bank-poslovni-izvestaj.md` | Templates | business analysis | working | limited/internal | `standards/indekurilanc-standard.md`, `template-plan.md` | medium | Business review, KPI, and performance framing |
-| `investiciona-i-operativna-imovina-registar-plan.md` | Templates | asset registry | working | limited/internal | `governance/document-lifecycle.md`, `config/sensitive-content-review-checklist.md` | high | Sensitive asset inventory and sanitization logic |
-| `javni-prikaz-emisija-i-kamatna-politika-plan.md` | Templates | public policy/display | working | public-safe | `dinar-standard-plan.md`, `investiciona-i-operativna-imovina-registar-plan.md` | high | Public asset/policy framing and publication constraints |
-| `covecnost-narativni-epilog-plan.md` | Public Output | narrative epilog framework | working | public-safe | `governance/document-lifecycle.md`, `docs/repository-operating-model.md`, `standards/glossary.md` | medium | Controlled narrative framing for courage, learning, innovation, and human potential |
-| `eksterni-repozitorijum-pravni-navod-plan.md` | Templates | legal/reputational handling | working | limited/internal | `governance/document-lifecycle.md`, `standards/glossary.md` | high | External-claim handling and evidence workflow |
-| `globalni-licencni-okvir-i-delatnosti-plan.md` | Templates | licensing/master operations | working | limited/internal | `governance/document-lifecycle.md`, `docs/future-data-model.md` | high | Activity expansion, approvals, and licensing scope |
-| `vercel-naplata-poruka-plan.md` | Support | billing communication template | working | limited/internal | `config/sensitive-content-review-checklist.md`, `governance/document-lifecycle.md` | medium | Vercel support workflow |
-| `github-naplata-poruka-plan.md` | Support | billing communication template | working | limited/internal | `config/sensitive-content-review-checklist.md`, `governance/document-lifecycle.md` | medium | GitHub support workflow |
-| `docs/repository-operating-model.md` | Architecture | operating model | working | public-safe | `README.md`, `governance/repo-charter.md`, `governance/document-lifecycle.md`, `docs/document-portfolio.md`, `docs/repository-roadmap.md`, `docs/future-data-model.md`, `config/sensitive-content-review-checklist.md` | medium | Route developer/creator work through ownership, approvals, and release gates |
-| `docs/future-data-model.md` | Architecture | planning reference | draft | limited/internal | `docs/document-portfolio.md`, `standards/indekurilanc-standard.md`, `governance/document-lifecycle.md` | medium | Future entities and integration boundaries |
-| `docs/repository-roadmap.md` | Roadmap | delivery plan | working | public-safe | `docs/document-portfolio.md`, `governance/repo-charter.md`, `config/validate_repository.py` | medium | Delivery sequencing across product and docs |
-| `config/sensitive-content-review-checklist.md` | Controls | checklist | approved | canonical/internal standard | `governance/document-lifecycle.md`, `README.md` | high | Pre-commit and pre-publication review |
+| File | Category | Type | Status | Visibility | Owner lane | Audience layer | Depends on | Risk | Primary use |
+|---|---|---|---|---|---|---|---|---|---|
+| `README.md` | Navigation | repository guide | working | public-safe | navigation / creator + shared lane | creator / public-safe + contributor navigation | `docs/repository-operating-model.md`, `governance/repo-charter.md`, `governance/document-lifecycle.md`, `standards/indekurilanc-standard.md` | medium | Start here for structure and workflow |
+| `governance/repo-charter.md` | Governance | charter | approved | canonical/internal standard | governance / standards alignment | canonical / standards | `standards/indekurilanc-standard.md`, `standards/glossary.md` | high | Understand repository purpose and hierarchy |
+| `governance/document-lifecycle.md` | Governance | rules | approved | canonical/internal standard | governance + shared lane | canonical / standards | `governance/repo-charter.md`, `config/sensitive-content-review-checklist.md` | high | Review metadata, status, and publication rules |
+| `standards/glossary.md` | Standards | glossary | approved | canonical/internal standard | standards lane | canonical / standards | `governance/repo-charter.md`, `governance/document-lifecycle.md` | medium | Resolve terminology before editing linked materials |
+| `standards/indekurilanc-standard.md` | Standards | scoring standard | approved | canonical/internal standard | standards lane | canonical / standards | `governance/repo-charter.md`, `governance/document-lifecycle.md`, `standards/glossary.md` | high | Canonical source for INDEKURILANC behavior; rendered downstream by `script.js` and the prototype surface |
+| `dinar-standard-plan.md` | Standards | value-system framework | working | canonical/internal standard | standards lane | canonical / standards with controlled scenario use | `governance/document-lifecycle.md`, `standards/glossary.md` | high | DINAR status, usage, and controls |
+| `template-plan.md` | Templates | mapping template | working | public-safe | domain / shared planning lane | contributor planning + creator-safe reuse | `README.md`, `governance/document-lifecycle.md`, `standards/glossary.md` | low | Reusable structure for baseline mapping |
+| `ai-iq-world-bank-poslovni-izvestaj.md` | Templates | business analysis | working | limited/internal | domain lane | internal planning | `standards/indekurilanc-standard.md`, `template-plan.md` | medium | Business review, KPI, and performance framing |
+| `investiciona-i-operativna-imovina-registar-plan.md` | Templates | asset registry | working | limited/internal | domain lane | internal planning | `governance/document-lifecycle.md`, `config/sensitive-content-review-checklist.md` | high | Sensitive asset inventory and sanitization logic |
+| `javni-prikaz-emisija-i-kamatna-politika-plan.md` | Templates | public policy/display | working | public-safe | domain + creator coordination lane | creator / public-safe + policy output | `dinar-standard-plan.md`, `investiciona-i-operativna-imovina-registar-plan.md` | high | Public asset/policy framing and publication constraints |
+| `covecnost-narativni-epilog-plan.md` | Public Output | narrative epilog framework | working | public-safe | creator + domain lane | creator / public-safe narrative | `governance/document-lifecycle.md`, `docs/repository-operating-model.md`, `standards/glossary.md` | medium | Controlled narrative framing for courage, learning, innovation, and human potential |
+| `eksterni-repozitorijum-pravni-navod-plan.md` | Templates | legal/reputational handling | working | limited/internal | domain + governance coordination lane | regulatory / legal | `governance/document-lifecycle.md`, `standards/glossary.md` | high | External-claim handling and evidence workflow |
+| `globalni-licencni-okvir-i-delatnosti-plan.md` | Templates | licensing/master operations | working | limited/internal | domain + governance coordination lane | internal planning + regulatory / legal | `governance/document-lifecycle.md`, `docs/future-data-model.md` | high | Activity expansion, approvals, and licensing scope |
+| `vercel-naplata-poruka-plan.md` | Support | billing communication template | working | limited/internal | support lane | support / operational communication | `config/sensitive-content-review-checklist.md`, `governance/document-lifecycle.md` | medium | Vercel support workflow |
+| `github-naplata-poruka-plan.md` | Support | billing communication template | working | limited/internal | support lane | support / operational communication | `config/sensitive-content-review-checklist.md`, `governance/document-lifecycle.md` | medium | GitHub support workflow |
+| `docs/repository-operating-model.md` | Architecture | operating model | working | public-safe | portfolio + shared lane | contributor routing + creator/public-safe framing | `governance/repo-charter.md`, `governance/document-lifecycle.md`, `docs/document-portfolio.md`, `docs/repository-roadmap.md`, `docs/future-data-model.md`, `config/sensitive-content-review-checklist.md` | medium | Primary coordination document for ownership, approvals, lanes, work cycle, and release gates |
+| `docs/future-data-model.md` | Architecture | planning reference | draft | limited/internal | portfolio lane | contributor / architecture | `docs/document-portfolio.md`, `standards/indekurilanc-standard.md`, `governance/document-lifecycle.md` | medium | Future entities and integration boundaries |
+| `docs/repository-roadmap.md` | Roadmap | delivery plan | working | public-safe | portfolio lane | contributor / architecture | `docs/document-portfolio.md`, `docs/repository-operating-model.md`, `governance/repo-charter.md` | medium | Delivery sequencing across product and docs |
+| `config/sensitive-content-review-checklist.md` | Controls | checklist | approved | canonical/internal standard | governance + shared lane | canonical / standards | `governance/document-lifecycle.md`, `README.md` | high | Pre-commit and pre-publication review |
 
 ## Portfolio snapshot
 
@@ -56,7 +56,15 @@ This file is the master portfolio map for repository documents, their category, 
 8. `docs/repository-operating-model.md` for ownership, approvals, and release gates
 9. `docs/future-data-model.md` for later platform work
 
-This usage order is also the preferred execution order for non-trivial repository changes: standard/governance direction first, then portfolio and roadmap alignment, then plan updates, then public-safe surfaces.
+This usage order is a reading and routing sequence. For the canonical non-trivial change order, use `docs/repository-operating-model.md`.
+
+## Program-equivalent routing rules
+
+- `docs/repository-operating-model.md` is the primary coordination reference for repository-wide developer/creator routing.
+- Use developer lane for implementation, rendering, structure, validation, and traceability work.
+- Use creator lane for public-safe framing, reusable explanation, and audience alignment.
+- Use shared-lane checkpoints when a change crosses standards, governance, portfolio, plans, or prototype surfaces.
+- Keep every reusable public-safe surface downstream from a controlling source reference and cataloged in the public-safe output set.
 
 ## Reusable public-safe output catalog
 

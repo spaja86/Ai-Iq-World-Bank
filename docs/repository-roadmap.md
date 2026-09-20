@@ -7,69 +7,61 @@
 - **Status:** working
 - **Visibility:** public-safe
 - **Purpose:** Sequences repository stabilization, documentation alignment, frontend growth, and platformization.
-- **Depends on:** `docs/document-portfolio.md`, `governance/repo-charter.md`, `config/validate_repository.py`
+- **Depends on:** `docs/document-portfolio.md`, `docs/repository-operating-model.md`, `governance/repo-charter.md`
 
 ## Priority order
 
-1. Standards + governance + validation
-2. Frontend clarity and stability
-3. Alignment of plans and cross-references
-4. Modular growth and future data model
-5. Dashboard/API/platform layer
+1. Standards + governance alignment
+2. Portfolio and operating-model routing
+3. Plan and support-template alignment
+4. Public-safe prototype synchronization
+5. Validation and release-readiness enforcement
+6. Modular growth and future data model
+7. Dashboard/API/platform layer
 
-## Phase 1 - Foundation stabilization
+## Phase A - Operating model and ownership rules
 
-- Lock the core repository structure around `README.md`, `docs/`, `governance/`, `standards/`, and `config/`.
-- Keep `README.md` as the main navigation entry.
-- Maintain the source-of-truth hierarchy from standards to governance to guide documents and implementation.
-- Prevent ad-hoc structural growth by requiring portfolio and lifecycle updates for new document classes.
+- Treat `docs/repository-operating-model.md` as the primary coordination document for the repository-wide developer + creator program equivalent.
+- Keep one shared non-trivial change order everywhere: standards first, governance second, portfolio/roadmap third, plans fourth, public output last.
+- Keep developer lane, creator lane, and shared-lane checkpoints explicit in routing, approvals, and reusable-surface expectations.
+- Extend accountable ownership across navigation, standards, governance, portfolio, domain, support, and product areas.
 
-## Phase 2 - Product strengthening
+## Phase B - Governance and lifecycle enforcement
 
-- Preserve `index.html`, `styles.css`, and `script.js` as the public prototype baseline.
-- Keep INDEKURILANC as the central interactive module.
-- Ensure the public interface shows result, interpretation, priority focus, and standard version clearly.
-- Add clearer breakdown panels for score drivers, operating lanes, and public-safe output routes.
-- Prepare space for future dashboards, reference panels, and additional calculators.
-- Keep standard values, display data, and logic separated for easier growth.
+- Require `governance/document-lifecycle.md` to describe the shared repository work cycle and cross-lane release expectations.
+- Require every structured document to follow the same metadata, visibility, and controlling-source rules.
+- Require low/medium/high change classification before merge when a change is non-trivial.
+- Record whether high-impact work creates new reusable public-safe outputs or concept surfaces.
+
+## Phase C - Portfolio, roadmap, and file catalog alignment
+
+- Use `docs/document-portfolio.md` as the master map of file ownership lanes, audience layers, dependencies, and public-safe output roles.
+- Keep `README.md` and portfolio references aligned with the operating-model routing language.
+- Keep `docs/future-data-model.md` aligned with real document, release, and reusable-surface controls.
+- Prevent untracked structural growth by requiring portfolio and lifecycle updates for new document classes.
+
+## Phase D - Root plan and support-template alignment
+
+- Route domain plans through the same standards -> governance -> portfolio -> plans -> public-output sequence.
+- Add explicit lane usage and public/internal separation guidance to reusable root templates.
+- Keep legal, licensing, business, asset, and support plans explicit about controlling sources and sanitization requirements.
+- Keep support communication templates evidence-driven and downstream from governance and sensitive-content controls.
+
+## Phase E - Prototype and public-safe output synchronization
+
+- Preserve `index.html`, `styles.css`, and `script.js` as the public-safe prototype baseline.
+- Keep INDEKURILANC as the central interactive module with active standard/version exposure.
+- Keep the operating-model section synchronized with repository lanes, work cycle, change classes, checkpoints, and success criteria.
 - Do not introduce new reusable concept surfaces in the prototype without an upstream standard or governance reference path.
 
-## Phase 3 - Core standardization
+## Phase F - Validation and release-readiness gates
 
-- Maintain `standards/indekurilanc-standard.md` as the canonical scoring source.
-- Maintain `standards/glossary.md` as the controlled terminology source.
-- Maintain `dinar-standard-plan.md` as the dedicated DINAR framework.
-- Require standard updates before related logic changes become canonical.
-- Require new cross-repository terminology to enter the glossary before broad reuse.
+- Maintain `config/validate_repository.py` as the primary repository enforcement path and keep the existing validation workflow aligned with it.
+- Expand validation only after the corresponding governance or operating-model rule is documented.
+- Validate required structure, prototype anchors, and exposed standard/version signals before merge.
+- Re-check sanitization, visibility, and reusable-surface traceability before release.
 
-## Phase 4 - Portfolio alignment
-
-- Use `docs/document-portfolio.md` as the master map of files, status, dependencies, and visibility.
-- Use `docs/repository-operating-model.md` as the routing layer for ownership, approvals, and release readiness.
-- Keep `docs/future-data-model.md` aligned with real document and governance entities.
-- Require every structured document to declare type, status, purpose, dependencies, and visibility.
-- Keep portfolio status, risk level, and dependency registry synchronized with repository growth.
-- Keep audience-layer mapping and public-surface routing synchronized with repository growth.
-
-## Phase 5 - Domain-plan alignment
-
-- Use `ai-iq-world-bank-poslovni-izvestaj.md` for business analysis and KPI framing.
-- Use `investiciona-i-operativna-imovina-registar-plan.md` for internal asset tracking.
-- Use `javni-prikaz-emisija-i-kamatna-politika-plan.md` for public display and policy outputs.
-- Use `eksterni-repozitorijum-pravni-navod-plan.md` for external-claim handling.
-- Use `globalni-licencni-okvir-i-delatnosti-plan.md` for jurisdiction and licensing expansion.
-- Use `vercel-naplata-poruka-plan.md` and `github-naplata-poruka-plan.md` for support communication.
-
-## Phase 6 - Lifecycle and review enforcement
-
-- Require every new document to follow `governance/document-lifecycle.md`.
-- Require statuses `draft`, `working`, `approved`, or `archived`.
-- Make scenario, verified, internal, and public-safe boundaries explicit.
-- Use review checkpoints before merge for standards, visibility, references, and sensitive content.
-- Require ownership routing, change impact review, and release-readiness checks for non-trivial work.
-- Record whether high-impact changes create new reusable public-safe outputs or concept surfaces.
-
-## Phase 7 - Security and sanitization
+## Phase G - Security and sanitization
 
 - Do not commit populated sensitive planning files unless sanitized.
 - Remove checkout-specific absolute paths.
@@ -77,16 +69,16 @@
 - Keep public outputs aggregated when that is enough.
 - Ensure DINAR usage always carries status, version, and context.
 
-## Phase 8 - Validation and automation
+## Phase H - Validation and automation
 
 - Maintain `config/validate_repository.py` as the repository validator.
 - Maintain `.github/workflows/validate.yml` for automatic checks.
 - Validate required files, repository-relative references, structured document control blocks, forbidden checkout paths, and frontend syntax.
-- Keep required operating-model files and key prototype rendering anchors under validation.
+- Keep required operating-model files, shared-lane routing anchors, and key prototype rendering anchors under validation.
 - Expand checks gradually when portfolio and lifecycle rules become more precise.
 - Keep validation aligned with any future enforcement of public-surface routing or reference exposure rules.
 
-## Phase 9 - Creator and communication alignment
+## Phase I - Creator and communication alignment
 
 - Define what is demonstration/public-safe, canonical, internal planning, regulatory, and support wording.
 - Keep repository storytelling aligned with standards and governance boundaries.
@@ -94,7 +86,7 @@
 - Keep creator-lane outputs cataloged as public-safe surfaces instead of isolated ad-hoc messages.
 - Treat future multilingual output as a downstream layer sourced from canonical and governance-controlled wording.
 
-## Phase 10 - Modular growth
+## Phase J - Modular growth
 
 - Prepare the frontend for clearer modules when growth justifies the split.
 - Keep the future model centered on score profiles, document records, asset summaries, governance decisions, jurisdiction/license entries, and KPI metrics.
@@ -102,13 +94,13 @@
 - Keep future modularization ready for distinct score logic, narrative panels, reference blocks, and data hooks.
 - Prepare a read-only dashboard surface only after concept-source mapping and release gates are stable.
 
-## Phase 11 - Public and internal layering
+## Phase K - Public and internal layering
 
 - Define which assets are public-safe, limited/internal, or canonical/internal standards.
 - Require future modules to declare their target audience and visibility.
 - Avoid mixing demo/prototype surfaces with sensitive operational detail.
 
-## Phase 12 - Platformization
+## Phase L - Platformization
 
 - Add dashboard-style views only after document and governance controls are stable.
 - Introduce managed data or API flows only after metadata structures and approval rules are mature.
@@ -138,3 +130,11 @@ Track future work across four explicit maturity branches:
 - public-safe narrative consistency
 - reusable output catalog coverage
 - multilingual downstream readiness without creating a new source of truth
+
+## Success criteria
+
+- every non-trivial change has a visible controlling source,
+- every structured document has valid control metadata,
+- every reusable public-safe surface is cataloged and traceable,
+- developer and creator responsibilities stay separated but coordinated,
+- standards, governance, portfolio, plans, prototype, and validation keep the same operating logic.

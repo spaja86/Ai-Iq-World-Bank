@@ -36,6 +36,8 @@
 | Ownership lane | The role-based responsibility path for a repository area such as standards, governance, portfolio, support, or product |
 | Developer lane | The implementation path focused on rendering, structure, validation, and source-controlled prototype behavior |
 | Creator lane | The public-safe explanation path focused on narrative, framing, and shareable sanitized outputs |
+| Shared lane | The coordination path for source confirmation, visibility classification, release readiness, and concept-surface mapping across multiple owners |
+| Repository work cycle | The repository-wide sequence that identifies the controlling source, classifies visibility, updates upstream rules first, aligns downstream files, validates, and confirms sanitization |
 | Change impact matrix | A simple low/medium/high classification used to decide the minimum review depth for a change |
 | Release readiness | The final repository check that confirms standards, governance, visibility, validation, and sanitization are aligned before sharing |
 | Multilingual downstream layer | A translated or audience-specific presentation layer that must stay downstream from canonical standards and governance |

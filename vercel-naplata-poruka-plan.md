@@ -12,6 +12,14 @@
 
 Ovaj dokument implementira traženi plan za formalnu komunikaciju sa Vercel podrškom povodom problema sa naplatom i nastavka poslovanja.
 
+## 0) Routing i lane napomena
+
+- **Primarni lane:** support/operational communication lane.
+- **Creator lane upotreba:** ograničena na jasnoću, neutralni ton i javno-bezbedno formulisanje poruke.
+- **Developer lane upotreba:** za evidenciju dokaza, strukturu follow-up toka i buduće sistemsko praćenje slučaja.
+- **Kontrolni koordinacioni dokument:** `docs/repository-operating-model.md`.
+- Poruka mora ostati downstream u odnosu na governance i sensitive-content kontrole; ne uvoditi neproverene tvrdnje ili poverljive podatke u deljene verzije.
+
 ## 1) Cilj poruke
 
 - potvrda identiteta naloga
