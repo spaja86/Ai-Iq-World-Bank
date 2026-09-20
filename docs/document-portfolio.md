@@ -27,6 +27,7 @@ This file is the master portfolio map for repository documents, their category, 
 | `ai-iq-world-bank-poslovni-izvestaj.md` | Templates | business analysis | working | limited/internal | domain lane | internal planning | `standards/indekurilanc-standard.md`, `template-plan.md` | medium | Business review, KPI, and performance framing |
 | `investiciona-i-operativna-imovina-registar-plan.md` | Templates | asset registry | working | limited/internal | domain lane | internal planning | `governance/document-lifecycle.md`, `config/sensitive-content-review-checklist.md` | high | Sensitive asset inventory and sanitization logic |
 | `javni-prikaz-emisija-i-kamatna-politika-plan.md` | Templates | public policy/display | working | public-safe | domain + creator coordination lane | creator / public-safe + policy output | `dinar-standard-plan.md`, `investiciona-i-operativna-imovina-registar-plan.md` | high | Public asset/policy framing and publication constraints |
+| `covecnost-narativni-epilog-plan.md` | Public Output | narrative epilog framework | working | public-safe | creator + domain lane | creator / public-safe narrative | `governance/document-lifecycle.md`, `docs/repository-operating-model.md`, `standards/glossary.md` | medium | Controlled narrative framing for courage, learning, innovation, and human potential |
 | `eksterni-repozitorijum-pravni-navod-plan.md` | Templates | legal/reputational handling | working | limited/internal | domain + governance coordination lane | regulatory / legal | `governance/document-lifecycle.md`, `standards/glossary.md` | high | External-claim handling and evidence workflow |
 | `globalni-licencni-okvir-i-delatnosti-plan.md` | Templates | licensing/master operations | working | limited/internal | domain + governance coordination lane | internal planning + regulatory / legal | `governance/document-lifecycle.md`, `docs/future-data-model.md` | high | Activity expansion, approvals, and licensing scope |
 | `vercel-naplata-poruka-plan.md` | Support | billing communication template | working | limited/internal | support lane | support / operational communication | `config/sensitive-content-review-checklist.md`, `governance/document-lifecycle.md` | medium | Vercel support workflow |
@@ -73,6 +74,7 @@ Track these as the current reusable public-safe output set:
 2. `index.html`, `styles.css`, and `script.js` for the controlled prototype
 3. `docs/repository-operating-model.md` for routing, approvals, and release readiness
 4. `javni-prikaz-emisija-i-kamatna-politika-plan.md` for public-policy and transparency structure
+5. `covecnost-narativni-epilog-plan.md` for controlled creator/public-safe narrative epilog output
 
 Any new reusable surface should identify its controlling source and fit this catalog before it is treated as a stable public-safe output.
 
@@ -82,6 +84,7 @@ Any new reusable surface should identify its controlling source and fit this cat
 - **Governance sequence:** `governance/document-lifecycle.md` builds on `governance/repo-charter.md`
 - **Scoring core:** `standards/indekurilanc-standard.md` -> `script.js` -> `ai-iq-world-bank-poslovni-izvestaj.md`
 - **Value-system core:** `dinar-standard-plan.md` -> `javni-prikaz-emisija-i-kamatna-politika-plan.md`
+- **Narrative public-safe core:** `governance/document-lifecycle.md` + `docs/repository-operating-model.md` -> `covecnost-narativni-epilog-plan.md`
 - **Sensitive asset/public split:** `investiciona-i-operativna-imovina-registar-plan.md` -> `javni-prikaz-emisija-i-kamatna-politika-plan.md` -> `config/sensitive-content-review-checklist.md`
 - **Expansion and licensing:** `globalni-licencni-okvir-i-delatnosti-plan.md` -> `docs/future-data-model.md` -> governance controls
 - **Support communication:** `vercel-naplata-poruka-plan.md` and `github-naplata-poruka-plan.md` -> `config/sensitive-content-review-checklist.md`
@@ -131,6 +134,7 @@ The repository's logical public-safe output catalog currently consists of `READM
 - Use `ai-iq-world-bank-poslovni-izvestaj.md` for business performance analysis.
 - Use `investiciona-i-operativna-imovina-registar-plan.md` for internal asset registry planning.
 - Use `javni-prikaz-emisija-i-kamatna-politika-plan.md` for public-facing transparency and policy outputs.
+- Use `covecnost-narativni-epilog-plan.md` for controlled creator/public-safe narrative framing around courage, learning, innovation, and human potential.
 - Use `eksterni-repozitorijum-pravni-navod-plan.md` for handling claims originating outside this repository.
 - Use `globalni-licencni-okvir-i-delatnosti-plan.md` for activity expansion, jurisdiction planning, and approvals.
 - Use `vercel-naplata-poruka-plan.md` or `github-naplata-poruka-plan.md` when preparing billing support communication.

@@ -113,6 +113,7 @@ The interface must show numeric score, maturity status, operational interpretati
 - `ai-iq-world-bank-poslovni-izvestaj.md` - business analysis template with KPI and INDEKURILANC framing
 - `investiciona-i-operativna-imovina-registar-plan.md` - asset registry template with sanitization rules
 - `javni-prikaz-emisija-i-kamatna-politika-plan.md` - public transparency, emission, and interest-policy template
+- `covecnost-narativni-epilog-plan.md` - creator/public-safe narrative epilog framework for courage, learning, innovation, and human potential
 - `eksterni-repozitorijum-pravni-navod-plan.md` - legal and reputational handling template for external claims
 - `globalni-licencni-okvir-i-delatnosti-plan.md` - master licensing and activity-expansion template
 - `vercel-naplata-poruka-plan.md` - Vercel billing support template
