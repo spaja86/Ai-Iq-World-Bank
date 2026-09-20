@@ -124,6 +124,6 @@ Pre svake dalje upotrebe proveriti:
 Ovaj dokument može ostati radni creator/public-safe plan ili postati stabilniji javni narativni izlaz tek kada:
 
 1. publika i kanal budu jasno određeni,
-2. controlling-source reference bude potvrđen,
+2. kontrolni izvor bude potvrđen,
 3. portfolio i operating-model mapa potvrde mesto dokumenta među javnim površinama,
 4. javna verzija prođe završnu proveru tona, značenja i public-safe granica.
