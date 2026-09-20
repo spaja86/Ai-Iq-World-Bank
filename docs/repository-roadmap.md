@@ -56,7 +56,7 @@
 
 ## Phase F - Validation and release-readiness gates
 
-- Maintain `config/validate_repository.py` and `.github/workflows/validate.yml` as the enforcement path for required files, repository-relative references, structured metadata, and frontend anchors.
+- Maintain `config/validate_repository.py` as the primary repository enforcement path and keep the existing validation workflow aligned with it.
 - Expand validation only after the corresponding governance or operating-model rule is documented.
 - Validate required structure, prototype anchors, and exposed standard/version signals before merge.
 - Re-check sanitization, visibility, and reusable-surface traceability before release.

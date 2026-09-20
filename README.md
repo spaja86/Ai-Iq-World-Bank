@@ -154,15 +154,15 @@ Use the repository-wide execution order for non-trivial work:
 4. plans fourth
 5. public output last
 
-Use one consistent repository work cycle for non-trivial changes:
+Use the canonical repository work cycle from `docs/repository-operating-model.md` for non-trivial changes:
 
 1. identify the controlling source
-2. classify audience and visibility
-3. update the governing standard, governance rule, or approved routing source
-4. align dependent portfolio and plan documents
-5. update public-safe outputs only after upstream alignment
-6. validate required structure, references, and standard/version exposure
-7. confirm sanitization and release readiness
+2. classify audience layer and visibility
+3. update the governing standard, governance rule, or approved routing document
+4. align portfolio, roadmap, and dependent plans
+5. update public-safe prototype or other downstream surfaces only after upstream alignment
+6. validate structure, repository-relative references, required anchors, and exposed standard/version signals
+7. confirm sanitization, release readiness, and reusable-surface traceability
 
 Every reusable public-facing surface should also:
 
