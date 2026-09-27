@@ -9,6 +9,7 @@ Tracked files are templates and sanitized examples only.
 ## Included templates
 
 - `fakture-registar-template.csv` - invoice register schema
+- `fakture-registar.csv` (optional, gitignored) - local/internal working register used for periodic stale-status and date controls during validation
 - `ugovori-registar-template.csv` - contract register schema
 - `evidencija-operativnih-dokaza-template.csv` - operational evidence register schema
 - `revizijski-trag-template.csv` - audit trail schema

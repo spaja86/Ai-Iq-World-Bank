@@ -144,6 +144,7 @@ CSV_TEMPLATE_HEADERS = {
         'referenca',
     ],
 }
+INVOICE_HEADERS = CSV_TEMPLATE_HEADERS['business/fakture-registar-template.csv']
 INVOICE_ALLOWED_STATUSES = {
     'u-pripremi',
     'na-proveri',
@@ -155,6 +156,7 @@ INVOICE_ALLOWED_STATUSES = {
 }
 INVOICE_STALE_STATUSES = {'na-proveri', 'na-odobrenju'}
 INVOICE_STALE_DAYS = 30
+OPTIONAL_RUNTIME_INVOICE_REGISTRY = 'business/fakture-registar.csv'
 
 
 def fail(message: str) -> None:
@@ -308,14 +310,15 @@ def validate_repository_relative_reference(relative_path: str, reference_value: 
         fail(f'{relative_path} row {row_number} has non-repository-relative reference: {reference_value}')
 
 
-def validate_invoice_registry_template() -> None:
-    relative_path = 'business/fakture-registar-template.csv'
-    rows = validate_csv_template_headers(relative_path, CSV_TEMPLATE_HEADERS[relative_path])
+def validate_invoice_rows(
+    relative_path: str,
+    rows: list[dict[str, str]],
+    enforce_temporal_controls: bool,
+) -> None:
     seen_invoice_ids = set()
     today = date.today()
-
     for row_number, row in enumerate(rows, start=2):
-        values = {key: normalize_csv_value(row.get(key)) for key in CSV_TEMPLATE_HEADERS[relative_path]}
+        values = {key: normalize_csv_value(row.get(key)) for key in INVOICE_HEADERS}
         if not any(values.values()):
             continue
 
@@ -338,17 +341,31 @@ def validate_invoice_registry_template() -> None:
             invoice_date = datetime.strptime(values['datum'], '%Y-%m-%d').date()
         except ValueError:
             fail(f'{relative_path} row {row_number} must use YYYY-MM-DD date format')
-        if invoice_date > today:
-            fail(f'{relative_path} row {row_number} has future date: {values["datum"]}')
-
-        if status in INVOICE_STALE_STATUSES and (today - invoice_date).days > INVOICE_STALE_DAYS:
-            fail(
-                f'{relative_path} row {row_number} has stale status "{status}" '
-                f'older than {INVOICE_STALE_DAYS} days'
-            )
+        if enforce_temporal_controls:
+            if invoice_date > today:
+                fail(f'{relative_path} row {row_number} has future date: {values["datum"]}')
+            if status in INVOICE_STALE_STATUSES and (today - invoice_date).days > INVOICE_STALE_DAYS:
+                fail(
+                    f'{relative_path} row {row_number} has stale status "{status}" '
+                    f'older than {INVOICE_STALE_DAYS} days'
+                )
 
         validate_repository_relative_reference(relative_path, values['referenca'], row_number)
         validate_repository_relative_reference(relative_path, values['dokaz_attachment'], row_number)
+
+
+def validate_invoice_registry_template() -> None:
+    relative_path = 'business/fakture-registar-template.csv'
+    rows = validate_csv_template_headers(relative_path, INVOICE_HEADERS)
+    validate_invoice_rows(relative_path, rows, enforce_temporal_controls=False)
+
+
+def validate_runtime_invoice_registry_if_present() -> None:
+    registry_path = ROOT / OPTIONAL_RUNTIME_INVOICE_REGISTRY
+    if not registry_path.exists():
+        return
+    rows = validate_csv_template_headers(OPTIONAL_RUNTIME_INVOICE_REGISTRY, INVOICE_HEADERS)
+    validate_invoice_rows(OPTIONAL_RUNTIME_INVOICE_REGISTRY, rows, enforce_temporal_controls=True)
 
 
 def validate_business_templates() -> None:
@@ -414,6 +431,7 @@ validate_required_markers(
     'meta-monetization',
 )
 validate_invoice_registry_template()
+validate_runtime_invoice_registry_if_present()
 validate_business_templates()
 
 print('Repository validation passed.')

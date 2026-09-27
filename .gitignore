@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 business/sanitized/
 business/private/
+business/fakture-registar.csv
