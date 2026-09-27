@@ -65,6 +65,16 @@ class ValidateRepositoryTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('template-plan.md is missing required routing-block field: Release status:', result.stdout)
 
+    def test_validator_requires_support_routing_block_metadata(self) -> None:
+        repo_root = self.copy_repo()
+        support_path = repo_root / 'github-naplata-poruka-plan.md'
+        support_text = support_path.read_text(encoding='utf-8')
+        support_path.write_text(support_text.replace('**Audience layer:**', '**Audience lane:**', 1), encoding='utf-8')
+
+        result = self.run_validator(repo_root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('github-naplata-poruka-plan.md is missing required routing-block field: Audience layer:', result.stdout)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -179,8 +179,24 @@ def validate_routing_block(relative_path: Path, text: str, document_control_valu
     if document_control_values.get('Category') not in ROUTING_BLOCK_REQUIRED_CATEGORIES:
         return
 
+    routing_section_lines = []
+    in_routing_section = False
+    for line in text.splitlines():
+        if line.startswith('## '):
+            if in_routing_section:
+                break
+            if 'routing' in line.lower():
+                in_routing_section = True
+                continue
+        if in_routing_section:
+            routing_section_lines.append(line)
+
+    if not in_routing_section:
+        fail(f'{relative_path} is missing a routing section for reusable document metadata')
+
+    routing_section_text = '\n'.join(routing_section_lines)
     for snippet in ROUTING_BLOCK_REQUIRED_SNIPPETS:
-        if snippet not in text:
+        if snippet not in routing_section_text:
             fail(f'{relative_path} is missing required routing-block field: {snippet}')
 
 
