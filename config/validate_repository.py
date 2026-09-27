@@ -176,8 +176,6 @@ def is_structured_markdown(relative_path: Path) -> bool:
 
 
 def validate_routing_block(relative_path: Path, text: str, document_control_values: dict[str, str]) -> None:
-    if len(relative_path.parts) != 1:
-        return
     if document_control_values.get('Category') not in ROUTING_BLOCK_REQUIRED_CATEGORIES:
         return
 
