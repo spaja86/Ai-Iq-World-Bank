@@ -122,18 +122,22 @@ Za svaku fakturu ili naplatni slučaj voditi najmanje:
 
 ### 5.2 Statusna logika
 
-- **aktivno** - naplata i usluga funkcionišu bez blokade
-- **na proveri** - postoje signali ili otvoreno pitanje koje traži proveru
-- **sporno** - faktura ili transakcija je predmet neslaganja, dupliranja ili greške
-- **suspendovano** - usluga ili billing status ugrožava kontinuitet
-- **rešeno** - uzrok je utvrđen, status potvrđen i operativni tok vraćen
+Koristiti iste canonical statuse iz domenskog modela, uz lokalno objašnjenje:
+
+| Canonical status | Lokalno značenje |
+|---|---|
+| `active` | naplata i usluga funkcionišu bez blokade |
+| `under_review` | postoje signali ili otvoreno pitanje koje traži proveru |
+| `disputed` | faktura ili transakcija je predmet neslaganja, dupliranja ili greške |
+| `suspended` | usluga ili billing status ugrožava kontinuitet |
+| `resolved` | uzrok je utvrđen, status potvrđen i operativni tok vraćen |
 
 ### 5.3 Poslovni uticaj
 
 Svaka faktura mora biti povezana sa:
 
 1. projektom koji podržava,
-2. prihodom ili korisničkim toku koji štiti,
+2. prihodom ili korisničkim tokom koji štiti,
 3. rizikom prekida ako ostane nerešena,
 4. potrebnim nivoom eskalacije.
 
