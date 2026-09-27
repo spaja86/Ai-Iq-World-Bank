@@ -95,7 +95,7 @@ class ValidateRepositoryTests(unittest.TestCase):
 
     def test_validator_rejects_stale_invoice_pending_status(self) -> None:
         repo_root = self.copy_repo()
-        invoices_path = repo_root / 'business/fakture-registar-template.csv'
+        invoices_path = repo_root / 'business/fakture-registar.csv'
         invoices_path.write_text(
             '\n'.join([
                 'id,dobavljac_partner,iznos,valuta,datum,status,dokaz_attachment,odobrenje,referenca',
@@ -125,7 +125,7 @@ class ValidateRepositoryTests(unittest.TestCase):
 
     def test_validator_rejects_future_invoice_date(self) -> None:
         repo_root = self.copy_repo()
-        invoices_path = repo_root / 'business/fakture-registar-template.csv'
+        invoices_path = repo_root / 'business/fakture-registar.csv'
         invoices_path.write_text(
             '\n'.join([
                 'id,dobavljac_partner,iznos,valuta,datum,status,dokaz_attachment,odobrenje,referenca',
@@ -137,6 +137,37 @@ class ValidateRepositoryTests(unittest.TestCase):
         result = self.run_validator(repo_root)
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('has future date', result.stdout)
+
+    def test_validator_rejects_duplicate_invoice_ids(self) -> None:
+        repo_root = self.copy_repo()
+        invoices_path = repo_root / 'business/fakture-registar-template.csv'
+        invoices_path.write_text(
+            '\n'.join([
+                'id,dobavljac_partner,iznos,valuta,datum,status,dokaz_attachment,odobrenje,referenca',
+                'INV-001,partner-a,1000.00,RSD,2026-01-01,u-pripremi,business/sanitized/a.txt,na-cekanju,business/sanitized/a-ref.txt',
+                'INV-001,partner-b,2000.00,RSD,2026-01-02,na-proveri,business/sanitized/b.txt,na-cekanju,business/sanitized/b-ref.txt',
+            ]),
+            encoding='utf-8',
+        )
+
+        result = self.run_validator(repo_root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('has duplicate id', result.stdout)
+
+    def test_validator_rejects_non_repository_relative_invoice_reference(self) -> None:
+        repo_root = self.copy_repo()
+        invoices_path = repo_root / 'business/fakture-registar-template.csv'
+        invoices_path.write_text(
+            '\n'.join([
+                'id,dobavljac_partner,iznos,valuta,datum,status,dokaz_attachment,odobrenje,referenca',
+                'INV-009,partner,1000.00,RSD,2026-01-01,u-pripremi,/tmp/dokaz.txt,na-cekanju,business/sanitized/ref.txt',
+            ]),
+            encoding='utf-8',
+        )
+
+        result = self.run_validator(repo_root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('non-repository-relative reference', result.stdout)
 
 
 if __name__ == '__main__':
