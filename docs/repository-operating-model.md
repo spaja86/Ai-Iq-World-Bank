@@ -87,6 +87,26 @@ Use one consistent work cycle for cross-repository changes:
 - Keep multilingual or channel-specific variants downstream from canonical wording.
 - Confirm whether the work stays in one lane or requires a shared-lane handoff before release.
 
+## Non-trivial change metadata
+
+Every non-trivial repository change should keep the same minimum routing metadata visible across documents, plans, and prototype surfaces:
+
+1. controlling source,
+2. audience layer,
+3. visibility class,
+4. ownership lane plus any required shared-lane handoff,
+5. release status for the current surface or working artifact.
+
+Root plans, support templates, and reusable public-output frameworks should expose this metadata in their routing block through:
+
+- primary lane,
+- creator/developer usage when relevant,
+- controlling coordination source,
+- audience layer,
+- visibility handling,
+- shared-lane checkpoint,
+- release status.
+
 ### 2. Standards lane
 
 - Owns scoring rules, glossary terms, DINAR context, and other canonical definitions.

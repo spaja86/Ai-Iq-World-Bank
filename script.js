@@ -153,6 +153,7 @@ const NARRATIVE_LANES = Object.freeze([
 const REPOSITORY_WORK_CYCLE = Object.freeze([
     'Follow the canonical repository work cycle in docs/repository-operating-model.md.',
     'Start with the controlling source plus audience/visibility classification.',
+    'Record ownership lane, shared-lane handoff need, and release status for non-trivial work.',
     'Align standards, governance, portfolio, and plans before updating downstream public-safe surfaces.',
     'Validate anchors, references, standard/version exposure, sanitization, and release readiness before sharing.'
 ]);
@@ -194,6 +195,7 @@ const RELEASE_GATES = Object.freeze([
 const DEVELOPER_CREATOR_CHECKPOINTS = Object.freeze([
     'Confirm the controlling standard, governance rule, or approved plan before changing a reusable surface.',
     'Classify the target audience layer and visibility before drafting new copy or prototype panels.',
+    'Make the ownership lane, any shared-lane handoff, and the current release status explicit for non-trivial work.',
     'Keep source logic, public-safe explanation, and release-readiness checks separable.',
     'Update concept-surface mapping when a reusable panel or cataloged output changes.',
     'Confirm whether the change needs shared-lane coordination before release.',

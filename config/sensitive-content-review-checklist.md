@@ -17,6 +17,8 @@ Use this checklist before committing or sharing documentation updates.
 - Confirm that the `Document Control` block declares status, visibility, purpose, and dependencies.
 - Confirm whether the work belongs primarily to the developer lane, creator lane, or another ownership lane.
 - Confirm the controlling source path for any new public-facing concept or message.
+- Confirm the audience layer, visibility intent, and release status for any reusable working or public-safe surface.
+- Confirm whether a shared-lane handoff is required before the change is treated as release-ready.
 - Confirm whether a reusable concept surface inventory entry or source-mapping entry must be updated.
 - Remove checkout-specific absolute filesystem paths.
 - Remove secrets, tokens, credentials, or private access information.

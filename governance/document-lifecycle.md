@@ -136,6 +136,20 @@ Where useful, also identify whether the work is primarily developer-lane or crea
 
 Use a shared lane classification when the work exists mainly to coordinate source confirmation, visibility, release-readiness, or reusable-surface traceability across multiple owners.
 
+## Routing block expectations for reusable working documents
+
+When a root plan, support template, or reusable public-output framework routes repository work, its early routing section should keep the repository work cycle explicit through:
+
+- primary lane,
+- creator/developer usage when relevant,
+- controlling coordination source,
+- audience layer,
+- visibility handling,
+- shared-lane checkpoint,
+- release status.
+
+This keeps reusable working documents downstream from the operating model instead of letting ad-hoc local wording redefine the release path.
+
 ## Publication and sanitization rules
 
 Before sharing a document outside the narrow working context:

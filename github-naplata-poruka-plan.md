@@ -18,6 +18,10 @@ Ovaj dokument implementira traženi plan za formalnu komunikaciju sa GitHub podr
 - **Creator lane upotreba:** ograničena na javno-bezbedan, neutralan i poslovno jasan ton komunikacije.
 - **Developer lane upotreba:** za evidenciju dokaza, sequencing follow-up koraka i eventualno buduće case-management mapiranje.
 - **Kontrolni koordinacioni dokument:** `docs/repository-operating-model.md`.
+- **Audience layer:** support/operational communication; creator/public-safe samo za neutralan i sanitizovan deljeni rezime ako je potreban.
+- **Visibility handling:** radni billing detalji ostaju `limited/internal`; deljene verzije uklanjaju poverljive identifikatore i case detalje.
+- **Shared-lane checkpoint:** pre reusable outputa potvrditi controlling source, audience layer, visibility, shared-lane handoff i release readiness.
+- **Release status:** working support template; nije canonical pravilo niti public-safe output bez sanitizacije i potvrde statusa dokaza.
 - Svaki deljeni output mora ostati downstream u odnosu na governance pravila, status dokaza i sensitive-content kontrolu.
 
 ## 1) Cilj obraćanja

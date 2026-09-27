@@ -149,6 +149,16 @@ Treat `docs/repository-operating-model.md` as the primary coordination document 
 
 For non-trivial work, follow the canonical execution order and repository work cycle defined in `docs/repository-operating-model.md`.
 
+For every non-trivial change, keep these routing fields explicit somewhere in the affected working surface or routing document:
+
+- controlling source
+- audience layer
+- visibility
+- ownership lane and any shared-lane handoff
+- release status
+
+Root plans, support templates, and reusable public-output frameworks should expose this through a routing block with primary lane, controlling coordination source, audience layer, visibility handling, shared-lane checkpoint, and release status.
+
 Every reusable public-facing surface should also:
 
 - identify or inherit a controlling source reference,
@@ -198,6 +208,7 @@ Validate locally with:
 The repository workflow in `.github/workflows/validate.yml` currently runs:
 
 - `python3 config/validate_repository.py` for required core files, structured document control blocks, allowed status/visibility values, dependency existence, repository-relative references, required frontend ids, and active standard version exposure in `script.js`
+- `python3 config/validate_repository.py` also checks that core root planning/support surfaces keep the shared routing-block metadata used by the operating model
 - `node --check script.js` for frontend syntax validation
 
 ## Development priorities

@@ -18,6 +18,10 @@ Ovaj dokument je **fill-in template/framework** za slučajeve kada eksterni repo
 - **Creator lane upotreba:** samo za neutralan, verifikovan i statusno obeležen javni rezime.
 - **Developer lane upotreba:** za evidenciju izvora, citatnih lokacija i audit traga.
 - **Kontrolni koordinacioni dokument:** `docs/repository-operating-model.md`.
+- **Audience layer:** regulatory/legal i internal handling; creator/public-safe samo kroz neutralan verifikovan rezime.
+- **Visibility handling:** radna obrada ostaje `limited/internal` dok se status tvrdnji, dokaz i pravna klasifikacija ne potvrde.
+- **Shared-lane checkpoint:** pre reusable ili javnog izlaza potvrditi controlling source, audience layer, visibility, shared-lane handoff i release readiness.
+- **Release status:** working legal-handling input; nije javni source of truth bez pravne verifikacije i upstream usklađivanja.
 - Bez pravne verifikacije i statusa tvrdnje nema prelaska u stabilan javni output.
 
 ## 1) Definisanje cilja

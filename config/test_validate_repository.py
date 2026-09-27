@@ -55,6 +55,44 @@ class ValidateRepositoryTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('index.html is missing required id: repository-work-cycle', result.stdout)
 
+    def test_validator_requires_root_routing_block_metadata(self) -> None:
+        repo_root = self.copy_repo()
+        template_path = repo_root / 'template-plan.md'
+        template_text = template_path.read_text(encoding='utf-8')
+        template_path.write_text(template_text.replace('**Release status:**', '**Status for release:**', 1), encoding='utf-8')
+
+        result = self.run_validator(repo_root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('template-plan.md is missing required routing-block field: Release status:', result.stdout)
+
+    def test_validator_requires_support_routing_block_metadata(self) -> None:
+        repo_root = self.copy_repo()
+        support_path = repo_root / 'github-naplata-poruka-plan.md'
+        support_text = support_path.read_text(encoding='utf-8')
+        support_path.write_text(support_text.replace('**Audience layer:**', '**Audience lane:**', 1), encoding='utf-8')
+
+        result = self.run_validator(repo_root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('github-naplata-poruka-plan.md is missing required routing-block field: Audience layer:', result.stdout)
+
+    def test_validator_accepts_top_of_file_routing_metadata(self) -> None:
+        repo_root = self.copy_repo()
+        template_path = repo_root / 'template-plan.md'
+        template_text = template_path.read_text(encoding='utf-8')
+        routing_block = '\n'.join([
+            '- **Audience layer:** contributor planning first; creator/public-safe reuse only through sanitized downstream summaries.',
+            '- **Visibility handling:** keep repository-facing structure public-safe, but do not treat filled-in sensitive variants as source-control-ready outputs.',
+            '- **Shared-lane checkpoint:** confirm controlling source, audience layer, visibility, and release-readiness whenever the template output becomes a reusable repository surface.',
+            '- **Release status:** working routing template only; not a canonical rule or release-ready public output by itself.',
+        ])
+        template_path.write_text(
+            template_text.replace('## Document Control', f'{routing_block}\n\n## Document Control', 1),
+            encoding='utf-8',
+        )
+
+        result = self.run_validator(repo_root)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
 
 if __name__ == '__main__':
     unittest.main()

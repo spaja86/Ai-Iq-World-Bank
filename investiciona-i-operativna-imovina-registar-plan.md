@@ -21,6 +21,10 @@ Ovaj dokument je **fill-in template/framework** za evidenciju i analizu:
 - **Creator lane upotreba:** samo za agregirani javno-bezbedan prikaz izveden kroz `javni-prikaz-emisija-i-kamatna-politika-plan.md`.
 - **Developer lane upotreba:** za strukturu registra, proveru tragova i buduće validacione ili data-model integracije.
 - **Kontrolni koordinacioni dokument:** `docs/repository-operating-model.md`.
+- **Audience layer:** internal planning; creator/public-safe samo kroz agregirane i sanitizovane javne izveštaje.
+- **Visibility handling:** popunjene verzije ostaju `limited/internal`; javni prikaz mora ukloniti tačne lokacije, količine po objektu i operativne detalje.
+- **Shared-lane checkpoint:** pre svakog reusable izlaza potvrditi controlling source, audience layer, visibility, shared-lane handoff i release readiness.
+- **Release status:** working registry input; nije javni source of truth niti release-ready output bez sanitizacije i upstream potvrde.
 - Osetljivi detalji ostaju interni; javni izlazi nastaju tek posle sanitizacije i posle upstream standard/governance usklađivanja.
 
 ## Bezbednosna napomena (obavezno)

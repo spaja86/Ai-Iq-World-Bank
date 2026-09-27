@@ -18,6 +18,10 @@ Ovaj dokument implementira traženi plan za formalnu komunikaciju sa Vercel podr
 - **Creator lane upotreba:** ograničena na jasnoću, neutralni ton i javno-bezbedno formulisanje poruke.
 - **Developer lane upotreba:** za evidenciju dokaza, strukturu follow-up toka i buduće sistemsko praćenje slučaja.
 - **Kontrolni koordinacioni dokument:** `docs/repository-operating-model.md`.
+- **Audience layer:** support/operational communication; creator/public-safe samo za neutralan i sanitizovan deljeni rezime ako je potreban.
+- **Visibility handling:** radni case detalji ostaju `limited/internal`; deljene verzije uklanjaju poverljive billing i identifikacione podatke.
+- **Shared-lane checkpoint:** pre reusable outputa potvrditi controlling source, audience layer, visibility, shared-lane handoff i release readiness.
+- **Release status:** working support template; nije canonical pravilo niti public-safe output bez sanitizacije i potvrde statusa dokaza.
 - Poruka mora ostati downstream u odnosu na governance i sensitive-content kontrole; ne uvoditi neproverene tvrdnje ili poverljive podatke u deljene verzije.
 
 ## 1) Cilj poruke
