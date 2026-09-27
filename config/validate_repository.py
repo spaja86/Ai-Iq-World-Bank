@@ -113,6 +113,7 @@ CSV_TEMPLATE_HEADERS = {
         'valuta',
         'datum',
         'status',
+        'status_azuriran_datum',
         'dokaz_attachment',
         'odobrenje',
         'referenca',
@@ -297,7 +298,9 @@ def normalize_csv_value(value: str | None) -> str:
 def validate_csv_template_headers(relative_path: str, required_headers: list[str]) -> list[dict[str, str]]:
     with (ROOT / relative_path).open(encoding='utf-8', newline='') as csv_file:
         reader = csv.DictReader(csv_file)
-        headers = [header.strip() for header in (reader.fieldnames or [])]
+        headers = reader.fieldnames or []
+        if any(header.strip() != header for header in headers):
+            fail(f'{relative_path} must not use padded header names')
         if headers != required_headers:
             fail(f'{relative_path} must use exact headers: {", ".join(required_headers)}')
         return list(reader)
@@ -333,7 +336,7 @@ def validate_invoice_rows(
             fail(f'{relative_path} row {row_number} has duplicate id: {invoice_id}')
         seen_invoice_ids.add(invoice_id)
 
-        for required_key in ['dobavljac_partner', 'iznos', 'valuta', 'datum', 'status', 'odobrenje']:
+        for required_key in ['dobavljac_partner', 'iznos', 'valuta', 'datum', 'status', 'status_azuriran_datum', 'odobrenje']:
             if not values[required_key]:
                 fail(f'{relative_path} row {row_number} is missing required value: {required_key}')
 
@@ -342,13 +345,20 @@ def validate_invoice_rows(
             fail(f'{relative_path} row {row_number} has invalid status: {status}')
 
         try:
-            invoice_date = datetime.strptime(values['datum'], '%Y-%m-%d').date()
+            datetime.strptime(values['datum'], '%Y-%m-%d').date()
         except ValueError:
             fail(f'{relative_path} row {row_number} must use YYYY-MM-DD date format')
+        try:
+            status_updated_date = datetime.strptime(values['status_azuriran_datum'], '%Y-%m-%d').date()
+        except ValueError:
+            fail(f'{relative_path} row {row_number} must use YYYY-MM-DD date format for status_azuriran_datum')
         if enforce_temporal_controls:
-            if invoice_date > today:
-                fail(f'{relative_path} row {row_number} has future date: {values["datum"]}')
-            if status in INVOICE_STALE_STATUSES and (today - invoice_date).days > INVOICE_STALE_DAYS:
+            if status_updated_date > today:
+                fail(
+                    f'{relative_path} row {row_number} has future status update date: '
+                    f'{values["status_azuriran_datum"]}'
+                )
+            if status in INVOICE_STALE_STATUSES and (today - status_updated_date).days > INVOICE_STALE_DAYS:
                 fail(
                     f'{relative_path} row {row_number} has stale status "{status}" '
                     f'older than {INVOICE_STALE_DAYS} days'

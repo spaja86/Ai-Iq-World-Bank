@@ -1,1 +1,1 @@
-id,dobavljac_partner,iznos,valuta,datum,status,dokaz_attachment,odobrenje,referenca
+id,dobavljac_partner,iznos,valuta,datum,status,status_azuriran_datum,dokaz_attachment,odobrenje,referenca

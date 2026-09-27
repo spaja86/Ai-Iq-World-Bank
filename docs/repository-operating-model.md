@@ -134,7 +134,7 @@ Root plans, support templates, and reusable public-output frameworks should expo
 
 ## Business operations segment (fakture i evidencija)
 
-- `business/fakture-registar-template.csv` defines required invoice fields: ID, partner, amount, currency, date, status, attachment evidence, approval, and reference.
+- `business/fakture-registar-template.csv` defines required invoice fields: ID, partner, amount, currency, invoice date, status, status update date, attachment evidence, approval, and reference.
 - `business/ugovori-registar-template.csv`, `business/evidencija-operativnih-dokaza-template.csv`, and `business/revizijski-trag-template.csv` standardize contract, evidence, and audit tracking.
 - `business/nedeljni-operativni-ciklus-template.md` defines weekly operating rhythm and owner responsibilities for finance, legal/compliance, developer lane, creator lane, and final release control.
 - Business templates remain limited/internal structures; public-safe outputs must be sanitized summaries derived through governance controls.
