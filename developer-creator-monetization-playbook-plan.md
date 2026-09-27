@@ -67,7 +67,7 @@ Monetizaciona pravila se uvode i održavaju kroz sledeću hijerarhiju:
 | Entry | rani korisnici i validacioni lead-ovi | brz ulaz u koncept + osnovni output | limitiran opseg i podrška | lead quality, activation | working | `docs/repository-operating-model.md` + relevantan standard/governance izvor |
 | Growth | mali timovi i operativni korisnici | stabilniji workflow i proširen support okvir | zahteva redovan review i SLA disciplinu | conversion rate, retention | working | `docs/repository-operating-model.md` + relevantan standard/governance izvor |
 | Advanced | organizacije sa višim zahtevima | napredna kontrola i proširena operativna pouzdanost | strožiji release gate i compliance provera | net revenue, churn, resolution time | working | `docs/repository-operating-model.md` + relevantan standard/governance izvor |
-| Enterprise / program equivalent | kompleksni dugoročni modeli | formalizovan ownership, governance i eskalacioni okvir | najviši zahtev za evidenciju i approval sequence | active paid users, MNR, governance pass rate | working | `docs/repository-operating-model.md` + relevantan standard/governance izvor |
+| Enterprise / program equivalent | kompleksni dugoročni modeli | formalizovan ownership, governance i eskalacioni okvir | najviši zahtev za evidenciju i approval sequence | active paid users, MRR, governance pass rate | working | `docs/repository-operating-model.md` + relevantan standard/governance izvor |
 
 Pravilo: nijedna ponuda se ne tretira kao stabilna bez eksplicitne controlling source reference.
 
@@ -84,7 +84,7 @@ Pravilo: nijedna ponuda se ne tretira kao stabilna bez eksplicitne controlling s
 ### 5.1 North-star KPI
 
 - aktivni plaćeni korisnici (po periodu),
-- mesečni net prihod (MNR) kao finansijski signal stabilnosti.
+- mesečni net prihod (MRR) kao finansijski signal stabilnosti.
 
 ### 5.2 Operativni KPI
 
