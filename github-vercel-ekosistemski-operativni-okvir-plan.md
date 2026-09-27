@@ -148,6 +148,7 @@ GitHub domen mora eksplicitno razdvajati:
 
 - pripremiti samo sanitizovane sažetke,
 - ukloniti billing, account i transaction detalje,
+- proveriti deljivu verziju kroz `config/sensitive-content-review-checklist.md`,
 - objaviti tek kada shared lane potvrdi release readiness.
 
 ## 6) Uslov “ako se slažu”
