@@ -1,5 +1,6 @@
 import csv
 from datetime import date, datetime
+import os
 from pathlib import Path
 import re
 import sys
@@ -157,6 +158,7 @@ INVOICE_ALLOWED_STATUSES = {
 INVOICE_STALE_STATUSES = {'na-proveri', 'na-odobrenju'}
 INVOICE_STALE_DAYS = 30
 OPTIONAL_RUNTIME_INVOICE_REGISTRY = 'business/fakture-registar.csv'
+RUNTIME_INVOICE_VALIDATION_FLAG = 'AIIQ_VALIDATE_RUNTIME_BUSINESS'
 
 
 def fail(message: str) -> None:
@@ -363,6 +365,8 @@ def validate_invoice_registry_template() -> None:
 
 
 def validate_runtime_invoice_registry_if_present() -> None:
+    if os.getenv(RUNTIME_INVOICE_VALIDATION_FLAG) != '1':
+        return
     registry_path = ROOT / OPTIONAL_RUNTIME_INVOICE_REGISTRY
     if not registry_path.exists():
         return

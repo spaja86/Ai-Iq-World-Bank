@@ -28,3 +28,11 @@ This business segment is downstream from:
 - `docs/repository-operating-model.md`
 - `governance/document-lifecycle.md`
 - `config/sensitive-content-review-checklist.md`
+
+## Optional periodic runtime control
+
+To validate local runtime invoice data (`business/fakture-registar.csv`), run:
+
+`AIIQ_VALIDATE_RUNTIME_BUSINESS=1 python3 config/validate_repository.py`
+
+Default repository validation checks tracked templates only.
