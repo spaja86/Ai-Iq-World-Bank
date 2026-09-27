@@ -181,13 +181,15 @@ def validate_routing_block(relative_path: Path, text: str, document_control_valu
 
     sections = []
     current_section_lines = []
+    seen_section_heading = False
     for line in text.splitlines():
         if line.startswith('## '):
             if current_section_lines:
                 sections.append('\n'.join(current_section_lines))
             current_section_lines = [line]
+            seen_section_heading = True
             continue
-        if current_section_lines:
+        if current_section_lines or not seen_section_heading:
             current_section_lines.append(line)
 
     if current_section_lines:
