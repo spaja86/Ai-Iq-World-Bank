@@ -103,8 +103,8 @@ class ValidateRepositoryTests(unittest.TestCase):
         invoices_path = repo_root / 'business/fakture-registar.csv'
         invoices_path.write_text(
             '\n'.join([
-                'id,dobavljac_partner,iznos,valuta,datum,status,dokaz_attachment,odobrenje,referenca',
-                'INV-001,partner,1000.00,RSD,2020-01-01,na-proveri,business/sanitized/dokaz.txt,na-cekanju,business/sanitized/ref.txt',
+                'id,dobavljac_partner,iznos,valuta,datum,status,status_azuriran_datum,dokaz_attachment,odobrenje,referenca',
+                'INV-001,partner,1000.00,RSD,2020-01-01,na-proveri,2020-01-01,business/sanitized/dokaz.txt,na-cekanju,business/sanitized/ref.txt',
             ]),
             encoding='utf-8',
         )
@@ -128,29 +128,44 @@ class ValidateRepositoryTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('must use exact headers', result.stdout)
 
+    def test_validator_rejects_padded_business_csv_headers(self) -> None:
+        repo_root = self.copy_repo()
+        contracts_path = repo_root / 'business/ugovori-registar-template.csv'
+        contracts_path.write_text(
+            '\n'.join([
+                'id,partner ,tip_ugovora,datum_potpisivanja,status,odgovorno_lice,referenca',
+                'UG-001,partner,okvirni,2099-01-01,u-pripremi,owner,business/sanitized/contract.txt',
+            ]),
+            encoding='utf-8',
+        )
+
+        result = self.run_validator(repo_root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('must not use padded header names', result.stdout)
+
     def test_validator_rejects_future_invoice_date(self) -> None:
         repo_root = self.copy_repo()
         invoices_path = repo_root / 'business/fakture-registar.csv'
         invoices_path.write_text(
             '\n'.join([
-                'id,dobavljac_partner,iznos,valuta,datum,status,dokaz_attachment,odobrenje,referenca',
-                'INV-002,partner,1000.00,RSD,2999-01-01,u-pripremi,business/sanitized/dokaz.txt,na-cekanju,business/sanitized/ref.txt',
+                'id,dobavljac_partner,iznos,valuta,datum,status,status_azuriran_datum,dokaz_attachment,odobrenje,referenca',
+                'INV-002,partner,1000.00,RSD,2026-01-01,u-pripremi,2999-01-01,business/sanitized/dokaz.txt,na-cekanju,business/sanitized/ref.txt',
             ]),
             encoding='utf-8',
         )
 
         result = self.run_validator(repo_root, validate_runtime_business=True)
         self.assertNotEqual(result.returncode, 0)
-        self.assertIn('has future date', result.stdout)
+        self.assertIn('has future status update date', result.stdout)
 
     def test_validator_rejects_duplicate_invoice_ids(self) -> None:
         repo_root = self.copy_repo()
         invoices_path = repo_root / 'business/fakture-registar-template.csv'
         invoices_path.write_text(
             '\n'.join([
-                'id,dobavljac_partner,iznos,valuta,datum,status,dokaz_attachment,odobrenje,referenca',
-                'INV-001,partner-a,1000.00,RSD,2026-01-01,u-pripremi,business/sanitized/a.txt,na-cekanju,business/sanitized/a-ref.txt',
-                'INV-001,partner-b,2000.00,RSD,2026-01-02,na-proveri,business/sanitized/b.txt,na-cekanju,business/sanitized/b-ref.txt',
+                'id,dobavljac_partner,iznos,valuta,datum,status,status_azuriran_datum,dokaz_attachment,odobrenje,referenca',
+                'INV-001,partner-a,1000.00,RSD,2026-01-01,u-pripremi,2026-01-01,business/sanitized/a.txt,na-cekanju,business/sanitized/a-ref.txt',
+                'INV-001,partner-b,2000.00,RSD,2026-01-02,na-proveri,2026-01-02,business/sanitized/b.txt,na-cekanju,business/sanitized/b-ref.txt',
             ]),
             encoding='utf-8',
         )
@@ -164,8 +179,8 @@ class ValidateRepositoryTests(unittest.TestCase):
         invoices_path = repo_root / 'business/fakture-registar-template.csv'
         invoices_path.write_text(
             '\n'.join([
-                'id,dobavljac_partner,iznos,valuta,datum,status,dokaz_attachment,odobrenje,referenca',
-                'INV-009,partner,1000.00,RSD,2026-01-01,u-pripremi,/tmp/dokaz.txt,na-cekanju,business/sanitized/ref.txt',
+                'id,dobavljac_partner,iznos,valuta,datum,status,status_azuriran_datum,dokaz_attachment,odobrenje,referenca',
+                'INV-009,partner,1000.00,RSD,2026-01-01,u-pripremi,2026-01-01,/tmp/dokaz.txt,na-cekanju,business/sanitized/ref.txt',
             ]),
             encoding='utf-8',
         )
@@ -179,8 +194,8 @@ class ValidateRepositoryTests(unittest.TestCase):
         invoices_path = repo_root / 'business/fakture-registar-template.csv'
         invoices_path.write_text(
             '\n'.join([
-                'id,dobavljac_partner,iznos,valuta,datum,status,dokaz_attachment,odobrenje,referenca',
-                'INV-010,partner,1000.00,RSD,2026-01-01,u-pripremi,https://example.com/dokaz.pdf,na-cekanju,business/sanitized/ref.txt',
+                'id,dobavljac_partner,iznos,valuta,datum,status,status_azuriran_datum,dokaz_attachment,odobrenje,referenca',
+                'INV-010,partner,1000.00,RSD,2026-01-01,u-pripremi,2026-01-01,https://example.com/dokaz.pdf,na-cekanju,business/sanitized/ref.txt',
             ]),
             encoding='utf-8',
         )
@@ -194,8 +209,8 @@ class ValidateRepositoryTests(unittest.TestCase):
         invoices_path = repo_root / 'business/fakture-registar-template.csv'
         invoices_path.write_text(
             '\n'.join([
-                'id,dobavljac_partner,iznos,valuta,datum,status,dokaz_attachment,odobrenje,referenca',
-                'INV-011,partner,1000.00,RSD,2026-01-01,u-pripremi,mailto:ops@example.com,na-cekanju,business/sanitized/ref.txt',
+                'id,dobavljac_partner,iznos,valuta,datum,status,status_azuriran_datum,dokaz_attachment,odobrenje,referenca',
+                'INV-011,partner,1000.00,RSD,2026-01-01,u-pripremi,2026-01-01,mailto:ops@example.com,na-cekanju,business/sanitized/ref.txt',
             ]),
             encoding='utf-8',
         )

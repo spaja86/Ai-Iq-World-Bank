@@ -36,3 +36,5 @@ To validate local runtime invoice data (`business/fakture-registar.csv`), run:
 `AIIQ_VALIDATE_RUNTIME_BUSINESS=1 python3 config/validate_repository.py`
 
 Default repository validation checks tracked templates only.
+
+Runtime stale-status controls use `status_azuriran_datum` (status transition date), not invoice issue date.
