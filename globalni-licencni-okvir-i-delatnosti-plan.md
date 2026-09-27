@@ -7,7 +7,7 @@
 - **Status:** working
 - **Visibility:** limited/internal
 - **Purpose:** Master framework for activity expansion, jurisdiction readiness, approvals, and licensing boundaries.
-- **Depends on:** `governance/document-lifecycle.md`, `docs/future-data-model.md`, `standards/glossary.md`, `developer-creator-monetization-playbook-plan.md`
+- **Depends on:** `governance/document-lifecycle.md`, `docs/future-data-model.md`, `standards/glossary.md`
 
 
 Ovaj dokument je **fill-in template/framework** za implementaciju cilja da AI IQ WORLD BANK funkcioniše kao široka globalna platforma/holding sa maksimalnim brojem dozvoljenih delatnosti, uz jasno razdvajanje:
