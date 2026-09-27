@@ -42,13 +42,14 @@ Ovaj dokument operacionalizuje “vrh programskog ekvivalenta” za Developer + 
 - **Incident/support izvršni source:** `github-naplata-poruka-plan.md`, `vercel-naplata-poruka-plan.md`
 - **Javni/public-safe surface-i:** nastaju tek posle shared-lane provere, sanitizacije i release-gate potvrde
 
-Pravila meta-monetizacije se uvode i održavaju kroz sledeću hijerarhiju:
+Pravila meta-monetizacije se uvode i održavaju kroz sledeći kanonski redosled:
 
-1. routing i ownership u operating model sloju,
-2. terminološko i lifecycle zaključavanje u standards/governance sloju,
-3. operativni monetizacioni plan i support tokovi,
-4. licencna/jurisdikcijska usaglašenost,
-5. public-safe izlazi kao poslednji korak.
+1. terminološko zaključavanje u standards sloju,
+2. lifecycle i visibility pravila u governance sloju,
+3. routing i ownership u operating model / docs sloju,
+4. operativni monetizacioni plan i support tokovi,
+5. licencna/jurisdikcijska usaglašenost kada utiče na tržišni ulazak ili partner model,
+6. public-safe izlazi kao poslednji korak.
 
 ### 1.3 Formalna razdvojenost monetizacionih nivoa
 
