@@ -267,7 +267,8 @@ Ovaj playbook služi kao radni referentni okvir za Developer + Creator monetizac
 2. governance,
 3. docs/portfolio routing,
 4. plans/support implementacija,
-5. public/prototype izlaz.
+5. licensing/jurisdiction gate,
+6. public/prototype izlaz.
 
 Svaka buduća izmena treba da zadrži trag: controlling source, audience layer, visibility, ownership lane + shared handoff, release status.
 
