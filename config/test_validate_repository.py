@@ -123,6 +123,21 @@ class ValidateRepositoryTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('must use exact headers', result.stdout)
 
+    def test_validator_rejects_future_invoice_date(self) -> None:
+        repo_root = self.copy_repo()
+        invoices_path = repo_root / 'business/fakture-registar-template.csv'
+        invoices_path.write_text(
+            '\n'.join([
+                'id,dobavljac_partner,iznos,valuta,datum,status,dokaz_attachment,odobrenje,referenca',
+                'INV-002,partner,1000.00,RSD,2999-01-01,u-pripremi,business/sanitized/dokaz.txt,na-cekanju,business/sanitized/ref.txt',
+            ]),
+            encoding='utf-8',
+        )
+
+        result = self.run_validator(repo_root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('has future date', result.stdout)
+
 
 if __name__ == '__main__':
     unittest.main()

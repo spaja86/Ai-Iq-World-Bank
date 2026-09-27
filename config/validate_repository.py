@@ -338,6 +338,8 @@ def validate_invoice_registry_template() -> None:
             invoice_date = datetime.strptime(values['datum'], '%Y-%m-%d').date()
         except ValueError:
             fail(f'{relative_path} row {row_number} must use YYYY-MM-DD date format')
+        if invoice_date > today:
+            fail(f'{relative_path} row {row_number} has future date: {values["datum"]}')
 
         if status in INVOICE_STALE_STATUSES and (today - invoice_date).days > INVOICE_STALE_DAYS:
             fail(
