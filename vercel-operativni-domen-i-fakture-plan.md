@@ -7,7 +7,7 @@
 - **Status:** working
 - **Visibility:** limited/internal
 - **Purpose:** Structured operating plan for the Vercel domain covering billing, invoices, incidents, lane ownership, KPI tracking, and ecosystem collaboration.
-- **Depends on:** `docs/repository-operating-model.md`, `governance/document-lifecycle.md`, `docs/document-portfolio.md`, `developer-creator-monetization-playbook-plan.md`, `config/sensitive-content-review-checklist.md`
+- **Depends on:** `docs/repository-operating-model.md`, `governance/document-lifecycle.md`, `developer-creator-monetization-playbook-plan.md`, `config/sensitive-content-review-checklist.md`
 
 Ovaj dokument zaključava Vercel kao poseban operativni domen unutar Developer + Creator program-equivalent okvira i povezuje billing, support, fakture, kontinuitet usluge i partnersku saradnju sa širim monetizacionim sistemom.
 
