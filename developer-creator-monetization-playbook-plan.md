@@ -271,6 +271,6 @@ Svaka buduća izmena treba da zadrži trag: controlling source, audience layer, 
 Preporuka ovog dokumenta je da se **meta-monetization framework (`monetizacija nad monetizacijama`)** tretira kao:
 
 - viši operativni sloj Developer + Creator programa,
-- framework za orkestraciju više monetizacionih paterna,
+- framework za orkestraciju više monetizacionih obrazaca,
 - shared-lane approval-ready model,
 - a ne kao slobodan marketinški slogan bez lane, KPI, licensing i release pravila.
