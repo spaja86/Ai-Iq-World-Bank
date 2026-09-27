@@ -21,6 +21,10 @@ This document is a reusable planning framework, not a canonical product or gover
 - **Creator usage:** allowed for sanitized public-safe framing of an existing repository plan request.
 - **Developer usage:** allowed for structured implementation scoping, traceability, and dependency mapping.
 - **Controlling coordination source:** `docs/repository-operating-model.md`.
+- **Audience layer:** contributor planning first; creator/public-safe reuse only through sanitized downstream summaries.
+- **Visibility handling:** keep repository-facing structure public-safe, but do not treat filled-in sensitive variants as source-control-ready outputs.
+- **Shared-lane checkpoint:** confirm controlling source, audience layer, visibility, and release-readiness whenever the template output becomes a reusable repository surface.
+- **Release status:** working routing template only; not a canonical rule or release-ready public output by itself.
 - For non-trivial work derived from this template, follow: standards -> governance -> portfolio/roadmap -> plan/template -> public output.
 
 ## 2) Current Repository Baseline

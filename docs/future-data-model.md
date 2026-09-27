@@ -24,7 +24,9 @@ When entities are introduced, prefer shared control fields where relevant:
 - `source_reference`
 - `audience_layer`
 - `owner_lane`
+- `shared_lane_handoff`
 - `review_state`
+- `release_status`
 - `effective_date`
 - `last_reviewed_at`
 - `catalog_membership`
@@ -68,6 +70,8 @@ Suggested fields:
 - `source_of_truth`
 - `owner_role`
 - `owner_lane`
+- `shared_lane_handoff`
+- `release_status`
 - `last_reviewed_at`
 
 ### 3. Asset Summary
@@ -144,6 +148,7 @@ Suggested fields:
 - `approved_for_publication`
 - `audience_layer`
 - `catalog_status`
+- `release_status`
 - `published_at`
 
 ### 8. Support Workflow Case
@@ -205,10 +210,12 @@ Suggested fields:
 - `surface_type`
 - `channel`
 - `owner_lane`
+- `shared_lane_handoff`
 - `source_reference`
 - `standard_version`
 - `audience_layer`
 - `visibility`
+- `release_status`
 - `release_record_id`
 - `active`
 
@@ -248,6 +255,12 @@ A future system should also preserve the distinction between scenario assumption
 - Keep creator/public wording variants separate from regulatory, governance, and support wording.
 - Keep reusable public concept surfaces separate from canonical sources while preserving explicit source links.
 - Keep read-only dashboard summaries separate from any future managed operational workflow records.
+
+## Downstream modeling rule
+
+This future data model stays downstream from standards, governance, portfolio routing, and approved working-plan structure.
+
+No future entity should become a substitute source of truth for repository rules; it should only model already approved surfaces, lanes, checkpoints, release states, and source links.
 
 ## Implementation direction
 

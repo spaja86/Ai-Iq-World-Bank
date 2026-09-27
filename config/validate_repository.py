@@ -76,6 +76,23 @@ STRUCTURED_MD_DIRECTORIES = {'docs', 'governance', 'standards'}
 STRUCTURED_MD_FILES = {
     'config/sensitive-content-review-checklist.md',
 }
+ROUTING_BLOCK_REQUIRED_FILES = {
+    'template-plan.md',
+    'ai-iq-world-bank-poslovni-izvestaj.md',
+    'investiciona-i-operativna-imovina-registar-plan.md',
+    'javni-prikaz-emisija-i-kamatna-politika-plan.md',
+    'eksterni-repozitorijum-pravni-navod-plan.md',
+    'globalni-licencni-okvir-i-delatnosti-plan.md',
+    'vercel-naplata-poruka-plan.md',
+    'github-naplata-poruka-plan.md',
+    'covecnost-narativni-epilog-plan.md',
+}
+ROUTING_BLOCK_REQUIRED_SNIPPETS = [
+    'Audience layer:',
+    'Visibility handling:',
+    'Shared-lane checkpoint:',
+    'Release status:',
+]
 
 
 def fail(message: str) -> None:
@@ -158,6 +175,16 @@ def is_structured_markdown(relative_path: Path) -> bool:
     return relative_path.parts[0] in STRUCTURED_MD_DIRECTORIES
 
 
+def validate_routing_block(relative_path: Path, text: str) -> None:
+    relative_name = relative_path.as_posix()
+    if relative_name not in ROUTING_BLOCK_REQUIRED_FILES:
+        return
+
+    for snippet in ROUTING_BLOCK_REQUIRED_SNIPPETS:
+        if snippet not in text:
+            fail(f'{relative_path} is missing required routing-block field: {snippet}')
+
+
 for relative_path in REQUIRED_FILES:
     if not (ROOT / relative_path).exists():
         fail(f'Missing required file: {relative_path}')
@@ -171,6 +198,7 @@ for pattern in CONTENT_GLOBS:
             fail(f'Forbidden absolute checkout path found in {path.relative_to(ROOT)}')
         if path.suffix == '.md' and is_structured_markdown(path.relative_to(ROOT)):
             validate_document_control(path.relative_to(ROOT), text)
+            validate_routing_block(path.relative_to(ROOT), text)
 
 readme_text = (ROOT / 'README.md').read_text(encoding='utf-8')
 for linked_path in README_LINK_PATTERN.findall(readme_text):

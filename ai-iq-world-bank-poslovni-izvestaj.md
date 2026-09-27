@@ -18,6 +18,10 @@ Ovaj dokument implementira traženi plan za: opis poslovanja, kvartalni promet, 
 - **Creator lane upotreba:** samo za sanitizovan sažetak ili javno bezbedan narativ izveden iz odobrene verzije.
 - **Developer lane upotreba:** za strukturiranje podataka, validacione tragove i povezivanje sa kontrolisanim repozitorijumskim izlazima.
 - **Kontrolni koordinacioni dokument:** `docs/repository-operating-model.md`.
+- **Audience layer:** internal planning; creator/public-safe samo kroz odobren i sanitizovan downstream rezime.
+- **Visibility handling:** radna analiza ostaje `limited/internal` dok se ne napravi poseban sanitizovan javni izlaz.
+- **Shared-lane checkpoint:** pre reusable izlaza potvrditi controlling source, audience layer, visibility, shared-lane handoff i release readiness.
+- **Release status:** working input za analizu; nije samostalni canonical niti release-ready public-safe output.
 - Ako analiza menja kanonsko značenje, governance pravila ili javni prikaz, prvo se ažuriraju odgovarajući standard ili governance dokument, pa tek onda ovaj template i downstream output.
 
 ## 1) Cilj analize

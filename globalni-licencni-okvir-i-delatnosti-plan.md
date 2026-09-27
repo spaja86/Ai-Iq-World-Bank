@@ -23,6 +23,10 @@ Ovaj dokument je **fill-in template/framework** za implementaciju cilja da AI IQ
 - **Creator lane upotreba:** samo za sanitizovan javni prikaz statusa ili talasa ulaska bez neproverenih regulatornih tvrdnji.
 - **Developer lane upotreba:** za buduće mapiranje strukture podataka, statusnih polja i release traceability.
 - **Kontrolni koordinacioni dokument:** `docs/repository-operating-model.md`.
+- **Audience layer:** internal planning i regulatory/legal; creator/public-safe samo kroz neutralan sanitizovan statusni prikaz.
+- **Visibility handling:** radni licencni detalji ostaju `limited/internal`; javni prikaz ne sme preći potvrđeni regulatorni status.
+- **Shared-lane checkpoint:** pre reusable surface-a potvrditi controlling source, audience layer, visibility, shared-lane handoff i release readiness.
+- **Release status:** working licensing framework; nije canonical niti release-ready public-safe output bez pravne i governance potvrde.
 - Svaki javni ili prototipski izlaz iz ovog plana mora ostati downstream u odnosu na standarde, governance i pravno potvrđene statuse.
 
 ## Bezbednosna, pravna i reputaciona napomena

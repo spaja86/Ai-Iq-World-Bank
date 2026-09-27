@@ -64,6 +64,7 @@ This usage order is a reading and routing sequence. For the canonical non-trivia
 - Use developer lane for implementation, rendering, structure, validation, and traceability work.
 - Use creator lane for public-safe framing, reusable explanation, and audience alignment.
 - Use shared-lane checkpoints when a change crosses standards, governance, portfolio, plans, or prototype surfaces.
+- Keep root plans, support templates, and reusable public-output frameworks aligned to the same routing block metadata: primary lane, controlling coordination source, audience layer, visibility handling, shared-lane checkpoint, and release status.
 - Keep every reusable public-safe surface downstream from a controlling source reference and cataloged in the public-safe output set.
 
 ## Reusable public-safe output catalog

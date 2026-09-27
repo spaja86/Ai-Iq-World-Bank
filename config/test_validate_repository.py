@@ -55,6 +55,16 @@ class ValidateRepositoryTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('index.html is missing required id: repository-work-cycle', result.stdout)
 
+    def test_validator_requires_root_routing_block_metadata(self) -> None:
+        repo_root = self.copy_repo()
+        template_path = repo_root / 'template-plan.md'
+        template_text = template_path.read_text(encoding='utf-8')
+        template_path.write_text(template_text.replace('**Release status:**', '**Status for release:**', 1), encoding='utf-8')
+
+        result = self.run_validator(repo_root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('template-plan.md is missing required routing-block field: Release status:', result.stdout)
+
 
 if __name__ == '__main__':
     unittest.main()

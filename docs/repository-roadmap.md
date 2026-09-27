@@ -30,6 +30,7 @@
 
 - Require `governance/document-lifecycle.md` to describe the shared repository work cycle and cross-lane release expectations.
 - Require every structured document to follow the same metadata, visibility, and controlling-source rules.
+- Require reusable root plans and support templates to keep routing-block metadata for audience layer, visibility handling, shared-lane checkpoint, and release status.
 - Require low/medium/high change classification before merge when a change is non-trivial.
 - Record whether high-impact work creates new reusable public-safe outputs or concept surfaces.
 
@@ -44,6 +45,7 @@
 
 - Route domain plans through the same standards -> governance -> portfolio -> plans -> public-output sequence.
 - Add explicit lane usage and public/internal separation guidance to reusable root templates.
+- Keep reusable root templates explicit about audience layer, visibility handling, shared-lane checkpoint, and release status.
 - Keep legal, licensing, business, asset, and support plans explicit about controlling sources and sanitization requirements.
 - Keep support communication templates evidence-driven and downstream from governance and sensitive-content controls.
 
@@ -59,6 +61,7 @@
 - Maintain `config/validate_repository.py` as the primary repository enforcement path and keep the existing validation workflow aligned with it.
 - Expand validation only after the corresponding governance or operating-model rule is documented.
 - Validate required structure, prototype anchors, and exposed standard/version signals before merge.
+- Validate shared routing-block metadata on reusable root plans and support templates once those requirements are documented.
 - Re-check sanitization, visibility, and reusable-surface traceability before release.
 
 ## Phase G - Security and sanitization

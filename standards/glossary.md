@@ -32,13 +32,16 @@
 | Public-safe output flow | The sequence from canonical source through sanitization to a shareable document or prototype surface |
 | Concept surface | A reusable UI panel, document block, or creator-facing narrative surface that must remain linked to a controlling source |
 | Controlling source reference | The explicit standard, governance rule, or approved plan that authorizes a reusable public-facing surface |
+| Audience layer | The declared communication layer for a change or reusable surface such as creator/public-safe, canonical/standards, internal planning, regulatory/legal, or support/operational |
 | Public-safe output catalog | The tracked set of reusable public-safe repository surfaces such as the README, prototype panels, operating model, and approved public-safe plans |
 | Ownership lane | The role-based responsibility path for a repository area such as standards, governance, portfolio, support, or product |
 | Developer lane | The implementation path focused on rendering, structure, validation, and source-controlled prototype behavior |
 | Creator lane | The public-safe explanation path focused on narrative, framing, and shareable sanitized outputs |
 | Shared lane | The coordination path for source confirmation, visibility classification, release readiness, and concept-surface mapping across multiple owners |
+| Shared-lane handoff | The explicit point where work crossing developer, creator, governance, standards, or domain responsibilities requires shared-lane coordination before release |
 | Repository work cycle | The repository-wide sequence that identifies the controlling source, classifies visibility, updates upstream rules first, aligns downstream files, validates, and confirms sanitization |
 | Change impact matrix | A simple low/medium/high classification used to decide the minimum review depth for a change |
+| Release status | The declared state of a working surface that indicates whether it remains a routing input, a sanitized public-safe output, or a release-ready controlled artifact |
 | Release readiness | The final repository check that confirms standards, governance, visibility, validation, and sanitization are aligned before sharing |
 | Multilingual downstream layer | A translated or audience-specific presentation layer that must stay downstream from canonical standards and governance |
 | Read-only dashboard surface | A future public-safe display layer that may summarize approved outputs without introducing managed operational workflows |

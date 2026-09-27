@@ -17,6 +17,10 @@ Ovaj dokument je **fill-in template/framework** za javnu transparentnost podatak
 - **Primarni lane:** creator/public-safe output lane uz domain i governance koordinaciju.
 - **Developer lane upotreba:** za mapiranje javnih output surface-a, traceability i buduću prototipsku implementaciju.
 - **Kontrolni koordinacioni dokument:** `docs/repository-operating-model.md`.
+- **Audience layer:** creator/public-safe output uz jasno odvajanje od internal planning i canonical sloja.
+- **Visibility handling:** javna verzija ostaje `public-safe`; interni izvori i scenario detalji ostaju van javnog outputa.
+- **Shared-lane checkpoint:** pre objave potvrditi controlling source, audience layer, visibility, shared-lane handoff i release readiness za svaki reusable public surface.
+- **Release status:** working public-safe framework; nije samostalan canonical source bez upstream standard/governance potvrde.
 - Svaki javni prikaz mora ostati downstream u odnosu na `dinar-standard-plan.md`, `governance/document-lifecycle.md`, i sanitizovane izvore iz internih planova.
 
 ## Bezbednosna i javna napomena

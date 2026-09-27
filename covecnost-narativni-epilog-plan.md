@@ -13,6 +13,16 @@ Ovaj dokument uređuje jedan creator/public-safe narativni izlaz za odeljak „�
 
 Ne uvodi novu naučnu teoriju, ne postavlja novi standard i ne tretira metaforičke izraze kao proverene činjenice.
 
+## 0) Routing i lane napomena
+
+- **Primarni lane:** creator/public-safe narrative lane uz governance i portfolio koordinaciju.
+- **Developer lane upotreba:** za mapiranje reusable surface-a, traceability i buduću prototipsku ili dashboard integraciju.
+- **Kontrolni koordinacioni dokument:** `docs/repository-operating-model.md`.
+- **Audience layer:** creator/public-safe uz jasno odvajanje od canonical i internal planning sloja.
+- **Visibility handling:** ostaje `public-safe`, ali metafore, autorski ton i motivacioni iskazi ne smeju biti predstavljeni kao verifikovane činjenice.
+- **Shared-lane checkpoint:** pre reusable objave potvrditi controlling source, audience layer, visibility, shared-lane handoff i release readiness.
+- **Release status:** working narrative framework; nije canonical source niti finalni public-safe output dok se kanal i kontrolni izvor objave ne potvrde.
+
 ## 1) Namena i granice dokumenta
 
 - Primarna namena: oblikovanje snažne, ali kontrolisane poruke koja povezuje hrabrost, obrazovanje, inovaciju i ljudski potencijal.
