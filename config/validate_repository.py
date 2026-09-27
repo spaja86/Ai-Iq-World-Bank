@@ -220,6 +220,13 @@ def validate_routing_block(relative_path: Path, text: str, document_control_valu
             fail(f'{relative_path} is missing required routing-block field: {snippet}')
 
 
+def validate_required_markers(relative_path: str, markers: list[str], label: str) -> None:
+    text = (ROOT / relative_path).read_text(encoding='utf-8')
+    for marker in markers:
+        if marker not in text:
+            fail(f'{relative_path} is missing required {label} marker: {marker}')
+
+
 for relative_path in REQUIRED_FILES:
     if not (ROOT / relative_path).exists():
         fail(f'Missing required file: {relative_path}')
@@ -258,20 +265,15 @@ for marker in OPERATING_MODEL_REQUIRED_MARKERS:
     if marker not in operating_model_text:
         fail(f'docs/repository-operating-model.md is missing required operating-model marker: {marker}')
 
-meta_monetization_playbook_text = (ROOT / 'developer-creator-monetization-playbook-plan.md').read_text(encoding='utf-8')
-for marker in META_MONETIZATION_PLAYBOOK_REQUIRED_MARKERS:
-    if marker not in meta_monetization_playbook_text:
-        fail(
-            'developer-creator-monetization-playbook-plan.md is missing required '
-            f'meta-monetization marker: {marker}'
-        )
-
-licensing_plan_text = (ROOT / 'globalni-licencni-okvir-i-delatnosti-plan.md').read_text(encoding='utf-8')
-for marker in LICENSING_META_MONETIZATION_REQUIRED_MARKERS:
-    if marker not in licensing_plan_text:
-        fail(
-            'globalni-licencni-okvir-i-delatnosti-plan.md is missing required '
-            f'meta-monetization marker: {marker}'
-        )
+validate_required_markers(
+    'developer-creator-monetization-playbook-plan.md',
+    META_MONETIZATION_PLAYBOOK_REQUIRED_MARKERS,
+    'meta-monetization',
+)
+validate_required_markers(
+    'globalni-licencni-okvir-i-delatnosti-plan.md',
+    LICENSING_META_MONETIZATION_REQUIRED_MARKERS,
+    'meta-monetization',
+)
 
 print('Repository validation passed.')
