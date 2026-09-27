@@ -27,6 +27,7 @@ Ovaj dokument operacionalizuje “vrh programskog ekvivalenta” za Developer + 
 
 ### 1.1 Zvaničan naziv i status koncepta
 
+<!-- meta-monetization:official-term -->
 - **Zvaničan radni naziv pojma:** **Meta-monetization framework (`monetizacija nad monetizacijama`)**.
 - Ovaj pojam označava **viši operativni sloj Developer + Creator programa** koji upravlja, kombinuje i optimizuje više monetizacionih modela odjednom.
 - Klasifikacija koncepta: **limited/internal working approval framework** unutar shared-lane monetization planiranja.
@@ -206,6 +207,7 @@ Javni ili creator-facing izlaz sme sadržati samo:
 - agregirane rezultate,
 - formulacije bez neproverenih finansijskih ili regulatornih tvrdnji.
 
+<!-- meta-monetization:global-compatibility -->
 ## 10) Globalno širenje i jurisdikcijska kompatibilnost
 
 Meta-monetization framework mora biti kompatibilan sa sledećim režimima:
@@ -219,6 +221,7 @@ Meta-monetization framework mora biti kompatibilan sa sledećim režimima:
 
 - Model se ne sme predstavljati kao univerzalno dozvoljen bez pravne matrice.
 - Svaki meta-monetizacioni obrazac mora imati vezu ka `globalni-licencni-okvir-i-delatnosti-plan.md` kada utiče na tržišni ulazak, partnere ili licencu.
+<!-- meta-monetization:level-transition-check -->
 - Kada isti obrazac menja status od Nivo 2 ka Nivo 3, shared lane mora proveriti da li raste regulatorni, reputacioni ili partnerski rizik.
 - Creator/public-safe rezime koristi neutralne formulacije i ne sugeriše globalno operativno odobrenje.
 
