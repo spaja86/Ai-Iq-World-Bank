@@ -83,8 +83,8 @@ Pravilo: nijedna ponuda se ne tretira kao stabilna bez eksplicitne controlling s
 
 ### 5.1 North-star KPI
 
-- aktivni plaćeni korisnici (po periodu),
-- mesečni net prihod (MRR) kao finansijski signal stabilnosti.
+- **Primarni north-star KPI:** aktivni plaćeni korisnici (po periodu).
+- **Komplementarni finansijski signal:** mesečni net prihod (MRR), koji se koristi za potvrdu održivosti i kvaliteta monetizacionog rasta.
 
 ### 5.2 Operativni KPI
 
