@@ -58,7 +58,8 @@ Ovaj plan pokriva sledeće oblasti:
 
 ## 3) Vercel kao poseban operativni domen
 
-Vercel domen mora se voditi kao poseban poslovni i support sloj sa sledećim obaveznim entitetima:
+Vercel domen mora se voditi kao poseban poslovni i support sloj sa sledećim obaveznim entitetima.
+Statusi u ovoj tabeli predstavljaju minimalne lifecycle statuse po entitetu i ne zamenjuju specifične invoice statuse iz registra faktura:
 
 | Entitet | Opis | Minimalni interni status |
 |---|---|---|
@@ -120,9 +121,9 @@ Za svaku fakturu ili naplatni slučaj voditi najmanje:
 | Zaštićeni prihod / tok | preporučeno | monetizaciona veza |
 | Rizik prekida | da | release i continuity procena |
 
-### 5.2 Statusna logika
+### 5.2 Statusna logika za fakture
 
-Koristiti iste canonical statuse iz domenskog modela, uz lokalno objašnjenje:
+Za invoice registar koristiti sledeće canonical invoice statuse, uz lokalno objašnjenje:
 
 | Canonical status | Lokalno značenje |
 |---|---|
