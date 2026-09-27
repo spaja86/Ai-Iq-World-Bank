@@ -91,8 +91,8 @@ Any new reusable surface should identify its controlling source and fit this cat
 - **Sensitive asset/public split:** `investiciona-i-operativna-imovina-registar-plan.md` -> `javni-prikaz-emisija-i-kamatna-politika-plan.md` -> `config/sensitive-content-review-checklist.md`
 - **Expansion and licensing:** `globalni-licencni-okvir-i-delatnosti-plan.md` -> `docs/future-data-model.md` -> governance controls -> downstream monetization constraints
 - **Monetization playbook core:** `docs/repository-operating-model.md` + governance controls + billing support templates + `globalni-licencni-okvir-i-delatnosti-plan.md` -> `developer-creator-monetization-playbook-plan.md`
-- **Vercel operating core:** `docs/repository-operating-model.md` + `developer-creator-monetization-playbook-plan.md` -> `vercel-operativni-domen-i-fakture-plan.md` -> `vercel-naplata-poruka-plan.md`
-- **Vercel support communication:** `vercel-operativni-domen-i-fakture-plan.md` + `vercel-naplata-poruka-plan.md` -> `config/sensitive-content-review-checklist.md`
+- **Vercel operating planning chain:** `docs/repository-operating-model.md` + `developer-creator-monetization-playbook-plan.md` -> `vercel-operativni-domen-i-fakture-plan.md` -> `vercel-naplata-poruka-plan.md`
+- **Support release/sanitization gate:** `vercel-naplata-poruka-plan.md` + `github-naplata-poruka-plan.md` -> `config/sensitive-content-review-checklist.md`
 - **GitHub support communication:** `github-naplata-poruka-plan.md` -> `config/sensitive-content-review-checklist.md`
 - **Operating sequence:** `governance/document-lifecycle.md` + `docs/repository-operating-model.md` -> `docs/repository-roadmap.md` -> prototype/public-safe outputs
 
