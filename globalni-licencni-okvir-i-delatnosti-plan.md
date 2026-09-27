@@ -7,7 +7,7 @@
 - **Status:** working
 - **Visibility:** limited/internal
 - **Purpose:** Master framework for activity expansion, jurisdiction readiness, approvals, and licensing boundaries.
-- **Depends on:** `governance/document-lifecycle.md`, `docs/future-data-model.md`, `standards/glossary.md`
+- **Depends on:** `governance/document-lifecycle.md`, `docs/future-data-model.md`, `standards/glossary.md`, `developer-creator-monetization-playbook-plan.md`
 
 
 Ovaj dokument je **fill-in template/framework** za implementaciju cilja da AI IQ WORLD BANK funkcioniše kao široka globalna platforma/holding sa maksimalnim brojem dozvoljenih delatnosti, uz jasno razdvajanje:
@@ -154,6 +154,17 @@ Cilj ovog stuba nije jedna univerzalna licenca, već **globalni sistem licenci p
   - „moguće kroz lokalnu registraciju”
   - „moguće isključivo kroz partner/licencirani model”
   - „scenario bez javne regulatorne potvrde”
+
+### 4.3 Veza sa meta-monetizacijom
+
+- Shared-lane **meta-monetization framework (`monetizacija nad monetizacijama`)** iz `developer-creator-monetization-playbook-plan.md` može se primeniti samo kao downstream operativni okvir u odnosu na ovu licencnu matricu.
+- Svaki meta-monetizacioni obrazac mora biti klasifikovan kao:
+  - direktni prihod,
+  - kanal,
+  - pojačivač prihoda,
+  - ili upravljački sloj nad drugim prihodima.
+- Ako obrazac uključuje partnera, lokalnu registraciju, licencu ili korišćenje termina **bank**, ne sme biti predstavljen kao univerzalno dozvoljen bez jurisdikcijske procene.
+- Javni/public-safe prikaz takvog obrasca mora ostati neutralan i ne sme implicirati regulatornu potvrdu van popunjene pravne matrice.
 
 ## 5) Globalna licencna matrica
 
