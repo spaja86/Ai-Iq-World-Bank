@@ -1,0 +1,2 @@
+id,dobavljac_partner,iznos,valuta,datum,status,dokaz_attachment,odobrenje,referenca
+INV-TEMPLATE-001,primer-partner,0.00,RSD,2099-01-01,u-pripremi,business/sanitized/placeholder-dokaz.txt,na-cekanju,business/sanitized/placeholder-referenca.txt

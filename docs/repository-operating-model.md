@@ -130,6 +130,14 @@ Root plans, support templates, and reusable public-output frameworks should expo
 - Owns business, asset, public-policy, legal, licensing, and support templates.
 - Keeps scenario, internal, and public-safe variants clearly separated.
 - Supplies structured inputs for future reporting and platformization.
+- Uses `business/` templates for invoice, contract, evidence, and audit-trail structure while keeping sensitive raw artifacts outside source control unless sanitized.
+
+## Business operations segment (fakture i evidencija)
+
+- `business/fakture-registar-template.csv` defines required invoice fields: ID, partner, amount, currency, date, status, attachment evidence, approval, and reference.
+- `business/ugovori-registar-template.csv`, `business/evidencija-operativnih-dokaza-template.csv`, and `business/revizijski-trag-template.csv` standardize contract, evidence, and audit tracking.
+- `business/nedeljni-operativni-ciklus-template.md` defines weekly operating rhythm and owner responsibilities for finance, legal/compliance, developer lane, creator lane, and final release control.
+- Business templates remain limited/internal structures; public-safe outputs must be sanitized summaries derived through governance controls.
 
 <!-- operating-model:pillar-routing -->
 ## Repository pillar routing
@@ -144,6 +152,7 @@ Apply the operating model to every repository pillar:
 | Root plans and support templates | root `*.md` plan/support files | domain or support lane | separate structured internal inputs from public-safe outputs and declare lane usage |
 | Prototype | `index.html`, `styles.css`, `script.js` | developer + creator shared output | expose only approved public-safe surfaces tied to controlling sources |
 | Validation and CI | `config/validate_repository.py`, `.github/workflows/validate.yml` | developer / governance shared enforcement | enforce documented rules only after the rule exists in standards or governance |
+| GitHub collaboration governance | `.github/CODEOWNERS`, `.github/CONTRIBUTING.md`, `.github/SECURITY.md`, `.github/PULL_REQUEST_TEMPLATE.md`, `.github/ISSUE_TEMPLATE/` | governance + shared lane | enforce ownership routing, secure reporting, and release-gate checklist consistency |
 
 ## Handoffs and cross-lane boundaries
 

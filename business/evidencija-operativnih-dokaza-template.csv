@@ -1,0 +1,2 @@
+id,kategorija,datum,opis,dokaz_attachment,status,referenca
+DOK-TEMPLATE-001,finansije,2099-01-01,sanitizovani-opis,business/sanitized/placeholder-dokaz.txt,validirano,business/sanitized/placeholder-evidencija.txt

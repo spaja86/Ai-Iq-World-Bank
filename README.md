@@ -38,6 +38,8 @@ Core repository structure is intentionally stable:
 - `governance/` holds lifecycle and charter rules.
 - `standards/` holds canonical definitions and controlled terminology.
 - `config/` holds validation and sensitive-content review controls.
+- `.github/` holds repository governance assets (workflow, ownership, contribution/security, issue/PR templates).
+- `business/` holds sanitized business-operations templates (invoices, contracts, evidence, audit trail, weekly rhythm).
 - Root `*.md` files remain reserved for active standards and reusable fill-in plans already mapped in the portfolio.
 
 Do not add ad-hoc top-level files or new document groups without also updating:
@@ -79,6 +81,8 @@ Separate scenario assumptions, verified facts, internal detail, and public outpu
 - `governance/` - repository charter and lifecycle rules
 - `standards/` - INDEKURILANC and glossary standards
 - `config/` - validation and sensitive-content review controls
+- `.github/` - workflow and collaboration governance
+- `business/` - controlled business template segment
 - Root `*.md` planning files - reusable templates and active root standards
 
 ## Product baseline: INDEKURILANC
@@ -120,6 +124,12 @@ The interface must show numeric score, maturity status, operational interpretati
 - `vercel-operativni-domen-i-fakture-plan.md` - Vercel operational-domain plan for invoices, incidents, KPI, and ecosystem collaboration
 - `vercel-naplata-poruka-plan.md` - Vercel billing support template
 - `github-naplata-poruka-plan.md` - GitHub billing and subscription support template
+- `business/README.md` - controlled business-operations template segment and sensitive-content boundary
+- `business/fakture-registar-template.csv` - invoice register template (sanitized structure only)
+- `business/ugovori-registar-template.csv` - contract register template (sanitized structure only)
+- `business/evidencija-operativnih-dokaza-template.csv` - operational evidence register template (sanitized structure only)
+- `business/revizijski-trag-template.csv` - audit-trail template (sanitized structure only)
+- `business/nedeljni-operativni-ciklus-template.md` - weekly operating rhythm template with owner-lane responsibilities
 
 ### Portfolio and roadmap references
 
@@ -131,6 +141,7 @@ The interface must show numeric score, maturity status, operational interpretati
 ## Governance and protection rules
 
 - Planning documents are fill-in templates; populated versions with sensitive business or asset details must stay out of source control unless sanitized.
+- Business registry templates in `business/` are schema-only; real invoices/contracts/attachments stay outside source control unless sanitized.
 - Public-facing content must clearly separate scenario assumptions from verified facts.
 - DINAR values must always carry status, version, and effective-date context.
 - Repository documents should reference sibling files with repository-relative paths.
