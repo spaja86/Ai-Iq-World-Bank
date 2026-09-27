@@ -3,6 +3,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import os
 from pathlib import Path
 
 
@@ -17,12 +18,16 @@ class ValidateRepositoryTests(unittest.TestCase):
         shutil.copytree(REPO_ROOT, target, ignore=shutil.ignore_patterns('.git', '__pycache__', '*.pyc'))
         return target
 
-    def run_validator(self, repo_root: Path) -> subprocess.CompletedProcess[str]:
+    def run_validator(self, repo_root: Path, validate_runtime_business: bool = False) -> subprocess.CompletedProcess[str]:
+        env = os.environ.copy()
+        if validate_runtime_business:
+            env['AIIQ_VALIDATE_RUNTIME_BUSINESS'] = '1'
         return subprocess.run(
             [sys.executable, 'config/validate_repository.py'],
             cwd=repo_root,
             capture_output=True,
             text=True,
+            env=env,
             check=False,
         )
 
@@ -104,7 +109,7 @@ class ValidateRepositoryTests(unittest.TestCase):
             encoding='utf-8',
         )
 
-        result = self.run_validator(repo_root)
+        result = self.run_validator(repo_root, validate_runtime_business=True)
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('has stale status', result.stdout)
 
@@ -134,7 +139,7 @@ class ValidateRepositoryTests(unittest.TestCase):
             encoding='utf-8',
         )
 
-        result = self.run_validator(repo_root)
+        result = self.run_validator(repo_root, validate_runtime_business=True)
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('has future date', result.stdout)
 
