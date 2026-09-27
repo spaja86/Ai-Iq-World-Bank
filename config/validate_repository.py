@@ -1,3 +1,5 @@
+import csv
+from datetime import date, datetime
 from pathlib import Path
 import re
 import sys
@@ -17,6 +19,12 @@ REQUIRED_FILES = [
     'standards/indekurilanc-standard.md',
     'standards/glossary.md',
     'config/sensitive-content-review-checklist.md',
+    'business/README.md',
+    'business/fakture-registar-template.csv',
+    'business/ugovori-registar-template.csv',
+    'business/evidencija-operativnih-dokaza-template.csv',
+    'business/revizijski-trag-template.csv',
+    'business/nedeljni-operativni-ciklus-template.md',
 ]
 FORBIDDEN_PATH_SNIPPET = '/'.join([
     '',
@@ -96,6 +104,57 @@ LICENSING_META_MONETIZATION_REQUIRED_MARKERS = [
     '<!-- licensing:meta-monetization-link -->',
     '<!-- licensing:meta-monetization-classification -->',
 ]
+CSV_TEMPLATE_HEADERS = {
+    'business/fakture-registar-template.csv': [
+        'id',
+        'dobavljac_partner',
+        'iznos',
+        'valuta',
+        'datum',
+        'status',
+        'dokaz_attachment',
+        'odobrenje',
+        'referenca',
+    ],
+    'business/ugovori-registar-template.csv': [
+        'id',
+        'partner',
+        'tip_ugovora',
+        'datum_potpisivanja',
+        'status',
+        'odgovorno_lice',
+        'referenca',
+    ],
+    'business/evidencija-operativnih-dokaza-template.csv': [
+        'id',
+        'kategorija',
+        'datum',
+        'opis',
+        'dokaz_attachment',
+        'status',
+        'referenca',
+    ],
+    'business/revizijski-trag-template.csv': [
+        'id',
+        'datum',
+        'oblast',
+        'promena',
+        'vlasnik',
+        'odobrenje',
+        'referenca',
+    ],
+}
+INVOICE_ALLOWED_STATUSES = {
+    'u-pripremi',
+    'na-proveri',
+    'na-odobrenju',
+    'odobreno',
+    'placeno',
+    'odbijeno',
+    'stornirano',
+}
+INVOICE_STALE_STATUSES = {'na-proveri', 'na-odobrenju'}
+INVOICE_STALE_DAYS = 30
 
 
 def fail(message: str) -> None:
@@ -227,6 +286,83 @@ def validate_required_markers(relative_path: str, markers: list[str], label: str
             fail(f'{relative_path} is missing required {label} marker: {marker}')
 
 
+def normalize_csv_value(value: str | None) -> str:
+    return (value or '').strip()
+
+
+def validate_csv_template_headers(relative_path: str, required_headers: list[str]) -> list[dict[str, str]]:
+    with (ROOT / relative_path).open(encoding='utf-8', newline='') as csv_file:
+        reader = csv.DictReader(csv_file)
+        headers = [header.strip() for header in (reader.fieldnames or [])]
+        if headers != required_headers:
+            fail(f'{relative_path} must use exact headers: {", ".join(required_headers)}')
+        return list(reader)
+
+
+def validate_repository_relative_reference(relative_path: str, reference_value: str, row_number: int) -> None:
+    if not reference_value:
+        return
+    if reference_value.startswith('/') or FORBIDDEN_PATH_SNIPPET in reference_value:
+        fail(f'{relative_path} row {row_number} has non-repository-relative reference: {reference_value}')
+    if '..' in Path(reference_value).parts:
+        fail(f'{relative_path} row {row_number} has non-repository-relative reference: {reference_value}')
+
+
+def validate_invoice_registry_template() -> None:
+    relative_path = 'business/fakture-registar-template.csv'
+    rows = validate_csv_template_headers(relative_path, CSV_TEMPLATE_HEADERS[relative_path])
+    seen_invoice_ids = set()
+    today = date.today()
+
+    for row_number, row in enumerate(rows, start=2):
+        values = {key: normalize_csv_value(row.get(key)) for key in CSV_TEMPLATE_HEADERS[relative_path]}
+        if not any(values.values()):
+            continue
+
+        invoice_id = values['id']
+        if not invoice_id:
+            fail(f'{relative_path} row {row_number} must include id')
+        if invoice_id in seen_invoice_ids:
+            fail(f'{relative_path} row {row_number} has duplicate id: {invoice_id}')
+        seen_invoice_ids.add(invoice_id)
+
+        for required_key in ['dobavljac_partner', 'iznos', 'valuta', 'datum', 'status', 'odobrenje']:
+            if not values[required_key]:
+                fail(f'{relative_path} row {row_number} is missing required value: {required_key}')
+
+        status = values['status']
+        if status not in INVOICE_ALLOWED_STATUSES:
+            fail(f'{relative_path} row {row_number} has invalid status: {status}')
+
+        try:
+            invoice_date = datetime.strptime(values['datum'], '%Y-%m-%d').date()
+        except ValueError:
+            fail(f'{relative_path} row {row_number} must use YYYY-MM-DD date format')
+
+        if status in INVOICE_STALE_STATUSES and (today - invoice_date).days > INVOICE_STALE_DAYS:
+            fail(
+                f'{relative_path} row {row_number} has stale status "{status}" '
+                f'older than {INVOICE_STALE_DAYS} days'
+            )
+
+        validate_repository_relative_reference(relative_path, values['referenca'], row_number)
+        validate_repository_relative_reference(relative_path, values['dokaz_attachment'], row_number)
+
+
+def validate_business_templates() -> None:
+    for relative_path, headers in CSV_TEMPLATE_HEADERS.items():
+        if relative_path == 'business/fakture-registar-template.csv':
+            continue
+        rows = validate_csv_template_headers(relative_path, headers)
+        for row_number, row in enumerate(rows, start=2):
+            values = {key: normalize_csv_value(row.get(key)) for key in headers}
+            if not any(values.values()):
+                continue
+            validate_repository_relative_reference(relative_path, values.get('referenca', ''), row_number)
+            if 'dokaz_attachment' in values:
+                validate_repository_relative_reference(relative_path, values['dokaz_attachment'], row_number)
+
+
 for relative_path in REQUIRED_FILES:
     if not (ROOT / relative_path).exists():
         fail(f'Missing required file: {relative_path}')
@@ -275,5 +411,7 @@ validate_required_markers(
     LICENSING_META_MONETIZATION_REQUIRED_MARKERS,
     'meta-monetization',
 )
+validate_invoice_registry_template()
+validate_business_templates()
 
 print('Repository validation passed.')

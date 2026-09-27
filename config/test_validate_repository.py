@@ -93,6 +93,36 @@ class ValidateRepositoryTests(unittest.TestCase):
         result = self.run_validator(repo_root)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
+    def test_validator_rejects_stale_invoice_pending_status(self) -> None:
+        repo_root = self.copy_repo()
+        invoices_path = repo_root / 'business/fakture-registar-template.csv'
+        invoices_path.write_text(
+            '\n'.join([
+                'id,dobavljac_partner,iznos,valuta,datum,status,dokaz_attachment,odobrenje,referenca',
+                'INV-001,partner,1000.00,RSD,2020-01-01,na-proveri,business/sanitized/dokaz.txt,na-cekanju,business/sanitized/ref.txt',
+            ]),
+            encoding='utf-8',
+        )
+
+        result = self.run_validator(repo_root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('has stale status', result.stdout)
+
+    def test_validator_rejects_invalid_business_csv_headers(self) -> None:
+        repo_root = self.copy_repo()
+        contracts_path = repo_root / 'business/ugovori-registar-template.csv'
+        contracts_path.write_text(
+            '\n'.join([
+                'id,partner,tip_ugovora,datum_potpisivanja,status,odgovorno_lice',
+                'UG-001,partner,okvirni,2099-01-01,u-pripremi,owner',
+            ]),
+            encoding='utf-8',
+        )
+
+        result = self.run_validator(repo_root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('must use exact headers', result.stdout)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,0 +1,36 @@
+name: Bug report
+description: Report a functional or validation issue
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Confirm controlling source and lane impact before submitting.
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: Short issue summary
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-submit checks
+      options:
+        - label: I confirmed the issue does not include secrets or sensitive operational detail
+          required: true
+        - label: I included repository-relative file references
+          required: true
