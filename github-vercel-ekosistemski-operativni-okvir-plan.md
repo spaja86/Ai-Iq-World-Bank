@@ -159,15 +159,27 @@ GitHub domen mora eksplicitno razdvajati:
 
 ## 7) Decision gates
 
-| Gate | Pitanje potvrde | Minimalni dokaz |
-|---|---|---|
-| Gate 1 — controlling source | Da li je controlling source potvrđen? | reference ka `docs/repository-operating-model.md` i relevantnim downstream planovima |
-| Gate 2 — audience/visibility | Da li su audience layer i visibility klasifikovani? | eksplicitan routing blok i separation pravila |
-| Gate 3 — billing/support facts | Da li su billing i support činjenice potvrđene? | invoice/transaction/support case trag ili potvrđen status |
-| Gate 4 — continuity mapping | Da li su continuity i poslovni uticaj mapirani? | veza ka projektu, toku, repo-u ili deployment-u |
-| Gate 5 — creator/developer sync | Da li su creator poruka i developer evidencija usklađeni? | shared-lane pregled poruke, statusa i tehničkog uticaja |
-| Gate 6 — reusable output approval | Da li shared lane odobrava reusable output? | potvrđen visibility handling i release readiness |
-| Gate 7 — governance/licensing review | Da li je potreban širi governance ili licensing pregled? | dodatna procena za partnerski, enterprise ili cross-jurisdiction kontekst |
+1. **Gate 1 — controlling source**
+   - pitanje potvrde: da li je controlling source potvrđen
+   - minimalni dokaz: reference ka `docs/repository-operating-model.md` i relevantnim downstream planovima
+2. **Gate 2 — audience/visibility**
+   - pitanje potvrde: da li su audience layer i visibility klasifikovani
+   - minimalni dokaz: eksplicitan routing blok i separation pravila
+3. **Gate 3 — billing/support facts**
+   - pitanje potvrde: da li su billing i support činjenice potvrđene
+   - minimalni dokaz: invoice/transaction/support case trag ili potvrđen status
+4. **Gate 4 — continuity mapping**
+   - pitanje potvrde: da li su continuity i poslovni uticaj mapirani
+   - minimalni dokaz: veza ka projektu, toku, repo-u ili deployment-u
+5. **Gate 5 — creator/developer sync**
+   - pitanje potvrde: da li su creator poruka i developer evidencija usklađeni
+   - minimalni dokaz: shared-lane pregled poruke, statusa i tehničkog uticaja
+6. **Gate 6 — reusable output approval**
+   - pitanje potvrde: da li shared lane odobrava reusable output
+   - minimalni dokaz: potvrđen visibility handling i release readiness
+7. **Gate 7 — governance/licensing review**
+   - pitanje potvrde: da li je potreban širi governance ili licensing pregled
+   - minimalni dokaz: dodatna procena za partnerski, enterprise ili cross-jurisdiction kontekst
 
 ## 8) KPI okvir
 
