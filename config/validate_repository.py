@@ -87,16 +87,14 @@ ROUTING_BLOCK_REQUIRED_SNIPPETS = [
     'Shared-lane checkpoint:',
     'Release status:',
 ]
-META_MONETIZATION_PLAYBOOK_REQUIRED_SNIPPETS = [
-    'Meta-monetization framework (`monetizacija nad monetizacijama`)',
-    '## 10) Globalno širenje i jurisdikcijska kompatibilnost',
-    'Kada isti obrazac menja status od Nivo 2 ka Nivo 3',
-    'globalni-licencni-okvir-i-delatnosti-plan.md',
+META_MONETIZATION_PLAYBOOK_REQUIRED_MARKERS = [
+    '<!-- meta-monetization:official-term -->',
+    '<!-- meta-monetization:global-compatibility -->',
+    '<!-- meta-monetization:level-transition-check -->',
 ]
-LICENSING_META_MONETIZATION_REQUIRED_SNIPPETS = [
-    '### 4.3 Veza sa meta-monetizacijom',
-    'meta-monetization framework (`monetizacija nad monetizacijama`)',
-    'upravljački sloj nad drugim prihodima',
+LICENSING_META_MONETIZATION_REQUIRED_MARKERS = [
+    '<!-- licensing:meta-monetization-link -->',
+    '<!-- licensing:meta-monetization-classification -->',
 ]
 
 
@@ -261,19 +259,19 @@ for marker in OPERATING_MODEL_REQUIRED_MARKERS:
         fail(f'docs/repository-operating-model.md is missing required operating-model marker: {marker}')
 
 meta_monetization_playbook_text = (ROOT / 'developer-creator-monetization-playbook-plan.md').read_text(encoding='utf-8')
-for snippet in META_MONETIZATION_PLAYBOOK_REQUIRED_SNIPPETS:
-    if snippet not in meta_monetization_playbook_text:
+for marker in META_MONETIZATION_PLAYBOOK_REQUIRED_MARKERS:
+    if marker not in meta_monetization_playbook_text:
         fail(
             'developer-creator-monetization-playbook-plan.md is missing required '
-            f'meta-monetization snippet: {snippet}'
+            f'meta-monetization marker: {marker}'
         )
 
 licensing_plan_text = (ROOT / 'globalni-licencni-okvir-i-delatnosti-plan.md').read_text(encoding='utf-8')
-for snippet in LICENSING_META_MONETIZATION_REQUIRED_SNIPPETS:
-    if snippet not in licensing_plan_text:
+for marker in LICENSING_META_MONETIZATION_REQUIRED_MARKERS:
+    if marker not in licensing_plan_text:
         fail(
             'globalni-licencni-okvir-i-delatnosti-plan.md is missing required '
-            f'meta-monetization snippet: {snippet}'
+            f'meta-monetization marker: {marker}'
         )
 
 print('Repository validation passed.')

@@ -155,9 +155,11 @@ Cilj ovog stuba nije jedna univerzalna licenca, već **globalni sistem licenci p
   - „moguće isključivo kroz partner/licencirani model”
   - „scenario bez javne regulatorne potvrde”
 
+<!-- licensing:meta-monetization-link -->
 ### 4.3 Veza sa meta-monetizacijom
 
 - Shared-lane **meta-monetization framework (`monetizacija nad monetizacijama`)** iz `developer-creator-monetization-playbook-plan.md` može se primeniti samo kao downstream operativni okvir u odnosu na ovu licencnu matricu.
+<!-- licensing:meta-monetization-classification -->
 - Svaki meta-monetizacioni obrazac mora biti klasifikovan kao:
   - direktni prihod,
   - kanal,
