@@ -370,6 +370,8 @@ def validate_runtime_invoice_registry_if_present() -> None:
     registry_path = ROOT / OPTIONAL_RUNTIME_INVOICE_REGISTRY
     if not registry_path.exists():
         return
+    if not registry_path.is_file():
+        fail(f'{OPTIONAL_RUNTIME_INVOICE_REGISTRY} must be a file')
     rows = validate_csv_template_headers(OPTIONAL_RUNTIME_INVOICE_REGISTRY, INVOICE_HEADERS)
     validate_invoice_rows(OPTIONAL_RUNTIME_INVOICE_REGISTRY, rows, enforce_temporal_controls=True)
 

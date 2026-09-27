@@ -204,6 +204,15 @@ class ValidateRepositoryTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('non-repository-relative reference', result.stdout)
 
+    def test_validator_rejects_runtime_invoice_registry_directory(self) -> None:
+        repo_root = self.copy_repo()
+        runtime_registry_path = repo_root / 'business/fakture-registar.csv'
+        runtime_registry_path.mkdir(parents=True, exist_ok=True)
+
+        result = self.run_validator(repo_root, validate_runtime_business=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('must be a file', result.stdout)
+
 
 if __name__ == '__main__':
     unittest.main()
