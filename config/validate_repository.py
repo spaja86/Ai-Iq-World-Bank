@@ -76,16 +76,10 @@ STRUCTURED_MD_DIRECTORIES = {'docs', 'governance', 'standards'}
 STRUCTURED_MD_FILES = {
     'config/sensitive-content-review-checklist.md',
 }
-ROUTING_BLOCK_REQUIRED_FILES = {
-    'template-plan.md',
-    'ai-iq-world-bank-poslovni-izvestaj.md',
-    'investiciona-i-operativna-imovina-registar-plan.md',
-    'javni-prikaz-emisija-i-kamatna-politika-plan.md',
-    'eksterni-repozitorijum-pravni-navod-plan.md',
-    'globalni-licencni-okvir-i-delatnosti-plan.md',
-    'vercel-naplata-poruka-plan.md',
-    'github-naplata-poruka-plan.md',
-    'covecnost-narativni-epilog-plan.md',
+ROUTING_BLOCK_REQUIRED_CATEGORIES = {
+    'Templates',
+    'Public Output',
+    'Support',
 }
 ROUTING_BLOCK_REQUIRED_SNIPPETS = [
     'Audience layer:',
@@ -100,9 +94,9 @@ def fail(message: str) -> None:
     sys.exit(1)
 
 
-def validate_document_control(relative_path: Path, text: str) -> None:
+def parse_document_control_values(relative_path: Path, text: str) -> dict[str, str]:
     if relative_path.as_posix() in STRUCTURED_MD_EXCLUDES:
-        return
+        return {}
 
     lines = text.splitlines()
     if not lines or not lines[0].startswith('# '):
@@ -163,6 +157,12 @@ def validate_document_control(relative_path: Path, text: str) -> None:
         if not (ROOT / dependency_path).exists():
             fail(f'{relative_path} depends on missing file: {dependency}')
 
+    return values
+
+
+def validate_document_control(relative_path: Path, text: str) -> dict[str, str]:
+    return parse_document_control_values(relative_path, text)
+
 
 def is_structured_markdown(relative_path: Path) -> bool:
     relative_name = relative_path.as_posix()
@@ -175,9 +175,10 @@ def is_structured_markdown(relative_path: Path) -> bool:
     return relative_path.parts[0] in STRUCTURED_MD_DIRECTORIES
 
 
-def validate_routing_block(relative_path: Path, text: str) -> None:
-    relative_name = relative_path.as_posix()
-    if relative_name not in ROUTING_BLOCK_REQUIRED_FILES:
+def validate_routing_block(relative_path: Path, text: str, document_control_values: dict[str, str]) -> None:
+    if len(relative_path.parts) != 1:
+        return
+    if document_control_values.get('Category') not in ROUTING_BLOCK_REQUIRED_CATEGORIES:
         return
 
     for snippet in ROUTING_BLOCK_REQUIRED_SNIPPETS:
@@ -197,8 +198,8 @@ for pattern in CONTENT_GLOBS:
         if FORBIDDEN_PATH_SNIPPET in text:
             fail(f'Forbidden absolute checkout path found in {path.relative_to(ROOT)}')
         if path.suffix == '.md' and is_structured_markdown(path.relative_to(ROOT)):
-            validate_document_control(path.relative_to(ROOT), text)
-            validate_routing_block(path.relative_to(ROOT), text)
+            document_control_values = validate_document_control(path.relative_to(ROOT), text)
+            validate_routing_block(path.relative_to(ROOT), text, document_control_values)
 
 readme_text = (ROOT / 'README.md').read_text(encoding='utf-8')
 for linked_path in README_LINK_PATTERN.findall(readme_text):
