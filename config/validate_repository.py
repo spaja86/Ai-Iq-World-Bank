@@ -304,6 +304,8 @@ def validate_csv_template_headers(relative_path: str, required_headers: list[str
 def validate_repository_relative_reference(relative_path: str, reference_value: str, row_number: int) -> None:
     if not reference_value:
         return
+    if re.match(r'^[a-zA-Z][a-zA-Z0-9+.-]*://', reference_value):
+        fail(f'{relative_path} row {row_number} has non-repository-relative reference: {reference_value}')
     if reference_value.startswith('/') or FORBIDDEN_PATH_SNIPPET in reference_value:
         fail(f'{relative_path} row {row_number} has non-repository-relative reference: {reference_value}')
     if '..' in Path(reference_value).parts:
