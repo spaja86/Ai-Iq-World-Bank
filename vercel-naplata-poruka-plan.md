@@ -7,10 +7,10 @@
 - **Status:** working
 - **Visibility:** limited/internal
 - **Purpose:** Template for Vercel billing and reactivation communication with controlled supporting evidence.
-- **Depends on:** `config/sensitive-content-review-checklist.md`, `governance/document-lifecycle.md`
+- **Depends on:** `config/sensitive-content-review-checklist.md`, `governance/document-lifecycle.md`, `vercel-operativni-domen-i-fakture-plan.md`
 
 
-Ovaj dokument implementira traženi plan za formalnu komunikaciju sa Vercel podrškom povodom problema sa naplatom i nastavka poslovanja.
+Ovaj dokument implementira traženi plan za formalnu komunikaciju sa Vercel podrškom povodom problema sa naplatom i nastavka poslovanja, kao izvršni support sloj downstream od `vercel-operativni-domen-i-fakture-plan.md`.
 
 ## 0) Routing i lane napomena
 
@@ -30,6 +30,13 @@ Ovaj dokument implementira traženi plan za formalnu komunikaciju sa Vercel podr
 - jasan opis problema sa naplatom
 - potvrda da je zahtev za nastavak pretplate već poslat
 - hitan zahtev za proveru billing statusa i nastavak usluge bez prekida
+
+## 1a) Mesto u Vercel operativnom domenu
+
+- koristiti ovaj dokument kada je slučaj već evidentiran u internom Vercel registru,
+- svaku poslatu poruku povezati sa invoice, transaction ili support case tragom,
+- deljeni sadržaj mora ostati usklađen sa visibility pravilima iz `vercel-operativni-domen-i-fakture-plan.md`,
+- creator/public-safe rezime praviti tek posle shared-lane potvrde.
 
 ## 2) Činjenice koje treba popuniti pre slanja
 
