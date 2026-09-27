@@ -167,10 +167,10 @@ GitHub domen mora eksplicitno razdvajati:
    - minimalni dokaz: eksplicitan routing blok i separation pravila
 3. **Gate 3 — billing/support facts**
    - pitanje potvrde: da li su billing i support činjenice potvrđene
-   - minimalni dokaz: invoice/transaction/support case trag ili potvrđen status
+   - minimalni dokaz: invoice/transaction trag, trag support slučaja ili potvrđen status
 4. **Gate 4 — continuity mapping**
    - pitanje potvrde: da li su continuity i poslovni uticaj mapirani
-   - minimalni dokaz: veza ka projektu, toku, repo-u ili deployment-u
+   - minimalni dokaz: veza ka projektu, toku, repozitorijumu ili deployment-u
 5. **Gate 5 — creator/developer sync**
    - pitanje potvrde: da li su creator poruka i developer evidencija usklađeni
    - minimalni dokaz: shared-lane pregled poruke, statusa i tehničkog uticaja
