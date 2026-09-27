@@ -109,7 +109,7 @@ Pravilo: nijedna ponuda se ne tretira kao stabilna bez eksplicitne controlling s
 
 ## 7) Podrška i naplata kao deo monetizacionog sistema
 
-Billing/support šabloni (`github-naplata-poruka-plan.md`, `vercel-naplata-poruka-plan.md`) koriste se kao incident->resolution sloj monetizacionog sistema.
+Billing/support šabloni (`github-naplata-poruka-plan.md`, `vercel-naplata-poruka-plan.md`) koriste se kao incident-to-resolution sloj monetizacionog sistema.
 
 ### 7.1 Jedinstven tok
 
@@ -121,8 +121,12 @@ Billing/support šabloni (`github-naplata-poruka-plan.md`, `vercel-naplata-poruk
 
 ### 7.2 Eskalacija i SLA okvir
 
-- Definisati nivoe hitnosti (normal/high/critical) po uticaju na kontinuitet.
+- Nivoi hitnosti moraju se klasifikovati po sledećem minimumu:
+  - **normal:** lokalni incident bez prekida ključnog poslovnog toka;
+  - **high:** incident sa delimičnim prekidom ili značajnim degradiranjem ključnog toka;
+  - **critical:** incident sa potpunim prekidom ključnog toka ili blokadom naplate/aktivacije.
 - Evidentirati vreme reakcije i vreme razrešenja kao obavezne metričke tačke.
+- Kada je potrebna detaljnija klasifikacija i approval logika, primeniti controlling source u `docs/repository-operating-model.md` i `governance/document-lifecycle.md`.
 
 ## 8) Operativni ciklus izvršenja
 
