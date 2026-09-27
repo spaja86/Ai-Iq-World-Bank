@@ -7,7 +7,7 @@
 - **Status:** working
 - **Visibility:** limited/internal
 - **Purpose:** Working playbook for implementing the Developer + Creator program-equivalent monetization model, including the shared-lane meta-monetization framework, with controlled routing, KPI governance, and release gates.
-- **Depends on:** `docs/repository-operating-model.md`, `governance/document-lifecycle.md`, `docs/document-portfolio.md`, `standards/glossary.md`, `globalni-licencni-okvir-i-delatnosti-plan.md`, `vercel-operativni-domen-i-fakture-plan.md`, `github-naplata-poruka-plan.md`, `vercel-naplata-poruka-plan.md`, `config/sensitive-content-review-checklist.md`
+- **Depends on:** `docs/repository-operating-model.md`, `governance/document-lifecycle.md`, `docs/document-portfolio.md`, `standards/glossary.md`, `globalni-licencni-okvir-i-delatnosti-plan.md`, `github-naplata-poruka-plan.md`, `vercel-naplata-poruka-plan.md`, `config/sensitive-content-review-checklist.md`
 
 Ovaj dokument operacionalizuje “vrh programskog ekvivalenta” za Developer + Creator model kroz kontrolisani shared-lane okvir meta-monetizacije, potpuno downstream u odnosu na postojeći operating model.
 
