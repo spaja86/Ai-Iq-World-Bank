@@ -256,7 +256,7 @@ Billing/support šabloni (`github-naplata-poruka-plan.md`, `vercel-naplata-poruk
 - Ne objavljivati osetljive billing, identifikacione ili operativne detalje.
 - Svaki javni surface mora ostati downstream od standards/governance izvora i operating model routing pravila.
 
-## 14) Završna operacionalizacija i approval preporuka
+## 14) Završna operacionalizacija i implementacioni rezime
 
 Ovaj playbook služi kao radni referentni okvir za Developer + Creator monetizaciju i mapiranje budućih izmena kroz obavezni redosled:
 
@@ -268,7 +268,7 @@ Ovaj playbook služi kao radni referentni okvir za Developer + Creator monetizac
 
 Svaka buduća izmena treba da zadrži trag: controlling source, audience layer, visibility, ownership lane + shared handoff, release status.
 
-Preporuka ovog dokumenta je da se **meta-monetization framework (`monetizacija nad monetizacijama`)** tretira kao:
+U skladu sa `standards/glossary.md`, `docs/repository-operating-model.md` i `globalni-licencni-okvir-i-delatnosti-plan.md`, ovaj playbook implementira **meta-monetization framework (`monetizacija nad monetizacijama`)** kao:
 
 - viši operativni sloj Developer + Creator programa,
 - framework za orkestraciju više monetizacionih obrazaca,
