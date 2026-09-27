@@ -193,20 +193,19 @@ def validate_routing_block(relative_path: Path, text: str, document_control_valu
     if current_section_lines:
         sections.append('\n'.join(current_section_lines))
 
-    routing_section_text = next(
-        (
-            section
-            for section in sections
-            if any(snippet in section for snippet in ROUTING_BLOCK_REQUIRED_SNIPPETS)
-        ),
-        None,
-    )
+    best_section_text = ''
+    best_match_count = 0
+    for section in sections:
+        match_count = sum(1 for snippet in ROUTING_BLOCK_REQUIRED_SNIPPETS if snippet in section)
+        if match_count > best_match_count:
+            best_section_text = section
+            best_match_count = match_count
 
-    if routing_section_text is None:
+    if best_match_count == 0:
         fail(f'{relative_path} is missing a routing section for reusable document metadata')
 
     for snippet in ROUTING_BLOCK_REQUIRED_SNIPPETS:
-        if snippet not in routing_section_text:
+        if snippet not in best_section_text:
             fail(f'{relative_path} is missing required routing-block field: {snippet}')
 
 
