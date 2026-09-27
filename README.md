@@ -117,6 +117,7 @@ The interface must show numeric score, maturity status, operational interpretati
 - `eksterni-repozitorijum-pravni-navod-plan.md` - legal and reputational handling template for external claims
 - `globalni-licencni-okvir-i-delatnosti-plan.md` - master licensing and activity-expansion template
 - `developer-creator-monetization-playbook-plan.md` - developer + creator monetization playbook for offer tiers, shared-lane meta-monetization, KPI governance, and release-gate control
+- `vercel-operativni-domen-i-fakture-plan.md` - Vercel operational-domain plan for invoices, incidents, KPI, and ecosystem collaboration
 - `vercel-naplata-poruka-plan.md` - Vercel billing support template
 - `github-naplata-poruka-plan.md` - GitHub billing and subscription support template
 

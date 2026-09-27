@@ -7,7 +7,7 @@
 - **Status:** working
 - **Visibility:** limited/internal
 - **Purpose:** Working playbook for implementing the Developer + Creator program-equivalent monetization model, including the shared-lane meta-monetization framework, with controlled routing, KPI governance, and release gates.
-- **Depends on:** `docs/repository-operating-model.md`, `governance/document-lifecycle.md`, `docs/document-portfolio.md`, `standards/glossary.md`, `globalni-licencni-okvir-i-delatnosti-plan.md`, `github-naplata-poruka-plan.md`, `vercel-naplata-poruka-plan.md`, `config/sensitive-content-review-checklist.md`
+- **Depends on:** `docs/repository-operating-model.md`, `governance/document-lifecycle.md`, `docs/document-portfolio.md`, `standards/glossary.md`, `globalni-licencni-okvir-i-delatnosti-plan.md`, `vercel-operativni-domen-i-fakture-plan.md`, `github-naplata-poruka-plan.md`, `vercel-naplata-poruka-plan.md`, `config/sensitive-content-review-checklist.md`
 
 Ovaj dokument operacionalizuje “vrh programskog ekvivalenta” za Developer + Creator model kroz kontrolisani shared-lane okvir meta-monetizacije, potpuno downstream u odnosu na postojeći operating model.
 
@@ -40,6 +40,7 @@ Ovaj dokument operacionalizuje “vrh programskog ekvivalenta” za Developer + 
 - **Terminološki i lifecycle source:** `standards/glossary.md`, `governance/document-lifecycle.md`
 - **Operativni monetizacioni source:** `developer-creator-monetization-playbook-plan.md`
 - **Licencni i jurisdikcijski source:** `globalni-licencni-okvir-i-delatnosti-plan.md`
+- **Vercel operativni source:** `vercel-operativni-domen-i-fakture-plan.md`
 - **Incident/support izvršni source:** `github-naplata-poruka-plan.md`, `vercel-naplata-poruka-plan.md`
 - **Javni/public-safe surface-i:** nastaju tek posle shared-lane provere, sanitizacije i release-gate potvrde
 
@@ -227,7 +228,7 @@ Meta-monetization framework mora biti kompatibilan sa sledećim režimima:
 
 ## 11) Podrška i naplata kao deo monetizacionog sistema
 
-Billing/support šabloni (`github-naplata-poruka-plan.md`, `vercel-naplata-poruka-plan.md`) koriste se kao incident-to-resolution sloj monetizacionog sistema.
+Billing/support šabloni (`github-naplata-poruka-plan.md`, `vercel-naplata-poruka-plan.md`) koriste se kao incident-to-resolution sloj monetizacionog sistema, dok `vercel-operativni-domen-i-fakture-plan.md` definiše Vercel kao poseban operativni domen za kontinuitet, evidenciju faktura i shared-lane saradnju.
 
 ### 11.1 Jedinstven tok
 
@@ -245,6 +246,12 @@ Billing/support šabloni (`github-naplata-poruka-plan.md`, `vercel-naplata-poruk
   - **critical:** incident sa potpunim prekidom ključnog toka ili blokadom naplate/aktivacije.
 - Evidentirati vreme reakcije i vreme razrešenja kao obavezne metričke tačke.
 - Kada je potrebna detaljnija klasifikacija i approval logika, primeniti controlling source u `docs/repository-operating-model.md` i `governance/document-lifecycle.md`.
+
+### 11.3 Vercel domen kao program-equivalent zaštitni sloj
+
+- Vercel billing i operations tretirati kao infrastrukturu koja štiti retention, continuity i poverenje korisnika.
+- Svaku Vercel fakturu, subscription blokadu ili incident mapirati na pogođeni projekat, prihod koji štiti i rizik prekida.
+- Shared lane odlučuje kada Vercel slučaj ostaje support predmet, a kada postaje ekosistemska ili partner-context tema.
 
 ## 12) Operativni ciklus izvršenja
 

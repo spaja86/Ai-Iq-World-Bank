@@ -48,6 +48,7 @@
 - Keep reusable root templates explicit about audience layer, visibility handling, shared-lane checkpoint, and release status.
 - Keep legal, licensing, business, asset, and support plans explicit about controlling sources and sanitization requirements.
 - Keep support communication templates evidence-driven and downstream from governance and sensitive-content controls.
+- Keep Vercel operational-domain planning aligned with monetization, invoice tracking, and support escalation surfaces.
 
 ## Phase E - Prototype and public-safe output synchronization
 
