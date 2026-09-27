@@ -87,6 +87,17 @@ ROUTING_BLOCK_REQUIRED_SNIPPETS = [
     'Shared-lane checkpoint:',
     'Release status:',
 ]
+META_MONETIZATION_PLAYBOOK_REQUIRED_SNIPPETS = [
+    'Meta-monetization framework (`monetizacija nad monetizacijama`)',
+    '## 10) Globalno širenje i jurisdikcijska kompatibilnost',
+    'Kada isti obrazac menja status od Nivo 2 ka Nivo 3',
+    'globalni-licencni-okvir-i-delatnosti-plan.md',
+]
+LICENSING_META_MONETIZATION_REQUIRED_SNIPPETS = [
+    '### 4.3 Veza sa meta-monetizacijom',
+    'meta-monetization framework (`monetizacija nad monetizacijama`)',
+    'upravljački sloj nad drugim prihodima',
+]
 
 
 def fail(message: str) -> None:
@@ -248,5 +259,21 @@ operating_model_text = (ROOT / 'docs/repository-operating-model.md').read_text(e
 for marker in OPERATING_MODEL_REQUIRED_MARKERS:
     if marker not in operating_model_text:
         fail(f'docs/repository-operating-model.md is missing required operating-model marker: {marker}')
+
+meta_monetization_playbook_text = (ROOT / 'developer-creator-monetization-playbook-plan.md').read_text(encoding='utf-8')
+for snippet in META_MONETIZATION_PLAYBOOK_REQUIRED_SNIPPETS:
+    if snippet not in meta_monetization_playbook_text:
+        fail(
+            'developer-creator-monetization-playbook-plan.md is missing required '
+            f'meta-monetization snippet: {snippet}'
+        )
+
+licensing_plan_text = (ROOT / 'globalni-licencni-okvir-i-delatnosti-plan.md').read_text(encoding='utf-8')
+for snippet in LICENSING_META_MONETIZATION_REQUIRED_SNIPPETS:
+    if snippet not in licensing_plan_text:
+        fail(
+            'globalni-licencni-okvir-i-delatnosti-plan.md is missing required '
+            f'meta-monetization snippet: {snippet}'
+        )
 
 print('Repository validation passed.')
