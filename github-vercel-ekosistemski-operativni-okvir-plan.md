@@ -11,6 +11,8 @@
 
 Ovaj dokument implementira zajednički Vercel + GitHub okvir za “vrh programskog ekvivalenta” kao shared-lane operativni plan downstream od `docs/repository-operating-model.md` i postojećih monetizacionih, support i governance izvora.
 
+U ovom dokumentu izraz **„vrh programskog ekvivalenta”** koristi se samo kao opisni radni izraz za viši shared-lane operativni sloj Developer + Creator programa. On nema status controlling termina i ne zamenjuje postojeći terminološki i routing lanac iz `developer-creator-monetization-playbook-plan.md`, `standards/glossary.md` i `docs/repository-operating-model.md`.
+
 ## 0) Routing i lane napomena
 
 - **Primarni lane:** shared ecosystem operations lane.
@@ -236,5 +238,5 @@ Ovaj okvir je uspešno implementiran kada postoji:
 1. zaključati routing i ownership,
 2. stabilizovati Vercel i GitHub billing/support tokove,
 3. mapirati continuity i monetizacioni uticaj,
-4. definisati zajednički ecosystem status,
+4. definisati zajednički status uključenja u ekosistem,
 5. pripremiti samo sanitizovane public-safe izlaze.
