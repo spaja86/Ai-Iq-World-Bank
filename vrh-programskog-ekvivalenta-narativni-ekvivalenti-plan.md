@@ -184,6 +184,7 @@ Ovaj plan definiše sledeće minimalne izlaze:
 Pre dalje upotrebe ili proširenja proveriti:
 
 - [ ] da li je controlling source eksplicitno naveden,
+- [ ] da li svi izrazi iz matrice u sekciji 2.2 imaju kompletne routing-metapodatke,
 - [ ] da li svaki izraz ima status po jednom od tri nivoa,
 - [ ] da li creator/public-safe metafora ne menja canonical značenje,
 - [ ] da li je za fikcionalne izraze eksplicitno potvrđena zabrana glorifikacije i zabrana predstavljanja kao činjenice,
