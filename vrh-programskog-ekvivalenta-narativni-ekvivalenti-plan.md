@@ -177,7 +177,7 @@ Ovaj plan definiše sledeće minimalne izlaze:
 3. KPI tabelu po lane-u,
 4. shared-lane checkpoint listu,
 5. public-safe smernice za narativne izvedenice,
-6. routing-metapodatke za `Developer + Creator operating model`, `VRH programskog ekvivalenta`, `Napoleon Bonaparta`, `Velim dobar dan, krijem 'top' kao da je san` i `ITLER ARNOLD / VOJNIKOV ŠEGRT JE KVOSKO PO ATOMSKOM SKLONIŠTU U EPRUVETI`.
+6. routing-metapodatke za izraze definisane u matrici iz sekcije 2.2.
 
 ## 9) Shared-lane checkpoint lista
 
