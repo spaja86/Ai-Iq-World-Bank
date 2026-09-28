@@ -56,8 +56,9 @@ Dozvoljene vrednosti i izvor:
 
 Validaciona napomena:
 
-- `config/validate_repository.py` automatski sprovodi Document Control strukturu, status/visibility skupove i routing-block zahteve za obuhvaćene dokumente.
-- Ova šema dodatno uvodi obaveznu operativnu disciplinu za VRH cross-lane evidenciju (manual + review kontrola), uključujući audience layer i ownership lane eksplicitnost za svaku netrivijalnu reusable promenu.
+- **Machine-validated (`config/validate_repository.py`):** Document Control struktura, status/visibility skupovi, zavisnosti i routing-block zahtevi za obuhvaćene dokumente.
+- **Review-only (shared-lane checkpoint):** audience layer, ownership lane/handoff detalj, i potpuna cross-lane evidencija za svaku netrivijalnu reusable promenu.
+- **Combined control:** release status mora biti eksplicitan u evidenciji; validan status skup ostaje `draft`, `working`, `approved`, `archived`.
 - Automatska validacija primarno pokriva strukturisane `.md` surface-e (`docs/`, `governance/`, `standards/`, root `.md` planove i `config/sensitive-content-review-checklist.md`), dok se kompletna VRH cross-lane evidencija proverava kroz shared-lane review checkpoint.
 
 ## 1) Ciljna specifikacija “VRH programskog ekvivalenta”
@@ -127,7 +128,7 @@ Za svaku veću cross-lane promenu voditi minimalni zapis:
 
 | Datum | Promena surface-a | Controlling source potvrda | Audience layer | Visibility klasifikacija | Handoff odluka | Release status |
 | --- | --- | --- | --- | --- | --- | --- |
-| YYYY-MM-DD | naziv dokumenta/panela | potvrđeno / na proveri | internal planning / canonical/standards / creator/public-safe | public-safe / limited/internal / canonical/internal standard | developer->creator / creator->developer / shared | working / draft / approved / archived |
+| YYYY-MM-DD | naziv dokumenta/panela | potvrđeno / na proveri | internal planning / canonical/standards / creator/public-safe | public-safe / limited/internal / canonical/internal standard | developer->creator / creator->developer / shared | draft / working / approved / archived |
 
 Napomena: audience layer se vodi kao zasebno polje, dok kolona visibility koristi isključivo visibility klase definisane u odeljku 0.2.
 Kada je surface canonical, koristi se visibility `canonical/internal standard` uz isti šablon evidencije.
