@@ -11,6 +11,8 @@
 
 Ovaj plan operacionalizuje “VRH programskog ekvivalenta” za AI IQ World Bank kao jedinstven developer + creator okvir koji ostaje potpuno downstream od postojećih standards, governance i operating-model pravila. **MARKAN** je dozvoljen samo kao aditivni alias za ovaj Developer + Creator VRH kontekst; ne zamenjuje canonical terminologiju, controlling source, ownership routing ni release kontrole.
 
+Tema „ITLER ARNOLD / VOJNIKOV ŠEGRT JE KVOSKO PO ATOMSKOM SKLONIŠTU U EPRUVETI“ tretira se isključivo kao fikcionalni narativni okvir bez političke ili istorijske glorifikacije i bez predstavljanja kao činjenice.
+
 ## 0) Routing i lane napomena
 
 - **Primarni lane:** shared execution lane (developer + creator + governance usklađivanje).
@@ -21,6 +23,50 @@ Ovaj plan operacionalizuje “VRH programskog ekvivalenta” za AI IQ World Bank
 - **Visibility handling:** radni detalji ostaju `limited/internal`; deljive verzije prikazuju agregate i odobrene javno-bezbedne formulacije.
 - **Shared-lane checkpoint:** pre svake reusable promene potvrditi controlling source, audience/visibility, ownership i release status.
 - **Release status:** working okvir; nije canonical standard niti automatski public-safe output bez sanitizacije i release-gate potvrde.
+
+## 0.1) Zvanična formulacija naziva i svrhe
+
+- **Zvanični naziv okvira:** „VRH programskog ekvivalenta“.
+- **Zvanična svrha okvira:** zajednički developer + creator operativni kvalitetni okvir za tačnost, stabilnost, javno-bezbednu komunikaciju i release spremnost.
+- **Pravilo zaključavanja:** svi izvedeni nazivi, metafore i varijante ostaju podređeni ovom zvaničnom nazivu i svrsi i ne dobijaju canonical status.
+- **Granica upotrebe:** „ITLER“ je u ovom kontekstu isključivo fikcionalna oznaka i ne sme se koristiti za političku, istorijsku ili ideološku interpretaciju.
+
+## 0.2) Jedinstvena struktura metapodataka
+
+Svaka netrivijalna promena ili reusable surface mora eksplicitno sadržati sledeća polja:
+
+1. controlling source,
+2. audience layer,
+3. visibility,
+4. ownership lane (uz shared-lane handoff kada je potrebno),
+5. release status.
+
+Pravilo obaveznosti:
+
+- Za netrivijalne promene svih reusable surface-ova svih 5 polja su obavezna.
+- Samo privremene lokalne beleške koje nisu release kandidati i ne ulaze u reusable tok mogu ostati bez pune šeme.
+
+Dozvoljene vrednosti i izvor:
+
+- **controlling source:** repo-relative referenca ka dokumentu koji upravlja značenjem/promenom (hijerarhija iz `README.md` i `docs/repository-operating-model.md`).
+- **audience layer:** creator/public-safe, internal planning, canonical/standards, regulatory/legal, support/operations (slojna podela iz `README.md` i `docs/repository-operating-model.md`).
+- **visibility:** `public-safe`, `limited/internal`, `canonical/internal standard` (kontrolisane klase vidljivosti iz `README.md` i `governance/document-lifecycle.md`).
+- **ownership lane:** developer, creator, shared (lane model iz `docs/repository-operating-model.md`).
+- **release status:** `draft`, `working`, `approved`, `archived` (status model usklađen sa `governance/document-lifecycle.md` i validacijom u `config/validate_repository.py`).
+
+Normativno pravilo vrednosti:
+
+- Navedene liste su iscrpne za ovaj VRH okvir.
+- Vrednosti se koriste u istom zapisu (bez alias varijanti) radi konzistentnog review tumačenja.
+
+Validaciona napomena:
+
+- **Machine-validated (postojeće i neizmenjeno validator ponašanje u `config/validate_repository.py`):** Document Control struktura, status/visibility skupovi, zavisnosti i routing-block zahtevi za obuhvaćene dokumente.
+- **Review-only (shared-lane checkpoint):** audience layer, ownership lane/handoff detalj, i potpuna cross-lane evidencija za svaku netrivijalnu reusable promenu.
+- **Combined control:** release status mora biti eksplicitan u evidenciji; validan status skup ostaje `draft`, `working`, `approved`, `archived`.
+- Automatska validacija primarno pokriva strukturisane `.md` surface-e (`docs/`, `governance/`, `standards/`, root `.md` planove i `config/sensitive-content-review-checklist.md`), dok se kompletna VRH cross-lane evidencija proverava kroz shared-lane review checkpoint.
+- Polja audience layer i ownership lane se obavezno evidentiraju u šemi iz sekcije 5.1 i proveravaju kroz shared-lane checkpoint listu.
+- Autoritativna lokacija metapodataka: za plan dokumente polja se vode u routing sekciji dokumenta; za operativni audit trag vode se u evidenciji po šemi iz sekcije 5.1.
 
 ## 1) Ciljna specifikacija “VRH programskog ekvivalenta”
 
@@ -56,6 +102,15 @@ Developer lane je odgovoran za:
 - stabilnost score logike i očuvanje traceability veze prema controlling source-u,
 - ekspoziciju aktivnog standard/version signala na izlaznim površinama.
 
+### 3.1) Mapa tehničkih površina (dokumenti, prototip, reference)
+
+- **Primarni plan dokumenti:** `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md`
+- **Kontrolni routing dokument:** `docs/repository-operating-model.md`
+- **Portfolio i lifecycle reference:** `docs/document-portfolio.md`, `governance/document-lifecycle.md`
+- **Prototip prikaz (struktura):** `index.html` sekcije `#operating-model` i `#control-map`
+- **Prototip prikaz (dinamički sadržaj):** `script.js` površine `NARRATIVE_LANES`, `DEVELOPER_CREATOR_CHECKPOINTS`, `CONCEPT_SURFACE_INVENTORY`, `PUBLIC_OUTPUT_CATALOG`
+- **Validaciona reference tačka:** `config/validate_repository.py`
+
 ## 4) Creator lane — narativni i javni stub
 
 Creator lane je odgovoran za:
@@ -74,11 +129,24 @@ Shared lane obezbeđuje:
 - mapiranje svakog reusable outputa na standard ili governance dokument,
 - potvrdu da narativ, implementacija i governance značenje ostaju usklađeni.
 
+### 5.1) Evidencija promena koje prelaze Developer ↔ Creator granicu
+
+Za svaku veću cross-lane promenu voditi minimalni zapis:
+
+| Datum | Promena surface-a | Controlling source potvrda | Audience layer | Visibility klasifikacija | Ownership lane | Handoff odluka | Release status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| YYYY-MM-DD | naziv dokumenta/panela | potvrđeno / na proveri | creator/public-safe / internal planning / canonical/standards / regulatory/legal / support/operations | public-safe / limited/internal / canonical/internal standard | developer / creator / shared | developer->creator / creator->developer / shared | draft / working / approved / archived |
+
+Napomena: audience layer se vodi kao zasebno polje, dok kolona visibility koristi isključivo visibility klase definisane u odeljku 0.2.
+Kada je surface canonical, koristi se visibility `canonical/internal standard` uz isti šablon evidencije.
+Ova sekcija definiše šemu; operativna evidencija se vodi u namenskom review/audit artefaktu (npr. zapis zasnovan na `business/revizijski-trag-template.csv`) i po potrebi se referencira iz povezanog radnog plana.
+
 ## 6) Program ekvivalenta po fazama
 
 ### Faza A — standardizacija i governance zaključavanje
 - Potvrditi controlling source i terminološku usklađenost.
 - Zaključati lifecycle, visibility i release-control pravila.
+- Potvrditi fikcionalnu granicu i zabranu političke/istorijske glorifikacije za narativne izraze.
 
 ### Faza B — poravnanje plan-dokumenata i kataloga izlaza
 - Uskladiti root planove, support površine i portfolio mapiranje.
@@ -118,6 +186,7 @@ Obavezni minimum pre finalizacije većih promena:
 - jasnoća poruke,
 - konzistentnost audience slojeva,
 - reuse stopa public-safe surface-a.
+- nulta stopa političke/istorijske glorifikacije u public-safe narativima.
 
 ### Shared KPI
 - broj promena sa potpunim routing metapodacima,
