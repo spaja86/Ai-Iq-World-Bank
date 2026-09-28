@@ -228,5 +228,5 @@ Promena ili programski talas je spreman kada su istovremeno ispunjeni sledeći u
 
 1. svi lane-ovi rade po istom operativnom modelu,
 2. svaka javna površina je sledljiva do controlling source-a,
-3. canonical značenje ostaje netaknuto i svi downstream surface-ovi ostaju usklađeni sa controlling source pravilima,
+3. canonical značenje ostaje netaknuto i svi reusable ili release-bound downstream surface-ovi ostaju usklađeni sa controlling source pravilima,
 4. release odluke su dokazive, ponovljive i bezbedne za javnu upotrebu.
