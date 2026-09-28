@@ -46,6 +46,10 @@ U ovom planu izraz **„VRH programskog ekvivalenta”** ostaje radni operativni
   - nadmašivanje konkurencije kroz stabilnost,
   - tačnost isporuke,
   - vrednost za korisnika.
+- Operativno tumačenje ključnih izraza u ovom okviru:
+  - **„brzina u trku”** = kratki release ciklusi,
+  - **„strela”** = mali i precizni inkrementi,
+  - **„dokle god sam živ”** = kontinuitet održavanja, monitoring i anti-regresiona disciplina.
 - Nijedna formulacija iz ove sekcije ne predstavlja poziv na realno nasilje, konflikt ili fizičku akciju.
 
 ## 2) Terminološko zaključavanje po nivoima
@@ -114,9 +118,6 @@ Developer lane u ovom planu vodi:
 - validaciju i proveru regresija,
 - traceability prema controlling source dokumentima,
 - poravnanje prototipa ili panela sa odobrenim značenjem.
-- mapiranje izraza „brzina u trku” na kratke release cikluse,
-- mapiranje izraza „strela” na male i precizne inkremente,
-- mapiranje izraza „dokle god sam živ” na kontinuitet održavanja, monitoring i anti-regresionu disciplinu.
 
 ### 3.2 Creator lane
 
