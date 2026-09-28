@@ -62,6 +62,17 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
 2. **working/internal** — operativni izrazi za shared-lane planiranje i izvršenje,
 3. **creator/public-safe** — metaforičke ili narativne formulacije koje služe objašnjenju, ne upravljanju.
 
+### 2.2 Matrica termina i obaveznih metapodataka
+
+| Izraz | Nivo | Controlling source | Audience layer | Visibility | Ownership lane | Release status | Pravilo upotrebe |
+|---|---|---|---|---|---|---|---|
+| `Developer + Creator operating model` | `canonical` | `docs/repository-operating-model.md` | canonical/standards + contributor routing | `public-safe` | shared | approved | koristi se za ownership, audience, visibility i release redosled |
+| `VRH programskog ekvivalenta` | `working/internal` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md` | internal planning + contributor execution | `limited/internal` | shared | working | koristi se samo kao interni okvir downstream od postojećih izvora |
+| `Napoleon Bonaparta` | `working/internal` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | internal planning + contributor execution | `limited/internal` | creator uz shared-lane proveru | working | dozvoljen samo kao kontrolisana metafora ili interni narativni marker; ne sme postati istorijski, politički ili reputacioni claim |
+| `Napoleon Bonaparta` — sanitizovana creator/public-safe izvedenica | `creator/public-safe` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | creator/public-safe | `public-safe` | creator uz shared-lane proveru | draft | dozvoljena tek nakon shared-lane provere, neutralnog tumačenja i sanitizacije |
+| `Velim dobar dan, krijem 'top' kao da je san` | `working/internal` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | internal planning + contributor execution | `limited/internal` | creator uz shared-lane proveru | working | dozvoljen samo uz neutralno tumačenje i bez predstavljanja kao činjenice, standarda ili operativne instrukcije |
+| `Velim dobar dan, krijem 'top' kao da je san` — sanitizovana creator/public-safe izvedenica | `creator/public-safe` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | creator/public-safe | `public-safe` | creator uz shared-lane proveru | draft | dozvoljena tek nakon shared-lane provere, neutralnog tumačenja i sanitizacije |
+| `ITLER ARNOLD / VOJNIKOV ŠEGRT JE KVOSKO PO ATOMSKOM SKLONIŠTU U EPRUVETI` | `working/internal` | ovaj plan | internal planning + contributor execution | `limited/internal` | shared | working | dozvoljen samo uz eksplicitnu napomenu da je sadržaj fikcionalan i narativan, uz zabranu glorifikacije i zabranu predstavljanja kao činjenice, standarda ili operativne instrukcije |
 ### 2.2 Matrica termina i statusa
 
 - **Developer + creator operating model**
@@ -107,6 +118,8 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
 - Working/internal nivo služi za operativnu koordinaciju i ne širi canonical značenje van postojećih izvora.
 - Creator/public-safe nivo sme pojednostaviti poruku, ali ne sme redefinisati canonical kvalitet, KPI logiku ni release spremnost.
 - Fikcionalni placeholder izrazi moraju ostati neutralni i bez glorifikacije istorijskih ili političkih narativa.
+- `Napoleon Bonaparta` i `Velim dobar dan, krijem 'top' kao da je san` ostaju downstream narativne izvedenice i ne dobijaju canonical status.
+- Zaključavanje značenja u ovoj sekciji ostaje podređeno `docs/repository-operating-model.md` sekciji `5a. Downstream term-control rule` i operativnoj klasifikaciji iz `vrh-programskog-ekvivalenta-operativni-okvir-plan.md` sekcije 0.3.
 
 ## 3) Role i odgovornosti po lane-u
 
@@ -167,6 +180,14 @@ Faze rada u ovom planu moraju ostati ovim redom:
 ### 5.1 KPI tabela po lane-u
 
 - **Developer**
+  - KPI fokus: validacija prolaznost, broj regresija, lead time do stabilnog i validiranog izdanja
+  - minimalni kriterijum uspeha: promene validirane, bez prekida reference lanca i bez regresija u zahvaćenom surface-u
+- **Creator**
+  - KPI fokus: jasnoća poruke, konzistentnost audience slojeva i neutralnog tumačenja, reuse stopa public-safe surface-a, nulta stopa političke/istorijske glorifikacije
+  - minimalni kriterijum uspeha: metafore ostaju javno-bezbedne, neutralne i nedvosmisleno odvojene od canonical tvrdnji
+- **Shared**
+  - KPI fokus: udeo promena sa potpunim routing metapodacima, udeo promena bez governance odstupanja, release-gate prolaznost kroz cikluse
+  - minimalni kriterijum uspeha: svaka reusable izvedenica ima status, controlling source i audience/visibility klasifikaciju
   - KPI fokus: lead time, tačnost, stabilnost, validacija, traceability
   - minimalni kriterijum uspeha: promene validirane, bez prekida reference lanca i bez regresija u zahvaćenom surface-u
 - **Creator**
@@ -199,23 +220,25 @@ Pre bilo kakvog public-safe izvođenja proveriti:
 
 ## 7) Pravila za public-safe izvedenice
 
-### 7.1 “Anštajn” kao creator-facing quality metaphor
+### 7.1 `Napoleon Bonaparta` kao kontrolisana creator-facing metafora
 
-Izraz **„Anštajn”** sme se koristiti samo ako istovremeno ispunjava sledeće uslove:
+Izraz **`Napoleon Bonaparta`** sme se koristiti samo ako istovremeno ispunjava sledeće uslove:
 
 1. ima jasno ograničen audience layer,
 2. koristi public-safe i neutralnu formulaciju,
 3. ima vezu ka controlling source dokumentu koji određuje stvarna merila kvaliteta,
-4. eksplicitno ne zamenjuje canonical merila kvaliteta, scoring ili release kriterijume.
+4. eksplicitno ne zamenjuje canonical merila kvaliteta, scoring ili release kriterijume,
+5. ne predstavlja istorijski, politički ili reputacioni claim koji upravlja planom.
 
-### 7.2 “Ekvivalent praznog hoda podupire se vazduhom u projektnom okviru zaprege” kao eksperimentalni narativni koncept
+### 7.2 `Velim dobar dan, krijem 'top' kao da je san` kao eksperimentalni narativni koncept
 
-Ovaj izraz se uvek tretira kao **eksperimentalni narativni koncept** uz obavezno razdvajanje:
+Ovaj izraz se uvek tretira kao **eksperimentalni creator izraz** uz obavezno razdvajanje:
 
 - **metafora:** poetska ili konceptualna slika za objašnjenje napora, kretanja, rasterećenja ili koordinacije,
 - **operativna pretpostavka:** eventualna interna radna interpretacija koja još nema canonical potvrdu,
 - **proverljiva činjenica:** u ovom planu nije uspostavljena i ne sme se podrazumevati,
 - **zabrana za canonical/public-safe claim:** izraz ne ide u canonical sloj niti u javni claim bez dalje standardizacije, governance potvrde i eksplicitnog controlling source-a.
+- **neutralno tumačenje:** dozvoljena je samo sanitizovana i neutralna izvedenica bez operativne ili canonical snage.
 
 ### 7.3 “ITLER ARNOLD / VOJNIKOV ŠEGRT...” kao strogo ograničen fikcionalni okvir
 
@@ -243,13 +266,17 @@ Ovaj plan definiše sledeće minimalne izlaze:
 2. matricu termina i njihov status,
 3. KPI tabelu po lane-u,
 4. shared-lane checkpoint listu,
-5. public-safe smernice za narativne izvedenice.
+5. public-safe smernice za narativne izvedenice,
+6. routing-metapodatke za izraze definisane u matrici iz sekcije 2.2.
 
 ## 9) Shared-lane checkpoint lista
+
+Kanonska shared-lane checkpoint evidencija za cross-lane promene ostaje u `vrh-programskog-ekvivalenta-operativni-okvir-plan.md` sekciji 5.1. Ova lista je narativna dopuna koju treba proveriti zajedno sa tim operativnim checkpoint-om.
 
 Pre dalje upotrebe ili proširenja proveriti:
 
 - [ ] da li je controlling source eksplicitno naveden,
+- [ ] da li svi izrazi iz matrice u sekciji 2.2 imaju kompletne routing-metapodatke,
 - [ ] da li svaki izraz ima status po jednom od tri nivoa,
 - [ ] da li creator/public-safe metafora ne menja canonical značenje,
 - [ ] da li je za fikcionalne izraze eksplicitno potvrđena zabrana glorifikacije i zabrana predstavljanja kao činjenice,
