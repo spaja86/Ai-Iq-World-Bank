@@ -179,7 +179,7 @@ Ovaj plan definiše sledeće minimalne izlaze:
 5. public-safe smernice za narativne izvedenice,
 6. routing-metapodatke za `Developer + Creator operating model`, `VRH programskog ekvivalenta`, `Napoleon Bonaparta`, `Velim dobar dan, krijem 'top' kao da je san` i `ITLER ARNOLD / VOJNIKOV ŠEGRT JE KVOSKO PO ATOMSKOM SKLONIŠTU U EPRUVETI`.
 
-Ovih pet izraza čine aktivni scope obavezno praćenih termina u ovom planu; raniji ilustrativni primeri koji nisu navedeni u matrici iz sekcije 2.2 više se ne vode kao zasebni termini sa obaveznim routing-metapodacima.
+Navedeni izrazi čine aktivni scope obavezno praćenih termina u ovom planu; raniji ilustrativni primeri koji nisu navedeni u matrici iz sekcije 2.2 više se ne vode kao zasebni termini sa obaveznim routing-metapodacima.
 
 ## 9) Shared-lane checkpoint lista
 
