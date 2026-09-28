@@ -17,6 +17,8 @@ Tema „ITLER ARNOLD / VOJNIKOV ŠEGRT JE KVOSKO PO ATOMSKOM SKLONIŠTU U EPRUVE
 
 Tema Zeus/Posejdon, Kiklop/Herakle i Herkules u ovom dokumentu tretira se isključivo kao **narativni ekvivalent** za developer + creator radni okvir. Citati povezani sa tim figurama tretiraju se kao autorski, poetski ili interpretativni materijal, a ne kao proverene tehničke, istorijske ili canonical tvrdnje.
 
+Tema „2 topa love popa/lovca po kvadratnim jednačinama (kosi hitac)” u ovom dokumentu tretira se isključivo kao kontrolisani šahovsko-matematički narativni ekvivalent. Ne predstavlja dokaznu tvrdnju, realnu akciju ni tehnički doslovan model, već radnu metaforu za koordinaciju, anticipaciju i transformaciju sirovog pritiska u kontrolisani izlaz.
+
 ## 0) Routing i lane napomena
 
 - **Primarni lane:** shared execution lane za developer + creator usklađivanje uz governance proveru.
@@ -72,10 +74,17 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
 | `VRH programskog ekvivalenta` | `working/internal` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md` | internal planning + contributor execution | `limited/internal` | shared | working | koristi se samo kao interni okvir downstream od postojećih izvora |
 | `Napoleon Bonaparta` | `working/internal` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | internal planning + contributor execution | `limited/internal` | creator uz shared-lane proveru | working | dozvoljen samo kao kontrolisana metafora ili interni narativni marker; ne sme postati istorijski, politički ili reputacioni claim |
 | `Napoleon Bonaparta` — sanitizovana creator/public-safe izvedenica | `creator/public-safe` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | creator/public-safe | `public-safe` | creator uz shared-lane proveru | draft | dozvoljena tek nakon shared-lane provere, neutralnog tumačenja i sanitizacije |
+| `šahovski narativ` | `working/internal` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | internal planning + contributor execution | `limited/internal` | shared | working | koristi se samo kao kontrolisana struktura za uloge, putanje i anticipaciju; ne kao claim o realnom sukobu |
+| `2 topa` | `working/internal` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | internal planning + contributor execution | `limited/internal` | developer + shared | working | mapira se na dva koordinisana izvršna ili validaciona stuba; ne tumači se kao oružje ni realna pretnja |
+| `pop/lovac` | `working/internal` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | internal planning + contributor execution | `limited/internal` | creator + shared | working | mapira se na pokretni kreativni ili problemski čvor koji menja smer, ugao ili stanje; ne na doslovni religijski, lovni ili fizički subjekt |
+| `kvadratne jednačine` | `working/internal` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | internal planning + contributor execution | `limited/internal` | developer | working | koriste se kao metafora za model putanje, procenu rizika i iterativno predviđanje; ne kao dokazna matematička specifikacija |
+| `kosi hitac` | `working/internal` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | internal planning + contributor execution | `limited/internal` | developer + creator | working | koristi se kao narativni ekvivalent za anticipaciju i koordinaciju kroz promenljive uslove, bez realnog konfliktnog značenja |
+| `epski pop` | `creator/public-safe` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | creator/public-safe | `public-safe` | creator uz shared-lane proveru | draft | završna uzdignuta creator figura koja označava disciplinovano i odgovorno uzdizanje, ne religijski, vojni ili istorijski autoritet |
 | `Velim dobar dan, krijem 'top' kao da je san` | `working/internal` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | internal planning + contributor execution | `limited/internal` | creator uz shared-lane proveru | working | dozvoljen samo uz neutralno tumačenje i bez predstavljanja kao činjenice, standarda ili operativne instrukcije |
 | `Velim dobar dan, krijem 'top' kao da je san` — sanitizovana creator/public-safe izvedenica | `creator/public-safe` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | creator/public-safe | `public-safe` | creator uz shared-lane proveru | draft | dozvoljena tek nakon shared-lane provere, neutralnog tumačenja i sanitizacije |
 | `ITLER ARNOLD / VOJNIKOV ŠEGRT JE KVOSKO PO ATOMSKOM SKLONIŠTU U EPRUVETI` | `working/internal` | ovaj plan | internal planning + contributor execution | `limited/internal` | shared | working | dozvoljen samo uz eksplicitnu napomenu da je sadržaj fikcionalan i narativan, uz zabranu glorifikacije i zabranu predstavljanja kao činjenice, standarda ili operativne instrukcije |
-### 2.2 Matrica termina i statusa
+
+### 2.2a Matrica termina i statusa
 
 - **Developer + creator operating model**
   - nivo: `canonical`
@@ -87,6 +96,16 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
   - status: radni operativni izraz
   - pravilo upotrebe: koristi se samo kao interni okvir downstream od postojećih izvora
   - controlling source: `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`
+- **šahovski narativ / 2 topa / pop-lovac / kvadratne jednačine / kosi hitac**
+  - nivo: `working/internal`
+  - status: kontrolisani narativni i matematičko-programski ekvivalenti
+  - pravilo upotrebe: koriste se samo za mapiranje koordinacije, predviđanja, promene stanja i shared-lane izvršenja; zabranjeno je doslovno, oružano ili dokazno tumačenje
+  - controlling source: ovaj plan + `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`
+- **epski pop**
+  - nivo: `creator/public-safe`
+  - status: sanitizovana završna izvedenica
+  - pravilo upotrebe: koristi se samo kao javno-bezbedna figura stvaralačkog uzdizanja bez religijske, političke ili vojne tvrdnje
+  - controlling source: ovaj plan + `docs/repository-operating-model.md`
 - **DŽINGISKAN / konjički napad strela u trku**
   - nivo: `working/internal`
   - status: kontrolisana interna metafora
@@ -114,7 +133,18 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
   - pravilo upotrebe: ne koristiti kao operativni claim, standard ili proverljivu činjenicu bez dalje standardizacije
   - controlling source: ovaj plan + `governance/document-lifecycle.md`
 
-### 2.3 Matrica likova i narativnih ekvivalenata
+### 2.3 Narativna matrica figura i kontrolisana mapa uloga
+
+| Figura / izraz | Simboličko značenje | Dozvoljena operativna interpretacija | Zabranjena interpretacija | Lane vlasništvo |
+|---|---|---|---|---|
+| `pop/lovac` | pokretna meta, kreativni ili problemski čvor | entitet koji menja ugao, pravac ili stanje i tera sistem na anticipaciju | doslovni religijski, lovni ili fizički subjekt progona | creator + shared |
+| `2 topa` | dve koordinisane sile | dva lane-a, dva izvršna stuba ili dva validaciona toka koji rade nad istim problemom | oružje, nasilje ili fizička potera | developer + shared |
+| `kvadratne jednačine` | formalizovana putanja i prediktivna logika | model putanje, procena rizika, promena stanja i iterativno predviđanje | dokaz da je narativ matematički ili fizički doslovan | developer |
+| `kosi hitac` | kretanje pod uglom kroz promenljive uslove | anticipacija, koordinacija i nelinearno približavanje stabilnom izlazu | realni balistički ili konfliktni scenario | developer + creator |
+| `epski pop` | uzdignuti završni lik narativa | creator/public-safe figura koja označava disciplinovano, odgovorno i stvaralačko uzdizanje | religijski autoritet, vojni pobednik ili istorijski claim | creator uz shared kontrolu |
+| `Napoleon Bonaparta` | kontrolisani marker vrha ambicije i manevarskog reda | interna metafora za fokus, disciplinu i strateško usmerenje unutar VRH okvira | istorijski, politički ili reputacioni autoritet | creator uz shared kontrolu |
+
+### 2.4 Dodatna interna klasa mitoloških narativnih ekvivalenata
 
 | Lik / par | Simboličko značenje | Dozvoljena operativna interpretacija | Zabranjena interpretacija | Lane vlasništvo |
 |---|---|---|---|---|
@@ -122,7 +152,7 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
 | Kiklop + Herakle | koncentrisana snaga probijanja prepreka i monumentalni izvršni pritisak | otpornost, tehničko savladavanje prepreka, iterativni pritisak kvaliteta, snažna izvedba pod opterećenjem | rušenje u doslovnom smislu, realno nasilje, dehumanizacija protivnika ili glorifikacija destrukcije | shared uz developer primenu |
 | Herkules | vrhunac snage i nosilac sloja “najjači od svih” | najviši nivo discipline, nosivosti isporuke, dugotrajne odgovornosti i snažnog creator/developer izraza | tvrdnja o superiornosti ljudi kao kategorija, fizička pretnja, literalna vojna ili nasilna heroizacija | creator uz shared kontrolu |
 
-### 2.4 Matrica citata i slojeva tumačenja
+### 2.5 Matrica citata i slojeva tumačenja
 
 | Originalni navod | Unutrašnje značenje | Developer tumačenje | Creator/public-safe tumačenje |
 |---|---|---|---|
@@ -130,7 +160,7 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
 | „Stena do stena imena moga srušiće se na vas, tako mi Boga” | osećaj monumentalne sile i nezaustavljivog pritiska | niz velikih, preciznih isporuka ili korektivnih zahvata koji lome prepreke i podižu standard kvaliteta | pojačan poetski izraz o snazi prisustva, odlučnosti i velikom stvaralačkom zamahu bez pretnje ili poziva na povredu |
 | „Najjači od svih bacam stenu kao stih” | spoj sirove snage i izraza, sila pretvorena u artikulisano delo | najviši nivo nosivosti sistema ili isporuke uz kontrolisanu preciznost i disciplinu | metafora o tome da snaga dobija smisao tek kada postane stvaranje, izraz ili doprinos drugima |
 
-### 2.5 Neutralizacija konfliktnog jezika
+### 2.6 Neutralizacija konfliktnog jezika
 
 - `rat` -> intenzivna faza rada, izazov, zahtevna operativna etapa
 - `kamen` / `stena` -> veliki teret, velika isporuka, tvrda prepreka, masivan radni blok
@@ -144,28 +174,44 @@ Obavezno pravilo:
 - zabranjeno je realno nasilno, političko, vojno ili dehumanizujuće tumačenje,
 - creator/public-safe izvedenica mora zadržati snagu tona bez zadržavanja konfliktnog okvira.
 
-### 2.6 Zaključavanje značenja
+### 2.7 Zaključavanje značenja
 
 - Canonical nivo ostaje vezan za postojeće standards/governance/operating-model izvore.
 - Working/internal nivo služi za operativnu koordinaciju i ne širi canonical značenje van postojećih izvora.
 - Creator/public-safe nivo sme pojednostaviti poruku, ali ne sme redefinisati canonical kvalitet, KPI logiku ni release spremnost.
 - Fikcionalni placeholder izrazi moraju ostati neutralni i bez glorifikacije istorijskih ili političkih narativa.
 - Zeus/Posejdon, Kiklop/Herakle i Herkules ostaju kontrolisani narativni ekvivalenti i ne dobijaju canonical status.
-- `Napoleon Bonaparta` i `Velim dobar dan, krijem 'top' kao da je san` ostaju downstream narativne izvedenice i ne dobijaju canonical status.
+- `Napoleon Bonaparta`, `2 topa`, `pop/lovac`, `kvadratne jednačine`, `kosi hitac`, `epski pop` i `Velim dobar dan, krijem 'top' kao da je san` ostaju downstream narativne izvedenice i ne dobijaju canonical status.
 - Zaključavanje značenja u ovoj sekciji ostaje podređeno `docs/repository-operating-model.md` sekciji `5a. Downstream term-control rule` i operativnoj klasifikaciji iz `vrh-programskog-ekvivalenta-operativni-okvir-plan.md` sekcije 0.3.
 
-## 3) Role i odgovornosti po lane-u
+## 3) Matematičko-programski ekvivalent
 
-### 3.1 Developer lane
+U ovom planu matematički i programski sloj služe kao kontrolisana interpretacija narativa, a ne kao doslovna tehnička specifikacija.
+
+- `2 topa` predstavljaju dva paralelna izvršna ili validaciona stuba koji simultano zatvaraju isti problemski prostor.
+- `pop/lovac` predstavlja entitet koji menja ugao, pravac ili stanje i zato zahteva ponovno usklađivanje sistema.
+- `kvadratne jednačine` predstavljaju model putanje, procene rizika i iterativnog predviđanja.
+- `kosi hitac` predstavlja nelinearno približavanje cilju kroz anticipaciju i koordinaciju više promenljivih.
+- `put ka epskom popu` predstavlja prelaz od sirove potere i rasute energije ka stabilnom, kontrolisanom i reusable izlazu.
+
+## 4) Developer lane značenje
 
 Developer lane u ovom planu vodi:
 
-- tehničku tačnost i stabilnost,
+- tehničku tačnost i stabilnost interpretacije,
 - validaciju i proveru regresija,
 - traceability prema controlling source dokumentima,
-- poravnanje prototipa ili panela sa odobrenim značenjem.
+- prevođenje metafore u programski smisao bez doslovnog konfliktnog ili fizičkog značenja.
 
-### 3.2 Creator lane
+Programski prevod metafore:
+
+1. `2 topa` = dva paralelna toka izvršenja, review-a ili validacije,
+2. `pop/lovac` = pokretni čvor problema koji menja stanje sistema,
+3. `kvadratne jednačine` = model grananja, projekcije putanje i procene rizika,
+4. `kosi hitac` = koordinisano delovanje pod uglom, uz korekcije po iteraciji,
+5. `epski pop` = završni stabilni izlaz koji je validiran, kontrolisan i spreman za reuse.
+
+## 5) Creator lane značenje
 
 Creator lane vodi:
 
@@ -173,10 +219,15 @@ Creator lane vodi:
 - katalog reusable public-safe izvedenica,
 - kontrolu tona, sloja publike i neutralne formulacije,
 - zaštitu od pretvaranja metafore u canonical tvrdnju.
-- transformaciju agresivnih metafora u motivacione, etičke i public-safe formulacije,
-- zabranu glorifikacije nasilja, istorijsko-političkih figura i dehumanizacije „protivnika”.
 
-### 3.3 Shared lane
+Creator ton u ovom okviru treba da:
+
+1. spoji šahovski, epski i matematički sloj u stilizovanu priču,
+2. zadrži snagu metafore bez realnog nasilja ili progona,
+3. ukloni istorijsko, političko i reputaciono tumačenje `Napoleon Bonaparta`,
+4. završi porukom o koordinaciji, disciplini, anticipaciji i stvaralačkom uzdizanju.
+
+## 6) Shared-lane i operativni tok realizacije
 
 Shared lane vodi:
 
@@ -184,82 +235,26 @@ Shared lane vodi:
 - ownership handoff između developer i creator rada,
 - release gate-ove i visibility proveru,
 - potvrdu da svaki izvedeni izraz ostaje downstream od controlling source dokumenta.
-- obavezni checkpoint pre svakog reusable izlaza:
-  - controlling source potvrda,
-  - audience + visibility klasifikacija,
-  - ownership handoff (`developer` / `creator` / `shared`),
-  - release status (`draft` / `working` / `approved` / `archived`).
 
-## 4) Faze realizacije
+Redosled rada u ovom planu ostaje:
 
-Faze rada u ovom planu moraju ostati ovim redom:
+1. potvrda canonical/routing nivoa,
+2. usklađivanje working/internal izraza i portfolija,
+3. definisanje reusable surface-ova,
+4. priprema creator/public-safe izvedenice,
+5. validacija i release odluka.
 
-1. **standard/gov potvrda značenja** — potvrditi da canonical značenje dolazi iz postojećih standards/governance izvora.
-2. **usklađivanje planova i portfolija** — obezbediti da radni plan i njegovo mesto u portfoliju budu eksplicitni.
-3. **definisanje reusable surface-ova** — identifikovati koje narativne ili operativne izvedenice mogu postati ponovljivo upotrebljive.
-4. **javno-bezbedna creator interpretacija** — pripremiti samo sanitizovane metafore i neutralne rezimee.
-5. **prototip/panel poravnanje** — ako se izvedenice prikazuju downstream, vezati ih za controlling source i public-safe pravila.
-6. **validacija i release odluka** — proveriti strukturu, reference, visibility, sanitizaciju i release spremnost.
+Kada se pojavljuju novi navodi ili sirovi ulazi, tretiraju se kao:
 
-### 4.1 Operativne faze A-D
+1. **postojeći citat u repo-u**,
+2. **novi ulaz za budući dokument**,
+3. **sanitizovana izvedenica**.
 
-- **Faza A — terminološko zaključavanje i governance granice.**
-- **Faza B — lane KPI i evidencija handoff-a.**
-- **Faza C — prototip/panel poruke usklađene sa public-safe pravilima.**
-- **Faza D — kontrolisano objavljivanje i iterativno poboljšanje.**
+Bez eksplicitne lokacije i potvrde u repozitorijumu, navod ne sme biti predstavljen kao repo-dokumentovana činjenica.
 
-### 4.2 Katalog citata i status inventara
+## 7) Public-safe izvedenica
 
-Za ovaj plan voditi eksplicitni katalog citata sa sledećim statusima:
-
-1. **postojeći citat u repo-u** — navod je već prisutan u praćenim dokumentima i ima mapiranu lokaciju,
-2. **novi ulaz za budući dokument** — navod je dostavljen za buduću obradu, ali još nije potvrđen kao postojeći repo sadržaj,
-3. **sanitizovana izvedenica** — javno-bezbedna prerada koja ostaje downstream od internog izvora.
-
-Obavezna polja kataloga:
-
-- originalni navod,
-- status inventara,
-- lokacija u repo-u ili napomena da lokacija još nije potvrđena,
-- controlling source za tumačenje,
-- dozvoljeni audience layer.
-
-Pošto ovi tačni citati nisu prethodno potvrđeni verbatim u postojećim fajlovima, u ovom trenutku se tretiraju kao **novi ulaz za budući dokument** dok se njihova lokacija ili prethodno prisustvo ne mapira kroz poseban pregled repozitorijuma.
-
-## 5) KPI i kriterijumi uspeha
-
-### 5.1 KPI tabela po lane-u
-
-- **Developer**
-  - KPI fokus: validacija prolaznost, broj regresija, lead time do stabilnog i validiranog izdanja
-  - minimalni kriterijum uspeha: promene validirane, bez prekida reference lanca i bez regresija u zahvaćenom surface-u
-- **Creator**
-  - KPI fokus: jasnoća poruke, konzistentnost audience slojeva i neutralnog tumačenja, reuse stopa public-safe surface-a, nulta stopa političke/istorijske glorifikacije
-  - minimalni kriterijum uspeha: metafore ostaju javno-bezbedne, neutralne i nedvosmisleno odvojene od canonical tvrdnji
-- **Shared**
-  - KPI fokus: udeo promena sa potpunim routing metapodacima, udeo promena bez governance odstupanja, release-gate prolaznost kroz cikluse
-  - minimalni kriterijum uspeha: svaka reusable izvedenica ima status, controlling source i audience/visibility klasifikaciju
-  - KPI fokus: lead time, tačnost, stabilnost, validacija, traceability
-  - minimalni kriterijum uspeha: promene validirane, bez prekida reference lanca i bez regresija u zahvaćenom surface-u
-- **Creator**
-  - KPI fokus: jasnoća poruke, public-safe usklađenost, narativna upotrebljivost, reuse stopa
-  - minimalni kriterijum uspeha: metafore ostaju javno-bezbedne, neutralne i nedvosmisleno odvojene od canonical tvrdnji
-- **Shared**
-  - KPI fokus: ownership handoff, release gates, meaning alignment, routing kompletnost
-  - minimalni kriterijum uspeha: svaka reusable izvedenica ima status, controlling source i audience/visibility klasifikaciju, bez governance odstupanja
-
-### 5.2 Završni kriterijumi plana
-
-Plan je uspešno sproveden kada:
-
-1. svi korišćeni pojmovi imaju status i controlling source,
-2. developer i creator lane rade downstream od istog operating modela,
-3. nijedan metaforički izraz ne menja canonical značenje,
-4. javni izlazi ostaju sanitizovani, sledljivi i repo-relative,
-5. canonical značenje je netaknuto, a metafora ostaje interno kontrolisana ili javno neutralizovana,
-6. svi izlazi su release-gate odobreni.
-
-## 6) Release-readiness i sanitizacija
+### 7.1 Opšta pravila
 
 Pre bilo kakvog public-safe izvođenja proveriti:
 
@@ -267,92 +262,46 @@ Pre bilo kakvog public-safe izvođenja proveriti:
 - da li je izraz klasifikovan kao canonical, working/internal ili creator/public-safe,
 - da li visibility ostaje pravilno odvojen između internog i javnog sloja,
 - da li su reference repo-relative i sledljive,
-- da li se narativna formulacija pogrešno predstavlja kao proverljiva činjenica,
-- da li su citati odvojeni od operativnih instrukcija,
-- da li je audience layer jasan za svaku izvedenicu.
+- da li se narativna formulacija pogrešno predstavlja kao proverljiva činjenica.
 
-## 6.1 “Po istinitom događaju” granica
+### 7.2 `Napoleon Bonaparta` kao kontrolisana metafora
 
-Izraz **„po istinitom događaju”** u ovom okviru može se koristiti samo uz jasno razdvajanje sledećih slojeva:
-
-1. **lično iskustvo / autorski događaj** — subjektivni ili autobiografski okvir koji nije automatski repo-dokumentovana činjenica,
-2. **citirani materijal** — originalni navod koji se prenosi kao tekstualni ili poetski sadržaj,
-3. **interpretacija** — značenje koje developer, creator ili shared lane izvodi iz navoda,
-4. **repo-dokumentovana činjenica** — samo ono što je eksplicitno potvrđeno kroz postojeći tracked dokument i repo-relative referencu.
-
-Pravilo upotrebe:
-
-- bez eksplicitne lokacije i potvrde u repozitorijumu, izraz „po istinitom događaju” ne sme zvučati kao da je već verifikovan repozitorijumski dokaz,
-- creator/public-safe varijante moraju izbegavati implicitno dokazivanje ličnog događaja kao opšte činjenice,
-- shared lane mora potvrditi da li se radi o ličnom okviru, citatu, interpretaciji ili repozitorijumski potvrđenoj tvrdnji.
-
-## 7) Pravila za public-safe izvedenice
-
-### 7.1 `Napoleon Bonaparta` kao kontrolisana creator-facing metafora
-
-Izraz **`Napoleon Bonaparta`** sme se koristiti samo ako istovremeno ispunjava sledeće uslove:
+Izraz **`Napoleon Bonaparta`** sme se koristiti samo ako:
 
 1. ima jasno ograničen audience layer,
-2. koristi public-safe i neutralnu formulaciju,
+2. koristi neutralnu i public-safe formulaciju,
 3. ima vezu ka controlling source dokumentu koji određuje stvarna merila kvaliteta,
 4. eksplicitno ne zamenjuje canonical merila kvaliteta, scoring ili release kriterijume,
-5. ne predstavlja istorijski, politički ili reputacioni claim koji upravlja planom.
+5. ne predstavlja istorijski, politički ili reputacioni claim.
 
-### 7.2 `Velim dobar dan, krijem 'top' kao da je san` kao eksperimentalni narativni koncept
+### 7.3 Šahovsko-matematička izvedenica
 
-Ovaj izraz se uvek tretira kao **eksperimentalni creator izraz** uz obavezno razdvajanje:
+Izrazi `2 topa`, `pop/lovac`, `kvadratne jednačine` i `kosi hitac` smeju ići u reuse samo kada:
 
-- **metafora:** poetska ili konceptualna slika za objašnjenje napora, kretanja, rasterećenja ili koordinacije,
-- **operativna pretpostavka:** eventualna interna radna interpretacija koja još nema canonical potvrdu,
-- **proverljiva činjenica:** u ovom planu nije uspostavljena i ne sme se podrazumevati,
-- **zabrana za canonical/public-safe claim:** izraz ne ide u canonical sloj niti u javni claim bez dalje standardizacije, governance potvrde i eksplicitnog controlling source-a.
-- **neutralno tumačenje:** dozvoljena je samo sanitizovana i neutralna izvedenica bez operativne ili canonical snage.
+1. ostaju jasno označeni kao narativni ekvivalenti,
+2. ne zvuče kao dokazna matematika, fizika ili realan sukob,
+3. njihovo značenje ostaje prevedeno u koordinaciju, predviđanje i disciplinu,
+4. finalna verzija prolazi neutralizaciju konfliktnog jezika.
 
-### 7.3 “ITLER ARNOLD / VOJNIKOV ŠEGRT...” kao strogo ograničen fikcionalni okvir
+### 7.4 Završni creator/public-safe rezime
 
-Ovaj izraz se može koristiti samo uz sledeće uslove:
+Sanitizovana javna izvedenica može glasiti:
 
-1. eksplicitna napomena da je sadržaj fikcionalan i narativan,
-2. zabrana političke, istorijske i ideološke glorifikacije,
-3. zabrana predstavljanja kao proverljive činjenice, standarda ili operativne instrukcije,
-4. obavezna veza ka controlling source dokumentu i visibility klasifikaciji.
-
-### 7.4 Red-team semantička provera narativa
-
-Pre odobravanja reusable narativnog izlaza obavezno sprovesti semantičku red-team proveru:
-
-1. ukloniti formulacije koje impliciraju realno nasilje, osvetu ili poziv na povredu,
-2. ukloniti formulacije koje dehumanizuju konkurenciju ili publiku,
-3. potvrditi da finalni tekst ostaje u konkurentskom/performans kontekstu,
-4. potvrditi da je canonical značenje netaknuto i da je vidljivost pravilno klasifikovana.
-
-### 7.5 Mitološki narativni ekvivalenti kao kontrolisana interna klasa
-
-Zeus/Posejdon, Kiklop/Herakle i Herkules smeju se koristiti samo kada su istovremeno ispunjeni sledeći uslovi:
-
-1. jasno je naznačeno da predstavljaju narativne ekvivalente, ne canonical termine,
-2. njihovo značenje je prevedeno u developer, creator ili shared operativni smisao,
-3. ne predstavljaju religijsku, istorijsku ili naučnu tvrdnju,
-4. svaka future public-safe izvedenica prolazi neutralizaciju konfliktnog jezika,
-5. controlling source i visibility klasifikacija ostaju eksplicitni.
+> Dve usklađene sile prate pokretni izazov ne zato da ga poraze, već da ga razumeju, predvide i prevedu u red. Kada se disciplina, anticipacija i stvaralačka smelost spoje, sirova potera prerasta u kontrolisani put ka uzdignutom, odgovornom i deljivom izlazu.
 
 ## 8) Minimalni izlazi plana
 
 Ovaj plan definiše sledeće minimalne izlaze:
 
-1. interni operativni okvir za developer + creator saradnju,
-2. matricu termina i njihov status,
-3. matricu likova i njihovih narativnih ekvivalenata,
-4. matricu citata i dozvoljenih interpretacija,
-5. katalog citata sa statusom inventara,
-6. KPI tabelu po lane-u,
-7. shared-lane checkpoint listu,
-8. kriterijume za public-safe izvedenicu,
-9. završni creator epilog ili javno-bezbedni rezime kada release gate to dozvoli.
-3. KPI tabelu po lane-u,
-4. shared-lane checkpoint listu,
-5. public-safe smernice za narativne izvedenice,
-6. routing-metapodatke za izraze definisane u matrici iz sekcije 2.2.
+1. internu dugu verziju narativnog okvira,
+2. matricu termina i njihovog statusa,
+3. developer/programski prevod metafore,
+4. creator/public-safe sanitizovani rezime,
+5. kratki završni epilog za reuse.
+
+Kratki završni epilog za reuse:
+
+> Put ka „epskom popu” u ovom okviru nije put progona, već put usklađivanja. Dve sile discipline i predviđanja prate promenljivi izazov dok ga ne pretvore u jasan, odgovoran i stvaralački izlaz.
 
 ## 9) Shared-lane checkpoint lista
 
@@ -363,15 +312,22 @@ Pre dalje upotrebe ili proširenja proveriti:
 - [ ] da li je controlling source eksplicitno naveden,
 - [ ] da li svi izrazi iz matrice u sekciji 2.2 imaju kompletne routing-metapodatke,
 - [ ] da li svaki izraz ima status po jednom od tri nivoa,
+- [ ] da li `2 topa`, `pop/lovac`, `kvadratne jednačine`, `kosi hitac` i `epski pop` ostaju narativni ekvivalenti bez doslovnog konfliktnog značenja,
+- [ ] da li `Napoleon Bonaparta` ostaje kontrolisana metafora bez istorijskog, političkog ili reputacionog autoriteta,
 - [ ] da li creator/public-safe metafora ne menja canonical značenje,
-- [ ] da li su Zeus/Posejdon, Kiklop/Herakle i Herkules mapirani samo kao narativni ekvivalenti,
-- [ ] da li su citati razdvojeni na original, unutrašnje značenje, developer i creator/public-safe tumačenje,
-- [ ] da li je za fikcionalne izraze eksplicitno potvrđena zabrana glorifikacije i zabrana predstavljanja kao činjenice,
-- [ ] da li “po istinitom događaju” ostaje jasno odvojeno od repo-dokumentovane činjenice,
-- [ ] da li je ownership handoff između developer i creator rada jasan,
 - [ ] da li su visibility i audience layer pravilno ograničeni,
 - [ ] da li su svi javni izlazi sanitizovani, sledljivi i repo-relative.
 
-## 10) Završni princip kontinuiteta
+## 10) Release uslovi
 
-Izraz **„Dokle god sam živ”** u ovom okviru obavezno znači dugoročnu posvećenost kvalitetu, odgovornosti i održivom unapređenju sistema, bez konfliktnog ili fizičkog tumačenja.
+Plan je spreman za dalju upotrebu kada:
+
+1. svi korišćeni pojmovi imaju status i controlling source,
+2. developer i creator lane rade downstream od istog operating modela,
+3. nijedan metaforički izraz ne menja canonical značenje,
+4. javni izlazi ostaju sanitizovani, sledljivi i repo-relative,
+5. završna public-safe verzija prođe neutralizaciju konfliktnog jezika i shared-lane proveru.
+
+Završni princip kontinuiteta:
+
+- izraz **„Dokle god sam živ”** i slične formulacije u ovom okviru znače dugoročnu posvećenost kvalitetu, odgovornosti i održivom unapređenju sistema, bez konfliktnog ili fizičkog tumačenja.
