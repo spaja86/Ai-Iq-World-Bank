@@ -74,8 +74,8 @@ Validaciona napomena:
 |---|---|---|---|---|---|---|
 | `Developer + Creator operating model` | canonical | `docs/repository-operating-model.md` | canonical/standards + contributor routing | `public-safe` | shared | working |
 | `VRH programskog ekvivalenta` | working/internal | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md` | internal planning + contributor execution | `limited/internal` | shared | working |
-| `Napoleon Bonaparta` | narativni kandidat | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md` | internal planning; creator/public-safe samo kroz sanitizovanu i neutralnu izvedenicu | `limited/internal` | creator uz shared-lane proveru | working |
-| `Velim dobar dan, krijem 'top' kao da je san` | eksperimentalna narativna formulacija | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md` | creator/public-safe eksperimentalna izvedenica uz interni review trag | `limited/internal` | creator uz shared-lane proveru | working |
+| `Napoleon Bonaparta` | working/internal — narativni kandidat | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md` | internal planning; creator/public-safe samo kroz sanitizovanu i neutralnu izvedenicu | `limited/internal` | creator uz shared-lane proveru | working |
+| `Velim dobar dan, krijem 'top' kao da je san` | working/internal — eksperimentalna narativna formulacija | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md` | creator/public-safe eksperimentalna izvedenica uz interni review trag | `limited/internal` | creator uz shared-lane proveru | working |
 
 Normativna pravila:
 
