@@ -9,7 +9,7 @@
 - **Purpose:** Implements the repository-wide VRH program-equivalent specification through quality standards, lane KPI controls, release criteria, phased rollout, and shared governance routing.
 - **Depends on:** `docs/repository-operating-model.md`, `governance/document-lifecycle.md`, `docs/document-portfolio.md`, `docs/repository-roadmap.md`, `standards/indekurilanc-standard.md`, `config/sensitive-content-review-checklist.md`
 
-Ovaj plan operacionalizuje “VRH programskog ekvivalenta” za AI IQ World Bank kao jedinstven developer + creator okvir koji ostaje potpuno downstream od postojećih standards, governance i operating-model pravila.
+Ovaj plan operacionalizuje “VRH programskog ekvivalenta” za AI IQ World Bank kao jedinstven developer + creator okvir koji ostaje potpuno downstream od postojećih standards, governance i operating-model pravila. **MARKAN** je dozvoljen samo kao aditivni alias za ovaj Developer + Creator VRH kontekst; ne zamenjuje canonical terminologiju, controlling source, ownership routing ni release kontrole.
 
 ## 0) Routing i lane napomena
 
