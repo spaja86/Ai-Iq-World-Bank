@@ -86,6 +86,8 @@ Normativna pravila:
 - `Napoleon Bonaparta` ostaje kontrolisana metafora ili interni narativni marker i ne sme postati istorijski, politički ili reputacioni claim,
 - `Velim dobar dan, krijem 'top' kao da je san` ostaje eksperimentalna creator formulacija bez operativne ili canonical snage.
 
+Ova pravila se tumače isključivo downstream od `docs/repository-operating-model.md` sekcije `5a. Downstream term-control rule`, koja ostaje glavni controlling source za repository-wide Developer + Creator terminološki režim.
+
 ## 1) Ciljna specifikacija “VRH programskog ekvivalenta”
 
 Jedinstvena ciljna specifikacija zahteva:

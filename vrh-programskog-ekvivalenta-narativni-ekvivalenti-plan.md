@@ -65,6 +65,7 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
 - Creator/public-safe nivo sme pojednostaviti poruku, ali ne sme redefinisati canonical kvalitet, KPI logiku ni release spremnost.
 - Fikcionalni placeholder izrazi moraju ostati neutralni i bez glorifikacije istorijskih ili političkih narativa.
 - `Napoleon Bonaparta` i `Velim dobar dan, krijem 'top' kao da je san` ostaju downstream narativne izvedenice i ne dobijaju canonical status.
+- Zaključavanje značenja u ovoj sekciji ostaje podređeno `docs/repository-operating-model.md` sekciji `5a. Downstream term-control rule` i operativnoj klasifikaciji iz `vrh-programskog-ekvivalenta-operativni-okvir-plan.md` sekcije 0.3.
 
 ## 3) Role i odgovornosti po lane-u
 
@@ -182,6 +183,8 @@ Ovaj plan definiše sledeće minimalne izlaze:
 6. routing-metapodatke za izraze definisane u matrici iz sekcije 2.2.
 
 ## 9) Shared-lane checkpoint lista
+
+Kanonska shared-lane checkpoint evidencija za cross-lane promene ostaje u `vrh-programskog-ekvivalenta-operativni-okvir-plan.md` sekciji 5.1. Ova lista je narativna dopuna koju treba proveriti zajedno sa tim operativnim checkpoint-om.
 
 Pre dalje upotrebe ili proširenja proveriti:
 
