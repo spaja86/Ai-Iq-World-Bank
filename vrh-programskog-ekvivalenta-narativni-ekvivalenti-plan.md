@@ -105,7 +105,7 @@ Faze rada u ovom planu moraju ostati ovim redom:
 
 | Lane | KPI fokus | Minimalni kriterijum uspeha |
 |---|---|---|
-| Developer | tačnost, stabilnost, validacija, traceability | promene validirane, bez prekida reference lanca i bez regressions u zahvaćenom surface-u |
+| Developer | tačnost, stabilnost, validacija, traceability | promene validirane, bez prekida reference lanca i bez regresija u zahvaćenom surface-u |
 | Creator | jasnoća, public-safe ton, narativna upotrebljivost | metafore ostaju javno-bezbedne, neutralne i nedvosmisleno odvojene od canonical tvrdnji |
 | Shared | ownership handoff, release gates, meaning alignment | svaka reusable izvedenica ima status, controlling source i audience/visibility klasifikaciju |
 
