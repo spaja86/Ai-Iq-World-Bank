@@ -68,6 +68,26 @@ Validaciona napomena:
 - Polja audience layer i ownership lane se obavezno evidentiraju u šemi iz sekcije 5.1 i proveravaju kroz shared-lane checkpoint listu.
 - Autoritativna lokacija metapodataka: za plan dokumente polja se vode u routing sekciji dokumenta; za operativni audit trag vode se u evidenciji po šemi iz sekcije 5.1.
 
+## 0.3) Klasifikacija ključnih izraza u okviru
+
+| Izraz | Klasifikacija | Controlling source | Audience layer | Visibility | Ownership lane | Release status |
+|---|---|---|---|---|---|---|
+| `Developer + Creator operating model` | canonical | `docs/repository-operating-model.md` | canonical/standards + contributor routing | `public-safe` | shared | approved |
+| `VRH programskog ekvivalenta` | working/internal | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md` | internal planning + contributor execution | `limited/internal` | shared | working |
+| `Napoleon Bonaparta` | working/internal | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md` | internal planning + contributor execution | `limited/internal` | creator uz shared-lane proveru | working |
+| `Napoleon Bonaparta` — sanitizovana creator/public-safe izvedenica | creator/public-safe | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md` | creator/public-safe | `public-safe` | creator uz shared-lane proveru | draft |
+| `Velim dobar dan, krijem 'top' kao da je san` | working/internal | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md` | internal planning + contributor execution | `limited/internal` | creator uz shared-lane proveru | working |
+| `Velim dobar dan, krijem 'top' kao da je san` — sanitizovana creator/public-safe izvedenica | creator/public-safe | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md` | creator/public-safe | `public-safe` | creator uz shared-lane proveru | draft |
+
+Normativna pravila:
+
+- samo `Developer + Creator operating model` zadržava canonical ulogu za routing i ownership značenje,
+- `VRH programskog ekvivalenta` ostaje working/internal koordinacioni izraz downstream od operating modela,
+- `Napoleon Bonaparta` ostaje kontrolisana metafora ili interni narativni marker i ne sme postati istorijski, politički ili reputacioni claim,
+- `Velim dobar dan, krijem 'top' kao da je san` ostaje eksperimentalna creator formulacija bez operativne ili canonical snage.
+
+Ova pravila se tumače isključivo downstream od `docs/repository-operating-model.md` sekcije `5a. Downstream term-control rule`, koja ostaje glavni controlling source za repository-wide Developer + Creator terminološki režim.
+
 ## 1) Ciljna specifikacija “VRH programskog ekvivalenta”
 
 Jedinstvena ciljna specifikacija zahteva:
@@ -107,6 +127,8 @@ Developer lane je odgovoran za:
 - obaveznu validaciju kao release kapiju (`python3 config/validate_repository.py`, `node --check script.js`, security provere),
 - stabilnost score logike i očuvanje traceability veze prema controlling source-u,
 - ekspoziciju aktivnog standard/version signala na izlaznim površinama.
+- tehničku tačnost svih downstream surface-ova koji se pozivaju na VRH okvir,
+- usklađivanje eventualnih panela ili drugih surface-ova sa postojećim controlling source pravilima.
 
 ### 3.1) Mapa tehničkih površina (dokumenti, prototip, reference)
 
@@ -125,6 +147,9 @@ Creator lane je odgovoran za:
 - konzistentan ton po audience slojevima uz kontrolisanu terminologiju,
 - katalog reusable concept surfaces koji je sledljiv do controlling source-a,
 - sanitizaciju sadržaja pre javnog sloja.
+- narativno pakovanje bez menjanja canonical značenja,
+- samo neutralne i sanitizovane izvedenice metaforičkih izraza,
+- jasno razdvajanje metafore od činjenice, standarda i operativne instrukcije.
 
 ## 5) Shared lane — usklađivanje Developer + Creator tokova
 
@@ -134,6 +159,9 @@ Shared lane obezbeđuje:
 - handoff pravila za promene koje prelaze lane granice,
 - mapiranje svakog reusable outputa na standard ili governance dokument,
 - potvrdu da narativ, implementacija i governance značenje ostaju usklađeni.
+- potvrdu da izvedeni izraz ne menja canonical značenje,
+- potvrdu ownership handoff-a između developer i creator rada,
+- potvrdu da reusable narativ ostaje public-safe i repo-relative pre dalje upotrebe.
 
 ### 5.1) Evidencija promena koje prelaze Developer ↔ Creator granicu
 
@@ -157,6 +185,7 @@ Ova sekcija definiše šemu; operativna evidencija se vodi u namenskom review/au
 ### Faza B — poravnanje plan-dokumenata i kataloga izlaza
 - Uskladiti root planove, support površine i portfolio mapiranje.
 - Potvrditi da svaki reusable surface ima routing metapodatke.
+- Potvrditi klasifikaciju izraza `Developer + Creator operating model`, `VRH programskog ekvivalenta`, `Napoleon Bonaparta` i `Velim dobar dan, krijem 'top' kao da je san`.
 
 ### Faza C — prototip/panel usklađivanje
 - Uskladiti javne panele i prototip sa operating model pravilima.
@@ -184,6 +213,20 @@ Obavezni minimum pre finalizacije većih promena:
 ## 9) Merenje uspeha (KPI)
 
 ### Developer KPI
+1. validacija prolaznost,
+2. broj regresija,
+3. lead time do stabilnog i validiranog izdanja.
+
+### Creator KPI
+1. jasnoća poruke,
+2. konzistentnost audience slojeva i neutralnog tumačenja,
+3. reuse stopa public-safe surface-a,
+4. nulta stopa političke/istorijske glorifikacije u public-safe narativima.
+
+### Shared KPI
+1. udeo promena sa potpunim routing metapodacima,
+2. udeo promena bez governance odstupanja,
+3. release-gate prolaznost kroz cikluse.
 - lead time do isporuke,
 - validacija prolaznost,
 - broj regresija,
@@ -206,6 +249,8 @@ Promena ili programski talas je spreman kada su istovremeno ispunjeni sledeći u
 
 1. svi lane-ovi rade po istom operativnom modelu,
 2. svaka javna površina je sledljiva do controlling source-a,
+3. canonical značenje ostaje netaknuto i svi reusable ili release-bound downstream surface-ovi ostaju usklađeni sa controlling source pravilima,
+4. release odluke su dokazive, ponovljive i bezbedne za javnu upotrebu.
 3. release odluke su dokazive, ponovljive i bezbedne za javnu upotrebu,
 4. canonical značenje je netaknuto, a metafora ostaje interno kontrolisana ili javno neutralizovana.
 
