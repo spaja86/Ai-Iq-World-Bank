@@ -62,7 +62,7 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
   - nivo: `working/internal` strogo ograničen fikcionalni narativni placeholder
   - status: dozvoljen samo u internom planiranju i kontrolisanoj evaluaciji narativa
   - pravilo upotrebe: zabranjena politička, istorijska ili ideološka glorifikacija; izraz se ne predstavlja kao činjenica, public claim niti canonical smernica
-  - controlling source: ovaj plan + `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`
+  - controlling source: `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`
 - **Anštajn**
   - nivo: `creator/public-safe`
   - status: dozvoljena samo kontrolisana metafora

@@ -41,6 +41,11 @@ Svaka netrivijalna promena ili reusable surface mora eksplicitno sadržati slede
 4. ownership lane (uz shared-lane handoff kada je potrebno),
 5. release status.
 
+Pravilo obaveznosti:
+
+- Za netrivijalne promene svih reusable surface-ova svih 5 polja su obavezna.
+- Samo privremene lokalne beleške koje nisu release kandidati i ne ulaze u reusable tok mogu ostati bez pune šeme.
+
 Dozvoljene vrednosti i izvor:
 
 - **controlling source:** repo-relative referenca ka dokumentu koji upravlja značenjem/promenom (hijerarhija iz `README.md` i `docs/repository-operating-model.md`).
@@ -119,6 +124,7 @@ Za svaku veću cross-lane promenu voditi minimalni zapis:
 | YYYY-MM-DD | naziv dokumenta/panela | potvrđeno / na proveri | internal planning / canonical/standards / creator/public-safe | public-safe / limited/internal | developer->creator / creator->developer / shared | working / draft / approved / archived |
 
 Napomena: audience layer se vodi kao zasebno polje, dok kolona visibility koristi isključivo visibility klase definisane u odeljku 0.2.
+Ovaj minimalni template je namerno ograničen na `public-safe` i `limited/internal` za cross-lane operativni tok; `canonical/internal standard` koristi se kada je surface sam canonical standard.
 
 ## 6) Program ekvivalenta po fazama
 
