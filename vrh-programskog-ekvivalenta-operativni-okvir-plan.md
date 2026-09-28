@@ -58,6 +58,7 @@ Validaciona napomena:
 
 - `config/validate_repository.py` automatski sprovodi Document Control strukturu, status/visibility skupove i routing-block zahteve za obuhvaćene dokumente.
 - Ova šema dodatno uvodi obaveznu operativnu disciplinu za VRH cross-lane evidenciju (manual + review kontrola), uključujući audience layer i ownership lane eksplicitnost za svaku netrivijalnu reusable promenu.
+- Automatska validacija primarno pokriva strukturisane `.md` surface-e (`docs/`, `governance/`, `standards/`, root `.md` planove i `config/sensitive-content-review-checklist.md`), dok se kompletna VRH cross-lane evidencija proverava kroz shared-lane review checkpoint.
 
 ## 1) Ciljna specifikacija “VRH programskog ekvivalenta”
 
