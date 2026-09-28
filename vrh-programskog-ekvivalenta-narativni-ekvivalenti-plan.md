@@ -46,12 +46,26 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
 
 ### 2.2 Matrica termina i statusa
 
-| Izraz | Nivo | Status | Pravilo upotrebe | Controlling source |
-|---|---|---|---|---|
-| `docs/repository-operating-model.md` definisan developer + creator operating model | canonical | postojeći canonical/routing izvor | koristi se za ownership, audience, visibility i release redosled | `docs/repository-operating-model.md` |
-| `vrh programskog ekvivalenta` | working/internal | radni operativni izraz | koristi se samo kao interni okvir downstream od postojećih izvora | `vrh-programskog-ekvivalenta-operativni-okvir-plan.md` |
-| `Anštajn` | creator/public-safe | dozvoljena samo kontrolisana metafora | ne sme zameniti canonical merila kvaliteta, scoring ili release kriterijume | ovaj plan + `docs/repository-operating-model.md` |
-| `ekvivalent praznog hoda podupire se vazduhom u projektnom okviru zaprege` | creator/public-safe eksperimentalni koncept | eksperimentalna narativna formulacija | ne koristiti kao operativni claim, standard ili proverljivu činjenicu bez dalje standardizacije | ovaj plan + `governance/document-lifecycle.md` |
+- **Developer + creator operating model**
+  - nivo: `canonical`
+  - status: postojeći canonical/routing izvor
+  - pravilo upotrebe: koristi se za ownership, audience, visibility i release redosled
+  - controlling source: `docs/repository-operating-model.md`
+- **VRH programskog ekvivalenta**
+  - nivo: `working/internal`
+  - status: radni operativni izraz
+  - pravilo upotrebe: koristi se samo kao interni okvir downstream od postojećih izvora
+  - controlling source: `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`
+- **Anštajn**
+  - nivo: `creator/public-safe`
+  - status: dozvoljena samo kontrolisana metafora
+  - pravilo upotrebe: ne sme zameniti canonical merila kvaliteta, scoring ili release kriterijume
+  - controlling source: ovaj plan + `docs/repository-operating-model.md`
+- **Ekvivalent praznog hoda podupire se vazduhom u projektnom okviru zaprege**
+  - nivo: `creator/public-safe` eksperimentalni koncept
+  - status: eksperimentalna narativna formulacija
+  - pravilo upotrebe: ne koristiti kao operativni claim, standard ili proverljivu činjenicu bez dalje standardizacije
+  - controlling source: ovaj plan + `governance/document-lifecycle.md`
 
 ### 2.3 Zaključavanje značenja
 
@@ -103,11 +117,15 @@ Faze rada u ovom planu moraju ostati ovim redom:
 
 ### 5.1 KPI tabela po lane-u
 
-| Lane | KPI fokus | Minimalni kriterijum uspeha |
-|---|---|---|
-| Developer | tačnost, stabilnost, validacija, traceability | promene validirane, bez prekida reference lanca i bez regresija u zahvaćenom surface-u |
-| Creator | jasnoća, public-safe ton, narativna upotrebljivost | metafore ostaju javno-bezbedne, neutralne i nedvosmisleno odvojene od canonical tvrdnji |
-| Shared | ownership handoff, release gates, meaning alignment | svaka reusable izvedenica ima status, controlling source i audience/visibility klasifikaciju |
+- **Developer**
+  - KPI fokus: tačnost, stabilnost, validacija, traceability
+  - minimalni kriterijum uspeha: promene validirane, bez prekida reference lanca i bez regresija u zahvaćenom surface-u
+- **Creator**
+  - KPI fokus: jasnoća, public-safe ton, narativna upotrebljivost
+  - minimalni kriterijum uspeha: metafore ostaju javno-bezbedne, neutralne i nedvosmisleno odvojene od canonical tvrdnji
+- **Shared**
+  - KPI fokus: ownership handoff, release gates, meaning alignment
+  - minimalni kriterijum uspeha: svaka reusable izvedenica ima status, controlling source i audience/visibility klasifikaciju
 
 ### 5.2 Završni kriterijumi plana
 
