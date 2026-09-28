@@ -61,11 +61,12 @@ Normativno pravilo vrednosti:
 
 Validaciona napomena:
 
-- **Machine-validated (postojeće validator ponašanje u `config/validate_repository.py`):** Document Control struktura, status/visibility skupovi, zavisnosti i routing-block zahtevi za obuhvaćene dokumente.
+- **Machine-validated (postojeće i neizmenjeno validator ponašanje u `config/validate_repository.py`):** Document Control struktura, status/visibility skupovi, zavisnosti i routing-block zahtevi za obuhvaćene dokumente.
 - **Review-only (shared-lane checkpoint):** audience layer, ownership lane/handoff detalj, i potpuna cross-lane evidencija za svaku netrivijalnu reusable promenu.
 - **Combined control:** release status mora biti eksplicitan u evidenciji; validan status skup ostaje `draft`, `working`, `approved`, `archived`.
 - Automatska validacija primarno pokriva strukturisane `.md` surface-e (`docs/`, `governance/`, `standards/`, root `.md` planove i `config/sensitive-content-review-checklist.md`), dok se kompletna VRH cross-lane evidencija proverava kroz shared-lane review checkpoint.
 - Polja audience layer i ownership lane se obavezno evidentiraju u šemi iz sekcije 5.1 i proveravaju kroz shared-lane checkpoint listu.
+- Autoritativna lokacija metapodataka: za plan dokumente polja se vode u routing sekciji dokumenta; za operativni audit trag vode se u evidenciji po šemi iz sekcije 5.1.
 
 ## 1) Ciljna specifikacija “VRH programskog ekvivalenta”
 

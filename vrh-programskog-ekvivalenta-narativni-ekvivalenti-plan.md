@@ -61,9 +61,6 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
 - **ITLER ARNOLD / VOJNIKOV ŠEGRT JE KVOSKO PO ATOMSKOM SKLONIŠTU U EPRUVETI**
   - nivo: `working/internal` (nivo 2 u pravilu tri nivoa)
   - status: dozvoljen samo u internom planiranju i kontrolisanoj evaluaciji narativa
-  - audience layer: internal planning
-  - visibility: limited/internal
-  - release status: working
   - pravilo upotrebe: primeniti normativna ograničenja iz sekcije 7.3
   - controlling source: `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md`
   - related reference: `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`
