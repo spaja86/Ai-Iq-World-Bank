@@ -54,12 +54,18 @@ Dozvoljene vrednosti i izvor:
 - **ownership lane:** developer, creator, shared (lane model iz `docs/repository-operating-model.md`).
 - **release status:** `draft`, `working`, `approved`, `archived` (status model usklađen sa `governance/document-lifecycle.md` i validacijom u `config/validate_repository.py`).
 
+Normativno pravilo vrednosti:
+
+- Navedene liste su iscrpne za ovaj VRH okvir.
+- Vrednosti se koriste u istom zapisu (bez alias varijanti) radi konzistentnog review tumačenja.
+
 Validaciona napomena:
 
 - **Machine-validated (postojeće validator ponašanje u `config/validate_repository.py`):** Document Control struktura, status/visibility skupovi, zavisnosti i routing-block zahtevi za obuhvaćene dokumente.
 - **Review-only (shared-lane checkpoint):** audience layer, ownership lane/handoff detalj, i potpuna cross-lane evidencija za svaku netrivijalnu reusable promenu.
 - **Combined control:** release status mora biti eksplicitan u evidenciji; validan status skup ostaje `draft`, `working`, `approved`, `archived`.
 - Automatska validacija primarno pokriva strukturisane `.md` surface-e (`docs/`, `governance/`, `standards/`, root `.md` planove i `config/sensitive-content-review-checklist.md`), dok se kompletna VRH cross-lane evidencija proverava kroz shared-lane review checkpoint.
+- Polja audience layer i ownership lane se obavezno evidentiraju u šemi iz sekcije 5.1 i proveravaju kroz shared-lane checkpoint listu.
 
 ## 1) Ciljna specifikacija “VRH programskog ekvivalenta”
 

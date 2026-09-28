@@ -64,7 +64,7 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
   - audience layer: internal planning
   - visibility: limited/internal
   - release status: working
-  - pravilo upotrebe: zabranjena politička, istorijska ili ideološka glorifikacija; izraz se ne predstavlja kao činjenica, public claim niti canonical smernica
+  - pravilo upotrebe: primeniti normativna ograničenja iz sekcije 7.3
   - controlling source: `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md`
   - related reference: `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`
 - **Anštajn**
