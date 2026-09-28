@@ -59,9 +59,9 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
   - pravilo upotrebe: koristi se samo kao interni okvir downstream od postojećih izvora
   - controlling source: `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`
 - **ITLER ARNOLD / VOJNIKOV ŠEGRT JE KVOSKO PO ATOMSKOM SKLONIŠTU U EPRUVETI**
-  - nivo: `creator/public-safe` fikcionalni narativni placeholder
-  - status: dozvoljen isključivo kao fikcionalna konstrukcija
-  - pravilo upotrebe: zabranjena politička, istorijska ili ideološka glorifikacija; izraz se ne predstavlja kao činjenica niti canonical smernica
+  - nivo: `working/internal` strogo ograničen fikcionalni narativni placeholder
+  - status: dozvoljen samo u internom planiranju i kontrolisanoj evaluaciji narativa
+  - pravilo upotrebe: zabranjena politička, istorijska ili ideološka glorifikacija; izraz se ne predstavlja kao činjenica, public claim niti canonical smernica
   - controlling source: ovaj plan + `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`
 - **Anštajn**
   - nivo: `creator/public-safe`
