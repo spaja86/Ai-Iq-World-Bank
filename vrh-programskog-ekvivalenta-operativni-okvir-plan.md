@@ -132,7 +132,7 @@ Za svaku veću cross-lane promenu voditi minimalni zapis:
 
 Napomena: audience layer se vodi kao zasebno polje, dok kolona visibility koristi isključivo visibility klase definisane u odeljku 0.2.
 Kada je surface canonical, koristi se visibility `canonical/internal standard` uz isti šablon evidencije.
-Evidencija se vodi u ovoj sekciji (5.1) kao radni zapis za svaku novu netrivijalnu cross-lane promenu; po potrebi se referencira iz povezanog radnog plana ili review zapisa.
+Ova sekcija definiše šemu; operativna evidencija se vodi u namenskom review/audit artefaktu (npr. zapis zasnovan na `business/revizijski-trag-template.csv`) i po potrebi se referencira iz povezanog radnog plana.
 
 ## 6) Program ekvivalenta po fazama
 
