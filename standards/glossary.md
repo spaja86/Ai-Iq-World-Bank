@@ -23,6 +23,7 @@
 | Public output | A version suitable for wider distribution under legal/reputational controls |
 | Internal output | A version intended for restricted operational use |
 | Meta-monetization framework (`monetizacija nad monetizacijama`) | The approved working term for a shared-lane framework that governs, combines, and optimizes multiple monetization models while remaining downstream from repository standards, governance, and routing controls |
+| MARKAN (additive alias) | A permitted non-controlling alias for the Developer + Creator VRH program-equivalent context. It adds a label only; it does not replace canonical terminology, controlling sources, ownership routing, or release controls. |
 | Creator / public-safe wording | Public-facing language used to explain the concept or prototype without exposing sensitive operational detail |
 | Regulatory / legal wording | Controlled language used for compliance, jurisdiction, legal, or reputational handling |
 | Support wording | Neutral operational language used for billing, incident, escalation, follow-up, and closure messages |
