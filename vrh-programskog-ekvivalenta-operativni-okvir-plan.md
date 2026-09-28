@@ -108,7 +108,7 @@ Za svaku veću cross-lane promenu voditi minimalni zapis:
 
 | Datum | Promena surface-a | Controlling source potvrda | Audience layer | Visibility klasifikacija | Handoff odluka | Release status |
 | --- | --- | --- | --- | --- | --- | --- |
-| YYYY-MM-DD | naziv dokumenta/panela | potvrđeno / na proveri | internal planning / contributor execution / creator/public-safe | public-safe / limited/internal / canonical/internal standard | developer->creator / creator->developer / shared | working / draft / approved / archived |
+| YYYY-MM-DD | naziv dokumenta/panela | potvrđeno / na proveri | internal planning / contributor execution / creator/public-safe | public-safe / limited/internal | developer->creator / creator->developer / shared | working / draft / approved / archived |
 
 Napomena: audience layer se vodi kao zasebno polje (npr. internal planning, contributor execution, creator/public-safe), dok kolona visibility koristi samo zvanične visibility vrednosti.
 
