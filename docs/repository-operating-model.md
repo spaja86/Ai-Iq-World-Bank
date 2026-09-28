@@ -86,6 +86,8 @@ Use one consistent work cycle for cross-repository changes:
 - Update concept-surface mapping when a reusable panel, narrative block, or cataloged output changes.
 - Keep multilingual or channel-specific variants downstream from canonical wording.
 - Confirm whether the work stays in one lane or requires a shared-lane handoff before release.
+- Keep derivative or metaphorical terminology downstream from this file and any approved working plan; do not let narrative variants replace canonical routing language.
+- Require shared-lane review before any reusable metaphor, slogan, or creator-facing phrase is treated as a stable repository surface.
 
 ## Non-trivial change metadata
 
@@ -164,6 +166,15 @@ Use these handoffs when work moves between repository layers:
 4. **Plans -> Prototype/Public output** when sanitized, approved, public-safe meaning is ready for display.
 5. **Developer -> Creator** when implementation surfaces need public-safe narrative framing.
 6. **Creator -> Developer** when public-safe messaging needs synchronized UI anchors or validation coverage.
+
+### 5a. Downstream term-control rule
+
+`docs/repository-operating-model.md` remains the primary controlling source for the repository-wide Developer + Creator framework.
+
+- Working/internal plans may introduce downstream phrasing only when they preserve the same ownership, audience, visibility, and release-gate meaning defined here.
+- Canonical routing language remains the Developer + Creator operating model and must not be replaced by metaphorical or narrative aliases.
+- Working/internal labels such as `VRH programskog ekvivalenta` may coordinate downstream execution, but they do not override this operating model.
+- Narrative candidates and experimental creator phrases may exist only as controlled downstream derivatives with explicit shared-lane review, public-safe filtering, and repository-relative traceability.
 
 ## Narrative and audience layers
 

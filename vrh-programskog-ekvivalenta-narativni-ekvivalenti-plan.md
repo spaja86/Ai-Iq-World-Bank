@@ -46,34 +46,15 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
 2. **working/internal** — operativni izrazi za shared-lane planiranje i izvršenje,
 3. **creator/public-safe** — metaforičke ili narativne formulacije koje služe objašnjenju, ne upravljanju.
 
-### 2.2 Matrica termina i statusa
+### 2.2 Matrica termina i obaveznih metapodataka
 
-- **Developer + creator operating model**
-  - nivo: `canonical`
-  - status: postojeći canonical/routing izvor
-  - pravilo upotrebe: koristi se za ownership, audience, visibility i release redosled
-  - controlling source: `docs/repository-operating-model.md`
-- **VRH programskog ekvivalenta**
-  - nivo: `working/internal`
-  - status: radni operativni izraz
-  - pravilo upotrebe: koristi se samo kao interni okvir downstream od postojećih izvora
-  - controlling source: `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`
-- **ITLER ARNOLD / VOJNIKOV ŠEGRT JE KVOSKO PO ATOMSKOM SKLONIŠTU U EPRUVETI**
-  - nivo: `working/internal` (nivo 2 u pravilu tri nivoa)
-  - status: dozvoljen samo u internom planiranju i kontrolisanoj evaluaciji narativa
-  - pravilo upotrebe: primeniti normativna ograničenja iz sekcije 7.3
-  - controlling source: `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md`
-  - related reference: `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`
-- **Anštajn**
-  - nivo: `creator/public-safe`
-  - status: dozvoljena samo kontrolisana metafora
-  - pravilo upotrebe: ne sme zameniti canonical merila kvaliteta, scoring ili release kriterijume
-  - controlling source: ovaj plan + `docs/repository-operating-model.md`
-- **Ekvivalent praznog hoda podupire se vazduhom u projektnom okviru zaprege**
-  - nivo: `creator/public-safe` eksperimentalni koncept
-  - status: eksperimentalna narativna formulacija
-  - pravilo upotrebe: ne koristiti kao operativni claim, standard ili proverljivu činjenicu bez dalje standardizacije
-  - controlling source: ovaj plan + `governance/document-lifecycle.md`
+| Izraz | Nivo | Controlling source | Audience layer | Visibility | Ownership lane | Release status | Pravilo upotrebe |
+|---|---|---|---|---|---|---|---|
+| `Developer + Creator operating model` | `canonical` | `docs/repository-operating-model.md` | canonical/standards + contributor routing | `public-safe` | shared | working | koristi se za ownership, audience, visibility i release redosled |
+| `VRH programskog ekvivalenta` | `working/internal` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md` | internal planning + contributor execution | `limited/internal` | shared | working | koristi se samo kao interni okvir downstream od postojećih izvora |
+| `Napoleon Bonaparta` | `creator/public-safe` narativni kandidat | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | internal planning; creator/public-safe samo kroz neutralnu i sanitizovanu izvedenicu | `limited/internal` | creator uz shared-lane proveru | working | dozvoljen samo kao kontrolisana metafora ili interni narativni marker; ne sme postati istorijski, politički ili reputacioni claim |
+| `Velim dobar dan, krijem 'top' kao da je san` | `creator/public-safe` eksperimentalna formulacija | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | creator/public-safe eksperimentalna izvedenica + interni review trag | `limited/internal` | creator uz shared-lane proveru | working | dozvoljen samo uz neutralno tumačenje i bez predstavljanja kao činjenice, standarda ili operativne instrukcije |
+| `ITLER ARNOLD / VOJNIKOV ŠEGRT JE KVOSKO PO ATOMSKOM SKLONIŠTU U EPRUVETI` | `working/internal` | `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | internal planning + contributor execution | `limited/internal` | shared | working | primeniti normativna ograničenja iz sekcije 7.3 |
 
 ### 2.3 Zaključavanje značenja
 
@@ -81,6 +62,7 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
 - Working/internal nivo služi za operativnu koordinaciju i ne širi canonical značenje van postojećih izvora.
 - Creator/public-safe nivo sme pojednostaviti poruku, ali ne sme redefinisati canonical kvalitet, KPI logiku ni release spremnost.
 - Fikcionalni placeholder izrazi moraju ostati neutralni i bez glorifikacije istorijskih ili političkih narativa.
+- `Napoleon Bonaparta` i `Velim dobar dan, krijem 'top' kao da je san` ostaju downstream narativne izvedenice i ne dobijaju canonical status.
 
 ## 3) Role i odgovornosti po lane-u
 
@@ -157,23 +139,25 @@ Pre bilo kakvog public-safe izvođenja proveriti:
 
 ## 7) Pravila za public-safe izvedenice
 
-### 7.1 “Anštajn” kao creator-facing quality metaphor
+### 7.1 `Napoleon Bonaparta` kao kontrolisana creator-facing metafora
 
-Izraz **„Anštajn”** sme se koristiti samo ako istovremeno ispunjava sledeće uslove:
+Izraz **`Napoleon Bonaparta`** sme se koristiti samo ako istovremeno ispunjava sledeće uslove:
 
 1. ima jasno ograničen audience layer,
 2. koristi public-safe i neutralnu formulaciju,
 3. ima vezu ka controlling source dokumentu koji određuje stvarna merila kvaliteta,
-4. eksplicitno ne zamenjuje canonical merila kvaliteta, scoring ili release kriterijume.
+4. eksplicitno ne zamenjuje canonical merila kvaliteta, scoring ili release kriterijume,
+5. ne predstavlja istorijski, politički ili reputacioni claim koji upravlja planom.
 
-### 7.2 “Ekvivalent praznog hoda podupire se vazduhom u projektnom okviru zaprege” kao eksperimentalni narativni koncept
+### 7.2 `Velim dobar dan, krijem 'top' kao da je san` kao eksperimentalni narativni koncept
 
-Ovaj izraz se uvek tretira kao **eksperimentalni narativni koncept** uz obavezno razdvajanje:
+Ovaj izraz se uvek tretira kao **eksperimentalni creator izraz** uz obavezno razdvajanje:
 
 - **metafora:** poetska ili konceptualna slika za objašnjenje napora, kretanja, rasterećenja ili koordinacije,
 - **operativna pretpostavka:** eventualna interna radna interpretacija koja još nema canonical potvrdu,
 - **proverljiva činjenica:** u ovom planu nije uspostavljena i ne sme se podrazumevati,
 - **zabrana za canonical/public-safe claim:** izraz ne ide u canonical sloj niti u javni claim bez dalje standardizacije, governance potvrde i eksplicitnog controlling source-a.
+- **neutralno tumačenje:** dozvoljena je samo sanitizovana i neutralna izvedenica bez operativne ili canonical snage.
 
 ### 7.3 “ITLER ARNOLD / VOJNIKOV ŠEGRT...” kao strogo ograničen fikcionalni okvir
 
@@ -192,7 +176,8 @@ Ovaj plan definiše sledeće minimalne izlaze:
 2. matricu termina i njihov status,
 3. KPI tabelu po lane-u,
 4. shared-lane checkpoint listu,
-5. public-safe smernice za narativne izvedenice.
+5. public-safe smernice za narativne izvedenice,
+6. routing-metapodatke za `Developer + Creator operating model`, `VRH programskog ekvivalenta`, `Napoleon Bonaparta` i `Velim dobar dan, krijem 'top' kao da je san`.
 
 ## 9) Shared-lane checkpoint lista
 
