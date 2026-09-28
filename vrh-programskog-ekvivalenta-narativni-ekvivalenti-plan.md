@@ -40,6 +40,12 @@ Zajednička ambicija ovog plana je da jedan developer + creator okvir istovremen
 
 U ovom planu izraz **„VRH programskog ekvivalenta”** ostaje radni operativni okvir za developer + creator saradnju i ne dobija status canonical termina mimo postojećeg controlling source lanca.
 
+### 1.2 Potvrda cilja i rečnika (zaključavanje apdejta)
+
+- Ovaj dokument eksplicitno zaključava da je promena **VRH developer + creator narativni apdejt**.
+- Svi izrazi `SENZACIJA`, `EPIK`, `RER`, `IMORTAL`, `REMAPGE` ostaju downstream od `docs/repository-operating-model.md` i ne zamenjuju canonical routing jezik.
+- Canonical routing jezik ostaje `Developer + Creator operating model`, dok navedeni izrazi imaju samo radnu ili public-safe narativnu funkciju.
+
 ### 1.1 Programski i narativni ekvivalent (ne realna akcija)
 
 - Izraz **„DŽINGISKAN / konjički napad strela u trku”** u ovom okviru je isključivo metafora za:
@@ -133,6 +139,16 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
   - pravilo upotrebe: ne koristiti kao operativni claim, standard ili proverljivu činjenicu bez dalje standardizacije
   - controlling source: ovaj plan + `governance/document-lifecycle.md`
 
+### 2.2b Zaključana klasifikacija: SENZACIJA / EPIK / RER / IMORTAL / REMAPGE
+
+| Termin | Canonical nivo | Working/internal nivo | Creator/public-safe nivo | Pravilo |
+|---|---|---|---|---|
+| `SENZACIJA` | nije canonical termin | hook za početni fokus i pažnju u internom narativnom toku | uvodna pažnja bez hiperbole i bez apsolutnih tvrdnji | ne sme glumiti dokazanu činjenicu |
+| `EPIK` | nije canonical termin | value-frame za ambiciju kvaliteta i koordinacije | uzdignuta ali neutralna poruka o vrednosti izlaza | zabranjen konfliktni, elitistički ili dehumanizujući ton |
+| `RER` | nije canonical termin | proof-frame za operativnu proveru (review-evidence-release) | javno objašnjenje da kvalitet prolazi proveru pre objave | ostaje operativni mehanizam, ne standard |
+| `IMORTAL` | nije canonical termin | longevity-frame za kontinuitet održavanja i odgovornosti | poruka dugoročnosti bez mita o nepogrešivosti | bez apsolutnih garancija i bez dogmatskog tona |
+| `REMAPGE` | nije canonical termin | iterative-reset mehanizam za re-map/re-gate/re-evaluate ciklus | javna poruka kontinuiranog unapređenja kroz iteracije | ostaje operativni mehanizam, ne canonical pravilo |
+
 ### 2.3 Narativna matrica figura i kontrolisana mapa uloga
 
 | Figura / izraz | Simboličko značenje | Dozvoljena operativna interpretacija | Zabranjena interpretacija | Lane vlasništvo |
@@ -211,6 +227,18 @@ Programski prevod metafore:
 4. `kosi hitac` = koordinisano delovanje pod uglom, uz korekcije po iteraciji,
 5. `epski pop` = završni stabilni izlaz koji je validiran, kontrolisan i spreman za reuse.
 
+### 4.1 Developer narative update cycle (tehnički okvir)
+
+Obavezni stabilni ciklus za svaku netrivijalnu narativnu promenu:
+
+1. source lock (`standards` -> `governance` -> `docs/repository-operating-model.md` -> plan),
+2. evidence lock (repo-relative reference, status, visibility, ownership),
+3. validation lock (`python3 config/validate_repository.py`, `node --check script.js` kada je relevantno),
+4. release lock (shared-lane checkpoint i release status evidencija),
+5. remap lock (`REMAPGE` iteracija ako checkpoint nije prošao).
+
+`RER` u ovom dokumentu označava review-evidence-release tok i ne dobija canonical status.
+
 ## 5) Creator lane značenje
 
 Creator lane vodi:
@@ -252,6 +280,16 @@ Kada se pojavljuju novi navodi ili sirovi ulazi, tretiraju se kao:
 
 Bez eksplicitne lokacije i potvrde u repozitorijumu, navod ne sme biti predstavljen kao repo-dokumentovana činjenica.
 
+### 6.1 Narativna arhitektura apdejta (zaključana sekvenca)
+
+Izlazna sekvenca za reusable narativnu površinu:
+
+1. **Hook (`SENZACIJA`)** - dozvoljeno: pažnja i kontekst; zabranjeno: senzacionalistički apsolutni claim.
+2. **Value (`EPIK`)** - dozvoljeno: ambicija kvaliteta i smisla; zabranjeno: glorifikacija konflikta ili superiornosti ljudi.
+3. **Proof frame (`RER`)** - dozvoljeno: review/evidence/release objašnjenje; zabranjeno: predstavljanje metafore kao dokaza.
+4. **Longevity frame (`IMORTAL`)** - dozvoljeno: kontinuitet i odgovornost; zabranjeno: tvrdnja o nepogrešivosti ili trajnoj dominaciji.
+5. **Iterative reset (`REMAPGE`)** - dozvoljeno: korekcija i ponovno poravnanje; zabranjeno: zaobilaženje release gate-a.
+
 ## 7) Public-safe izvedenica
 
 ### 7.1 Opšta pravila
@@ -289,6 +327,15 @@ Sanitizovana javna izvedenica može glasiti:
 
 > Dve usklađene sile prate pokretni izazov ne zato da ga poraze, već da ga razumeju, predvide i prevedu u red. Kada se disciplina, anticipacija i stvaralačka smelost spoje, sirova potera prerasta u kontrolisani put ka uzdignutom, odgovornom i deljivom izlazu.
 
+### 7.5 Release-gate kriterijumi za javni izlaz
+
+Pre objave svake reusable narativne izvedenice obavezno potvrditi:
+
+1. sanitizaciju i neutralizaciju rizičnog jezika,
+2. usklađenost sa visibility klasom i audience layer-om,
+3. eksplicitan ownership i handoff trag,
+4. release status i controlling source trag,
+5. da samo odobrena public-safe varijanta ide na javne površine.
 ### 7.5 Kratka, srednja i duga public-safe varijanta (iz epskog citata)
 
 **Kratka varijanta:**
@@ -311,6 +358,8 @@ Ovaj plan definiše sledeće minimalne izlaze:
 2. matricu termina i njihovog statusa,
 3. developer/programski prevod metafore,
 4. creator/public-safe sanitizovani rezime,
+5. kratki završni epilog za reuse.
+6. objedinjeni developer + creator update okvir sa `SENZACIJA` -> `EPIK` -> `RER` -> `IMORTAL` -> `REMAPGE` sekvencom.
 5. kratku, srednju i dugu public-safe varijantu epskog citata,
 6. kratki završni epilog za reuse.
 
@@ -332,6 +381,33 @@ Pre dalje upotrebe ili proširenja proveriti:
 - [ ] da li creator/public-safe metafora ne menja canonical značenje,
 - [ ] da li su visibility i audience layer pravilno ograničeni,
 - [ ] da li su svi javni izlazi sanitizovani, sledljivi i repo-relative.
+- [ ] da li `RER` i `REMAPGE` ostaju operativni mehanizmi bez canonical statusa,
+- [ ] da li je narativna sekvenca `SENZACIJA -> EPIK -> RER -> IMORTAL -> REMAPGE` primenjena bez odstupanja od release gate-a.
+
+## 9.1 KPI okvir za VRH nivo narativnog apdejta
+
+### Developer KPI
+
+1. stabilnost narativnih surface-ova bez regresije,
+2. prolaz validacije po ciklusu,
+3. broj ciklusa do release-ready statusa.
+
+### Creator KPI
+
+1. jasnoća poruke po audience sloju,
+2. public-safe konzistentnost bez konfliktnog jezika,
+3. reuse stopa odobrenih narativnih blokova.
+
+### Shared KPI
+
+1. procenat promena sa kompletnim routing metapodacima,
+2. release-gate prolaznost po iteraciji,
+3. doslednost handoff evidencije između lane-ova.
+
+## 9.2 Operativni ciklus apdejta
+
+- **Nedeljni ciklus:** plan -> apdejt -> provera -> release odluka.
+- **Mesečni ciklus:** revizija termina (`SENZACIJA`, `EPIK`, `RER`, `IMORTAL`, `REMAPGE`) i efekta po audience slojevima.
 
 ## 10) Release uslovi
 
