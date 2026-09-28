@@ -13,6 +13,8 @@ Ovaj dokument postavlja traženi sadržaj kao **working internal plan**, potpuno
 
 Ne uvodi novi canonical standard, ne redefiniše postojeću controlling source hijerarhiju i ne tretira metaforičke izraze kao upravljačku terminologiju.
 
+Tema „ITLER ARNOLD / VOJNIKOV ŠEGRT JE KVOSKO PO ATOMSKOM SKLONIŠTU U EPRUVETI“ u ovom dokumentu je dozvoljena isključivo kao fikcionalna narativna konstrukcija bez političke, istorijske ili ideološke glorifikacije.
+
 ## 0) Routing i lane napomena
 
 - **Primarni lane:** shared execution lane za developer + creator usklađivanje uz governance proveru.
@@ -56,6 +58,11 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
   - status: radni operativni izraz
   - pravilo upotrebe: koristi se samo kao interni okvir downstream od postojećih izvora
   - controlling source: `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`
+- **ITLER ARNOLD / VOJNIKOV ŠEGRT JE KVOSKO PO ATOMSKOM SKLONIŠTU U EPRUVETI**
+  - nivo: `creator/public-safe` fikcionalni narativni placeholder
+  - status: dozvoljen isključivo kao fikcionalna konstrukcija
+  - pravilo upotrebe: zabranjena politička, istorijska ili ideološka glorifikacija; izraz se ne predstavlja kao činjenica niti canonical smernica
+  - controlling source: ovaj plan + `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`
 - **Anštajn**
   - nivo: `creator/public-safe`
   - status: dozvoljena samo kontrolisana metafora
@@ -72,6 +79,7 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
 - Canonical nivo ostaje vezan za postojeće standards/governance/operating-model izvore.
 - Working/internal nivo služi za operativnu koordinaciju i ne širi canonical značenje van postojećih izvora.
 - Creator/public-safe nivo sme pojednostaviti poruku, ali ne sme redefinisati canonical kvalitet, KPI logiku ni release spremnost.
+- Fikcionalni placeholder izrazi moraju ostati neutralni i bez glorifikacije istorijskih ili političkih narativa.
 
 ## 3) Role i odgovornosti po lane-u
 
@@ -166,6 +174,15 @@ Ovaj izraz se uvek tretira kao **eksperimentalni narativni koncept** uz obavezno
 - **proverljiva činjenica:** u ovom planu nije uspostavljena i ne sme se podrazumevati,
 - **zabrana za canonical/public-safe claim:** izraz ne ide u canonical sloj niti u javni claim bez dalje standardizacije, governance potvrde i eksplicitnog controlling source-a.
 
+### 7.3 “ITLER ARNOLD / VOJNIKOV ŠEGRT...” kao strogo ograničen fikcionalni okvir
+
+Ovaj izraz se može koristiti samo uz sledeće uslove:
+
+1. eksplicitna napomena da je sadržaj fikcionalan i narativan,
+2. zabrana političke, istorijske i ideološke glorifikacije,
+3. zabrana predstavljanja kao proverljive činjenice, standarda ili operativne instrukcije,
+4. obavezna veza ka controlling source dokumentu i visibility klasifikaciji.
+
 ## 8) Minimalni izlazi plana
 
 Ovaj plan definiše sledeće minimalne izlaze:
@@ -183,6 +200,7 @@ Pre dalje upotrebe ili proširenja proveriti:
 - [ ] da li je controlling source eksplicitno naveden,
 - [ ] da li svaki izraz ima status po jednom od tri nivoa,
 - [ ] da li creator/public-safe metafora ne menja canonical značenje,
+- [ ] da li je za fikcionalne izraze eksplicitno potvrđena zabrana glorifikacije i zabrana predstavljanja kao činjenice,
 - [ ] da li je ownership handoff između developer i creator rada jasan,
 - [ ] da li su visibility i audience layer pravilno ograničeni,
 - [ ] da li su svi javni izlazi sanitizovani, sledljivi i repo-relative.
