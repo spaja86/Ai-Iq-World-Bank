@@ -96,6 +96,12 @@ Jedinstvena ciljna specifikacija zahteva:
 2. merljive KPI ciljeve po lane-u (Developer, Creator i Shared lane),
 3. dokazive release kriterijume za AI IQ World Bank nivo spremnosti.
 
+Napomena o narativnom ekvivalentu:
+
+- Izraz „DŽINGISKAN / konjički napad strela u trku” koristi se isključivo kao interna metafora za brzinu iteracija, preciznost inkremenata i kontinuitet kvaliteta.
+- Izraz „poraz protivnika” koristi se isključivo kao neutralni cilj nadmašivanja konkurencije kroz stabilnost, tačnost i korisničku vrednost.
+- Zabranjeno je realno, konfliktno ili fizičko tumačenje navedenih izraza.
+
 ## 2) Upravljački okvir (controlling source)
 
 Svaka netrivijalna promena prati obavezni redosled:
@@ -221,6 +227,21 @@ Obavezni minimum pre finalizacije većih promena:
 1. udeo promena sa potpunim routing metapodacima,
 2. udeo promena bez governance odstupanja,
 3. release-gate prolaznost kroz cikluse.
+- lead time do isporuke,
+- validacija prolaznost,
+- broj regresija,
+- stabilnost releasa / vreme do stabilnog izdanja.
+
+### Creator KPI
+- jasnoća poruke,
+- public-safe usklađenost i konzistentnost audience slojeva,
+- reuse stopa public-safe surface-a.
+- nulta stopa političke/istorijske glorifikacije u public-safe narativima.
+
+### Shared KPI
+- procenat izlaza sa potpunim routing metapodacima,
+- procenat izlaza bez governance odstupanja,
+- release-gate prolaznost kroz cikluse.
 
 ## 10) Definicija “spremno za VRH nivo”
 
@@ -230,3 +251,17 @@ Promena ili programski talas je spreman kada su istovremeno ispunjeni sledeći u
 2. svaka javna površina je sledljiva do controlling source-a,
 3. canonical značenje ostaje netaknuto i svi reusable ili release-bound downstream surface-ovi ostaju usklađeni sa controlling source pravilima,
 4. release odluke su dokazive, ponovljive i bezbedne za javnu upotrebu.
+3. release odluke su dokazive, ponovljive i bezbedne za javnu upotrebu,
+4. canonical značenje je netaknuto, a metafora ostaje interno kontrolisana ili javno neutralizovana.
+
+## 11) Red-team semantička provera i završni princip
+
+Pre odobravanja reusable izlaza sprovodi se red-team semantička provera:
+
+1. ukloniti formulacije koje impliciraju realno nasilje, osvetu ili poziv na povredu,
+2. ukloniti formulacije sa dehumanizujućom semantikom,
+3. potvrditi da završna formulacija ostaje u konkurentskom/performans kontekstu.
+
+Završni princip:
+
+- Izraz „Dokle god sam živ” obavezno se tretira kao dugoročna posvećenost kvalitetu i odgovornosti, bez konfliktnog ili fizičkog okvira.

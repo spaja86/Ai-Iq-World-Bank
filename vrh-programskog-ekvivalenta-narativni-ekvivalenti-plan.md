@@ -36,6 +36,22 @@ Zajednička ambicija ovog plana je da jedan developer + creator okvir istovremen
 
 U ovom planu izraz **„VRH programskog ekvivalenta”** ostaje radni operativni okvir za developer + creator saradnju i ne dobija status canonical termina mimo postojećeg controlling source lanca.
 
+### 1.1 Programski i narativni ekvivalent (ne realna akcija)
+
+- Izraz **„DŽINGISKAN / konjički napad strela u trku”** u ovom okviru je isključivo metafora za:
+  - brzinu iteracija,
+  - preciznost isporuke,
+  - kontinuirani pritisak kvaliteta.
+- Izraz **„poraz protivnika”** prevodi se u neutralni programski cilj:
+  - nadmašivanje konkurencije kroz stabilnost,
+  - tačnost isporuke,
+  - vrednost za korisnika.
+- Operativno tumačenje ključnih izraza u ovom okviru:
+  - **„brzina u trku”** = kratki release ciklusi,
+  - **„strela”** = mali i precizni inkrementi,
+  - **„dokle god sam živ”** = kontinuitet održavanja, monitoring i anti-regresiona disciplina.
+- Nijedna formulacija iz ove sekcije ne predstavlja poziv na realno nasilje, konflikt ili fizičku akciju.
+
 ## 2) Terminološko zaključavanje po nivoima
 
 ### 2.1 Pravilo tri nivoa
@@ -57,6 +73,44 @@ Sve ključne izraze u ovom okviru treba razdvojiti na tri nivoa:
 | `Velim dobar dan, krijem 'top' kao da je san` | `working/internal` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | internal planning + contributor execution | `limited/internal` | creator uz shared-lane proveru | working | dozvoljen samo uz neutralno tumačenje i bez predstavljanja kao činjenice, standarda ili operativne instrukcije |
 | `Velim dobar dan, krijem 'top' kao da je san` — sanitizovana creator/public-safe izvedenica | `creator/public-safe` | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, ovaj plan | creator/public-safe | `public-safe` | creator uz shared-lane proveru | draft | dozvoljena tek nakon shared-lane provere, neutralnog tumačenja i sanitizacije |
 | `ITLER ARNOLD / VOJNIKOV ŠEGRT JE KVOSKO PO ATOMSKOM SKLONIŠTU U EPRUVETI` | `working/internal` | ovaj plan | internal planning + contributor execution | `limited/internal` | shared | working | dozvoljen samo uz eksplicitnu napomenu da je sadržaj fikcionalan i narativan, uz zabranu glorifikacije i zabranu predstavljanja kao činjenice, standarda ili operativne instrukcije |
+### 2.2 Matrica termina i statusa
+
+- **Developer + creator operating model**
+  - nivo: `canonical`
+  - status: postojeći canonical/routing izvor
+  - pravilo upotrebe: koristi se za ownership, audience, visibility i release redosled
+  - controlling source: `docs/repository-operating-model.md`
+- **VRH programskog ekvivalenta**
+  - nivo: `working/internal`
+  - status: radni operativni izraz
+  - pravilo upotrebe: koristi se samo kao interni okvir downstream od postojećih izvora
+  - controlling source: `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`
+- **DŽINGISKAN / konjički napad strela u trku**
+  - nivo: `working/internal`
+  - status: kontrolisana interna metafora
+  - pravilo upotrebe: mapira se samo na brzinu iteracija, preciznost i kvalitet; zabranjeno tumačenje kao realna akcija
+  - controlling source: ovaj plan + `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`
+- **poraz protivnika**
+  - nivo: `creator/public-safe`
+  - status: neutralizovani konkurentski cilj
+  - pravilo upotrebe: koristi se samo kao performans/konkurentnost bez nasilne ili dehumanizujuće semantike
+  - controlling source: ovaj plan + `docs/repository-operating-model.md`
+- **ITLER ARNOLD / VOJNIKOV ŠEGRT JE KVOSKO PO ATOMSKOM SKLONIŠTU U EPRUVETI**
+  - nivo: `working/internal` (nivo 2 u pravilu tri nivoa)
+  - status: dozvoljen samo u internom planiranju i kontrolisanoj evaluaciji narativa
+  - pravilo upotrebe: primeniti normativna ograničenja iz sekcije 7.3
+  - controlling source: `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md`
+  - related reference: `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`
+- **Anštajn**
+  - nivo: `creator/public-safe`
+  - status: dozvoljena samo kontrolisana metafora
+  - pravilo upotrebe: ne sme zameniti canonical merila kvaliteta, scoring ili release kriterijume
+  - controlling source: ovaj plan + `docs/repository-operating-model.md`
+- **Ekvivalent praznog hoda podupire se vazduhom u projektnom okviru zaprege**
+  - nivo: `creator/public-safe` eksperimentalni koncept
+  - status: eksperimentalna narativna formulacija
+  - pravilo upotrebe: ne koristiti kao operativni claim, standard ili proverljivu činjenicu bez dalje standardizacije
+  - controlling source: ovaj plan + `governance/document-lifecycle.md`
 
 ### 2.3 Zaključavanje značenja
 
@@ -86,6 +140,8 @@ Creator lane vodi:
 - katalog reusable public-safe izvedenica,
 - kontrolu tona, sloja publike i neutralne formulacije,
 - zaštitu od pretvaranja metafore u canonical tvrdnju.
+- transformaciju agresivnih metafora u motivacione, etičke i public-safe formulacije,
+- zabranu glorifikacije nasilja, istorijsko-političkih figura i dehumanizacije „protivnika”.
 
 ### 3.3 Shared lane
 
@@ -95,6 +151,11 @@ Shared lane vodi:
 - ownership handoff između developer i creator rada,
 - release gate-ove i visibility proveru,
 - potvrdu da svaki izvedeni izraz ostaje downstream od controlling source dokumenta.
+- obavezni checkpoint pre svakog reusable izlaza:
+  - controlling source potvrda,
+  - audience + visibility klasifikacija,
+  - ownership handoff (`developer` / `creator` / `shared`),
+  - release status (`draft` / `working` / `approved` / `archived`).
 
 ## 4) Faze realizacije
 
@@ -106,6 +167,13 @@ Faze rada u ovom planu moraju ostati ovim redom:
 4. **javno-bezbedna creator interpretacija** — pripremiti samo sanitizovane metafore i neutralne rezimee.
 5. **prototip/panel poravnanje** — ako se izvedenice prikazuju downstream, vezati ih za controlling source i public-safe pravila.
 6. **validacija i release odluka** — proveriti strukturu, reference, visibility, sanitizaciju i release spremnost.
+
+### 4.1 Operativne faze A-D
+
+- **Faza A — terminološko zaključavanje i governance granice.**
+- **Faza B — lane KPI i evidencija handoff-a.**
+- **Faza C — prototip/panel poruke usklađene sa public-safe pravilima.**
+- **Faza D — kontrolisano objavljivanje i iterativno poboljšanje.**
 
 ## 5) KPI i kriterijumi uspeha
 
@@ -120,6 +188,14 @@ Faze rada u ovom planu moraju ostati ovim redom:
 - **Shared**
   - KPI fokus: udeo promena sa potpunim routing metapodacima, udeo promena bez governance odstupanja, release-gate prolaznost kroz cikluse
   - minimalni kriterijum uspeha: svaka reusable izvedenica ima status, controlling source i audience/visibility klasifikaciju
+  - KPI fokus: lead time, tačnost, stabilnost, validacija, traceability
+  - minimalni kriterijum uspeha: promene validirane, bez prekida reference lanca i bez regresija u zahvaćenom surface-u
+- **Creator**
+  - KPI fokus: jasnoća poruke, public-safe usklađenost, narativna upotrebljivost, reuse stopa
+  - minimalni kriterijum uspeha: metafore ostaju javno-bezbedne, neutralne i nedvosmisleno odvojene od canonical tvrdnji
+- **Shared**
+  - KPI fokus: ownership handoff, release gates, meaning alignment, routing kompletnost
+  - minimalni kriterijum uspeha: svaka reusable izvedenica ima status, controlling source i audience/visibility klasifikaciju, bez governance odstupanja
 
 ### 5.2 Završni kriterijumi plana
 
@@ -128,7 +204,9 @@ Plan je uspešno sproveden kada:
 1. svi korišćeni pojmovi imaju status i controlling source,
 2. developer i creator lane rade downstream od istog operating modela,
 3. nijedan metaforički izraz ne menja canonical značenje,
-4. javni izlazi ostaju sanitizovani, sledljivi i repo-relative.
+4. javni izlazi ostaju sanitizovani, sledljivi i repo-relative,
+5. canonical značenje je netaknuto, a metafora ostaje interno kontrolisana ili javno neutralizovana,
+6. svi izlazi su release-gate odobreni.
 
 ## 6) Release-readiness i sanitizacija
 
@@ -171,6 +249,15 @@ Ovaj izraz se može koristiti samo uz sledeće uslove:
 3. zabrana predstavljanja kao proverljive činjenice, standarda ili operativne instrukcije,
 4. obavezna veza ka controlling source dokumentu i visibility klasifikaciji.
 
+### 7.4 Red-team semantička provera narativa
+
+Pre odobravanja reusable narativnog izlaza obavezno sprovesti semantičku red-team proveru:
+
+1. ukloniti formulacije koje impliciraju realno nasilje, osvetu ili poziv na povredu,
+2. ukloniti formulacije koje dehumanizuju konkurenciju ili publiku,
+3. potvrditi da finalni tekst ostaje u konkurentskom/performans kontekstu,
+4. potvrditi da je canonical značenje netaknuto i da je vidljivost pravilno klasifikovana.
+
 ## 8) Minimalni izlazi plana
 
 Ovaj plan definiše sledeće minimalne izlaze:
@@ -196,3 +283,7 @@ Pre dalje upotrebe ili proširenja proveriti:
 - [ ] da li je ownership handoff između developer i creator rada jasan,
 - [ ] da li su visibility i audience layer pravilno ograničeni,
 - [ ] da li su svi javni izlazi sanitizovani, sledljivi i repo-relative.
+
+## 10) Završni princip kontinuiteta
+
+Izraz **„Dokle god sam živ”** u ovom okviru obavezno znači dugoročnu posvećenost kvalitetu, odgovornosti i održivom unapređenju sistema, bez konfliktnog ili fizičkog tumačenja.
