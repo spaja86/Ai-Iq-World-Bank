@@ -289,6 +289,20 @@ Sanitizovana javna izvedenica može glasiti:
 
 > Dve usklađene sile prate pokretni izazov ne zato da ga poraze, već da ga razumeju, predvide i prevedu u red. Kada se disciplina, anticipacija i stvaralačka smelost spoje, sirova potera prerasta u kontrolisani put ka uzdignutom, odgovornom i deljivom izlazu.
 
+### 7.5 Kratka, srednja i duga public-safe varijanta (iz epskog citata)
+
+**Kratka varijanta:**
+
+> Najveća snaga čoveka nije razaranje, već odgovorno usmerena energija koja ideju pretvara u delo.
+
+**Srednja varijanta:**
+
+> Kada se sirova energija prevede u disciplinu i znanje, čovek ne traži metu već smisao. Snaga tada prestaje da bude pritisak i postaje odgovorno stvaranje koje može da se podeli sa drugima.
+
+**Duga varijanta:**
+
+> U ovom okviru epski izraz ne tumačimo kao poziv na sukob, već kao metaforu za unutrašnju snagu koja mora biti ukroćena pravilima, odgovornošću i učenjem. Čovekov maksimum nije u tome da ostavi posledicu, već da ostavi vrednost: da energiju pretvori u disciplinu, disciplinu u znanje, a znanje u stvaralački doprinos. Tako narativ zadržava intenzitet, ali ostaje public-safe, bez dehumanizujuće semantike i bez odstupanja od canonical izvora.
+
 ## 8) Minimalni izlazi plana
 
 Ovaj plan definiše sledeće minimalne izlaze:
@@ -297,7 +311,8 @@ Ovaj plan definiše sledeće minimalne izlaze:
 2. matricu termina i njihovog statusa,
 3. developer/programski prevod metafore,
 4. creator/public-safe sanitizovani rezime,
-5. kratki završni epilog za reuse.
+5. kratku, srednju i dugu public-safe varijantu epskog citata,
+6. kratki završni epilog za reuse.
 
 Kratki završni epilog za reuse:
 
@@ -327,6 +342,18 @@ Plan je spreman za dalju upotrebu kada:
 3. nijedan metaforički izraz ne menja canonical značenje,
 4. javni izlazi ostaju sanitizovani, sledljivi i repo-relative,
 5. završna public-safe verzija prođe neutralizaciju konfliktnog jezika i shared-lane proveru.
+
+### 10.1 Kriterijumi uspeha po lane-u
+
+- **Developer:** prolaz validacije, bez regresija, stabilan izlaz.
+- **Creator:** jasna i bezbedna poruka, bez redefinisanja canonical pravila.
+- **Shared:** potpuna usklađenost lane-ova i ponovljiva release procedura.
+
+## 11) Završni ishod i princip kontinuiteta
+
+Završni ishod ovog plana:
+
+- Jedinstven Developer + Creator okvir koji epski citat prevodi u kontrolisan, public-safe i operativno upotrebljiv narativni ekvivalent, bez bezbednosnih, reputacionih i governance odstupanja.
 
 Završni princip kontinuiteta:
 
