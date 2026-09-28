@@ -56,7 +56,7 @@ Dozvoljene vrednosti i izvor:
 
 Validaciona napomena:
 
-- **Machine-validated (`config/validate_repository.py`):** Document Control struktura, status/visibility skupovi, zavisnosti i routing-block zahtevi za obuhvaćene dokumente.
+- **Machine-validated (postojeće validator ponašanje u `config/validate_repository.py`):** Document Control struktura, status/visibility skupovi, zavisnosti i routing-block zahtevi za obuhvaćene dokumente.
 - **Review-only (shared-lane checkpoint):** audience layer, ownership lane/handoff detalj, i potpuna cross-lane evidencija za svaku netrivijalnu reusable promenu.
 - **Combined control:** release status mora biti eksplicitan u evidenciji; validan status skup ostaje `draft`, `working`, `approved`, `archived`.
 - Automatska validacija primarno pokriva strukturisane `.md` surface-e (`docs/`, `governance/`, `standards/`, root `.md` planove i `config/sensitive-content-review-checklist.md`), dok se kompletna VRH cross-lane evidencija proverava kroz shared-lane review checkpoint.
@@ -132,6 +132,7 @@ Za svaku veću cross-lane promenu voditi minimalni zapis:
 
 Napomena: audience layer se vodi kao zasebno polje, dok kolona visibility koristi isključivo visibility klase definisane u odeljku 0.2.
 Kada je surface canonical, koristi se visibility `canonical/internal standard` uz isti šablon evidencije.
+Evidencija se vodi u ovoj sekciji (5.1) kao radni zapis za svaku novu netrivijalnu cross-lane promenu; po potrebi se referencira iz povezanog radnog plana ili review zapisa.
 
 ## 6) Program ekvivalenta po fazama
 
