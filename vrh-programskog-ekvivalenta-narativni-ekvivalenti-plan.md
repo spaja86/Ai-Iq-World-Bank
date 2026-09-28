@@ -109,13 +109,13 @@ Faze rada u ovom planu moraju ostati ovim redom:
 ### 5.1 KPI tabela po lane-u
 
 - **Developer**
-  - KPI fokus: tačnost, stabilnost, validacija, traceability
+  - KPI fokus: validacija prolaznost, broj regresija, lead time do stabilnog i validiranog izdanja
   - minimalni kriterijum uspeha: promene validirane, bez prekida reference lanca i bez regresija u zahvaćenom surface-u
 - **Creator**
-  - KPI fokus: jasnoća, public-safe ton, narativna upotrebljivost
+  - KPI fokus: jasnoća poruke, konzistentnost audience slojeva i neutralnog tumačenja, reuse stopa public-safe surface-a, nulta stopa političke/istorijske glorifikacije
   - minimalni kriterijum uspeha: metafore ostaju javno-bezbedne, neutralne i nedvosmisleno odvojene od canonical tvrdnji
 - **Shared**
-  - KPI fokus: ownership handoff, release gates, meaning alignment
+  - KPI fokus: udeo promena sa potpunim routing metapodacima, udeo promena bez governance odstupanja, release-gate prolaznost kroz cikluse
   - minimalni kriterijum uspeha: svaka reusable izvedenica ima status, controlling source i audience/visibility klasifikaciju
 
 ### 5.2 Završni kriterijumi plana

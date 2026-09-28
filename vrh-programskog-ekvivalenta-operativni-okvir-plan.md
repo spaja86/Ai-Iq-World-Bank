@@ -203,20 +203,20 @@ Obavezni minimum pre finalizacije većih promena:
 ## 9) Merenje uspeha (KPI)
 
 ### Developer KPI
-- validacija prolaznost,
-- broj regresija,
-- lead time do stabilnog i validiranog izdanja.
+1. validacija prolaznost,
+2. broj regresija,
+3. lead time do stabilnog i validiranog izdanja.
 
 ### Creator KPI
-- jasnoća poruke,
-- konzistentnost audience slojeva i neutralnog tumačenja,
-- reuse stopa public-safe surface-a.
-- nulta stopa političke/istorijske glorifikacije u public-safe narativima.
+1. jasnoća poruke,
+2. konzistentnost audience slojeva i neutralnog tumačenja,
+3. reuse stopa public-safe surface-a,
+4. nulta stopa političke/istorijske glorifikacije u public-safe narativima.
 
 ### Shared KPI
-- udeo promena sa potpunim routing metapodacima,
-- udeo promena bez governance odstupanja,
-- release-gate prolaznost kroz cikluse.
+1. udeo promena sa potpunim routing metapodacima,
+2. udeo promena bez governance odstupanja,
+3. release-gate prolaznost kroz cikluse.
 
 ## 10) Definicija “spremno za VRH nivo”
 
