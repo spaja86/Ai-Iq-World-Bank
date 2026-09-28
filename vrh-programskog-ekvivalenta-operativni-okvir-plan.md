@@ -41,6 +41,14 @@ Svaka netrivijalna promena ili reusable surface mora eksplicitno sadržati slede
 4. ownership lane (uz shared-lane handoff kada je potrebno),
 5. release status.
 
+Dozvoljene vrednosti i izvor:
+
+- **controlling source:** repo-relative referenca ka dokumentu koji upravlja značenjem/promenom (hijerarhija iz `README.md` i `docs/repository-operating-model.md`).
+- **audience layer:** creator/public-safe, internal planning, canonical/standards, regulatory/legal, support/operations (slojna podela iz `README.md` i `docs/repository-operating-model.md`).
+- **visibility:** `public-safe`, `limited/internal`, `canonical/internal standard` (kontrolisane klase vidljivosti iz `README.md` i `governance/document-lifecycle.md`).
+- **ownership lane:** developer, creator, shared (lane model iz `docs/repository-operating-model.md`).
+- **release status:** `draft`, `working`, `approved`, `archived` (status model usklađen sa `governance/document-lifecycle.md` i validacijom u `config/validate_repository.py`).
+
 ## 1) Ciljna specifikacija “VRH programskog ekvivalenta”
 
 Jedinstvena ciljna specifikacija zahteva:
@@ -110,7 +118,7 @@ Za svaku veću cross-lane promenu voditi minimalni zapis:
 | --- | --- | --- | --- | --- | --- | --- |
 | YYYY-MM-DD | naziv dokumenta/panela | potvrđeno / na proveri | internal planning / contributor execution / creator/public-safe | public-safe / limited/internal | developer->creator / creator->developer / shared | working / draft / approved / archived |
 
-Napomena: audience layer se vodi kao zasebno polje (npr. internal planning, contributor execution, creator/public-safe), dok kolona visibility koristi samo zvanične visibility vrednosti.
+Napomena: audience layer se vodi kao zasebno polje, dok kolona visibility koristi isključivo visibility klase definisane u odeljku 0.2.
 
 ## 6) Program ekvivalenta po fazama
 
