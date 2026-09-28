@@ -54,6 +54,11 @@ Dozvoljene vrednosti i izvor:
 - **ownership lane:** developer, creator, shared (lane model iz `docs/repository-operating-model.md`).
 - **release status:** `draft`, `working`, `approved`, `archived` (status model usklađen sa `governance/document-lifecycle.md` i validacijom u `config/validate_repository.py`).
 
+Validaciona napomena:
+
+- `config/validate_repository.py` automatski sprovodi Document Control strukturu, status/visibility skupove i routing-block zahteve za obuhvaćene dokumente.
+- Ova šema dodatno uvodi obaveznu operativnu disciplinu za VRH cross-lane evidenciju (manual + review kontrola), uključujući audience layer i ownership lane eksplicitnost za svaku netrivijalnu reusable promenu.
+
 ## 1) Ciljna specifikacija “VRH programskog ekvivalenta”
 
 Jedinstvena ciljna specifikacija zahteva:
@@ -121,10 +126,10 @@ Za svaku veću cross-lane promenu voditi minimalni zapis:
 
 | Datum | Promena surface-a | Controlling source potvrda | Audience layer | Visibility klasifikacija | Handoff odluka | Release status |
 | --- | --- | --- | --- | --- | --- | --- |
-| YYYY-MM-DD | naziv dokumenta/panela | potvrđeno / na proveri | internal planning / canonical/standards / creator/public-safe | public-safe / limited/internal | developer->creator / creator->developer / shared | working / draft / approved / archived |
+| YYYY-MM-DD | naziv dokumenta/panela | potvrđeno / na proveri | internal planning / canonical/standards / creator/public-safe | public-safe / limited/internal / canonical/internal standard | developer->creator / creator->developer / shared | working / draft / approved / archived |
 
 Napomena: audience layer se vodi kao zasebno polje, dok kolona visibility koristi isključivo visibility klase definisane u odeljku 0.2.
-Ovaj minimalni template je namerno ograničen na `public-safe` i `limited/internal` za cross-lane operativni tok; `canonical/internal standard` koristi se kada je surface sam canonical standard.
+Kada je surface canonical, koristi se visibility `canonical/internal standard` uz isti šablon evidencije.
 
 ## 6) Program ekvivalenta po fazama
 
