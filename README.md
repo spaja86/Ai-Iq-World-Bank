@@ -123,7 +123,7 @@ The interface must show numeric score, maturity status, operational interpretati
 - `developer-creator-monetization-playbook-plan.md` - developer + creator monetization playbook for offer tiers, shared-lane meta-monetization, KPI governance, and release-gate control
 - `vrh-programskog-ekvivalenta-operativni-okvir-plan.md` - shared execution framework for VRH program-equivalent quality standard, lane KPI model, phased rollout, release-readiness criteria, and the non-controlling MARKAN additive alias
 - `github-vercel-ekosistemski-operativni-okvir-plan.md` - shared GitHub + Vercel ecosystem operations framework for conditional ecosystem positioning, onboarding phases, decision gates, and KPI control
-- `vercel-operativni-domen-i-fakture-plan.md` - Vercel operational-domain plan for invoices, incidents, KPI, and ecosystem collaboration
+- `vercel-operativni-domen-i-fakture-plan.md` - Vercel operational-domain plan for invoices, incidents, KPI, ecosystem collaboration, and a €100,000 monthly internal budget-control policy requiring human approval for payment or plan commitments
 - `vercel-naplata-poruka-plan.md` - Vercel billing support template
 - `github-naplata-poruka-plan.md` - GitHub billing and subscription support template
 - `business/README.md` - controlled business-operations template segment and sensitive-content boundary

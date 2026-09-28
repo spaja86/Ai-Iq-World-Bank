@@ -142,6 +142,21 @@ Svaka faktura mora biti povezana sa:
 3. rizikom prekida ako ostane nerešena,
 4. potrebnim nivoom eskalacije.
 
+## 5.4 Mesečna budžetska kontrola — AI IQ World Bank
+
+- **Interni mesečni limit:** €100.000 za Vercel obaveze i odobrene povezane troškove.
+- **Obračunska valuta dobavljača:** Vercel fakture mogu biti iskazane u USD; interni EUR limit se zato prati uz datum kursa, iznos u USD i konvertovani EUR iznos. Kurs ili konverzija nisu automatsko odobrenje plaćanja.
+- **Plaćanje:** AI IQ World Bank može pripremiti evidenciju, upozorenje i zahtev za odobrenje, ali ne sme samostalno izvršiti plaćanje, uneti karticu, prihvatiti ugovor niti promeniti Vercel plan.
+
+| Prag internog budžeta | Obavezna akcija | Vlasnik |
+|---|---|---|
+| 70% (€70.000) | evidentirati upozorenje i proveriti najveće kategorije potrošnje | finansije + developer lane |
+| 85% (€85.000) | otvoriti zahtev za finansijsko odobrenje pre novog diskrecionog troška | shared lane |
+| 95% (€95.000) | eskalirati odgovornom licu; zaustaviti neesencijalne promene koje povećavaju trošak | shared lane + finalna kontrola |
+| 100% (€100.000) | ne preuzimati novu obavezu bez eksplicitnog, dokumentovanog odobrenja odgovornog lica | odgovorno lice |
+
+Minimalni zapis za svaku kontrolu sadrži obračunski period, Vercel invoice ili usage referencu, iznos u valuti izvora, EUR ekvivalent, kurs/datum kursa, procenat budžeta, status odobrenja i sanitizovanu referencu na dokaz. Realni podaci o plaćanju, karticama, bankama i fakturama ostaju van source control-a.
+
 ## 6) Lane odgovornosti
 
 ### 6.1 Developer lane
