@@ -128,7 +128,7 @@ Za svaku veću cross-lane promenu voditi minimalni zapis:
 
 | Datum | Promena surface-a | Controlling source potvrda | Audience layer | Visibility klasifikacija | Ownership lane | Handoff odluka | Release status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| YYYY-MM-DD | naziv dokumenta/panela | potvrđeno / na proveri | internal planning / canonical/standards / creator/public-safe | public-safe / limited/internal / canonical/internal standard | developer / creator / shared | developer->creator / creator->developer / shared | draft / working / approved / archived |
+| YYYY-MM-DD | naziv dokumenta/panela | potvrđeno / na proveri | creator/public-safe / internal planning / canonical/standards / regulatory/legal / support/operations | public-safe / limited/internal / canonical/internal standard | developer / creator / shared | developer->creator / creator->developer / shared | draft / working / approved / archived |
 
 Napomena: audience layer se vodi kao zasebno polje, dok kolona visibility koristi isključivo visibility klase definisane u odeljku 0.2.
 Kada je surface canonical, koristi se visibility `canonical/internal standard` uz isti šablon evidencije.
