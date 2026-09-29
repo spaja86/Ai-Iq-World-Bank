@@ -61,6 +61,44 @@ main {
     padding: 28px 0 48px;
 }
 
+.portal-section {
+    border: 1px solid #aac4df;
+}
+
+.portal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.portal-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.portal-action.primary {
+    background: #0b63ce;
+    color: #fff;
+}
+
+.portal-action.secondary {
+    border: 1px solid #0b63ce;
+    color: #0b3f80;
+}
+
+.portal-action:hover,
+.portal-action:focus-visible {
+    outline: 3px solid #74aee8;
+    outline-offset: 3px;
+}
+
 .page-section {
     margin-bottom: 28px;
     padding: 28px;
