@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Investicije AI IQ World Bank — AI-pogonski investicioni fondovi, Canvas grafovi rasta aktive i godišnjih prinosa." />
-  <title>Investicije — AI IQ World Bank</title>
+  <meta name="description" content="Informativni sadržaj o principima rizika i diversifikacije." />
+  <title>Informativni prikaz — AI IQ World Bank</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<div class="ticker-wrapper" aria-label="Finansijski ticker">
+<div class="ticker-wrapper" aria-label="Status platforme">
   <div class="ticker-track"></div>
 </div>
 
@@ -21,8 +21,8 @@
         <li><a href="index.html">Početna</a></li>
         <li><a href="about.html">O Banci</a></li>
         <li><a href="services.html">Usluge</a></li>
-        <li><a href="loans.html">Krediti</a></li>
-        <li><a href="investments.html">Investicije</a></li>
+        <li><a href="loans.html">Kalkulator</a></li>
+        <li><a href="investments.html">Informativno</a></li>
         <li><a href="contact.html">Kontakt</a></li>
       </ul>
     </nav>
@@ -34,105 +34,25 @@
 
 <div class="page-hero">
   <div class="breadcrumb"><a href="index.html">Početna</a><span>/</span>Investicije</div>
-  <h1>Pametne <span>Investicije</span></h1>
-  <p>AI-pogonski investicioni fondovi sa dokazanim prinosima i globalnom diversifikacijom</p>
+  <h1>Informativni <span>prikaz</span></h1>
+  <p>Edukativni sadržaj o riziku, diversifikaciji i proveri izvora</p>
 </div>
 
-<!-- Investicioni fondovi kartice -->
+<!-- Edukativni prikaz -->
 <section>
   <div class="section-inner">
-    <div class="section-title animate-hidden">
-      <h2>Naši Investicioni Fondovi</h2>
-      <p>Izaberite fond koji odgovara vašem rizičnom profilu</p>
-      <div class="gold-line"></div>
-    </div>
+    <div class="section-title animate-hidden"><h2>Razumevanje investiranja</h2><p>Informativni sadržaj o riziku, diversifikaciji i istraživanju; ne predstavlja preporuku za ulaganje niti obećanje prinosa.</p><div class="gold-line"></div></div>
     <div class="investment-cards">
-      <div class="inv-card animate-hidden">
-        <div class="inv-icon">🌱</div>
-        <h4>Konzervativni Fond</h4>
-        <div class="inv-rate">5-7%</div>
-        <p>Godišnji prinos | Nizak rizik</p>
-      </div>
-      <div class="inv-card animate-hidden">
-        <div class="inv-icon">⚖️</div>
-        <h4>Balansirani Fond</h4>
-        <div class="inv-rate">8-11%</div>
-        <p>Godišnji prinos | Srednji rizik</p>
-      </div>
-      <div class="inv-card animate-hidden">
-        <div class="inv-icon">🚀</div>
-        <h4>Agresivni Fond</h4>
-        <div class="inv-rate">12-18%</div>
-        <p>Godišnji prinos | Visok rizik</p>
-      </div>
-      <div class="inv-card animate-hidden">
-        <div class="inv-icon">🤖</div>
-        <h4>AI Fond</h4>
-        <div class="inv-rate">14%+</div>
-        <p>Godišnji prinos | AI-upravljan</p>
-      </div>
+      <div class="inv-card animate-hidden"><div class="inv-icon">🌱</div><h4>Rizik i horizont</h4><p>Vreme, tolerancija rizika i ciljevi utiču na svaku odluku.</p></div>
+      <div class="inv-card animate-hidden"><div class="inv-icon">⚖️</div><h4>Diversifikacija</h4><p>Raspodela rizika je princip, ne garancija rezultata.</p></div>
+      <div class="inv-card animate-hidden"><div class="inv-icon">🔎</div><h4>Provera izvora</h4><p>Za svaku ponudu proverite instituciju, troškove i pravni status.</p></div>
+      <div class="inv-card animate-hidden"><div class="inv-icon">🛡️</div><h4>Odgovorno odlučivanje</h4><p>Tražite nezavisan, licenciran savet kada je to potrebno.</p></div>
     </div>
   </div>
 </section>
-
-<!-- Canvas grafovi -->
 <section style="background:var(--bank-mid); border-top:1px solid var(--glass-border); border-bottom:1px solid var(--glass-border);">
   <div class="section-inner">
-    <div class="section-title animate-hidden">
-      <h2>Rast Aktive Banke</h2>
-      <p>Ukupna aktiva u milijardama USD — 2020–2026</p>
-      <div class="gold-line"></div>
-    </div>
-    <div class="chart-container animate-hidden">
-      <h3>📈 Rast Ukupne Aktive (2020–2026)</h3>
-      <canvas id="assetsChart" aria-label="Linijski grafikon rasta aktive"></canvas>
-    </div>
-    <div style="margin-top:2rem;" class="chart-container animate-hidden">
-      <h3>📊 Godišnji Prinosi Fondova (%)</h3>
-      <canvas id="returnsChart" aria-label="Stupičasti grafikon godišnjih prinosa"></canvas>
-    </div>
-  </div>
-</section>
-
-<!-- Prednosti -->
-<section>
-  <div class="section-inner">
-    <div class="section-title animate-hidden">
-      <h2>Zašto Investirati sa Nama?</h2>
-      <div class="gold-line"></div>
-    </div>
-    <div class="cards-grid">
-      <div class="card animate-hidden">
-        <div class="card-icon">🤖</div>
-        <h3>AI Upravljanje</h3>
-        <p>Naš AI sistem analizira 1000+ tržišnih signala sekundo i prilagođava portfelj u realnom vremenu za maksimalne prinose.</p>
-      </div>
-      <div class="card animate-hidden">
-        <div class="card-icon">🌍</div>
-        <h3>Globalna Diversifikacija</h3>
-        <p>Investirajte u 190+ tržišta širom sveta — akcije, obveznice, nekretnine, robni marketi i digitalna imovina.</p>
-      </div>
-      <div class="card animate-hidden">
-        <div class="card-icon">💸</div>
-        <h3>Niske Naknade</h3>
-        <p>Upravljačka naknada od samo 0.5% godišnje — jedna od najnižih u industriji zahvaljujući AI automatizaciji.</p>
-      </div>
-      <div class="card animate-hidden">
-        <div class="card-icon">🛡️</div>
-        <h3>Zaštita Kapitala</h3>
-        <p>AI risk management sistem automatski štiti vaš kapital od naglog pada tržišta kroz hedging strategije.</p>
-      </div>
-      <div class="card animate-hidden">
-        <div class="card-icon">📱</div>
-        <h3>Real-Time Praćenje</h3>
-        <p>Pratite performanse vašeg portfelja 24/7 uz live grafove, obaveštenja i AI preporuke.</p>
-      </div>
-      <div class="card animate-hidden">
-        <div class="card-icon">💎</div>
-        <h3>Premium Klijenti</h3>
-        <p>Klijentima sa investicijom iznad €50,000 obezbeđujemo ličnog AI finansijskog savetnika bez naknade.</p>
-      </div>
-    </div>
+    <div class="section-title animate-hidden"><h2>Pre objave podataka</h2><p>Operativni pokazatelji, prinosi i podaci o imovini objavljuju se samo kada postoji proverljiv izvor, datum preseka i odgovarajuće odobrenje.</p><div class="gold-line"></div></div>
   </div>
 </section>
 
@@ -164,7 +84,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="logo-text">🏦 AI IQ World Bank</div>
-      <p>Profesionalna svetska banka budućnosti. AI tehnologije u službi vaših finansija.</p>
+      <p>Digitalna platforma za alate, sadržaje i razvojne inicijative.</p>
     </div>
     <div class="footer-col">
       <h4>Stranice</h4>
@@ -172,8 +92,8 @@
         <li><a href="index.html">Početna</a></li>
         <li><a href="about.html">O Banci</a></li>
         <li><a href="services.html">Usluge</a></li>
-        <li><a href="loans.html">Krediti</a></li>
-        <li><a href="investments.html">Investicije</a></li>
+        <li><a href="loans.html">Kalkulator</a></li>
+        <li><a href="investments.html">Informativno</a></li>
         <li><a href="contact.html">Kontakt</a></li>
       </ul>
     </div>
