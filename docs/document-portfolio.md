@@ -1,0 +1,168 @@
+# Document Portfolio Map
+
+## Document Control
+
+- **Category:** Architecture
+- **Type:** portfolio map
+- **Status:** approved
+- **Visibility:** public-safe
+- **Purpose:** Master index of repository documents, dependencies, visibility, and recommended usage order.
+- **Depends on:** `README.md`, `governance/document-lifecycle.md`, `governance/repo-charter.md`
+
+## Purpose
+
+This file is the master portfolio map for repository documents, their category, current role, dependencies, risk level, and recommended order of use.
+
+## Portfolio status matrix
+
+| File | Category | Type | Status | Visibility | Owner lane | Audience layer | Depends on | Risk | Primary use |
+|---|---|---|---|---|---|---|---|---|---|
+| `README.md` | Navigation | repository guide | working | public-safe | navigation / creator + shared lane | creator / public-safe + contributor navigation | `docs/repository-operating-model.md`, `governance/repo-charter.md`, `governance/document-lifecycle.md`, `standards/indekurilanc-standard.md` | medium | Start here for structure and workflow |
+| `governance/repo-charter.md` | Governance | charter | approved | canonical/internal standard | governance / standards alignment | canonical / standards | `standards/indekurilanc-standard.md`, `standards/glossary.md` | high | Understand repository purpose and hierarchy |
+| `governance/document-lifecycle.md` | Governance | rules | approved | canonical/internal standard | governance + shared lane | canonical / standards | `governance/repo-charter.md`, `config/sensitive-content-review-checklist.md` | high | Review metadata, status, and publication rules |
+| `standards/glossary.md` | Standards | glossary | approved | canonical/internal standard | standards lane | canonical / standards | `governance/repo-charter.md`, `governance/document-lifecycle.md` | medium | Resolve terminology before editing linked materials |
+| `standards/indekurilanc-standard.md` | Standards | scoring standard | approved | canonical/internal standard | standards lane | canonical / standards | `governance/repo-charter.md`, `governance/document-lifecycle.md`, `standards/glossary.md` | high | Canonical source for INDEKURILANC behavior; rendered downstream by `script.js` and the prototype surface |
+| `dinar-standard-plan.md` | Standards | value-system framework | working | canonical/internal standard | standards lane | canonical / standards with controlled scenario use | `governance/document-lifecycle.md`, `standards/glossary.md` | high | DINAR status, usage, and controls |
+| `template-plan.md` | Templates | mapping template | working | public-safe | domain / shared planning lane | contributor planning + creator-safe reuse | `README.md`, `governance/document-lifecycle.md`, `standards/glossary.md` | low | Reusable structure for baseline mapping |
+| `ai-iq-world-bank-poslovni-izvestaj.md` | Templates | business analysis | working | limited/internal | domain lane | internal planning | `standards/indekurilanc-standard.md`, `template-plan.md` | medium | Business review, KPI, and performance framing |
+| `investiciona-i-operativna-imovina-registar-plan.md` | Templates | asset registry | working | limited/internal | domain lane | internal planning | `governance/document-lifecycle.md`, `config/sensitive-content-review-checklist.md` | high | Sensitive asset inventory and sanitization logic |
+| `javni-prikaz-emisija-i-kamatna-politika-plan.md` | Templates | public policy/display | working | public-safe | domain + creator coordination lane | creator / public-safe + policy output | `dinar-standard-plan.md`, `investiciona-i-operativna-imovina-registar-plan.md` | high | Public asset/policy framing and publication constraints |
+| `covecnost-narativni-epilog-plan.md` | Public Output | narrative epilog framework | working | public-safe | creator + domain lane | creator / public-safe narrative | `governance/document-lifecycle.md`, `docs/repository-operating-model.md`, `standards/glossary.md` | medium | Controlled narrative framing for courage, learning, innovation, and human potential |
+| `eksterni-repozitorijum-pravni-navod-plan.md` | Templates | legal/reputational handling | working | limited/internal | domain + governance coordination lane | regulatory / legal | `governance/document-lifecycle.md`, `standards/glossary.md` | high | External-claim handling and evidence workflow |
+| `globalni-licencni-okvir-i-delatnosti-plan.md` | Templates | licensing/master operations | working | limited/internal | domain + governance coordination lane | internal planning + regulatory / legal | `governance/document-lifecycle.md`, `docs/future-data-model.md`, `standards/glossary.md` | high | Activity expansion, approvals, licensing scope, and jurisdiction constraints for downstream monetization models |
+| `developer-creator-monetization-playbook-plan.md` | Templates | monetization playbook | working | limited/internal | domain + shared monetization lane | contributor monetization planning + support/operational communication | `docs/repository-operating-model.md`, `governance/document-lifecycle.md`, `docs/document-portfolio.md`, `standards/glossary.md`, `globalni-licencni-okvir-i-delatnosti-plan.md`, `github-naplata-poruka-plan.md`, `vercel-naplata-poruka-plan.md`, `config/sensitive-content-review-checklist.md` | high | Developer + creator offer tiers, shared-lane meta-monetization framework, KPI, release-gate, and billing-support integration |
+| `vrh-programskog-ekvivalenta-operativni-okvir-plan.md` | Working Plan | program-equivalent execution framework | working | limited/internal | shared execution lane (developer + creator + governance) | internal planning + contributor execution | `docs/repository-operating-model.md`, `governance/document-lifecycle.md`, `docs/document-portfolio.md`, `docs/repository-roadmap.md`, `standards/indekurilanc-standard.md`, `config/sensitive-content-review-checklist.md` | high | Repository-wide VRH program-equivalent execution baseline for quality standards, lane KPI control, phased rollout, release-readiness criteria, and the non-controlling MARKAN additive alias |
+| `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md` | Working Plan | developer + creator narrative equivalence framework | working | limited/internal | shared execution lane (developer + creator + governance) | internal planning + contributor execution | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, `governance/document-lifecycle.md`, `docs/document-portfolio.md`, `config/sensitive-content-review-checklist.md` | medium | Working internal plan for canonical/working/public-safe term separation, shared-lane meaning control, chess/quadratic-shot narrative-equivalence mapping, and constrained handling of narrative inputs around the VRH program-equivalent framework |
+| `vrh-programskog-ekvivalenta-operativni-okvir-plan.md` | Working Plan | program-equivalent execution framework | working | limited/internal | shared execution lane (developer + creator + governance) | internal planning + contributor execution | `docs/repository-operating-model.md`, `governance/document-lifecycle.md`, `docs/document-portfolio.md`, `docs/repository-roadmap.md`, `standards/indekurilanc-standard.md`, `config/sensitive-content-review-checklist.md` | high | Repository-wide VRH program-equivalent execution baseline for quality standards, lane KPI control, phased rollout, release-readiness criteria, and downstream term classification under the Developer + Creator operating model |
+| `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md` | Working Plan | developer + creator narrative equivalence framework | working | limited/internal | shared execution lane (developer + creator + governance) | internal planning + contributor execution | `docs/repository-operating-model.md`, `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`, `governance/document-lifecycle.md`, `docs/document-portfolio.md`, `config/sensitive-content-review-checklist.md` | medium | Working internal plan for canonical/working/public-safe term separation, shared-lane meaning control, and constrained use of chess/quadratic-shot narrative candidates and other experimental creator phrases around the VRH framework |
+| `github-vercel-ekosistemski-operativni-okvir-plan.md` | Working Plan | ecosystem integration framework | working | limited/internal | shared ecosystem operations lane | internal planning + support/operational communication | `docs/repository-operating-model.md`, `governance/document-lifecycle.md`, `developer-creator-monetization-playbook-plan.md`, `vercel-operativni-domen-i-fakture-plan.md`, `vercel-naplata-poruka-plan.md`, `github-naplata-poruka-plan.md`, `config/sensitive-content-review-checklist.md` | high | Shared GitHub + Vercel onboarding, decision gates, conditional ecosystem positioning, and KPI control |
+| `vercel-operativni-domen-i-fakture-plan.md` | Templates | Vercel operational domain plan | working | limited/internal | domain + shared Vercel operations lane | internal planning + support/operational communication | `docs/repository-operating-model.md`, `governance/document-lifecycle.md`, `developer-creator-monetization-playbook-plan.md`, `config/sensitive-content-review-checklist.md` | high | Vercel invoices, incidents, KPI, lane ownership, and ecosystem collaboration |
+| `vercel-naplata-poruka-plan.md` | Support | billing communication template | working | limited/internal | support lane | support / operational communication | `config/sensitive-content-review-checklist.md`, `governance/document-lifecycle.md`, `vercel-operativni-domen-i-fakture-plan.md` | medium | Vercel support workflow |
+| `github-naplata-poruka-plan.md` | Support | billing communication template | working | limited/internal | support lane | support / operational communication | `config/sensitive-content-review-checklist.md`, `governance/document-lifecycle.md` | medium | GitHub support workflow |
+| `business/README.md` | Templates | business operations map | working | limited/internal | domain + governance coordination lane | internal planning + support/operational communication | `docs/repository-operating-model.md`, `governance/document-lifecycle.md`, `config/sensitive-content-review-checklist.md` | high | Controlled business segment for invoices, contracts, evidence, and audit templates |
+| `business/fakture-registar-template.csv` | Templates | invoice register schema | working | limited/internal | finance/domain lane | internal planning | `business/README.md`, `config/validate_repository.py` | high | Standardized invoice fields, statuses, approvals, and reference controls |
+| `business/ugovori-registar-template.csv` | Templates | contract register schema | working | limited/internal | legal/domain lane | internal planning + regulatory/legal | `business/README.md` | high | Contract inventory structure with owner and reference traceability |
+| `business/evidencija-operativnih-dokaza-template.csv` | Templates | evidence register schema | working | limited/internal | operations/support lane | support / operational communication | `business/README.md`, `config/sensitive-content-review-checklist.md` | high | Operational evidence mapping with sanitized attachment references |
+| `business/revizijski-trag-template.csv` | Templates | audit trail schema | working | limited/internal | governance + domain lane | internal planning + governance | `business/README.md`, `governance/document-lifecycle.md` | high | Revision history and approval trace for business records |
+| `business/nedeljni-operativni-ciklus-template.md` | Templates | weekly operating rhythm | working | limited/internal | shared lane | internal planning + support/operational communication | `business/README.md`, `docs/repository-operating-model.md` | medium | Weekly cadence for update, review, approval, release-gate, and publication flow |
+| `docs/repository-operating-model.md` | Architecture | operating model | working | public-safe | portfolio + shared lane | contributor routing + creator/public-safe framing | `governance/repo-charter.md`, `governance/document-lifecycle.md`, `docs/document-portfolio.md`, `docs/repository-roadmap.md`, `docs/future-data-model.md`, `config/sensitive-content-review-checklist.md` | medium | Primary coordination document for ownership, approvals, lanes, work cycle, and release gates |
+| `docs/future-data-model.md` | Architecture | planning reference | draft | limited/internal | portfolio lane | contributor / architecture | `docs/document-portfolio.md`, `standards/indekurilanc-standard.md`, `governance/document-lifecycle.md` | medium | Future entities and integration boundaries |
+| `docs/repository-roadmap.md` | Roadmap | delivery plan | working | public-safe | portfolio lane | contributor / architecture | `docs/document-portfolio.md`, `docs/repository-operating-model.md`, `governance/repo-charter.md` | medium | Delivery sequencing across product and docs |
+| `config/sensitive-content-review-checklist.md` | Controls | checklist | approved | canonical/internal standard | governance + shared lane | canonical / standards | `governance/document-lifecycle.md`, `README.md` | high | Pre-commit and pre-publication review |
+
+## Portfolio snapshot
+
+- **Approved:** governance core, glossary, INDEKURILANC standard, sensitive-content checklist, portfolio map
+- **Working:** README, DINAR framework, reusable templates, roadmap, domain plans, support plans
+- **Draft:** future data model
+- **Archived:** none currently tracked
+
+## Recommended usage order
+
+1. `README.md`
+2. `governance/repo-charter.md`
+3. `governance/document-lifecycle.md`
+4. `standards/glossary.md`
+5. `standards/indekurilanc-standard.md` and `dinar-standard-plan.md` as needed
+6. Domain-specific planning or support template
+7. `docs/document-portfolio.md` and `docs/repository-roadmap.md` for sequencing and dependencies
+8. `docs/repository-operating-model.md` for ownership, approvals, and release gates
+9. `docs/future-data-model.md` for later platform work
+
+This usage order is a reading and routing sequence. For the canonical non-trivial change order, use `docs/repository-operating-model.md`.
+
+## Program-equivalent routing rules
+
+- `docs/repository-operating-model.md` is the primary coordination reference for repository-wide developer/creator routing.
+- Use developer lane for implementation, rendering, structure, validation, and traceability work.
+- Use creator lane for public-safe framing, reusable explanation, and audience alignment.
+- Use shared-lane checkpoints when a change crosses standards, governance, portfolio, plans, or prototype surfaces.
+- Keep root plans, support templates, and reusable public-output frameworks aligned to the same routing block metadata: primary lane, controlling coordination source, audience layer, visibility handling, shared-lane checkpoint, and release status.
+- Keep every reusable public-safe surface downstream from a controlling source reference and cataloged in the public-safe output set.
+
+## Reusable public-safe output catalog
+
+Track these as the current reusable public-safe output set:
+
+1. `README.md` for top-level framing and navigation
+2. `index.html`, `styles.css`, and `script.js` for the controlled prototype
+3. `docs/repository-operating-model.md` for routing, approvals, and release readiness
+4. `javni-prikaz-emisija-i-kamatna-politika-plan.md` for public-policy and transparency structure
+5. `covecnost-narativni-epilog-plan.md` for controlled creator/public-safe narrative epilog output
+
+Any new reusable surface should identify its controlling source and fit this catalog before it is treated as a stable public-safe output.
+
+## Master dependency view
+
+- **Repository control core:** `README.md` depends on `governance/repo-charter.md` and `governance/document-lifecycle.md`
+- **Governance sequence:** `governance/document-lifecycle.md` builds on `governance/repo-charter.md`
+- **Scoring core:** `standards/indekurilanc-standard.md` -> `script.js` -> `ai-iq-world-bank-poslovni-izvestaj.md`
+- **Value-system core:** `dinar-standard-plan.md` -> `javni-prikaz-emisija-i-kamatna-politika-plan.md`
+- **Narrative public-safe core:** `governance/document-lifecycle.md` + `docs/repository-operating-model.md` -> `covecnost-narativni-epilog-plan.md`
+- **Sensitive asset/public split:** `investiciona-i-operativna-imovina-registar-plan.md` -> `javni-prikaz-emisija-i-kamatna-politika-plan.md` -> `config/sensitive-content-review-checklist.md`
+- **Expansion and licensing:** `globalni-licencni-okvir-i-delatnosti-plan.md` -> `docs/future-data-model.md` -> governance controls -> downstream monetization constraints
+- **Monetization playbook core:** `docs/repository-operating-model.md` + governance controls + billing support templates + `globalni-licencni-okvir-i-delatnosti-plan.md` -> `developer-creator-monetization-playbook-plan.md`
+- **VRH program-equivalent execution core:** `docs/repository-operating-model.md` + `governance/document-lifecycle.md` + `docs/repository-roadmap.md` + `standards/indekurilanc-standard.md` + sensitive-content controls -> `vrh-programskog-ekvivalenta-operativni-okvir-plan.md`
+- **VRH narrative-equivalence chain:** `docs/repository-operating-model.md` + `vrh-programskog-ekvivalenta-operativni-okvir-plan.md` + `governance/document-lifecycle.md` + sensitive-content controls -> `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md`
+- **Shared ecosystem operations chain:** `docs/repository-operating-model.md` + `developer-creator-monetization-playbook-plan.md` + `vercel-operativni-domen-i-fakture-plan.md` + support templates -> `github-vercel-ekosistemski-operativni-okvir-plan.md`
+- **Vercel operating planning chain:** `docs/repository-operating-model.md` + `developer-creator-monetization-playbook-plan.md` -> `vercel-operativni-domen-i-fakture-plan.md` -> `vercel-naplata-poruka-plan.md`
+- **Support release/sanitization gate:** `vercel-naplata-poruka-plan.md` + `github-naplata-poruka-plan.md` -> `config/sensitive-content-review-checklist.md`
+- **GitHub support communication:** `github-naplata-poruka-plan.md` -> `config/sensitive-content-review-checklist.md`
+- **Operating sequence:** `governance/document-lifecycle.md` + `docs/repository-operating-model.md` -> `docs/repository-roadmap.md` -> prototype/public-safe outputs
+
+## Ownership lanes
+
+| Lane | Main files | Ownership role |
+|---|---|---|
+| Navigation | `README.md` | Navigation owner |
+| Governance | `governance/`, `config/sensitive-content-review-checklist.md` | Governance owner |
+| Standards | `standards/`, `dinar-standard-plan.md` | Standards owner |
+| Portfolio / architecture | `docs/document-portfolio.md`, `docs/repository-roadmap.md`, `docs/repository-operating-model.md`, `docs/future-data-model.md` | Portfolio owner |
+| Domain plans | Root planning templates | Domain owner |
+| Support workflows | `vercel-naplata-poruka-plan.md`, `github-naplata-poruka-plan.md` | Support owner |
+| Prototype | `index.html`, `styles.css`, `script.js` | Product owner |
+
+## Maturity tracks
+
+Use these parallel tracks when expanding the repository:
+
+- **Standards maturity:** terminology, scoring, and canonical source completeness
+- **Governance maturity:** lifecycle, visibility, sanitization, and approval enforcement
+- **Prototype maturity:** controlled UI surfaces, modular boundaries, and validation anchors
+- **Creator maturity:** public-safe framing, cataloged messaging, and downstream multilingual readiness
+
+## Audience and public-surface map
+
+| Repository area | Primary audience layer | Public-surface role |
+|---|---|---|
+| `README.md` | creator / public-safe + contributor navigation | top-level public-safe framing and entry point |
+| `docs/repository-operating-model.md` | creator / public-safe + contributor routing | operating rules for reusable public-safe outputs |
+| `docs/document-portfolio.md` | contributor / architecture | structure map and cross-document routing |
+| `docs/repository-roadmap.md` | contributor / architecture | priority and sequencing reference |
+| `standards/` and `governance/` | canonical / standards | controlling source layer, not promotional output |
+| Root planning templates | internal planning, regulatory, or support depending on file | structured inputs that may later produce sanitized outputs |
+| `index.html`, `styles.css`, `script.js` | demonstration / creator-public | controlled prototype surfaces that must expose source-aligned meaning |
+
+## Public-safe output route
+
+Use canonical or governance sources first, route through the relevant working plan, sanitize the output, then expose the approved public-safe result through shared documents or the prototype.
+
+The repository's logical public-safe output catalog currently consists of `README.md`, the prototype files, `docs/repository-operating-model.md`, and any explicitly public-safe root plan such as `javni-prikaz-emisija-i-kamatna-politika-plan.md`.
+
+## When to use which plan
+
+- Use `ai-iq-world-bank-poslovni-izvestaj.md` for business performance analysis.
+- Use `investiciona-i-operativna-imovina-registar-plan.md` for internal asset registry planning.
+- Use `javni-prikaz-emisija-i-kamatna-politika-plan.md` for public-facing transparency and policy outputs.
+- Use `covecnost-narativni-epilog-plan.md` for controlled creator/public-safe narrative framing around courage, learning, innovation, and human potential.
+- Use `eksterni-repozitorijum-pravni-navod-plan.md` for handling claims originating outside this repository.
+- Use `globalni-licencni-okvir-i-delatnosti-plan.md` for activity expansion, jurisdiction planning, and approvals.
+- Use `developer-creator-monetization-playbook-plan.md` for developer + creator monetization design, shared-lane meta-monetization governance, and release-gated execution.
+- Use `vrh-programskog-ekvivalenta-operativni-okvir-plan.md` for repository-wide VRH program-equivalent execution, lane KPI governance, quality/security gates, phase rollout, and readiness criteria.
+- Use `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md` for controlled separation of canonical terms, VRH working/internal usage, chess/quadratic-shot narrative-equivalence mapping, quote classification, and creator/public-safe metaphors or other non-controlling expressions.
+- Use `vrh-programskog-ekvivalenta-operativni-okvir-plan.md` for repository-wide VRH program-equivalent execution, lane KPI governance, quality/security gates, readiness criteria, and downstream term classification under the main operating model.
+- Use `vrh-programskog-ekvivalenta-narativni-ekvivalenti-plan.md` for controlled separation of canonical terms, VRH working/internal usage, and constrained creator/public-safe handling of chess/quadratic-shot narrative candidates or other experimental non-controlling expressions.
+- Use `github-vercel-ekosistemski-operativni-okvir-plan.md` for shared GitHub + Vercel onboarding, conditional ecosystem positioning, joint decision gates, and cross-platform KPI control.
+- Use `vercel-operativni-domen-i-fakture-plan.md` for Vercel invoices, incidents, KPI tracking, lane ownership, and ecosystem collaboration planning.
+- Use `vercel-naplata-poruka-plan.md` or `github-naplata-poruka-plan.md` when preparing billing support communication.
+- Use `business/README.md` and the `business/*.csv` templates for controlled internal business records (invoices, contracts, evidence, audit trace) without committing sensitive raw artifacts.
