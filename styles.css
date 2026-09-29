@@ -610,6 +610,13 @@ canvas#loanChart { margin-top: 1.5rem; max-height: 220px; }
 .form-message.success { background: rgba(72,187,120,0.15); color: #48bb78; border: 1px solid rgba(72,187,120,0.3); }
 .form-message.error   { background: rgba(252,129,129,0.15); color: #fc8181; border: 1px solid rgba(252,129,129,0.3); }
 
+.form-note {
+  margin: 0 0 1rem;
+  color: var(--bank-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
 /* ===================== INVESTMENTS ===================== */
 .chart-container {
   background: var(--bank-mid);

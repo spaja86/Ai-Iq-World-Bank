@@ -114,11 +114,10 @@
             <label for="contactSubject">Tema</label>
             <select id="contactSubject" name="subject">
               <option value="">Izaberite temu...</option>
-              <option>Informacije o uslugama</option>
-              <option>Kreditni zahtev</option>
-              <option>Investiciono savetovanje</option>
-              <option>Tehnička podrška</option>
-              <option>Poslovne saradnje</option>
+              <option>Informacije o digitalnim platformama</option>
+              <option>Korisnička podrška</option>
+              <option>Poslovna saradnja</option>
+              <option>Medijski upit</option>
               <option>Ostalo</option>
             </select>
           </div>
@@ -126,8 +125,9 @@
             <label for="contactMessage">Poruka *</label>
             <textarea id="contactMessage" name="message" rows="5" placeholder="Napišite svoju poruku ovde..." required></textarea>
           </div>
-          <button type="submit" class="btn-primary" style="width:100%;">Pošalji Poruku ✉️</button>
-          <div class="form-message" id="formMessage"></div>
+          <p class="form-note">Nakon provere forme otvoriće se vaš email klijent. Ne unosite brojeve kartica, pristupne kodove ili druge osetljive finansijske podatke.</p>
+          <button type="submit" class="btn-primary" style="width:100%;">Nastavi u email klijent ✉️</button>
+          <div class="form-message" id="formMessage" aria-live="polite"></div>
         </form>
       </div>
     </div>
@@ -235,6 +235,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const name    = form.querySelector('#contactName').value.trim();
     const email   = form.querySelector('#contactEmail').value.trim();
+    const subject = form.querySelector('#contactSubject').value.trim() || 'Upit sa AI IQ World Bank sajta';
     const message = form.querySelector('#contactMessage').value.trim();
     const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -248,8 +249,10 @@ document.addEventListener('DOMContentLoaded', function () {
       show('Poruka mora imati najmanje 10 karaktera.', false); return;
     }
 
-    show('✅ Hvala! Vaša poruka je uspešno poslata. Odgovorićemo u roku od 24 sata.', true);
-    form.reset();
+    const emailBody = `Ime: ${name}\nEmail za odgovor: ${email}\nTema: ${subject}\n\nPoruka:\n${message}`;
+    const mailto = `mailto:spajicn@yahoo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+    show('Otvaramo vaš email klijent. Pregledajte poruku i sami je pošaljite.', true);
+    window.location.href = mailto;
   });
 
   function show(text, success) {
