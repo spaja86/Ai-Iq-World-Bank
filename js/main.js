@@ -49,7 +49,7 @@
   });
 
   // ── Counter Animation ────────────────────────────────────────
-  function animateCounter(el, target, suffix) {
+  function animateCounter(el, target, suffix, prefix) {
     const duration = 1800;
     const step = 16;
     const increment = target / (duration / step);
@@ -60,7 +60,7 @@
         current = target;
         clearInterval(timer);
       }
-      el.textContent = Math.floor(current) + suffix;
+      el.textContent = prefix + Math.floor(current) + suffix;
     }, step);
   }
 
@@ -72,7 +72,8 @@
           const el     = entry.target;
           const target = parseInt(el.dataset.counter, 10);
           const suffix = el.dataset.suffix || '';
-          animateCounter(el, target, suffix);
+          const prefix = el.dataset.prefix || '';
+          animateCounter(el, target, suffix, prefix);
           counterObserver.unobserve(el);
         }
       });
