@@ -1,309 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI IQ World Bank</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI IQ World Bank — Profesionalna svetska banka budućnosti. Maksimalna profesionalnost, saradnja sa svim bankama, AI tehnologije." />
+  <title>AI IQ World Bank — Naslovna</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <h1>AI IQ World Bank</h1>
-            <p class="hero-copy">One controlled repository for prototype modules, canonical standards, operational plans, and governance protection.</p>
-            <nav aria-label="Primary">
-                <ul class="nav-list">
-                    <li><a href="#overview">Overview</a></li>
-                    <li><a href="#architecture">Architecture</a></li>
-                    <li><a href="#operating-model">Operating Model</a></li>
-                    <li><a href="#control-map">Control Map</a></li>
-                    <li><a href="#indekurilanc">INDEKURILANC</a></li>
-                    <li><a href="#standards">Standards</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#governance">Governance</a></li>
-                    <li><a href="#roadmap">Roadmap</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+
+<!-- ══ TICKER BAR ══════════════════════════════════════════════ -->
+<div class="ticker-wrapper" aria-label="Finansijski ticker">
+  <div class="ticker-track"></div>
+</div>
+
+<!-- ══ HEADER ═════════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="AI IQ World Bank početna">
+      <span class="logo-icon">🏦</span>
+      <span>AI IQ World Bank</span>
+    </a>
+    <nav aria-label="Glavna navigacija">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="about.html">O Banci</a></li>
+        <li><a href="services.html">Usluge</a></li>
+        <li><a href="loans.html">Krediti</a></li>
+        <li><a href="investments.html">Investicije</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Otvori meni" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ══ HERO ════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Svetska Banka Budućnosti</div>
+    <h1>AI IQ <span>World Bank</span></h1>
+    <h2>Profesionalna Svetska Banka Budućnosti</h2>
+    <p>Maksimalna profesionalnost &bull; Saradnja sa svim bankama &bull; AI tehnologije</p>
+    <div class="hero-buttons">
+      <a href="services.html" class="btn-primary">Naše Usluge</a>
+      <a href="contact.html" class="btn-secondary">Kontaktirajte Nas</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STATS ════════════════════════════════════════════════════ -->
+<div class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-item animate-hidden">
+      <span class="stat-number" data-counter="190" data-suffix="+">0+</span>
+      <div class="stat-label">Zemalja Širom Sveta</div>
+    </div>
+    <div class="stat-item animate-hidden">
+      <span class="stat-number" data-counter="50" data-prefix="$" data-suffix="B+">$0B+</span>
+      <div class="stat-label">Ukupna Aktiva (USD)</div>
+    </div>
+    <div class="stat-item animate-hidden">
+      <span class="stat-number" data-counter="10" data-suffix="M+">0M+</span>
+      <div class="stat-label">Zadovoljnih Klijenata</div>
+    </div>
+    <div class="stat-item animate-hidden">
+      <span class="stat-number" data-counter="24" data-suffix="/7">0/7</span>
+      <div class="stat-label">Podrška Klijentima</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SERVICES PREVIEW ════════════════════════════════════════ -->
+<section>
+  <div class="section-inner">
+    <div class="section-title animate-hidden">
+      <h2>Naše Usluge</h2>
+      <p>Kompletan spektar bankarskih usluga za privatne i poslovne klijente</p>
+      <div class="gold-line"></div>
+    </div>
+    <div class="cards-grid">
+      <div class="card animate-hidden">
+        <div class="card-icon">💳</div>
+        <h3>Digitalno Bankarstvo</h3>
+        <p>Upravljajte računima, plaćanjima i investicijama 24/7 putem naše sigurne digitalne platforme sa AI podrškom.</p>
+        <a href="services.html" class="card-link">Saznajte više →</a>
+      </div>
+      <div class="card animate-hidden">
+        <div class="card-icon">🏠</div>
+        <h3>Stambeni Krediti</h3>
+        <p>Povoljne kamatne stope od 3.9% godišnje za stambene kredite do 30 godina otplate sa fleksibilnim uslovima.</p>
+        <a href="loans.html" class="card-link">Izračunaj ratu →</a>
+      </div>
+      <div class="card animate-hidden">
+        <div class="card-icon">📈</div>
+        <h3>Investicioni Fondovi</h3>
+        <p>Pametno investirajte uz naše AI-pogonske fondove sa prosečnim godišnjim prinosom od 8-14%.</p>
+        <a href="investments.html" class="card-link">Investirajte →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PLATFORMS ═══════════════════════════════════════════════ -->
+<section class="platforms-section" id="platforms">
+  <div class="section-inner">
+    <div class="section-title animate-hidden">
+      <h2>Ekosistem Kompanija SPAJA</h2>
+      <p>Sve naše platforme sarađuju međusobno za potpuno finansijsko iskustvo</p>
+      <div class="gold-line"></div>
+    </div>
+    <div class="platform-grid">
+      <a href="https://io-openui-ao.vercel.app" class="platform-card animate-hidden" target="_blank" rel="noopener">
+        <span class="platform-icon">🌐</span>
+        <div class="platform-card-text">
+          <strong>IO-OPENUI-AO</strong>
+          <span>Platforma za profesionalnu saradnju i igrice</span>
         </div>
-    </header>
-    <main class="container">
-        <section id="overview" class="page-section card-stack">
-            <h2>Repository Overview</h2>
-            <p>
-                The repository is designed as one connected system. Standards and governance control how plans and
-                public prototype surfaces evolve, while the prototype makes the active model visible.
-            </p>
-            <div id="pillar-grid" class="pillar-grid"></div>
-        </section>
-
-        <section id="architecture" class="page-section">
-            <h2>Controlled Architecture</h2>
-            <div class="module-grid architecture-grid">
-                <article class="card module-card">
-                    <h3>Source-of-Truth Hierarchy</h3>
-                    <ol id="source-hierarchy" class="ordered-card-list"></ol>
-                </article>
-                <article class="card module-card">
-                    <h3>Visibility Layers</h3>
-                    <div id="visibility-model" class="mini-card-grid"></div>
-                </article>
-                <article class="card module-card">
-                    <h3>Future Module Path</h3>
-                    <div id="future-modules" class="mini-card-grid"></div>
-                </article>
-                <article class="card module-card">
-                    <h3>Prototype Module Boundaries</h3>
-                    <div id="module-boundaries" class="mini-card-grid"></div>
-                </article>
-            </div>
-        </section>
-
-        <section id="operating-model" class="page-section">
-            <h2>Developer + Creator Operating Model</h2>
-            <p>
-                The repository separates canonical rules, working plans, public-safe outputs, and support communication
-                so the prototype can grow without bypassing governance while every non-trivial change stays tied to
-                controlling source, audience layer, visibility, shared-lane handoff, and release status.
-            </p>
-            <div class="module-grid">
-                <article class="card module-card">
-                    <h3>Execution Lanes</h3>
-                    <div id="narrative-lanes" class="mini-card-grid"></div>
-                </article>
-                <article class="card module-card">
-                    <h3>Repository Work Cycle</h3>
-                    <ol id="repository-work-cycle" class="ordered-card-list"></ol>
-                </article>
-                <article class="card module-card">
-                    <h3>Public-Safe Output Flow</h3>
-                    <ol id="public-output-flow" class="ordered-card-list"></ol>
-                </article>
-                <article class="card module-card">
-                    <h3>Approval Flow</h3>
-                    <ol id="approval-flow" class="ordered-card-list"></ol>
-                </article>
-                <article class="card module-card">
-                    <h3>Release Gates</h3>
-                    <div id="release-gates" class="mini-card-grid"></div>
-                </article>
-                <article class="card module-card">
-                    <h3>Shared Checkpoints</h3>
-                    <ol id="developer-creator-checkpoints" class="ordered-card-list"></ol>
-                </article>
-                <article class="card module-card">
-                    <h3>Change Classes</h3>
-                    <ol id="change-impact-matrix" class="ordered-card-list"></ol>
-                </article>
-                <article class="card module-card">
-                    <h3>Success Criteria</h3>
-                    <ol id="success-criteria" class="ordered-card-list"></ol>
-                </article>
-            </div>
-        </section>
-
-        <section id="control-map" class="page-section">
-            <h2>Controlled Surface Map</h2>
-            <p>
-                Reusable public-safe surfaces should stay mapped to a controlling source, ownership lane,
-                and release expectation before the repository expands into multilingual or dashboard layers.
-            </p>
-            <div class="module-grid">
-                <article class="card module-card">
-                    <h3>Concept Surface Inventory</h3>
-                    <div id="concept-surface-inventory" class="mini-card-grid"></div>
-                </article>
-                <article class="card module-card">
-                    <h3>Public-Safe Output Catalog</h3>
-                    <div id="public-output-catalog" class="mini-card-grid"></div>
-                </article>
-            </div>
-        </section>
-
-        <section id="indekurilanc" class="page-section" aria-labelledby="indekurilanc-title">
-            <h2 id="indekurilanc-title">INDEKURILANC</h2>
-            <p>
-                INDEKURILANC is the active repository scoring baseline for AI capability maturity.
-                The current standard keeps three weighted dimensions and requires an operational interpretation.
-            </p>
-            <div class="indekurilanc-grid">
-                <article class="card indekurilanc-card">
-                    <h3>Baseline Standard</h3>
-                    <ul id="indekurilanc-standard-list">
-                        <li>Infrastructure: 40%</li>
-                        <li>Skills: 35%</li>
-                        <li>Governance: 25%</li>
-                        <li>Active reference: INDEKURILANC-STD-V1</li>
-                    </ul>
-                    <p>
-                        Use the score as a structured readiness indicator, not as a substitute for a full business,
-                        governance, or licensing review.
-                    </p>
-                </article>
-                <article class="card indekurilanc-card" aria-labelledby="calculator-title">
-                    <h3 id="calculator-title">Readiness Calculator</h3>
-                    <form id="indekurilanc-form" novalidate>
-                        <label for="infrastructure-score">Infrastructure (0-100)</label>
-                        <input id="infrastructure-score" name="infrastructure" type="number" min="0" max="100" required>
-
-                        <label for="skills-score">Skills (0-100)</label>
-                        <input id="skills-score" name="skills" type="number" min="0" max="100" required>
-
-                        <label for="governance-score">Governance (0-100)</label>
-                        <input id="governance-score" name="governance" type="number" min="0" max="100" required>
-
-                        <div class="button-row">
-                            <button type="submit">Calculate INDEKURILANC</button>
-                            <button type="button" id="indekurilanc-reset">Reset</button>
-                        </div>
-                    </form>
-                    <p id="indekurilanc-feedback" class="indekurilanc-feedback" aria-live="polite"></p>
-                </article>
-                <article class="card indekurilanc-card">
-                    <h3>Result</h3>
-                    <dl id="indekurilanc-result" class="indekurilanc-result" aria-live="polite">
-                        <div>
-                            <dt>Index Score</dt>
-                            <dd id="indekurilanc-score">-</dd>
-                        </div>
-                        <div>
-                            <dt>Status</dt>
-                            <dd id="indekurilanc-status">Not Calculated</dd>
-                        </div>
-                        <div>
-                            <dt>Interpretation</dt>
-                            <dd id="indekurilanc-summary">Run the calculator to generate an operational interpretation.</dd>
-                        </div>
-                        <div>
-                            <dt>Priority Focus</dt>
-                            <dd id="indekurilanc-priority">Awaiting input</dd>
-                        </div>
-                        <div>
-                            <dt>Next Controlled Step</dt>
-                            <dd id="indekurilanc-next-step">Update the inputs to see the recommended next repository move.</dd>
-                        </div>
-                        <div>
-                            <dt>Standard</dt>
-                            <dd id="indekurilanc-standard">INDEKURILANC-STD-V1</dd>
-                        </div>
-                    </dl>
-                </article>
-                <article class="card indekurilanc-card">
-                    <h3>Weighted Contribution View</h3>
-                    <div id="indekurilanc-contributions" class="metric-list" aria-live="polite"></div>
-                </article>
-                <article class="card indekurilanc-card">
-                    <h3>Maturity Bands</h3>
-                    <div id="maturity-bands" class="mini-card-grid"></div>
-                </article>
-            </div>
-        </section>
-
-        <section id="standards" class="page-section">
-            <h2>Standards</h2>
-            <div class="reference-grid">
-                <article class="card reference-card">
-                    <h3>INDEKURILANC</h3>
-                    <p>Canonical score model, maturity bands, outputs, and change-control rules.</p>
-                    <p><code>standards/indekurilanc-standard.md</code></p>
-                </article>
-                <article class="card reference-card">
-                    <h3>Glossary</h3>
-                    <p>Controlled terminology for repository content, visibility, and future extensions.</p>
-                    <p><code>standards/glossary.md</code></p>
-                </article>
-                <article class="card reference-card">
-                    <h3>DINAR</h3>
-                    <p>Controlled internal/scenario unit with explicit status and usage rules.</p>
-                    <p><code>dinar-standard-plan.md</code></p>
-                </article>
-            </div>
-        </section>
-
-        <section id="portfolio" class="page-section">
-            <h2>Document Portfolio</h2>
-            <div class="portfolio-grid">
-                <article class="card portfolio-card">
-                    <h3>Business and KPI analysis</h3>
-                    <p><code>ai-iq-world-bank-poslovni-izvestaj.md</code></p>
-                </article>
-                <article class="card portfolio-card">
-                    <h3>Asset registry and sanitization</h3>
-                    <p><code>investiciona-i-operativna-imovina-registar-plan.md</code></p>
-                </article>
-                <article class="card portfolio-card">
-                    <h3>Public transparency and policy</h3>
-                    <p><code>javni-prikaz-emisija-i-kamatna-politika-plan.md</code></p>
-                </article>
-                <article class="card portfolio-card">
-                    <h3>Legal and external claim handling</h3>
-                    <p><code>eksterni-repozitorijum-pravni-navod-plan.md</code></p>
-                </article>
-                <article class="card portfolio-card">
-                    <h3>Licensing and activity expansion</h3>
-                    <p><code>globalni-licencni-okvir-i-delatnosti-plan.md</code></p>
-                </article>
-                <article class="card portfolio-card">
-                    <h3>Support communication</h3>
-                    <p><code>vercel-naplata-poruka-plan.md</code> and <code>github-naplata-poruka-plan.md</code></p>
-                </article>
-            </div>
-            <p class="supporting-copy">See <code>docs/document-portfolio.md</code> for status, dependencies, risk, and usage order.</p>
-        </section>
-
-        <section id="governance" class="page-section">
-            <h2>Governance</h2>
-            <div class="reference-grid">
-                <article class="card reference-card">
-                    <h3>Repository Charter</h3>
-                    <p>Defines purpose, pillars, structure lock, hierarchy, and approval expectations.</p>
-                    <p><code>governance/repo-charter.md</code></p>
-                </article>
-                <article class="card reference-card">
-                    <h3>Document Lifecycle</h3>
-                    <p>Defines control metadata, statuses, visibility, review checkpoints, and linking rules.</p>
-                    <p><code>governance/document-lifecycle.md</code></p>
-                </article>
-                <article class="card reference-card">
-                    <h3>Sensitive Content Review</h3>
-                    <p>Pre-commit checklist for sanitization, visibility, and publication safety.</p>
-                    <p><code>config/sensitive-content-review-checklist.md</code></p>
-                </article>
-            </div>
-        </section>
-
-        <section id="roadmap" class="page-section">
-            <h2>Roadmap</h2>
-            <ol id="roadmap-list" class="roadmap-list">
-                <li><strong>Foundation stabilization:</strong> structure, hierarchy, standards, and validation.</li>
-                <li><strong>Product strengthening:</strong> clearer prototype surfaces, score breakdowns, and standard-aligned outputs.</li>
-                <li><strong>Portfolio alignment:</strong> roadmap, operating model, ownership, and document metadata.</li>
-                <li><strong>Creator and support alignment:</strong> public-safe messaging plus structured support workflows.</li>
-                <li><strong>Lifecycle enforcement and platform growth:</strong> controlled modular expansion and release gates.</li>
-            </ol>
-            <p class="supporting-copy">Detailed sequencing lives in <code>docs/repository-roadmap.md</code>.</p>
-        </section>
-
-        <section id="contact" class="page-section">
-            <h2>Contact</h2>
-            <p>If you have questions about the repository, prototype direction, or document framework, use the listed owner channels.</p>
-            <ul class="contact-list">
-                <li>Email: <a href="mailto:spajicn@yahoo.com">spajicn@yahoo.com</a></li>
-                <li>Email: <a href="mailto:spajicn@gmail.com">spajicn@gmail.com</a></li>
-                <li><a href="https://www.facebook.com/Spaja86">Facebook Page 1</a></li>
-                <li><a href="https://www.facebook.com/profile.php?id=61583240952997">Facebook Page 2</a></li>
-                <li><a href="https://www.instagram.com/spaja.1986">Instagram</a></li>
-                <li><a href="https://www.tiktok.com/@spaja.1986">TikTok</a></li>
-                <li><a href="https://www.youtube.com/@spajanikopenevolution?si=9JIUkOKsxLcRn">YouTube</a></li>
-            </ul>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 AI IQ World Bank. All rights reserved.</p>
-            <p>Owner: Nikola Spajić</p>
+      </a>
+      <a href="https://github.com/spaja86/Ai-Iq-Menja-nica" class="platform-card animate-hidden" target="_blank" rel="noopener">
+        <span class="platform-icon">💱</span>
+        <div class="platform-card-text">
+          <strong>Ai-Iq-Menjačnica</strong>
+          <span>Kripto menjačnica sa najviše valuta</span>
         </div>
-    </footer>
-    <script src="script.js"></script>
+      </a>
+      <a href="https://github.com/spaja86/Kompanija-SPAJA" class="platform-card animate-hidden" target="_blank" rel="noopener">
+        <span class="platform-icon">🏢</span>
+        <div class="platform-card-text">
+          <strong>Kompanija SPAJA</strong>
+          <span>Matična IT kompanija — hub svih platformi</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SMEDEREVO EXPANSION ═════════════════════════════════════ -->
+<section class="smederevo-section">
+  <div class="section-inner">
+    <div class="smederevo-content">
+      <div class="animate-hidden">
+        <h2>Ekspanzija u Smederevo</h2>
+        <p>AI IQ World Bank širi svoje prisustvo u Srbiji sa posebnim fokusom na Smederevo. Naša digitalna infrastruktura omogućava pristup svim bankarskim uslugama bez ograničenja.</p>
+        <ul class="expansion-list">
+          <li>Digitalna filijala — Smederevo, Srbija</li>
+          <li>Lokalni tim za podršku klijentima</li>
+          <li>Partnerstvo sa lokalnim preduzećima</li>
+          <li>AI-potpomognuto finansijsko savetovanje</li>
+          <li>Posebni uslovi za lokalne klijente</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Postanite Klijent</a>
+      </div>
+      <div class="smederevo-visual animate-hidden">
+        <div style="font-size:3rem; margin-bottom:1rem;">🏙️</div>
+        <div class="city-name">Smederevo</div>
+        <p style="color:var(--bank-muted); margin-top:0.5rem;">Srbija, Evropa</p>
+        <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid var(--glass-border);">
+          <div style="color:var(--bank-gold); font-size:1.8rem; font-weight:800;">2024</div>
+          <div style="color:var(--bank-muted); font-size:0.85rem;">Godina osnivanja digitalne filijale</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══════════════════════════════════════════════════════ -->
+<section style="text-align:center; background:var(--bank-mid); border-top:1px solid var(--glass-border); border-bottom:1px solid var(--glass-border);">
+  <div class="section-inner">
+    <div class="animate-hidden">
+      <h2 style="font-size:clamp(1.5rem,3vw,2.2rem); color:#fff; margin-bottom:0.75rem;">Spremni da počnete?</h2>
+      <p style="color:var(--bank-muted); margin-bottom:2rem; max-width:500px; margin-left:auto; margin-right:auto;">Otvorite račun danas i pristupite svim bankarskim uslugama AI IQ World Bank.</p>
+      <a href="contact.html" class="btn-primary">Kontaktirajte Nas</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-text">🏦 AI IQ World Bank</div>
+      <p>Profesionalna svetska banka budućnosti. Maksimalna profesionalnost, saradnja sa svim bankama, AI tehnologije u službi vaših finansija.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Stranice</h4>
+      <ul>
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="about.html">O Banci</a></li>
+        <li><a href="services.html">Usluge</a></li>
+        <li><a href="loans.html">Krediti</a></li>
+        <li><a href="investments.html">Investicije</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Platforme</h4>
+      <ul>
+        <li><a href="https://io-openui-ao.vercel.app" target="_blank" rel="noopener">IO-OPENUI-AO</a></li>
+        <li><a href="https://github.com/spaja86/Ai-Iq-Menja-nica" target="_blank" rel="noopener">Ai-Iq-Menjačnica</a></li>
+        <li><a href="https://github.com/spaja86/Kompanija-SPAJA" target="_blank" rel="noopener">Kompanija SPAJA</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Kontakt</h4>
+      <p>👤 Nikola Spajić</p>
+      <p>📧 <a href="mailto:spajicn@yahoo.com">spajicn@yahoo.com</a></p>
+      <p>📧 <a href="mailto:spajicn@gmail.com">spajicn@gmail.com</a></p>
+      <p>📍 Smederevo, Srbija</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/Spaja86" target="_blank" rel="noopener">📘 Facebook</a>
+        <a href="https://www.instagram.com/spaja.1986" target="_blank" rel="noopener">📷 Instagram</a>
+        <a href="https://www.tiktok.com/@spaja.1986" target="_blank" rel="noopener">🎵 TikTok</a>
+        <a href="https://www.youtube.com/@spajanikopenevolution" target="_blank" rel="noopener">▶️ YouTube</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="footer-year">2026</span> AI IQ World Bank. Sva prava zadržana. | Vlasnik: Nikola Spajić</p>
+    <p>Dizajnirano sa ❤️ u Srbiji</p>
+  </div>
+</footer>
+
+<script src="js/ticker.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kreditni kalkulator AI IQ World Bank — izračunajte mesečnu ratu, ukupnu kamatu i vizualizujte strukturu kredita." />
+  <title>Krediti &amp; Kalkulator — AI IQ World Bank</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="ticker-wrapper" aria-label="Finansijski ticker">
+  <div class="ticker-track"></div>
+</div>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-icon">🏦</span><span>AI IQ World Bank</span></a>
+    <nav aria-label="Glavna navigacija">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="about.html">O Banci</a></li>
+        <li><a href="services.html">Usluge</a></li>
+        <li><a href="loans.html">Krediti</a></li>
+        <li><a href="investments.html">Investicije</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Otvori meni" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Početna</a><span>/</span>Krediti</div>
+  <h1>Kreditni <span>Kalkulator</span></h1>
+  <p>Izračunajte svoju mesečnu ratu i ukupne troškove kredita u realnom vremenu</p>
+</div>
+
+<!-- Kalkulator -->
+<section>
+  <div class="section-inner">
+    <div class="calculator-wrapper">
+      <!-- Forma -->
+      <div class="calc-panel animate-hidden">
+        <h3>🧮 Parametri Kredita</h3>
+
+        <div class="form-group">
+          <label for="loanAmount">Iznos kredita</label>
+          <input type="range" id="loanAmountRange" min="1000" max="500000" step="1000" value="50000" aria-label="Iznos kredita klizač" />
+          <div style="display:flex; gap:0.75rem; align-items:center;">
+            <input type="number" id="loanAmount" min="1000" max="500000" step="1000" value="50000" style="flex:1;" />
+            <span style="color:var(--bank-muted); font-size:0.85rem;">EUR</span>
+          </div>
+          <div class="range-val" id="amountDisplay">€50,000.00</div>
+        </div>
+
+        <div class="form-group">
+          <label for="loanRate">Godišnja kamatna stopa (%)</label>
+          <input type="range" id="loanRateRange" min="0.1" max="25" step="0.1" value="5.9" aria-label="Kamatna stopa klizač" />
+          <div style="display:flex; gap:0.75rem; align-items:center;">
+            <input type="number" id="loanRate" min="0.1" max="25" step="0.1" value="5.9" style="flex:1;" />
+            <span style="color:var(--bank-muted); font-size:0.85rem;">%</span>
+          </div>
+          <div class="range-val" id="rateDisplay">5.90%</div>
+        </div>
+
+        <div class="form-group">
+          <label for="loanMonths">Period otplate (meseci)</label>
+          <input type="range" id="loanMonthsRange" min="6" max="360" step="6" value="120" aria-label="Period otplate klizač" />
+          <div style="display:flex; gap:0.75rem; align-items:center;">
+            <input type="number" id="loanMonths" min="6" max="360" step="6" value="120" style="flex:1;" />
+            <span style="color:var(--bank-muted); font-size:0.85rem;">mes.</span>
+          </div>
+          <div class="range-val" id="monthsDisplay">120 mes.</div>
+        </div>
+
+        <div style="margin-top:1rem; padding:1rem; background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.2); border-radius:8px;">
+          <p style="color:var(--bank-muted); font-size:0.82rem; line-height:1.6;">
+            Formula: M = P × [r(1+r)ⁿ] / [(1+r)ⁿ − 1]<br/>
+            P = iznos, r = mesečna stopa, n = broj rata
+          </p>
+        </div>
+      </div>
+
+      <!-- Rezultati -->
+      <div class="calc-panel animate-hidden">
+        <h3>📊 Rezultati Kalkulacije</h3>
+        <div class="calc-results">
+          <div class="result-row">
+            <span class="result-label">Mesečna rata</span>
+            <span class="result-value highlight" id="resultMonthly">—</span>
+          </div>
+          <div class="result-row">
+            <span class="result-label">Ukupno plaćeno</span>
+            <span class="result-value" id="resultTotal">—</span>
+          </div>
+          <div class="result-row">
+            <span class="result-label">Ukupna kamata</span>
+            <span class="result-value" id="resultInterest">—</span>
+          </div>
+        </div>
+        <canvas id="loanChart" aria-label="Pita grafikon strukture kredita"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vrste kredita -->
+<section style="background:var(--bank-mid); border-top:1px solid var(--glass-border); border-bottom:1px solid var(--glass-border);">
+  <div class="section-inner">
+    <div class="section-title animate-hidden">
+      <h2>Vrste Kredita</h2>
+      <p>Pronađite kredit koji odgovara vašim potrebama</p>
+      <div class="gold-line"></div>
+    </div>
+    <div class="cards-grid">
+      <div class="card animate-hidden">
+        <div class="card-icon">🏠</div>
+        <h3>Stambeni Kredit</h3>
+        <p>Za kupovinu, izgradnju ili renoviranje nekretnine. Kamatna stopa od 3.9% godišnje, rok do 30 godina.</p>
+        <div style="margin-top:1rem; color:var(--bank-gold); font-weight:700; font-size:1.2rem;">od 3.9% god.</div>
+      </div>
+      <div class="card animate-hidden">
+        <div class="card-icon">🚗</div>
+        <h3>Auto Kredit</h3>
+        <p>Finansirajte kupovinu novog ili polovnog vozila. Brzo odobravanje u roku od 24 sata.</p>
+        <div style="margin-top:1rem; color:var(--bank-gold); font-weight:700; font-size:1.2rem;">od 4.5% god.</div>
+      </div>
+      <div class="card animate-hidden">
+        <div class="card-icon">💼</div>
+        <h3>Poslovni Kredit</h3>
+        <p>Finansirajte rast vašeg preduzeća. Fleksibilni uslovi, prilagođeni cashflow-u vašeg poslovanja.</p>
+        <div style="margin-top:1rem; color:var(--bank-gold); font-weight:700; font-size:1.2rem;">od 5.2% god.</div>
+      </div>
+      <div class="card animate-hidden">
+        <div class="card-icon">🎓</div>
+        <h3>Studentski Kredit</h3>
+        <p>Povoljni uslovi za finansiranje obrazovanja uz grejs period tokom studija.</p>
+        <div style="margin-top:1rem; color:var(--bank-gold); font-weight:700; font-size:1.2rem;">od 2.9% god.</div>
+      </div>
+      <div class="card animate-hidden">
+        <div class="card-icon">💳</div>
+        <h3>Gotovinski Kredit</h3>
+        <p>Brza gotovina bez kolaterala za lične potrebe. Odobravanje za 15 minuta.</p>
+        <div style="margin-top:1rem; color:var(--bank-gold); font-weight:700; font-size:1.2rem;">od 6.9% god.</div>
+      </div>
+      <div class="card animate-hidden">
+        <div class="card-icon">🔄</div>
+        <h3>Refinansiranje</h3>
+        <p>Prebacite postojeće kredite na povoljnije uslove i uštedite na kamatama.</p>
+        <div style="margin-top:1rem; color:var(--bank-gold); font-weight:700; font-size:1.2rem;">od 3.5% god.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Platforme -->
+<section class="platforms-section">
+  <div class="section-inner">
+    <div class="section-title animate-hidden">
+      <h2>Ekosistem Kompanija SPAJA</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="platform-grid">
+      <a href="https://io-openui-ao.vercel.app" class="platform-card animate-hidden" target="_blank" rel="noopener">
+        <span class="platform-icon">🌐</span>
+        <div class="platform-card-text"><strong>IO-OPENUI-AO</strong><span>Saradnja i igrice</span></div>
+      </a>
+      <a href="https://github.com/spaja86/Ai-Iq-Menja-nica" class="platform-card animate-hidden" target="_blank" rel="noopener">
+        <span class="platform-icon">💱</span>
+        <div class="platform-card-text"><strong>Ai-Iq-Menjačnica</strong><span>Kripto menjačnica</span></div>
+      </a>
+      <a href="https://github.com/spaja86/Kompanija-SPAJA" class="platform-card animate-hidden" target="_blank" rel="noopener">
+        <span class="platform-icon">🏢</span>
+        <div class="platform-card-text"><strong>Kompanija SPAJA</strong><span>Matična kompanija</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-text">🏦 AI IQ World Bank</div>
+      <p>Profesionalna svetska banka budućnosti. AI tehnologije u službi vaših finansija.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Stranice</h4>
+      <ul>
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="about.html">O Banci</a></li>
+        <li><a href="services.html">Usluge</a></li>
+        <li><a href="loans.html">Krediti</a></li>
+        <li><a href="investments.html">Investicije</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Platforme</h4>
+      <ul>
+        <li><a href="https://io-openui-ao.vercel.app" target="_blank" rel="noopener">IO-OPENUI-AO</a></li>
+        <li><a href="https://github.com/spaja86/Ai-Iq-Menja-nica" target="_blank" rel="noopener">Ai-Iq-Menjačnica</a></li>
+        <li><a href="https://github.com/spaja86/Kompanija-SPAJA" target="_blank" rel="noopener">Kompanija SPAJA</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Kontakt</h4>
+      <p>👤 Nikola Spajić</p>
+      <p>📧 <a href="mailto:spajicn@yahoo.com">spajicn@yahoo.com</a></p>
+      <p>📍 Smederevo, Srbija</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/Spaja86" target="_blank" rel="noopener">📘 FB</a>
+        <a href="https://www.instagram.com/spaja.1986" target="_blank" rel="noopener">📷 IG</a>
+        <a href="https://www.tiktok.com/@spaja.1986" target="_blank" rel="noopener">🎵 TT</a>
+        <a href="https://www.youtube.com/@spajanikopenevolution" target="_blank" rel="noopener">▶️ YT</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="footer-year">2026</span> AI IQ World Bank. Sva prava zadržana. | Vlasnik: Nikola Spajić</p>
+    <p>Dizajnirano sa ❤️ u Srbiji</p>
+  </div>
+</footer>
+
+<script src="js/ticker.js"></script>
+<script src="js/main.js"></script>
+<script src="js/calculator.js"></script>
+</body>
+</html>
