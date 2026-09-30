@@ -9,6 +9,10 @@
 - **Purpose:** Sequences repository stabilization, documentation alignment, frontend growth, and platformization.
 - **Depends on:** `docs/document-portfolio.md`, `docs/repository-operating-model.md`, `governance/repo-charter.md`
 
+## Idea portfolio
+
+Use [`docs/idea-registry.md`](./idea-registry.md) as the intake and prioritization layer for future concepts. It does not replace standards, governance, licensing review, or release gates.
+
 ## Priority order
 
 1. Standards + governance alignment
