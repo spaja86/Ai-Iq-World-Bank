@@ -51,6 +51,39 @@
   </div>
 </section>
 
+<section aria-labelledby="prototype-heading"><div class="section-inner">
+<h2 id="prototype-heading">Bezbedni bankarski prototip</h2>
+<p>Simulacija: nema potvrđenog bankovnog salda, izdatih kartica ili izvršenih uplata.</p>
+<p><a class="btn-primary" href="https://ai-iq-super-platforma.com/bank-prototype" rel="noopener">Otvori autentifikovani prototip platforme</a></p>
+<p>Prijava ostaje na platformi. Ova statička stranica ne prikuplja tokene, brojeve kartica ili bankarske podatke.</p>
+<h3>INDEKURILANC — edukativna procena zrelosti</h3>
+<p>Rezultat nije kreditni rejting, novac ili odobrenje za plaćanje.</p>
+<form id="indekurilanc-form">
+<label>Infrastruktura (0–100) <input name="infrastructure" type="number" min="0" max="100" step="any" required></label>
+<label>Veštine (0–100) <input name="skills" type="number" min="0" max="100" step="any" required></label>
+<label>Upravljanje (0–100) <input name="governance" type="number" min="0" max="100" step="any" required></label>
+<button type="submit">Izračunaj</button><button type="button" id="indekurilanc-reset">Resetuj</button>
+</form><p id="indekurilanc-feedback" role="status" aria-live="polite"></p>
+<p>Rezultat: <span id="indekurilanc-score"></span></p>
+<p>Zrelost: <span id="indekurilanc-status"></span></p>
+<p>Tumačenje: <span id="indekurilanc-summary"></span></p>
+<p>Prioritet: <span id="indekurilanc-priority"></span></p>
+<p>Sledeći korak: <span id="indekurilanc-next-step"></span></p>
+<p>Standard: <span id="indekurilanc-standard"></span></p>
+<div id="indekurilanc-contributions"></div>
+<h3>Narativni prikazi</h3><div id="narrative-lanes"></div>
+<h3>Radni ciklus</h3><div id="repository-work-cycle"></div>
+<h3>Javna objava</h3><div id="public-output-flow"></div>
+<h3>Odobrenja</h3><div id="approval-flow"></div>
+<h3>Uslovi izdanja</h3><div id="release-gates"></div>
+<h3>Granice modula</h3><div id="module-boundaries"></div>
+<h3>Razvojne provere</h3><div id="developer-creator-checkpoints"></div>
+<h3>Uticaj promena</h3><div id="change-impact-matrix"></div>
+<h3>Kriterijumi uspeha</h3><div id="success-criteria"></div>
+<h3>Prikazi</h3><div id="concept-surface-inventory"></div>
+<h3>Katalog javnih izlaza</h3><div id="public-output-catalog"></div>
+</div></section>
+
 <!-- ══ PLATFORM PRINCIPLES ════════════════════════════════ -->
 <div class="stats-section">
   <div class="stats-grid">
@@ -219,6 +252,7 @@
   </div>
 </footer>
 
+<script src="script.js"></script>
 <script src="js/ticker.js"></script>
 <script src="js/main.js"></script>
 </body>

@@ -122,3 +122,13 @@ Osnivač & CEO — Smederevo, Srbija
 
 © 2026 AI IQ World Bank. Sva prava zadržana.  
 Vlasnik: **Nikola Spajić** | Smederevo, Srbija
+
+## Bezbedni bankarski prototip — implementacija
+
+Naslovna sada sadrži vidljivu INDEKURILANC formu i javne governance prikaze povezane sa postojećim `script.js`. Edukativni rezultat nije kreditni rejting, saldo ili novac.
+
+Autentifikovani read-only prototip je na https://ai-iq-super-platforma.com/bank-prototype — backend mora prvo dobiti odgovarajuću izmenu iz spaja86/AI-IQ-SUPER-PLATFORMA. Statički frontend ne prikuplja tokene, bankovne brojeve ili podatke kartica; prijava i API provera ostaju na istom domenu platforme.
+
+Provere: `python -m unittest discover -s config -p 'test_*.py'` i `python config/validate_repository.py`. Backend CLI: `npm run digitalni-kompjuter -- bank-status` (read-only, bez uplate).
+
+Razlog promene: odobren nastavak pregleda bankarskog prototipa. Potrebna je ljudska provera pre spajanja. Stvarni računi, kartice, IPS, pravni/compliance model, pouzdano knjiženje i usaglašavanje zahtevaju naredne faze i ovlašćenog partnera. Vercel dug se potvrđuje stvarnim fakturama, ne podacima prototipa.
