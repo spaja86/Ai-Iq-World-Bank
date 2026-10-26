@@ -45,16 +45,16 @@ Provereno 26. oktobra 2026:
 
 | Mesto | Nalaz i postupanje |
 |---|---|
-| GitHub About za ovaj repozitorijum | Opis tvrdi da je projekat najbolja banka i sarađuje sa svim bankama. Predlog: „AI IQ World Bank — demonstracioni softver u razvoju, bez dozvole NBS za rad banke. Edukativni alati i probni prikazi.” Ovo polje nije datoteka u grani; odvojeno je od ovog diff-a. |
+| GitHub About za ovaj repozitorijum | Ispravljen 26. oktobra kroz GitHub web interfejs i potvrđen kroz API: „AI IQ World Bank — demonstracioni softver u razvoju, bez dozvole NBS za rad banke. Edukativni alati i probni prikazi.” Polje je javno ažurirano odvojeno od ovog diff-a; prethodna tvrdnja o najboljoj banci i saradnji sa svim bankama uklonjena je. |
 | Otvoreni PR-ovi #1 i #2 | Stariji predlozi sadrže tvrdnje o bankarskim uslugama, klijentima, aktivi i partnerima. Nisu spojeni, prepisani niti zatvoreni. Pre razmatranja moraju preuzeti ove korekcije i proći nove provere. |
-| IO-OPENUI-AO | `src/constants/index.ts` i aktivni `src/utils/constants.ts`, početna, footer i chatbot sadrže bankarsko/licencno pozicioniranje. Pripremljena korekcija je u `docs/patches/io-openui-world-bank-public-status.patch` za reviziju 7c7fa179f88557b8e10ec3b56ea185bd8e128d03. Četiri ciljana testa prolaze. Nije objavljen commit u IO repozitorijumu: AGENTS.md zahteva potpisane commitove, a raspoloživi način pisanja daje nepotpisane commitove. Patch je proveren pomoću `git apply --reverse --check`. |
+| IO-OPENUI-AO | `src/constants/index.ts` i aktivni `src/utils/constants.ts`, početna, footer i chatbot sadrže bankarsko/licencno pozicioniranje. Pripremljena korekcija je u `docs/patches/io-openui-world-bank-public-status.patch` za reviziju 7c7fa179f88557b8e10ec3b56ea185bd8e128d03. Četiri ciljana testa prolaze. Korekcija je objavljena u draft PR-u https://github.com/spaja86/IO-OPENUI-AO/pull/104 kroz GitHub web interfejs, koji potpisuje commitove; GitHub API potvrđuje potpise. Pet izvora i test datoteka odgovaraju lokalno testiranim hash-evima. Patch je proveren pomoću `git apply --reverse --check`. |
 | Kompanija-SPAJA | `app/ecosystem/page.tsx` sadrži tvrdnju o profesionalnoj svetskoj banci. `app/bank/page.tsx` prikazuje buduće delatnosti i licencnu matricu čiji statusi nisu dokaz stvarnih prijava ili dozvola. Korekcija kartice i licencnih ilustracija sa četiri ciljana testa pripremljena je u zasebnom draft PR-u: https://github.com/spaja86/Kompanija-SPAJA/pull/30. Pun build i browser prikaz te aplikacije nisu potvrđeni. |
 | Javne instalacije | Alat za čitanje javnih stranica nije mogao da otvori homepage naveden u GitHub metapodacima niti povezani `/bank-prototype`. Provera izvornog koda i lokalnog prikaza nije potvrda već objavljenog sadržaja. |
 | Društveni profili i drugi spoljašnji kanali | Ispravljene su njihove oznake u ovom repozitorijumu. Sadržaj profila nije ovim pregledom verifikovan niti izmenjen. |
 
 ## Primena povezane IO-OPENUI-AO korekcije
 
-Patch sadrži pet izvornih datoteka, četiri regresiona testa i dokumentaciju. U čistoj grani od navedene IO revizije: prvo `git apply --check`, zatim primena patch-a, `node --test src/worldBankPublicPresentation.test.cjs`, pregled diff-a i potpisani commit prema AGENTS.md. Paket ne menja finansijske funkcije ili deployment konfiguraciju. Potpisivanje i objava u tom repozitorijumu ostaju otvoreni; nije zatražen niti pretpostavljen izuzetak.
+Patch sadrži pet izvornih datoteka, četiri regresiona testa i dokumentaciju. U čistoj grani od navedene IO revizije: prvo `git apply --check`, zatim primena patch-a, `node --test src/worldBankPublicPresentation.test.cjs`, pregled diff-a i potpisani commit prema AGENTS.md. Paket ne menja finansijske funkcije ili deployment konfiguraciju. Primena je već sačuvana u potpisanoj grani `bugfix/world-bank-public-status-20261026` i draft PR-u #104; patch služi kao prenosiva kopija za navedenu polaznu reviziju. Nije korišćen izuzetak od zahteva za potpis; ljudski pregled ostaje obavezan.
 
 ## Kontrole i validacija
 
@@ -63,7 +63,7 @@ Patch sadrži pet izvornih datoteka, četiri regresiona testa i dokumentaciju. U
 - CI sada koristi `python3 -m unittest discover -s config -p 'test_*.py'`, čime uključuje i ranije izostavljene provere prototipa.
 - Komande za ponavljanje: `python3 config/validate_repository.py`, `python3 -m unittest discover -s config -p 'test_*.py'`, `node --check script.js`; proveriti i svaki postojeći JS fajl u direktorijumu `js`.
 - Konačno: 28/28 Python testova prolazi; validator, `node --check` za svih pet JS datoteka i `git diff --check` prolaze. Novi testovi odbacuju početnu reviziju (36 neuspešnih tvrdnji, bez greške testnog okruženja).
-- Stvarni browser prikaz nije potvrđen: Playwright nije imao instaliran kompatibilan Chromium, a pronađeni lokalni executable nije uspeo da pokrene sesiju. HTML provere obuhvataju statički tekst bez JavaScript-a, ali nisu zamena za vizuelnu desktop/mobilnu proveru. Nema fizičkog telefonskog testa. Lokalni rezultat nije udaljeni CI rezultat ili pravna potvrda.
+- Stvarni browser prikaz nije potvrđen: Playwright nije imao instaliran kompatibilan Chromium, a pronađeni lokalni executable nije uspeo da pokrene sesiju. Pokušaj instalacije Chromium-a završio se neispravnim/trunkiranim preuzetim paketom. HTML provere obuhvataju statički tekst bez JavaScript-a, ali nisu zamena za vizuelnu desktop/mobilnu proveru. Nema fizičkog telefonskog testa. Lokalni rezultat nije udaljeni CI rezultat ili pravna potvrda.
 
 ## Praćenje javnih površina
 

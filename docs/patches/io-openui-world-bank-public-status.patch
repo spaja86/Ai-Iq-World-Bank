@@ -1,6 +1,6 @@
 diff --git a/docs/WORLD-BANK-PUBLIC-STATUS-2026-10-26.md b/docs/WORLD-BANK-PUBLIC-STATUS-2026-10-26.md
 new file mode 100644
-index 0000000..dc61d69
+index 0000000..4e59a0c
 --- /dev/null
 +++ b/docs/WORLD-BANK-PUBLIC-STATUS-2026-10-26.md
 @@ -0,0 +1,11 @@
@@ -14,7 +14,7 @@ index 0000000..dc61d69
 +
 +Provera: `node --test src/worldBankPublicPresentation.test.cjs` — 4/4 prolaze (obuhvata sintaksu pet promenjenih TypeScript/TSX fajlova). Test koristi postojeću TypeScript razvojnu zavisnost. `git diff --check` prolazi. Nije rađen pun build, udaljeni CI niti vizuelna provera; sadržaj eventualne zasebne `/bank/` instalacije nije potvrđen ovom korekcijom.
 +
-+Nema bankarskih operacija, stvarnih uplata, novih zavisnosti, spajanja ili deployment-a. Patch je pripremljen za potpisan commit i ljudski pregled prema AGENTS.md; nije objavljen kao nepotpisan commit u ovom repozitorijumu.
++Nema bankarskih operacija, stvarnih uplata, novih zavisnosti, spajanja ili produkcionog deployment-a. Izmene se čuvaju u grani `bugfix/world-bank-public-status-20261026` kroz GitHub web interfejs, koji potpisuje commitove; potpis prvih izmena potvrđen je kroz GitHub API (`verified: true`). Ljudski pregled pre spajanja ostaje obavezan prema AGENTS.md. Statusi svih commitova i konačni rezultat provera beleže se u draft PR-u.
 diff --git a/src/components/ChatbotWidget.tsx b/src/components/ChatbotWidget.tsx
 index 3fa78b1..0c11b1a 100644
 --- a/src/components/ChatbotWidget.tsx
