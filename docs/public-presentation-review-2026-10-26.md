@@ -47,10 +47,14 @@ Provereno 26. oktobra 2026:
 |---|---|
 | GitHub About za ovaj repozitorijum | Opis tvrdi da je projekat najbolja banka i sarađuje sa svim bankama. Predlog: „AI IQ World Bank — demonstracioni softver u razvoju, bez dozvole NBS za rad banke. Edukativni alati i probni prikazi.” Ovo polje nije datoteka u grani; odvojeno je od ovog diff-a. |
 | Otvoreni PR-ovi #1 i #2 | Stariji predlozi sadrže tvrdnje o bankarskim uslugama, klijentima, aktivi i partnerima. Nisu spojeni, prepisani niti zatvoreni. Pre razmatranja moraju preuzeti ove korekcije i proći nove provere. |
-| IO-OPENUI-AO | `src/constants/index.ts` i aktivni `src/utils/constants.ts`, početna, footer i chatbot sadrže bankarsko/licencno pozicioniranje. Povezana korekcija prati se odvojeno u tom repozitorijumu. |
-| Kompanija-SPAJA | `app/ecosystem/page.tsx` sadrži tvrdnju o profesionalnoj svetskoj banci. `app/bank/page.tsx` prikazuje buduće delatnosti i licencnu matricu čiji statusi nisu dokaz stvarnih prijava ili dozvola. Povezana korekcija prati se odvojeno. |
+| IO-OPENUI-AO | `src/constants/index.ts` i aktivni `src/utils/constants.ts`, početna, footer i chatbot sadrže bankarsko/licencno pozicioniranje. Pripremljena korekcija je u `docs/patches/io-openui-world-bank-public-status.patch` za reviziju 7c7fa179f88557b8e10ec3b56ea185bd8e128d03. Četiri ciljana testa prolaze. Nije objavljen commit u IO repozitorijumu: AGENTS.md zahteva potpisane commitove, a raspoloživi način pisanja daje nepotpisane commitove. Patch je proveren pomoću `git apply --reverse --check`. |
+| Kompanija-SPAJA | `app/ecosystem/page.tsx` sadrži tvrdnju o profesionalnoj svetskoj banci. `app/bank/page.tsx` prikazuje buduće delatnosti i licencnu matricu čiji statusi nisu dokaz stvarnih prijava ili dozvola. Korekcija kartice i licencnih ilustracija sa četiri ciljana testa pripremljena je u zasebnom draft PR-u: https://github.com/spaja86/Kompanija-SPAJA/pull/30. Pun build i browser prikaz te aplikacije nisu potvrđeni. |
 | Javne instalacije | Alat za čitanje javnih stranica nije mogao da otvori homepage naveden u GitHub metapodacima niti povezani `/bank-prototype`. Provera izvornog koda i lokalnog prikaza nije potvrda već objavljenog sadržaja. |
 | Društveni profili i drugi spoljašnji kanali | Ispravljene su njihove oznake u ovom repozitorijumu. Sadržaj profila nije ovim pregledom verifikovan niti izmenjen. |
+
+## Primena povezane IO-OPENUI-AO korekcije
+
+Patch sadrži pet izvornih datoteka, četiri regresiona testa i dokumentaciju. U čistoj grani od navedene IO revizije: prvo `git apply --check`, zatim primena patch-a, `node --test src/worldBankPublicPresentation.test.cjs`, pregled diff-a i potpisani commit prema AGENTS.md. Paket ne menja finansijske funkcije ili deployment konfiguraciju. Potpisivanje i objava u tom repozitorijumu ostaju otvoreni; nije zatražen niti pretpostavljen izuzetak.
 
 ## Kontrole i validacija
 
