@@ -52,6 +52,8 @@ This file is the master portfolio map for repository documents, their category, 
 
 ## Portfolio snapshot
 
+Public-presentation evidence and surface inventory: `docs/public-presentation-review-2026-10-26.md` (Documentation; working; public-safe; developer + creator/shared lane). Controlled by `governance/repo-charter.md`, `standards/glossary.md`, and `governance/document-lifecycle.md`. Covers README and all six HTML pages, search/social metadata, project-status notice, navigation, footers, and linked platform cards. It records the software-demo boundary, NBS sources, regression checks, and remaining external publication work; it is not a regulatory approval.
+
 - **Approved:** governance core, glossary, INDEKURILANC standard, sensitive-content checklist, portfolio map
 - **Working:** README, DINAR framework, reusable templates, roadmap, domain plans, support plans
 - **Draft:** future data model
