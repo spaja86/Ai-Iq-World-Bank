@@ -11,7 +11,7 @@
 
 | Term | Meaning |
 |---|---|
-| AI IQ World Bank | The repository and concept space combining prototype, standards, planning, and governance assets |
+| AI IQ World Bank | Working name of a software development project combining an educational prototype, standards, planning, and governance assets; not a bank licensed by NBS. The working name is not evidence of regulatory approval or authorization to provide financial services |
 | INDEKURILANC | The active repository readiness-scoring model for AI capability maturity |
 | DINAR | Controlled internal/scenario unit governed by `dinar-standard-plan.md` |
 | Standard | A normative document that defines a canonical rule or controlled concept |

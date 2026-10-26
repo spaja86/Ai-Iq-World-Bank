@@ -73,6 +73,21 @@ img { max-width: 100%; display: block; }
   transition: box-shadow var(--transition);
 }
 .site-header.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.5); }
+
+/* Project status is static, readable without JavaScript, and never animated away. */
+.project-status {
+  padding: 1rem 5%;
+  background: var(--bank-mid);
+  border-bottom: 2px solid var(--bank-gold);
+  color: var(--bank-text);
+  line-height: 1.6;
+}
+.project-status p { margin: 0; }
+.project-status p + p { margin-top: 0.5rem; }
+.project-status strong { color: var(--bank-gold); }
+.project-status a { text-decoration: underline; }
+#regulatorni-status { scroll-margin-top: 6rem; }
+#regulatorni-status p { margin-top: 1rem; line-height: 1.7; }
 .nav-inner {
   max-width: 1200px;
   margin: 0 auto;

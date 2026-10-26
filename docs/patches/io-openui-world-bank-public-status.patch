@@ -1,0 +1,189 @@
+diff --git a/docs/WORLD-BANK-PUBLIC-STATUS-2026-10-26.md b/docs/WORLD-BANK-PUBLIC-STATUS-2026-10-26.md
+new file mode 100644
+index 0000000..4e59a0c
+--- /dev/null
++++ b/docs/WORLD-BANK-PUBLIC-STATUS-2026-10-26.md
+@@ -0,0 +1,11 @@
++# AI IQ World Bank — javni status, 26. oktobar 2026.
++
++Ova korekcija opisuje AI IQ World Bank kao radni naziv demonstracionog softvera bez dozvole NBS za rad banke. Usklađuje oba registra platformi, bankarsku karticu na početnoj, footer i odgovore chatbota. Status obe kartice postaje `development`. Uklanjaju se tvrdnje o postojećoj profesionalnoj banci, platnim tokovima i aktivnim licencama.
++
++Izvori: [NBS — osnivanje i saglasnosti](https://www.nbs.rs/sr/finansijske-institucije/banke/osnivanje-i-saglasnosti/) i [Zakon o bankama sa izmenama 19/2025](https://www.nbs.rs/export/sites/NBS_site/documents/propisi/zakoni/kpb_banke_2025.pdf). Član 6 ograničava upotrebu bankarskog naziva; oznaka demonstracionog softvera ne potvrđuje pravnu dozvoljenost poslovne upotrebe naziva. Planovi ostaju razvojni pravci, ne odobrenja ili usluge.
++
++Glavna korekcija: https://github.com/spaja86/Ai-Iq-World-Bank/pull/49. Polazna revizija ovog repozitorijuma: `7c7fa179f88557b8e10ec3b56ea185bd8e128d03`.
++
++Provera: `node --test src/worldBankPublicPresentation.test.cjs` — 4/4 prolaze (obuhvata sintaksu pet promenjenih TypeScript/TSX fajlova). Test koristi postojeću TypeScript razvojnu zavisnost. `git diff --check` prolazi. Nije rađen pun build, udaljeni CI niti vizuelna provera; sadržaj eventualne zasebne `/bank/` instalacije nije potvrđen ovom korekcijom.
++
++Nema bankarskih operacija, stvarnih uplata, novih zavisnosti, spajanja ili produkcionog deployment-a. Izmene se čuvaju u grani `bugfix/world-bank-public-status-20261026` kroz GitHub web interfejs, koji potpisuje commitove; potpis prvih izmena potvrđen je kroz GitHub API (`verified: true`). Ljudski pregled pre spajanja ostaje obavezan prema AGENTS.md. Statusi svih commitova i konačni rezultat provera beleže se u draft PR-u.
+diff --git a/src/components/ChatbotWidget.tsx b/src/components/ChatbotWidget.tsx
+index 3fa78b1..0c11b1a 100644
+--- a/src/components/ChatbotWidget.tsx
++++ b/src/components/ChatbotWidget.tsx
+@@ -11,14 +11,14 @@ interface Message {
+ const KB: [RegExp, string][] = [
+   [/video poziv|webrtc/i, 'Da pokrenete video poziv: idite na stranicu Video, kliknite "Pokreni poziv" i odobrite pristup kameri i mikrofonu. Koristimo WebRTC tehnologiju — direktna veza, bez servera.'],
+   [/igric[ae]|games/i, 'Dostupne igrice: 🎮 Tic-Tac-Toe (vs AI), 🧠 Tehnološki Kviz, ♟️ Chess (uskoro), 🏓 Pong (uskoro). Idite na stranicu Igrice!'],
+-  [/bank|world bank|ai iq world bank/i, 'AI IQ World Bank je globalni work/licensing/compliance centar ekosistema. Na /bank/ možete videti delatnosti, licence, statuse, regione, dokumentaciju i enterprise programe.'],
++  [/bank|world bank|ai iq world bank/i, 'AI IQ World Bank je radni naziv demonstracionog softvera u razvoju, bez dozvole NBS za rad banke. Ne otvara račune, ne prima depozite, ne izdaje kartice i ne izvršava uplate. Prikazi licenci i delatnosti su razvojni planovi, ne dokaz odobrenja.'],
+   [/licenc|license|licence/i, '"Licence za celu planetu za rad" je premium programski stub ekosistema: platformska licenca za globalni radni identitet, verifikovanu kompetenciju, compliance-ready status i odobrene delatnosti. Nije automatska državna radna dozvola za svaku zemlju.'],
+-  [/delatnost|sektor|industry|industr/i, 'AI IQ World Bank podržava širok katalog delatnosti: finansije, kripto tokove, poslovne servise, AI operacije, dokumentaciju i sektorske programe za IT, AI, fintech, gaming, consulting i druge industrije.'],
++  [/delatnost|sektor|industry|industr/i, 'AI IQ World Bank prikazuje razvojne ideje za digitalne alate i finansijsku edukaciju. Regulisane finansijske usluge nisu aktivne; budući pravci zahtevaju zasebnu pravnu i tehničku proveru.'],
+   [/univerzitet|sertifik|spremnost|readiness/i, 'UNEVERZITET vodi korisnika od PAN do DUN nivoa i sada uključuje global work readiness, bank/compliance/licensing module, KYC/AML, AI-finance i education-to-licence putanju.'],
+   [/webrtc/i, 'WebRTC (Web Real-Time Communication) je otvoreni standard za peer-to-peer audio, video i razmenu podataka direktno između pretraživača — bez potrebe za serverom.'],
+   [/chat|poruka/i, 'Za korišćenje chata: idite na Chat stranicu, izaberite kanal (#general, #gaming, #business, #random) i počnite da kucate. Podržani su emoji i reply na poruke.'],
+   [/vlasnik|autor|ko je/i, 'Vlasnik platforme je Nikola Spajić 👨‍💻. Email: spajicn@yahoo.com | spajicn@gmail.com. GitHub: spaja86. Facebook/Instagram/TikTok: Spaja86.'],
+-  [/platform[ae]|ekosistem/i, 'IO-OPENUI-AO ekosistem ima 4 platforme:\n🌐 IO-OPENUI-AO — saradnja i igrice\n💱 Ai-Iq-Menjačnica — kripto menjačnica\n🏦 Ai-Iq-World-Bank — globalni work/licensing/compliance centar\n🏢 Kompanija SPAJA — IT hub'],
++  [/platform[ae]|ekosistem/i, 'IO-OPENUI-AO ekosistem ima 4 platforme:\n🌐 IO-OPENUI-AO — saradnja i igrice\n💱 Ai-Iq-Menjačnica — kripto menjačnica\n🏦 Ai-Iq-World-Bank — demonstracioni softver bez dozvole NBS za rad banke\n🏢 Kompanija SPAJA — IT hub'],
+ ];
+ 
+ function getReply(text: string): string {
+@@ -34,7 +34,7 @@ export default function ChatbotWidget() {
+   const [open, setOpen] = useState(false);
+   const [input, setInput] = useState('');
+   const [messages, setMessages] = useState<Message[]>([
+-    { id: nextId++, role: 'bot', text: 'Zdravo! Ja sam IO-AO asistent 🤖. Mogu da pomognem sa pitanjima o platformi, AI IQ World Bank licencama i UNEVERZITET sistemu!', ts: new Date() },
++    { id: nextId++, role: 'bot', text: 'Zdravo! Ja sam IO-AO asistent 🤖. Mogu da pomognem sa pitanjima o platformi, softverskom projektu AI IQ World Bank i UNEVERZITET sistemu!', ts: new Date() },
+   ]);
+   const [typing, setTyping] = useState(false);
+   const bottomRef = useRef<HTMLDivElement>(null);
+@@ -163,7 +163,7 @@ export default function ChatbotWidget() {
+               value={input}
+               onChange={e => setInput(e.target.value)}
+               onKeyDown={e => e.key === 'Enter' && send()}
+-              placeholder="Pitaj o banki, licencama, univerzitetu..."
++              placeholder="Pitaj o projektu, razvojnim planovima, univerzitetu..."
+               style={{
+                 flex: 1,
+                 background: 'rgba(255,255,255,0.05)',
+diff --git a/src/components/Footer.tsx b/src/components/Footer.tsx
+index c34ded2..d3f180b 100644
+--- a/src/components/Footer.tsx
++++ b/src/components/Footer.tsx
+@@ -47,7 +47,7 @@ export default function Footer() {
+               </span>
+             </div>
+             <p style={{ color: 'var(--io-muted)', fontSize: '0.9rem', lineHeight: 1.7 }}>
+-              Platforma za profesionalnu saradnju, AI IQ World Bank licence, UNEVERZITET sertifikaciju i globalni radni pristup.
++              Platforma za saradnju i razvojne projekte. AI IQ World Bank je demonstracioni softver bez dozvole NBS za rad banke.
+             </p>
+             <div
+               style={{
+diff --git a/src/constants/index.ts b/src/constants/index.ts
+index 59acdf7..94abec3 100644
+--- a/src/constants/index.ts
++++ b/src/constants/index.ts
+@@ -36,12 +36,12 @@ export const PLATFORMS: Platform[] = [
+   {
+     id: 'ai-iq-world-bank',
+     name: 'Ai-Iq-World-Bank',
+-    description: 'Profesionalna svetska banka sa AI funkcionalnostima i globalnom saradnjom',
++    description: 'Demonstracioni softver u razvoju, bez dozvole NBS za rad banke; edukativni alati i probni prikazi.',
+     url: 'https://github.com/spaja86/Ai-Iq-World-Bank',
+     github: 'https://github.com/spaja86/Ai-Iq-World-Bank',
+     tech: ['HTML', 'CSS', 'JavaScript', 'AI'],
+     icon: '🏦',
+-    status: 'active',
++    status: 'development',
+   },
+   {
+     id: 'ai-iq-menjacnica',
+diff --git a/src/pages/Home.tsx b/src/pages/Home.tsx
+index f86fcba..d177625 100644
+--- a/src/pages/Home.tsx
++++ b/src/pages/Home.tsx
+@@ -8,7 +8,7 @@ import { FEATURES } from '../utils/constants';
+ 
+ const STATS = [
+   { value: '4', label: 'Ekosistem modula' },
+-  { value: '10', label: 'Tipova licenci u bank sloju' },
++  { value: 'DEMO', label: 'AI IQ World Bank — softverski projekat' },
+   { value: '18', label: 'Ciljanih industrijskih vertikala' },
+   { value: '24/7', label: 'Globalni pristup' },
+ ];
+@@ -104,7 +104,7 @@ export default function Home() {
+                 <div style={{ fontSize: '2rem', marginBottom: '12px' }}>🏦</div>
+                 <h3 style={{ color: 'var(--io-text)', marginBottom: '10px' }}>AI IQ World Bank</h3>
+                 <p style={{ color: 'var(--io-muted)', lineHeight: 1.7, marginBottom: '14px' }}>
+-                  Globalni work/licensing/compliance centar za delatnosti, dokumente, statuse, regione i enterprise aktivaciju.
++                  Demonstracioni softver u razvoju, bez dozvole NBS za rad banke. Edukativni alati i probni prikazi; bez računa, depozita, kartica i uplata.
+                 </p>
+                 <span style={{ color: 'var(--io-accent)', fontWeight: 700 }}>Otvori /bank/ →</span>
+               </a>
+@@ -155,7 +155,7 @@ export default function Home() {
+                   lineHeight: 1.7,
+                 }}
+               >
+-                Istraži AI IQ World Bank licence, proveri UNEVERZITET readiness putanju i zatim testiraj real-time i games module u istom ekosistemu.
++                Istraži softverski prototip AI IQ World Bank i njegove razvojne planove, proveri UNEVERZITET readiness putanju i zatim testiraj real-time i games module u istom ekosistemu.
+               </p>
+               <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                 <a href="/bank/" className="btn-primary">
+diff --git a/src/utils/constants.ts b/src/utils/constants.ts
+index bf62281..f7688ca 100644
+--- a/src/utils/constants.ts
++++ b/src/utils/constants.ts
+@@ -14,17 +14,17 @@ export const PLATFORMS: Platform[] = [
+   {
+     id: 'world-bank',
+     name: 'Ai-Iq-World-Bank',
+-    description: 'Globalni work, licensing, finance i compliance centar za identitet, sertifikaciju, dokumentaciju i profesionalnu aktivaciju.',
++    description: 'Demonstracioni softver u razvoju, bez dozvole NBS za rad banke; edukativni alati i probni prikazi.',
+     url: 'https://github.com/spaja86/Ai-Iq-World-Bank',
+     github: 'https://github.com/spaja86/Ai-Iq-World-Bank',
+     tech: ['HTML', 'CSS', 'JavaScript', 'AI'],
+     icon: '🏦',
+-    status: 'active' as const,
++    status: 'development' as const,
+   },
+   {
+     id: 'menjacnica',
+     name: 'Ai-Iq-Menjačnica',
+-    description: 'Svetska kripto menjačnica povezana sa settlement, remittance i treasury tokovima AI IQ World Bank sistema.',
++    description: 'Povezani softverski projekat; veza sa AI IQ World Bank nije dokaz aktivnih platnih ili bankarskih tokova.',
+     url: 'https://github.com/spaja86/Ai-Iq-Menja-nica',
+     github: 'https://github.com/spaja86/Ai-Iq-Menja-nica',
+     tech: ['JavaScript', 'HTML', 'CSS'],
+@@ -76,7 +76,7 @@ export const FEATURES: Feature[] = [
+   {
+     id: 'world-bank-licensing',
+     title: 'AI IQ World Bank',
+-    description: 'Globalni work/licensing/compliance sloj za finansije, licence, identitet, sertifikaciju, dokumente i profesionalnu aktivaciju.',
++    description: 'Softverski prototip bez dozvole NBS za rad banke. Planovi za finansije i regulatorne postupke nisu aktivne usluge.',
+     icon: '🏦',
+     category: 'ai',
+   },
+diff --git a/src/worldBankPublicPresentation.test.cjs b/src/worldBankPublicPresentation.test.cjs
+new file mode 100644
+index 0000000..5705725
+--- /dev/null
++++ b/src/worldBankPublicPresentation.test.cjs
+@@ -0,0 +1,29 @@
++const test = require('node:test');
++const assert = require('node:assert/strict');
++const fs = require('node:fs');
++const path = require('node:path');
++const ts = require('typescript');
++const root = path.resolve(__dirname, '..');
++const read = name => fs.readFileSync(path.join(root, name), 'utf8');
++const files = ['src/constants/index.ts', 'src/utils/constants.ts', 'src/pages/Home.tsx', 'src/components/Footer.tsx', 'src/components/ChatbotWidget.tsx'];
++test('all bank entry points disclose the lack of an NBS bank licence', () => {
++  for (const name of files) assert.match(read(name), /bez dozvole NBS za rad banke/, name);
++});
++test('both platform registries mark the bank software as in development', () => {
++  for (const name of files.slice(0, 2)) {
++    const text = read(name);
++    const bank = text.slice(text.indexOf("name: 'Ai-Iq-World-Bank'"), text.indexOf('  },', text.indexOf("name: 'Ai-Iq-World-Bank'")));
++    assert.match(bank, /status: 'development'/);
++    assert.match(bank, /Demonstracioni softver/);
++  }
++});
++test('legacy bank, settlement and licensing claims do not return', () => {
++  for (const name of files) assert.doesNotMatch(read(name), /Profesionalna svetska banka|settlement, remittance i treasury tokovima|AI IQ World Bank licence|Tipova licenci u bank sloju/, name);
++  assert.match(read('src/components/ChatbotWidget.tsx'), /ne prima depozite, ne izdaje kartice i ne izvršava uplate/);
++});
++test('changed TypeScript and JSX source parses without syntax errors', () => {
++  for (const name of files) {
++    const file = ts.createSourceFile(name, read(name), ts.ScriptTarget.Latest, true, name.endsWith('tsx') ? ts.ScriptKind.TSX : ts.ScriptKind.TS);
++    assert.deepEqual(file.parseDiagnostics, [], name);
++  }
++});

@@ -9,9 +9,15 @@
 - **Purpose:** Describes the public website structure, local use, and repository references.
 - **Depends on:** `governance/document-lifecycle.md`, `docs/document-portfolio.md`
 
-**Digitalna platforma u razvoju** — javni prikaz alata, sadržaja i razvojnih inicijativa.
+**Demonstracioni softver u razvoju** — AI IQ World Bank je radni naziv softverskog projekta, bez dozvole NBS za rad banke.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-gold?style=for-the-badge)](https://github.com/spaja86/Ai-Iq-World-Bank)
+Ovaj sajt ne pruža bankarske usluge: ne otvara račune, ne prima depozite, ne izdaje kartice i ne izvršava uplate. Dostupni su edukativni kalkulatori, informativni sadržaji i probni prikazi. Poslovna vizija razvoja AI i finansijskih tehnologija predstavlja budući pravac, a ne postojeću regulisanu uslugu.
+
+NBS razdvaja preliminarno odobrenje, dozvolu za rad, saglasnost na akta osnivačke skupštine i registraciju. Član 6 Zakona o bankama ograničava upotrebu reči „banka” i izvedenica. Zadržavanje radnog naziva ne potvrđuje pravnu dozvoljenost njegove poslovne upotrebe; potrebna je posebna pravna provera.
+
+Izvori: [NBS — osnivanje i saglasnosti](https://www.nbs.rs/sr/finansijske-institucije/banke/osnivanje-i-saglasnosti/) i [Zakon o bankama sa izmenama iz 2025](https://www.nbs.rs/export/sites/NBS_site/documents/propisi/zakoni/kpb_banke_2025.pdf), provereni 26. oktobra 2026. Nalazi, izmene i otvorene stavke: `docs/public-presentation-review-2026-10-26.md`.
+
+[![Softverski prototip](https://img.shields.io/badge/Softverski-prototip-gold?style=for-the-badge)](https://github.com/spaja86/Ai-Iq-World-Bank)
 [![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -35,8 +41,8 @@ AI IQ World Bank je višestranični javni sajt sa interaktivnim JavaScript funkc
 
 ```
 Ai-Iq-World-Bank/
-├── index.html          ← Naslovna strana (hero, stats, usluge, platforme)
-├── about.html          ← O banci (misija, vrednosti, osnivač)
+├── index.html          ← Naslovna strana (status, alati, probni prikazi, platforme)
+├── about.html          ← O projektu (misija, regulatorni status, autor)
 ├── services.html       ← Digitalne platforme i alati
 ├── loans.html          ← Edukativni anuitetski kalkulator
 ├── investments.html    ← Informativni sadržaj o riziku
@@ -90,13 +96,13 @@ python3 -m http.server 8000
 
 ## 🔗 Ekosistem Kompanija SPAJA
 
-Sve platforme sarađuju međusobno:
+Linkovi ka povezanim SPAJA softverskim projektima. Link nije dokaz bankarskog partnerstva, zajedničkog finansijskog sistema ili regulatornog odobrenja:
 
 | Platforma | Opis | Link |
 |-----------|------|------|
-| 🏦 **AI IQ World Bank** | Profesionalna svetska banka | *Ova platforma* |
+| 🏦 **AI IQ World Bank** | Demonstracioni softver u razvoju; bez dozvole NBS za rad banke | *Ova platforma* |
 | 🌐 **IO-OPENUI-AO** | Saradnja, igrice, WebRTC | [io-openui-ao.vercel.app](https://io-openui-ao.vercel.app) |
-| 💱 **Ai-Iq-Menjačnica** | Kripto menjačnica | [GitHub](https://github.com/spaja86/Ai-Iq-Menja-nica) |
+| 💱 **Ai-Iq-Menjačnica** | Povezani softverski projekat | [GitHub](https://github.com/spaja86/Ai-Iq-Menja-nica) |
 | 🏢 **Kompanija SPAJA** | Matična IT kompanija | [GitHub](https://github.com/spaja86/Kompanija-SPAJA) |
 
 ---
@@ -104,31 +110,31 @@ Sve platforme sarađuju međusobno:
 ## 👤 Vlasnik i Kontakt
 
 **Nikola Spajić**
-Osnivač & CEO — Smederevo, Srbija
+Autor i developer softverskog projekta — Smederevo, Srbija
 
 | Kontakt | Link |
 |---------|------|
 | 📧 Email | [spajicn@yahoo.com](mailto:spajicn@yahoo.com) |
 | 📧 Email | [spajicn@gmail.com](mailto:spajicn@gmail.com) |
 | 📘 Facebook | [facebook.com/Spaja86](https://www.facebook.com/Spaja86) |
-| 📘 Facebook (Banka) | [facebook.com/profile](https://www.facebook.com/profile.php?id=61583240952997) |
+| 📘 Facebook (projekat) | [facebook.com/profile](https://www.facebook.com/profile.php?id=61583240952997) |
 | 📷 Instagram | [instagram.com/spaja.1986](https://www.instagram.com/spaja.1986) |
 | 🎵 TikTok | [tiktok.com/@spaja.1986](https://www.tiktok.com/@spaja.1986) |
 | ▶️ YouTube | [youtube.com/@spajanikopenevolution](https://www.youtube.com/@spajanikopenevolution) |
 
 ---
 
-## 📄 Licenca
+## 📄 Autorska prava
 
 © 2026 AI IQ World Bank. Sva prava zadržana.  
 Vlasnik: **Nikola Spajić** | Smederevo, Srbija
 
-## Bezbedni bankarski prototip — implementacija
+## Demonstracioni finansijski interfejs — implementacija
 
 Naslovna sada sadrži vidljivu INDEKURILANC formu i javne governance prikaze povezane sa postojećim `script.js`. Edukativni rezultat nije kreditni rejting, saldo ili novac.
 
-Autentifikovani read-only prototip je na https://ai-iq-super-platforma.com/bank-prototype — backend mora prvo dobiti odgovarajuću izmenu iz spaja86/AI-IQ-SUPER-PLATFORMA. Statički frontend ne prikuplja tokene, bankovne brojeve ili podatke kartica; prijava i API provera ostaju na istom domenu platforme.
+Veza ka povezanom probnom interfejsu je https://ai-iq-super-platforma.com/bank-prototype. Njegova dostupnost i autentifikacija nisu potvrđene ovom proverom; potrebne backend izmene prate se u spaja86/AI-IQ-SUPER-PLATFORMA. Statički frontend ne prikuplja tokene, bankovne brojeve ili podatke kartica; prijava i API provera ostaju na istom domenu platforme.
 
 Provere: `python -m unittest discover -s config -p 'test_*.py'` i `python config/validate_repository.py`. Backend CLI: `npm run digitalni-kompjuter -- bank-status` (read-only, bez uplate).
 
-Razlog promene: odobren nastavak pregleda bankarskog prototipa. Potrebna je ljudska provera pre spajanja. Stvarni računi, kartice, IPS, pravni/compliance model, pouzdano knjiženje i usaglašavanje zahtevaju naredne faze i ovlašćenog partnera. Vercel dug se potvrđuje stvarnim fakturama, ne podacima prototipa.
+Promene javnog predstavljanja pripremljene su za pregled u zasebnoj grani. Stvarni računi, kartice i platne operacije nisu funkcije ovog sajta. Njihovo eventualno uvođenje zahteva zaseban pravni model, odgovarajuća odobrenja, proveru ovlašćenih pružalaca i posebnu tehničku validaciju. Prolazak testova ne potvrđuje regulatornu usklađenost.

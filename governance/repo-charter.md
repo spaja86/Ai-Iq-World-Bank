@@ -18,6 +18,12 @@ AI IQ World Bank exists to maintain one controlled repository that can support:
 - reusable planning templates,
 - governance controls for sensitive and scenario-driven content.
 
+## Public project status
+
+The public website is demonstration software under the working name AI IQ World Bank, without an NBS bank operating licence. Public copy must distinguish implemented educational tools, simulations, future ambitions, and regulated services. It must not assert bank partnerships, customer assets, deposits, cards, payments, or regulatory endorsement without verified evidence.
+
+The name is retained as requested project terminology; this is not a legal finding that its commercial use is permitted. Review the naming restriction in Article 6 of the Law on Banks before commercial use. See `docs/public-presentation-review-2026-10-26.md` for evidence, scope, and open publication items.
+
 ## Four repository pillars
 
 1. **Product / Prototype** - user-facing static experience and future application modules.
